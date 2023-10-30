@@ -4,13 +4,13 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        DosisBold: ["Dosis-Bold", "sans-serif"],
+        Bold: ["Dosis-Bold", "sans-serif"],
         ExtraBold: ["Dosis-ExtraBold", "sans-serif"],
         ExtraLight: ["Dosis-ExtraLight", "sans-serif"],
-        DosisLight: ["Dosis-Light", "sans-serif"],
-        DosisMedium: ["Dosis-Medium", "sans-serif"],
-        DosisRegular: ["Dosis-Regular", "sans-serif"],
-        DosisSemiBold: ["Dosis-SemiBold", "sans-serif"],
+        Light: ["Dosis-Light", "sans-serif"],
+        Medium: ["Dosis-Medium", "sans-serif"],
+        Regular: ["Dosis-Regular", "sans-serif"],
+        SemiBold: ["Dosis-SemiBold", "sans-serif"],
       },
     },
   },   
