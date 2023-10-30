@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -66,4 +70,39 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+@font-face {
+  font-family: 'Dosis-Bold';
+  src: url("../src/assets/fonts/Dosis-Bold.ttf");
+}
+
+
+@font-face {
+  font-family: 'Dosis-ExtraBold';
+  src: url("../src/assets/fonts/Dosis-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: 'Dosis-Light';
+  src: url("../src/assets/fonts/Dosis-Light.ttf") ;
+}
+
+@font-face {
+  font-family: 'Dosis-ExtraLight';
+  src: url("../src/assets/fonts/Dosis-ExtraLight.ttf") ;
+}
+
+@font-face {
+  font-family: 'Dosis-Medium';
+  src: url("../src/assets/fonts/Dosis-Medium.ttf");
+}
+
+@font-face {
+  font-family: 'Dosis-Regular';
+  src: url("../src/assets/fonts/Dosis-Regular.ttf") ;
+}
+
+@font-face {
+  font-family: 'Dosis-SemiBold';
+  src: url("../src/assets/fonts/Dosis-SemiBold.ttf");
 }
