@@ -1,14 +1,6 @@
-import React from "react";
-import Footer from "./Component/Footer";
-import Home from "./Component/Home";
+import HomePage from "./pages/Homepage/Homepage";
 
-function App() {
-  return (
-    <>
-      <Home />
-      <Footer />
-    </>
-  );
-}
-
+const App = () => {
+  return <HomePage />;
+};
 export default App;
