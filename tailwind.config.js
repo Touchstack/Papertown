@@ -13,6 +13,5 @@ export default {
         SemiBold: ["Dosis-SemiBold", "sans-serif"],
       },
     },
-  },   
-  plugins: [],
-} 
+  },
+};
