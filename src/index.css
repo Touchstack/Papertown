@@ -10,7 +10,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: Dosis-Regular, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -54,15 +54,25 @@ code {
 
 .marquee {
   background-color: transparent;
+  align-items: flex-start;
   white-space: nowrap;
   box-sizing: border-box;
-  animation: marquee 13s linear infinite;
+  animation: marquee 15s linear infinite ;
+  animation-direction: alternate;
   animation-play-state: running;
+  position: absolute;
+  top: 50%; 
+  
+  transform: translate(-100%, 0%)
+  
 }
 
 .marquee span {
   display: inline-block;
-  padding-left: 20%;
+  direction: ltr;
+  padding-left: 15%; 
+  margin-top: 15px ;
+
 }
 
 @keyframes marquee {
