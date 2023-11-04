@@ -1,5 +1,5 @@
 import React from "react";
-import "../Style/Circle.css";
+import "../src/Style/Circle.css";
 
 function Circle() {
   return (

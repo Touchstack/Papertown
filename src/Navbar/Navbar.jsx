@@ -5,6 +5,8 @@ import AppLogo from "../assets/Images/Logo.png";
 import EllipsePic from "../assets/Images/Ellipse.png";
 import { useLocation } from "react-router-dom";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
+import Circle from "../../Component/Circle";
+import Footer from "../pages/FooterPage/Footer";
 
 const Navbar = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
