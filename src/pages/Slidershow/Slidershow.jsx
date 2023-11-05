@@ -29,19 +29,7 @@ function Slidershow({ slides }) {
       <section className="slider">
         <HiChevronLeft className="slider__leftArrow" onClick={prevSlider} />
         <HiChevronRight className="slider__rightArrow" onClick={nextSlider} />
-        {sliderData.map((slide, index) => {
-          return (
-            <div
-              className={index === current ? "slide active" : "slide"}
-              key={index}
-            >
-              {index === current && (
-                // <img src={slide.image} alt="image" className="slider__image" />
-                <img src={iamgeBD} alt="" />
-              )}
-            </div>
-          );
-        })}
+        <img src={iamgeBD} alt="" className="slider__image" />
       </section>
     </div>
   );
