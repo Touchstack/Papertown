@@ -40,27 +40,31 @@ function Slidershow({ slides }) {
               Our Partners
             </h1>
           </div>
-          <div className="py-4 flex justify-center">
-            <div
-              className="block p-6 max-w-sm 
+          <div className="">
+            {/* box section start */}
+            <div className="py-4 flex justify-center">
+              <div
+                className="block p-6 max-w-sm 
 					bg-white 
 					rounded-lg border 
 					border-gray-200 shadow-md"
-            >
-              <img src={Icon1} alt="" />
-              <h1
-                className="mb-2 text-3xl
+              >
+                <img src={Icon1} alt="" />
+                <h1
+                  className="mb-2 text-3xl
 					font-bold 
 					text-black 
 					dark:text-white"
-              >
-                Android
-              </h1>
-              <p class="font-normal text-black">
-                A short description of how the Papertown Imaginarium partners
-                with this compnay
-              </p>
+                >
+                  Android
+                </h1>
+                <p class="font-normal text-black">
+                  A short description of how the Papertown Imaginarium partners
+                  with this compnay
+                </p>
+              </div>
             </div>
+            {/* box section end */}
           </div>
         </div>
         {/* <img src={iamgeBD} alt="" className="slider__image" /> */}
