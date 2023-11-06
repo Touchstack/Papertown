@@ -180,13 +180,22 @@ const SignUpNavbar = () => {
                     ) : null}
                   </span>
                 ))}
-                <div className="absolute bottom-20 flex flex-col">
+                <div className="absolute bottom-5 flex flex-col">
+                  <motion.a
+                    href="/login"
+                    className="font-Regular text-xl mb-10"
+                    whileHover={{ scale: 1.1 }}
+                    variants={itemVariants}
+                    onClick={() => setShowModal(true)}
+                  >
+                    Login
+                  </motion.a>
                   <motion.button
-                    className="inline-flex bg-[#52B4AE] text-[#b494de] px-1 h-[50px] rounded-full"
+                    className="text-[#FFF] font-Regular bg-[#52B4AE] px-9 h-[50px] p-3 rounded-full"
                     whileHover={{ scale: 1.1 }}
                     variants={itemVariants}
                   >
-                    <span className="p-3">Fortune</span>
+                    Join Papertown
                   </motion.button>
                 </div>
               </motion.div>
