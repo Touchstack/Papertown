@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "../../Navbar/Navbar";
+import SignUpNavbar from "../../Navbar/SignUpNavbar";
 import Footer from "../FooterPage/Footer";
 
 const Homepage = () => {
   return (
     <div className="h-screen">
-      <Navbar />
+      <SignUpNavbar />
       <Footer />
     </div>
   );
