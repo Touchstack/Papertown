@@ -1,13 +1,12 @@
 import React from "react";
-//import Navbar from "../../Navbar/Navbar";
 import SignUpNavbar from "../../Navbar/SignUpNavbar";
+import Footer from "../FooterPage/Footer";
 
 const Homepage = () => {
   return (
-    <div>
-      {/* <Navbar /> */}
+    <div className="h-screen">
       <SignUpNavbar />
-      <h1 className="my-8 text-center">Sign Up Modal</h1>
+      <Footer />
     </div>
   );
 };
