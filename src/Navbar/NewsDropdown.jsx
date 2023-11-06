@@ -1,4 +1,4 @@
-export const NavBarDropdown = () => {
+export const NewsDropdown = () => {
   return (
     <div
       id="dropdownNavbarCompany"
@@ -13,7 +13,7 @@ export const NavBarDropdown = () => {
             href="/tips"
             className="block px-2 py-3 hover:bg-gray-100 rounded-xl"
           >
-            Tips
+            News
           </a>
         </li>
 
@@ -22,7 +22,7 @@ export const NavBarDropdown = () => {
             href="/tips"
             className="block px-2 py-3 text-xl hover:bg-gray-100 rounded-xl"
           >
-            Prompts
+            Events
           </a>
         </li>
       </ul>

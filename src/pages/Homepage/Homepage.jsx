@@ -4,7 +4,7 @@ import Footer from "../FooterPage/Footer";
 
 const Homepage = () => {
   return (
-    <div>
+    <div className="h-screen">
       <Navbar />
       <Footer />
     </div>

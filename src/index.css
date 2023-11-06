@@ -1,4 +1,83 @@
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Montserrat+Subrayada&family=Montserrat:ital,wght@0,100;1,100&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: Dosis-Regular, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@font-face {
+  font-family: "Dosis-Bold";
+  src: url("../src/assets/fonts/Dosis-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Dosis-ExtraBold";
+  src: url("../src/assets/fonts/Dosis-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Dosis-Light";
+  src: url("../src/assets/fonts/Dosis-Light.ttf");
+}
+@font-face {
+  font-family: "Dosis-ExtraLight";
+  src: url("../src/assets/fonts/Dosis-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "Dosis-Medium";
+  src: url("../src/assets/fonts/Dosis-Medium.ttf");
+}
+@font-face {
+  font-family: "Dosis-Regular";
+  src: url("../src/assets/fonts/Dosis-Regular.ttf");
+}
+@font-face {
+  font-family: "Dosis-SemiBold";
+  src: url("../src/assets/fonts/Dosis-SemiBold.ttf");
+}
+
+.marquee {
+  background-color: transparent;
+  align-items: flex-start;
+  white-space: nowrap;
+  box-sizing: border-box;
+  animation: marquee 15s linear infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+  position: absolute;
+  top: 50%;
+
+  transform: translate(-100%, 0%);
+}
+
+.marquee span {
+  display: inline-block;
+  direction: ltr;
+  padding-left: 15%;
+  margin-top: 15px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}

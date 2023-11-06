@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { NavBarDropdown } from "./NavBarDropdown";
+import { NewsDropdown } from "./NewsDropdown";
 import AppLogo from "../assets/Images/Logo.png";
 import EllipsePic from "../assets/Images/Ellipse.png";
 import { useLocation } from "react-router-dom";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
-import Circle from "../../Component/Circle";
-import Footer from "../pages/FooterPage/Footer";
 
 const Navbar = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,6 +14,7 @@ const Navbar = () => {
   const [ariaExpanded, setAriaExpanded] = useState("false"); //expanded or collapsed state
   const [showMenu, setShowMenu] = useState(true);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [Dropdown, setDropdown] = useState(false);
   const [open, cycleOpen] = useCycle(false, true);
   const location = useLocation();
 
@@ -32,6 +32,9 @@ const Navbar = () => {
 
   const handleShowDropdown = () => {
     setShowDropdown(!showDropdown);
+  };
+  const handleDropdown = () => {
+    setDropdown(!Dropdown);
   };
 
   const links = [
@@ -184,7 +187,7 @@ const Navbar = () => {
             </motion.div>
           </motion.aside>
         ) : (
-          <nav className="flex container mx-auto px-2 text-center font-Regular rounded-full mt-12 max-w-5xl lg:pt-2 md:pt-2 sm:px-4 py-2 bg-purple-600 bg-opacity-25">
+          <nav className="flex container mx-auto px-2 text-center font-Regular rounded-full mt-12 max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-3 bg-purple-700 bg-opacity-30">
             <div className="container md:pl-25 flex justify-between items-center m-auto">
               <a
                 href="/"
@@ -298,7 +301,7 @@ const Navbar = () => {
                   </li>
                   <li className={`list-none inline-block text-[#FFF]`}>
                     <button
-                      onClick={handleShowDropdown}
+                      onClick={handleDropdown}
                       className="flex justify-center items-center mx-auto"
                     >
                       News
@@ -315,11 +318,10 @@ const Navbar = () => {
                         />
                       </svg>
                     </button>
-                    {showDropdown && <NavBarDropdown />}
+                    {Dropdown && <NewsDropdown />}
                   </li>
                 </ul>
               </div>
-
               <div
                 className={`${hidden} w-full lg:flex md:w-auto`}
                 id="navbar-buttons"
