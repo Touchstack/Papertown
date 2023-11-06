@@ -56,7 +56,7 @@ function Slidershow({ slides }) {
               >
                 Android
               </h1>
-              <p class="font-normal text-white">
+              <p class="font-normal text-black">
                 A short description of how the Papertown Imaginarium partners
                 with this compnay
               </p>
