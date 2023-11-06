@@ -7,6 +7,7 @@ const Homepage = () => {
     <div>
       {/* <Navbar /> */}
       <SignUpNavbar />
+      <h1 className="my-8 text-center">HomePAGE tEXT</h1>
     </div>
   );
 };
