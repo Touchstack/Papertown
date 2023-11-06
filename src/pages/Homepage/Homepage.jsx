@@ -7,7 +7,7 @@ const Homepage = () => {
     <div>
       {/* <Navbar /> */}
       <SignUpNavbar />
-      <h1 className="my-8 text-center">HomePAGE tEXT</h1>
+      <h1 className="my-8 text-center">Chnage to Navbar Branch</h1>
     </div>
   );
 };
