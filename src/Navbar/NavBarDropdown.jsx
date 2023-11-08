@@ -2,7 +2,7 @@ export const NavBarDropdown = () => {
   return (
     <div
       id="dropdownNavbarCompany"
-      className="z-10 absolute text-left mt-3 bg-purple-700 bg-opacity-30 divide-y divide-gray-100 rounded-[20px] lg:w-60 md:w-60 sm:w-80 w-80 drop-shadow-lg"
+      className="z-10 absolute text-left mt-3 bg-purple-700 bg-opacity-80 divide-y divide-gray-100 rounded-[20px] lg:w-60 md:w-60 sm:w-80 w-80 drop-shadow-lg"
     >
       <ul
         className="p-1 text-xl text-gray-900"

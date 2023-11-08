@@ -35,10 +35,20 @@ const SignUpNavbar = () => {
   const handleShowDropdown = () => {
     setShowDropdown(!showDropdown);
   };
+  
   const handleDropdown = () => {
     setDropdown(!Dropdown);
   };
-
+   
+  const handleCloseLogIn = () => {
+    setShowModal(false);
+    setShowModal2(true);
+  }
+  
+  const handleCloseJoin = () => {
+    setShowModal(true);
+    setShowModal2(false);
+  }
   const links = [
     { name: "Write", to: "/", id: 1 },
     { name: "Submit", to: "/", id: 2 },
@@ -347,7 +357,7 @@ const SignUpNavbar = () => {
                     >
                       login
                     </button>
-                    <button className="bg-[#52B4AE] text-[#FFF] px-9 p-3 rounded-full">
+                    <button className="bg-[#52B4AE] text-[#FFF] px-9 p-3 rounded-full" onClick={() => setShowModal2(true)}>
                       Join Papertown
                     </button>
                   </ul>
@@ -356,6 +366,8 @@ const SignUpNavbar = () => {
             </nav>
           )}
         </AnimatePresence>
+
+        {/*Model for Login*/}
         <Modal isVisible={showModal} onClose={() => setShowModal(false)}>
           <header className="lg:text-2xl md:text-2xl sm:text-xl text-xl pb-6 mt-5 ml-5 font-Bold text-[#000] break-normal md:break-all">
             Log in
@@ -401,15 +413,17 @@ const SignUpNavbar = () => {
               <a
                 href="#"
                 className="text-[#942D99] hover:underline ml-1"
-                onClick={() => setShowModal2(true)}
+                onClick={handleCloseLogIn}
               >
                 Sign up
               </a>
             </div>
           </form>
         </Modal>
-
-        <Modal isVisible={showModal2} onClose={() => setShowModal2(false)}>
+        
+         {/*Model for SignUp*/}
+        <Modal isVisible={showModal2} onClose={() => setShowModal2(false)}
+        >
           <header className="lg:text-2xl md:text-2xl sm:text-xl text-xl pb-2 ml-5 font-Bold text-[#000] break-normal md:break-all">
             Set up your account
           </header>
@@ -531,7 +545,7 @@ const SignUpNavbar = () => {
               <a
                 href="#"
                 className="text-[#942D99] hover:underline ml-1"
-                onClick={() => setShowModal(true)}
+                onClick={handleCloseJoin}
               >
                 Log in
               </a>
