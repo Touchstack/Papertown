@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../../Style/Slidershow.css";
 import { HiChevronRight, HiChevronLeft } from "react-icons/hi2";
-import { sliderData } from "../../../Component/sliderData";
 import "../../Style/Slidershow.css";
-import iamgeBD from "../../assets/Images/image.png";
 import Text from "../../../Component/Text";
 import Icon1 from "../../assets/Images/icon1.png";
 
@@ -58,7 +56,7 @@ function Slidershow({ slides }) {
                 >
                   Android
                 </h1>
-                <p class="font-normal text-black">
+                <p className="font-normal text-black">
                   A short description of how the Papertown Imaginarium partners
                   with this compnay
                 </p>
