@@ -3,9 +3,9 @@ import "../../Style/Slidershow.css";
 import { HiChevronRight, HiChevronLeft } from "react-icons/hi2";
 import { sliderData } from "../../../Component/sliderData";
 import "../../Style/Slidershow.css";
-import iamgeBD from "../..//assets/Images/image.png";
+import iamgeBD from "../../assets/Images/image.png";
 import Text from "../../../Component/Text";
-import Icon1 from "../..//assets/Images/icon1.png";
+import Icon1 from "../../assets/Images/icon1.png";
 
 function Slidershow({ slides }) {
   const [current, setCurrent] = useState(0);
