@@ -109,7 +109,8 @@ export default function Footer() {
 
   return (
     <div className="my-20">
-      <footer className="p-4 sm:p-6 bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 font-Medium">
+      {/* bg-gradient-to-r */}
+      <footer className="p-4 sm:p-6  from-purple-600 via-pink-500 to-purple-600 font-Medium">
         <div className="md:flex md:justify-center p-4">
           <div className="grid lg:grid-cols-6 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-8 sm:gap-6">
             <div className="">
