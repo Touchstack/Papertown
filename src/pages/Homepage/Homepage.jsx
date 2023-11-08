@@ -2,7 +2,7 @@ import React from "react";
 import SignUpNavbar from "../../Navbar/SignUpNavbar";
 import Slidershow from "../Slidershow/Slidershow";
 import Footer from "../FooterPage/Footer";
-import { sliderData } from "../../../Component/sliderData";
+import { sliderData } from "../../Component/SliderData";
 
 const Homepage = () => {
   return (

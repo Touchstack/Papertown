@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../../Style/Slidershow.css";
 import { HiChevronRight, HiChevronLeft } from "react-icons/hi2";
 import "../../Style/Slidershow.css";
-import Text from "../../../Component/Text";
+import Text from "../../Component/Text";
 import Icon1 from "../../assets/Images/icon1.png";
 
 function Slidershow({ slides }) {

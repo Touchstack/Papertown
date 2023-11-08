@@ -1,7 +1,7 @@
-import ImagePage from "../src/assets/Images/image.png";
-import ImagePage2 from "../src/assets/Images/image2.png";
-import ImagePage3 from "../src/assets/Images/image3.png";
-import ImagePage4 from "../src/assets/Images/image4.png";
+import ImagePage from "../assets/Images/image.png";
+import ImagePage2 from "../assets/Images/image2.png";
+import ImagePage3 from "../assets/Images/image3.png";
+import ImagePage4 from "../assets/Images/image4.png";
 
 export const sliderData = [
   {
