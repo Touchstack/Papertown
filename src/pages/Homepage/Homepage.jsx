@@ -2,6 +2,7 @@ import React from "react";
 import SignUpNavbar from "../../Navbar/SignUpNavbar";
 import Slidershow from "../Slidershow/Slidershow";
 import HomeWhyWeEXist from "../../Component/HomeWhyDoWeExist";
+import RedefiningWriting from "../../Component/RedefiningWriting";
 import Footer from "../FooterPage/Footer";
 
 const Homepage = () => {
@@ -10,6 +11,7 @@ const Homepage = () => {
       <SignUpNavbar />
       <Slidershow />
       <HomeWhyWeEXist />
+      <RedefiningWriting />
       <Footer />
     </div>
   );
