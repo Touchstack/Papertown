@@ -58,11 +58,11 @@ function Slidershow() {
             </div>
           </div>
         </div>
-        <div className="gap-[17px]  flex items-start">
+        <div className="gap-[17px] flex flex-wrap justify-center mt-10 ">
           {/* Android starts */}
           <div className="gap-[10px] w-[386px]  h-[187px] flex p-[28px] items-start shrink  flex-col bg-white rounded-[30px]">
             <div className="gap-[15px] flex grow items-start flex-col justify-between">
-              <div className="gap-[4px] flex items-start flex-col">
+              <div className="gap-[4px] flex flex-col jusitfy-between flex-grow">
                 <img
                   src={Icon1}
                   alt="phandroidlogofill5196"
@@ -81,17 +81,17 @@ function Slidershow() {
             </div>
           </div>
           {/* Android ends */}
-          {/* Apple Inc. starts */}
-          <div className="gap-[10px] w-[386px] h-[187px] flex p-[28px] items-start shrink  flex-col bg-white rounded-[30px]">
+          {/* Android starts */}
+          <div className="gap-[10px] w-[386px]  h-[187px] flex p-[28px] items-start shrink  flex-col bg-white rounded-[30px]">
             <div className="gap-[15px] flex grow items-start flex-col justify-between">
-              <div className="gap-[4px] flex items-start flex-col">
+              <div className="gap-[4px] flex flex-col jusitfy-between flex-grow">
                 <img
-                  src={Icon2}
+                  src={Icon1}
                   alt="phandroidlogofill5196"
                   className="w-[48px] h-[48px]"
                 />
                 <span className="text-black w-[315px] text-[24px] font-Bold text-left font-[800] leading-[26px]">
-                  <span>Apple Inc.</span>
+                  <span>Android</span>
                 </span>
               </div>
               <span className="home-login-text063">
@@ -102,18 +102,18 @@ function Slidershow() {
               </span>
             </div>
           </div>
-          {/* Apple Inc. ends */}
-          {/* Discord starts */}
-          <div className="gap-[10px] w-[386px] h-[187px] flex p-[28px] items-start shrink  flex-col bg-white rounded-[30px]">
+          {/* Android ends */}
+          {/* Android starts */}
+          <div className="gap-[10px] w-[386px]  h-[187px] flex p-[28px] items-start shrink  flex-col bg-white rounded-[30px]">
             <div className="gap-[15px] flex grow items-start flex-col justify-between">
-              <div className="gap-[4px] flex items-start flex-col">
+              <div className="gap-[4px] flex flex-col jusitfy-between flex-grow">
                 <img
-                  src={Icon3}
+                  src={Icon1}
                   alt="phandroidlogofill5196"
                   className="w-[48px] h-[48px]"
                 />
                 <span className="text-black w-[315px] text-[24px] font-Bold text-left font-[800] leading-[26px]">
-                  <span>Discord</span>
+                  <span>Android</span>
                 </span>
               </div>
               <span className="home-login-text063">
@@ -124,7 +124,7 @@ function Slidershow() {
               </span>
             </div>
           </div>
-          {/* Discord ends */}
+          {/* Android ends */}
         </div>
       </div>
     </div>
