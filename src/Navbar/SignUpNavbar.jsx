@@ -403,7 +403,7 @@ const SignUpNavbar = () => {
             </a>
             <button
               type="submit"
-              className="text-[#FFF] bg-[#DF327B] mt-2 hover:bg-amber-500 focus:ring-1 focus:outline-none
+              className="text-[#FFF] bg-[#DF327B] mt-2 focus:ring-1 focus:outline-none
                    focus:ring-amber-100 font-Regular rounded-full text-xl p-3 pl-12 w-[350px] pr-12 ml-4 text-center"
             >
               Log in
@@ -534,7 +534,7 @@ const SignUpNavbar = () => {
 
             <button
               type="submit"
-              className="text-[#FFF] bg-[#DF327B] mt-1 hover:bg-amber-500 focus:ring-1 focus:outline-none
+              className="text-[#FFF] bg-[#DF327B] mt-1 focus:ring-1 focus:outline-none
                    focus:ring-amber-100 font-SemiBold rounded-full text-xl p-2 pl-12 w-[350px] pr-12 ml-4 text-center"
             >
               Continue
