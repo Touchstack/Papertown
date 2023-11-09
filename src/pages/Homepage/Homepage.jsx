@@ -8,7 +8,7 @@ import Footer from "../FooterPage/Footer";
 
 const Homepage = () => {
   return (
-    <div className="">
+    <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 font-Medium  w-screen">
       {/* bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 font-Medium h-screen */}
       {/* <Circle> */}
       <SignUpNavbar />
