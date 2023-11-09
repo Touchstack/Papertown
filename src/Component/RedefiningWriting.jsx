@@ -12,12 +12,7 @@ const RedefiningWriting = () => {
             <div className="text-left items-center lg:p-24 md:p-18 sm:p-8 p-8">
               <p className="font-Bold lg:text-5xl md:text-4xl sm:text-4xl text-[#F2F2F2] text-4xl text-left">
                 Redefining writing, one
-                <span className="text-[#FBCA23] font-Bold lg:text-5xl md:text-4xl sm:text-4xl text-4xl">
-                  spark
-                </span>
-                <span className="font-Bold lg:text-5xl md:text-4xl sm:text-4xl text-[#F2F2F2] text-4xl">
-                  at a time
-                </span>
+                <span className="text-[#FBCA23]"> spark</span> at a time
               </p>
               <p className="font-Regular lg:text-lg md:text-lg sm:text-base pt-8 text-[#E8E8E8] leading-7 text-sm tracking-wider text-13">
                 It has survived not only five centuries, but also the leap into
