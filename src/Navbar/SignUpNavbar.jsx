@@ -1,4 +1,4 @@
-import { useState, useEffect, Fragment } from "react";
+import { useState,  Fragment,  } from "react";
 import Modal from "../Component/Modal";
 import { useNavigate } from "react-router-dom";
 import { NavBarDropdown } from "./NavBarDropdown";
@@ -6,6 +6,7 @@ import { NewsDropdown } from "./NewsDropdown";
 import AppLogo from "../assets/Images/Logo.png";
 import { useLocation } from "react-router-dom";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
+
 
 const SignUpNavbar = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -17,7 +18,8 @@ const SignUpNavbar = () => {
   const [Dropdown, setDropdown] = useState(false);
   const [open, cycleOpen] = useCycle(false, true);
   const location = useLocation();
-  const [showModal, setShowModal] = useState(false);
+
+  const [showModal, setShowModal] = useState(false); 
   const [showModal2, setShowModal2] = useState(false);
 
   const navBarToggler = () => {
@@ -369,19 +371,19 @@ const SignUpNavbar = () => {
 
         {/*Model for Login*/}
         <Modal isVisible={showModal} onClose={() => setShowModal(false)}>
-          <header className="lg:text-2xl md:text-2xl sm:text-xl text-xl pb-6 mt-5 ml-5 font-Bold text-[#000] break-normal md:break-all">
+          <header className="lg:text-3xl md:text-2xl sm:text-xl text-xl pb-6 mt-5 ml-5 font-Bold text-[#000] break-normal md:break-all">
             Log in
           </header>
 
           <form name="contact" method="post">
-            <div className="relative z-0 w-full mb-6 group text-sm font-Regular text-[#858585]">
+            <div className="relative mb-6 group text-sm font-Regular text-[#858585]">
               <input
                 type="email"
                 id="email"
                 placeholder="Email Address"
                 name="firstname"
                 required
-                className="block w-[350px] p-3 ml-4 text-[#666] font-Regular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
+                className="block w-[350px] h-[55px] p-3 ml-4 text-[#666] font-Regular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
               />
             </div>
             <div className="relative z-0 w-full mb-6 group text-sm font-Regular text-[#858585]">
@@ -391,7 +393,7 @@ const SignUpNavbar = () => {
                 placeholder="Password"
                 name="password"
                 required
-                className="block  w-[350px] p-3 ml-4 text-[#666] font-Regular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
+                className="block  w-[350px] h-[55px] p-3 ml-4 text-[#666] font-Regular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
               />
             </div>
             <a
@@ -451,7 +453,7 @@ const SignUpNavbar = () => {
             </svg>
           </div>
           <form name="contact" method="post">
-            <div className="relative z-0 w-full group text-sm mb-1 font-Regular text-[#858585]">
+            <div className="relative w-full group text-sm mb-1 font-Regular text-[#858585]">
               <input
                 type="text"
                 id="large-input"
