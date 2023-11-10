@@ -286,7 +286,7 @@ const SignUpNavbar = () => {
                           : `text-[#FFF]`
                       }`}
                     >
-                      <a href="/" className="">
+                      <a href="/submit" className="">
                         Submit
                       </a>
                     </li>

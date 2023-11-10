@@ -1,9 +1,11 @@
 import React from 'react'
 import SubmitComponent from '../../Component/SubmitPage/SubmitComponent'
+import Navbar from '../../Navbar/Navbar'
 
 const SubmitPage = () => {
   return (
     <div>
+      <Navbar/>
         <div className="flex-col text-black mt-40 text-center items-center h-144px w-734px">
             <h1 className="flex-col font-Bold lg:text-5xl md:text-4xl text-3xl justify-center mt-10" >Submit your personal <p>write-ups for review</p>
             </h1>
