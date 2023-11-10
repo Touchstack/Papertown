@@ -32,13 +32,13 @@ const RedefiningWriting = () => {
                   src={Rectangle}
                   alt="Rectangle.png"
                   style={{ height: "auto" }}
-                  className="absolute top-12 left-0 w-full h-full z-10"
+                  className="absolute top-12 left-0 w-full h-full"
                 />
                 <img
                   src={BackgroundImg}
                   alt="Background.png"
                   style={{ height: "auto" }}
-                  className="absolute top-0 left-0 w-full h-full z-20"
+                  className="absolute top-0 left-0 w-full h-full "
                 />
               </div>
             </div>

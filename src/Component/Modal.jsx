@@ -7,7 +7,7 @@ const Modal = ({ isVisible, onClose, children }) => {
   };
   return (
     <div
-      className="lg:fixed top-[80px] left-[900px] w-full h-[500px]  z-10 flex items justify-center"
+      className="lg:fixed top-[80px] left-[900px] w-full h-[500px]  z-50 flex items justify-center"
       id="wrapper"
       onClick={handleClose}
     >
