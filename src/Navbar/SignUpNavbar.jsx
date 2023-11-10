@@ -211,7 +211,7 @@ const SignUpNavbar = () => {
               </motion.div>
             </motion.aside>
           ) : (
-            <nav className="flex container mx-auto px-2 text-center font-Regular rounded-full max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-3 bg-purple-700 bg-opacity-30">
+            <nav className="flex container mx-auto px-2 text-center font-Regular rounded-full max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-3 bg-white-transparent">
               <div className="container md:pl-25 flex justify-between items-center m-auto">
                 <a
                   href="/"

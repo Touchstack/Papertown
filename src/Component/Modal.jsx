@@ -7,13 +7,13 @@ const Modal = ({ isVisible, onClose, children }) => {
   };
   return (
     <div
-      className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-10 flex items justify-center"
+      className="lg:fixed top-[80px] left-[900px] w-full h-[500px]  z-50 flex items justify-center"
       id="wrapper"
       onClick={handleClose}
     >
       <div className="w-[400px] flex flex-col">
         <button
-          className="text-[#B44DB8] text-xl place-self-end"
+          className="text-white text-xl place-self-end"
           onClick={() => onClose()}
         >
           X

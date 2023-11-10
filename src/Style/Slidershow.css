@@ -1,5 +1,5 @@
 .marqueeText {
-  position: absolute;
+  position: relative;
   white-space: nowrap;
   animation: floatText 5s infinite alternate ease-in-out;
 }
