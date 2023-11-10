@@ -98,24 +98,24 @@ const SubmitComponent = () => {
       
       <button
         type="submit"
-        className="bg-[#099B96] text-sm text-white py-3 mt-6 rounded-full w-1/2 sm:mt-8 sm:mb-12"
+        className="bg-[#099B96] font-SemiBold text-white py-3 mt-6 rounded-full w-1/2"
       >
         Submit my writeup
       </button>
     </form>
   </main>
 
-  <div className="mt-4 py-8 grid grid-cols-1 sm:grid-cols-2">
-    <div className="font-Bold text-center sm:text-left">
+  <div className="mt-4 py-8 grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1">
+    <div className="font-Bold text-center w-[558px] text-black text-[42px]">
       Don't take our word for it. Hear what our past and current writers have to say
     </div>
     <div className="text-center sm:text-left">
       <p className="text-sm font-Regular">
         Writers will identify their favorite sensory memories and transfer them to a visual heart map.
       </p>
-      <div className="flex flex-col items-center sm:items-start">
-        <img src="src/assets/Images/Logo.png" alt="Profile Picture" className="rounded-full" />
-        <span>Enoch Charway</span>
+      <div className="flex flex-col items-center">
+        <img src="src/assets/unsplash_4LunKr1gTd8.png" alt="Profile Picture" className="w-[39px] h-[39px] rounded-full border border-amber-400 inline-block" />
+        <span className="text-sm">Enoch Charway</span>
       </div>
     </div>
   </div>

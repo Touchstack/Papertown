@@ -16,7 +16,7 @@ const SubmitPage = () => {
             <div>
             <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 gap-4 lg:px-24 mb-10 ">
         <div className="">
-          <h2 className="text-black text-[42px] py-5 font-SemiBold text-center ">
+          <h2 className="text-black text-[42px] py-5 font-Bold text-center ">
     Guidlines for submission
           </h2><br/>
           <p className="font-Medium">Guide 1</p><br/>
@@ -29,7 +29,7 @@ const SubmitPage = () => {
 
         <div className="flex justify-center items-center mt-10">
          
-          <img className="bg-gradient-to-b from-yellow-500 to-white rounded-lg md:h-[400px] sm:h-[250px] md:mb-4 sm:mb-12"
+          <img className="bg-gradient-to-b from-yellow-500 to-white rounded-lg lg:h-full md:h-[400px] sm:h-[250px] md:mb-4 sm:mb-12"
             src="src/assets/Images/3holdbulb.png"
             alt="HoldBulb3"
           />
