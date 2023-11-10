@@ -1,7 +1,7 @@
 import React from "react";
 import SignUpNavbar from "../../Navbar/SignUpNavbar";
 import RedefiningWriting from "../../Component/RedefiningWriting";
-// import Slidershow from "../Slidershow/Slidershow";
+import Slidershow from "../Slidershow/Slidershow";
 import HomeWhyWeEXist from "../../Component/HomeWhyDoWeExist";
 import Footer from "../FooterPage/Footer";
 // import Circle from "../../Component/Circle";
@@ -13,6 +13,7 @@ const Homepage = () => {
       {/* <Circle> */}
       <SignUpNavbar />
       <RedefiningWriting />
+      <Slidershow />
       <HomeWhyWeEXist />
       <Footer />
       {/* </Circle> */}

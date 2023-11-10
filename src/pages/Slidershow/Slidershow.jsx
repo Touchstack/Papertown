@@ -39,13 +39,13 @@ function Slidershow() {
 
  
 
-      <div className="lg:left-[130px] left-5  lg:top-[530px] top-[250px] flex absolute items-start flex-col">
+      <div className="lg:left-[130px]   flex absolute  flex-col">
         {/* gap-[542px]   */}
-        <div className=" flex items-end justify-between shrink">
-          <span className=" lg:mt-[25%] mt-[60%] text-white text-3xl font-Bold font-[700]">
+        <div className=" flex  justify-between shrink">
+          <span className="  lg:mt-[42%] mt-[90%] text-white text-3xl font-Bold font-[700]">
             <span>Our Partners</span>
           </span>
-          <div className=" lg:gap-[16px] lg:flex items-start hidden">
+          <div className=" lg:gap-[16px] lg:flex hidden mt-[500px]">
             <div>
               {/* <HiChevronLeft className="w-[50px] h-[50px] text-white bg-gray-500 border-solid border-2  rounded-[50px] text-sm border-white z-10 text-center" /> */}
               <img
