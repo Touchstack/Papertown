@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
-import AppLogo from "../../assets/Images/Logo.png";
+import AppLogo from "../../assets/Images/Logo.svg";
 
 export default function Footer() {
   const [hoverIcon, setHoverIcon] = useState("");

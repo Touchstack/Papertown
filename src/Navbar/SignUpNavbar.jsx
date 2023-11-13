@@ -3,7 +3,7 @@ import Modal from "../Component/Modal";
 import { useNavigate } from "react-router-dom";
 import { NavBarDropdown } from "./NavBarDropdown";
 import { NewsDropdown } from "./NewsDropdown";
-import AppLogo from "../assets/Images/Logo.png";
+import AppLogo from "../assets/Images/Logo.svg";
 import { useLocation } from "react-router-dom";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 
@@ -37,20 +37,20 @@ const SignUpNavbar = () => {
   const handleShowDropdown = () => {
     setShowDropdown(!showDropdown);
   };
-  
+
   const handleDropdown = () => {
     setDropdown(!Dropdown);
   };
-   
+
   const handleCloseLogIn = () => {
     setShowModal(false);
     setShowModal2(true);
-  }
-  
+  };
+
   const handleCloseJoin = () => {
     setShowModal(true);
     setShowModal2(false);
-  }
+  };
   const links = [
     { name: "Write", to: "/", id: 1 },
     { name: "Submit", to: "/", id: 2 },
@@ -359,7 +359,10 @@ const SignUpNavbar = () => {
                     >
                       login
                     </button>
-                    <button className="bg-[#52B4AE] text-[#FFF] px-9 p-3 rounded-full" onClick={() => setShowModal2(true)}>
+                    <button
+                      className="bg-[#52B4AE] text-[#FFF] px-9 p-3 rounded-full"
+                      onClick={() => setShowModal2(true)}
+                    >
                       Join Papertown
                     </button>
                   </ul>
@@ -422,10 +425,9 @@ const SignUpNavbar = () => {
             </div>
           </form>
         </Modal>
-        
-         {/*Model for SignUp*/}
-        <Modal isVisible={showModal2} onClose={() => setShowModal2(false)}
-        >
+
+        {/*Model for SignUp*/}
+        <Modal isVisible={showModal2} onClose={() => setShowModal2(false)}>
           <header className="lg:text-2xl md:text-2xl sm:text-xl text-xl pb-2 ml-5 font-Bold text-[#000] break-normal md:break-all">
             Set up your account
           </header>
