@@ -13,14 +13,16 @@ export default {
         SemiBold: ["Dosis-SemiBold", "sans-serif"],
       },
       backgroundColor: {
-        'white-transparent': 'rgba(255, 255, 255, 0.20)',
+        'white-transparent': 'rgba(255, 255, 255, 0.40)',
+        'custom-gradient': 'linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)',
+        'custom-prm': 'var(--prm-1003, #B44DB8)',
       },
       boxShadow: {
         'custom': '0px 7px 80px 0px rgba(105, 23, 109, 0.30)',
       },
       backdropBlur: {
         'custom': '10px',
-      }
+      },
     }, width: {
       150: "150px",
       190: "190px",

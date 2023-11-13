@@ -3,7 +3,7 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import AppLogo from "../../assets/Images/Logo.svg";
 
-export default function Footer() {
+const Footer = () => {
   const [hoverIcon, setHoverIcon] = useState("");
   const [loading, setLoading] = useState(false);
   const [successAlert, setSuccessAlert] = useState(false);
@@ -111,8 +111,8 @@ export default function Footer() {
     <div className="">
     <div className="">
       {/* bg-gradient-to-r */}
-      <footer className="p-4 sm:p-6  from-purple-600 via-pink-500 to-purple-600 font-Medium">
-        <div className="md:flex md:justify-center p-4">
+      <footer className="md:px-[50px] sm:p-6  from-purple-600 via-pink-500 to-purple-600 font-Medium">
+        <div className="md:flex md:justify-center md:p-[50px] p-[20px]">
           <div className="grid lg:grid-cols-6 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-8 sm:gap-6">
             <div className="">
               <a href="/" className="flex justify-start items-start">
@@ -128,8 +128,8 @@ export default function Footer() {
               </div>
 
               <div
-                className="inline-flex items-start gap-10 text-xl font-SemiBold leading-normal
-               absolute flex justify-start gap-[20px] inline-flex mt-3"
+                className="items-start text-xl font-SemiBold leading-normal
+               absolute flex justify-start gap-[20px]  mt-3"
               >
                 <span className="text-[#FFF] text-lg font-Bold">
                   Why We Exist
@@ -144,7 +144,7 @@ export default function Footer() {
               <div className="font-Regular text-[#D0D0D0] w-[150px] text-sm sm:text-start mt-20">
                 Follow us on social media
               </div>
-              <div className="flex md:justify-start text-gray-600 dark:text-gray-400 pt-4 pr-8">
+              <div className="flex md:justify-start text-gray-600 dark:text-gray-400 pt-4 pb-4 pr-8">
                 <a
                   href=""
                   target="_blank"
@@ -328,7 +328,7 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <h2 className="mb-4 p-0 py-0 text-xl w-[250px] font-SemiBold text-[#FFFFFF]">
+            <h2 className="mb-4 p-0 py-0 text-xl w-[270px] text-[18px] font-SemiBold text-[#FFFFFF]">
               Receive weekly writing prompts when you subscribe to our
               newsletter
             </h2>
@@ -346,7 +346,7 @@ export default function Footer() {
                     placeholder="Email Address"
                     name="subscriptionemail"
                     required
-                    className="block w-72 h-14 p-4 text-[#B0B0B0] rounded-full border border-white border-opacity-100 bg-white bg-opacity-20 p-4 mb-4 font-SemiBold rounded-full bg-[#FFFAF5] sm:text-md focus:ring-blue-500 focus:border-blue-500"
+                    className="block w-[300px] h-14 p-4 text-[#B0B0B0] rounded-full border border-white border-opacity-100 bg-opacity-20  mb-4 font-SemiBold  bg-[#FFFAF5] sm:text-md focus:ring-blue-500 focus:border-blue-500"
                     onChange={handleChange}
                     value={text}
                   />
@@ -355,7 +355,7 @@ export default function Footer() {
                     <button
                       type="button"
                       onClick={() => subscribeNewsLetter()}
-                      className="font-SemiBold text-[#FFFFFF] bg-[#52B4AE] block w-72 h-14 p-4 hover:bg-amber-400 focus:ring-1 focus:outline-none focus:ring-amber-100 font-medium rounded-full text-xl px-5 py-3 
+                      className="font-SemiBold text-[#FFFFFF] bg-[#52B4AE] block w-[300px] h-14 p-4 hover:bg-amber-400 focus:ring-1 focus:outline-none focus:ring-amber-100 font-medium rounded-full text-xl px-5 py-3 
                       text-center mr-3 md:mr-0"
                     >
                       Subscribe
@@ -366,8 +366,8 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <h2 className="my-6 p-0 bg-[#4D4949] w-1360 sm:mx-auto lg:my-8" />
-        <div className="flex sm:flex sm:items-center sm:justify-between justify-between">
+
+        <div className="flex px-[20px] pb-[20px] sm:flex sm:items-center sm:justify-between justify-between">
           <div className="flex lg:w-2/6 md:w-3/6 sm:w-auto w-auto justify-around">
             <div className="text-sm sm:text-center text-[#D0D0D0]">
               <a href="/privacypolicy" className="hover:underline">
@@ -392,3 +392,5 @@ export default function Footer() {
     </div>
   );
 }
+
+export default Footer;
