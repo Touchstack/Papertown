@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { NavBarDropdown } from "./NavBarDropdown";
 import { NewsDropdown } from "./NewsDropdown";
-import AppLogo from "../assets/Images/Logo.png";
+import AppLogo from "../assets/Images/Logo.svg";
 import EllipsePic from "../assets/Images/Ellipse.png";
 import { useLocation } from "react-router-dom";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
@@ -187,7 +187,7 @@ const Navbar = () => {
             </motion.div>
           </motion.aside>
         ) : (
-          <nav className="flex container mx-auto px-2 text-center font-Regular rounded-full mt-12 max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-3 bg-purple-700 bg-opacity-30">
+          <nav className="flex container marker:mx-auto px-2 text-center font-Regular rounded-full mt-12 max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-3 bg-purple-700 bg-opacity-30">
             <div className="container md:pl-25 flex justify-between items-center m-auto">
               <a
                 href="/"
