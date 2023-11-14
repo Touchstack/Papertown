@@ -1,5 +1,5 @@
 import SignUpNavbar from '../../Navbar/SignUpNavbar';
-import Readbg from "../../assets/Images/readbg.png";
+import Readbg from "../../assets/Images/Readbg.png";
 import readSplash from "../../assets/Images/readSplash.png"
 import Footer from '../FooterPage/Footer';
 import ReadRowData from '../../Component/RowData/ReadRowData';
