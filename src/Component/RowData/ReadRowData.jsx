@@ -64,7 +64,7 @@ const ArticleCard = ({ category, date, title, author, contentPreview, image }) =
     </div>
 
     <div className={`hidden pt-[10px] transition ease-out duration-500 ${contentPreview ? 'group-hover:block' : 'hidden'}`}>
-      <p className='w-[350px]'>{contentPreview}</p>
+      <p className=''>{contentPreview}</p>
     </div>
 
     <div className={`animate flex flex-row pt-6 gap-3 items-center transition ease-in-out duration-300 ${contentPreview ? 'group-hover:hidden' : ''}`}>
