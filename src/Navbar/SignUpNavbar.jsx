@@ -1,16 +1,16 @@
 import { useState,  Fragment,  } from "react";
 import Modal from "../Component/Modal";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 import { NavBarDropdown } from "./NavBarDropdown";
 import { NewsDropdown } from "./NewsDropdown";
-import AppLogo from "../assets/Images/Logo.png";
+import AppLogo from "../assets/Images/Logo.svg";
 import { useLocation } from "react-router-dom";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 
 
 const SignUpNavbar = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const navigate = useNavigate();
+  //const [currentIndex, setCurrentIndex] = useState(0);
+  //const navigate = useNavigate();
   const hidden = "hidden"; //show or hide navbar
   const [ariaExpanded, setAriaExpanded] = useState("false"); //expanded or collapsed state
   const [showMenu, setShowMenu] = useState(true);
@@ -37,20 +37,20 @@ const SignUpNavbar = () => {
   const handleShowDropdown = () => {
     setShowDropdown(!showDropdown);
   };
-  
+
   const handleDropdown = () => {
     setDropdown(!Dropdown);
   };
-   
+
   const handleCloseLogIn = () => {
     setShowModal(false);
     setShowModal2(true);
-  }
-  
+  };
+
   const handleCloseJoin = () => {
     setShowModal(true);
     setShowModal2(false);
-  }
+  };
   const links = [
     { name: "Write", to: "/", id: 1 },
     { name: "Submit", to: "/", id: 2 },
@@ -299,7 +299,7 @@ const SignUpNavbar = () => {
                           : `text-[#FFF]`
                       }`}
                     >
-                      <a href="/" className="">
+                      <a href="/read" className="">
                         Read
                       </a>
                     </li>
@@ -354,12 +354,15 @@ const SignUpNavbar = () => {
                 >
                   <ul className="flex items-center py-2 font-Regular text-lg">
                     <button
-                      className="border border-lg text-[#FFF] px-9 p-3 mr-4 rounded-full"
+                      className="border-[1px] border-black text-[#000] px-7 p-3 mr-4 rounded-full"
                       onClick={() => setShowModal(true)}
                     >
                       login
                     </button>
-                    <button className="bg-[#52B4AE] text-[#FFF] px-9 p-3 rounded-full" onClick={() => setShowModal2(true)}>
+                    <button
+                      className="bg-[#52B4AE] text-[#FFF] px-9 p-3 rounded-full"
+                      onClick={() => setShowModal2(true)}
+                    >
                       Join Papertown
                     </button>
                   </ul>
@@ -422,10 +425,9 @@ const SignUpNavbar = () => {
             </div>
           </form>
         </Modal>
-        
-         {/*Model for SignUp*/}
-        <Modal isVisible={showModal2} onClose={() => setShowModal2(false)}
-        >
+
+        {/*Model for SignUp*/}
+        <Modal isVisible={showModal2} onClose={() => setShowModal2(false)}>
           <header className="lg:text-2xl md:text-2xl sm:text-xl text-xl pb-2 ml-5 font-Bold text-[#000] break-normal md:break-all">
             Set up your account
           </header>
@@ -441,14 +443,14 @@ const SignUpNavbar = () => {
               <path
                 d="M33.5791 78.5622V75.9666C33.5791 67.3653 40.772 60.3926 49.6449 60.3926H60.3554C69.2283 60.3926 76.4212 67.3653 76.4212 75.9666V78.5622"
                 stroke="#E1E1E1"
-                stroke-width="6"
-                stroke-linecap="round"
+                strokeWidth="6"
+                strokeLinecap="round"
               />
               <path
                 d="M55.0015 52.6071C49.0863 52.6071 44.291 47.9586 44.291 42.2244C44.291 36.4903 49.0863 31.8418 55.0015 31.8418C60.9167 31.8418 65.7121 36.4903 65.7121 42.2244C65.7121 47.9586 60.9167 52.6071 55.0015 52.6071Z"
                 stroke="#E1E1E1"
-                stroke-width="6"
-                stroke-linecap="round"
+                strokeWidth="6"
+                strokeLinecap="round"
               />
             </svg>
           </div>

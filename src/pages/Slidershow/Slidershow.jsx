@@ -14,7 +14,7 @@ function Slidershow() {
   return (
     <div className="flex justify-center">
       {/* <Text /> */}
-      <div class="relative overflow-hidden h-screen w-screen">
+      <div className="relative overflow-hidden h-screen w-screen">
         {/* opacity-[0.10] */}
         <div className="absolute  top-0 gap-10 ">
               <Marquee>
