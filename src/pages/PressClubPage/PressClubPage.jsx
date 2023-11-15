@@ -3,7 +3,7 @@ import PressClubs from "../../Component/PressClub/PressClubs";
 import PerkAndGoodies from "../../Component/PressClub/PerkAndGoodies";
 import FeaturedPressClubs from "../../Component/PressClub/FeaturedPressClubs";
 import Footer from "../FooterPage/Footer";
-import Style from "../../Style/Style.css";
+import "../../Style/Style.css";
 
 const PressClubPage = () => {
   return (
