@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+/* import React, { useState } from 'react';
 import Carousel from './Carousel';
+ import LeftArrow from "../../Images/arrow.png"
+import RightArrow from "../../Images/arrowRight.png"
 
 const OakCarousel = ({ texts }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -19,10 +21,10 @@ const OakCarousel = ({ texts }) => {
       </div>
       <div className="controls flex gap-4">
         <button onClick={showPrevious} className="left-icon cursor-pointer">
-          <img src="src/assets/Images/arrow.png" className="w-1/2 h-1/2"/>
+          <img src={LeftArrow} className="w-1/2 h-1/2"/>
         </button>
         <button onClick={showNext} className="right-icon cursor-pointer">
-        <img src="src/assets/Images/arrowRight.png" className="w-1/2 h-1/2"/>
+        <img src={RightArrow} className="w-1/2 h-1/2"/>
         </button>
       </div>
     </div>
