@@ -3,7 +3,7 @@ import Modal from "../../Component/Modal";
 import { useNavigate } from "react-router-dom";
 import { NavBarDropdown } from "../../Navbar/NavBarDropdown";
 import { NewsDropdown } from "../../Navbar/NewsDropdown";
-import AppLogo from "../../assets/Images/Logo.png";
+import AppLogo from "../../assets/Images/Logo.svg";
 import { useLocation } from "react-router-dom";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 
