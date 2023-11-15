@@ -64,7 +64,7 @@ const ArticleCard = ({ category, date, title, author, contentPreview, image }) =
     </div>
 
     <div className={`hidden pt-[10px] transition ease-out duration-500 ${contentPreview ? 'group-hover:block' : 'hidden'}`}>
-      <p className=''>{contentPreview}</p>
+      <p className='w-auto'>{contentPreview}</p>  {/*add a width*/}
     </div>
 
     <div className={`animate flex flex-row pt-6 gap-3 items-center transition ease-in-out duration-300 ${contentPreview ? 'group-hover:hidden' : ''}`}>
@@ -88,7 +88,7 @@ ArticleCard.propTypes = {
 
 // Individual Articles List Component 
 const ArticlesList = ({ articles }) => (
-  <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-[10px]">
+  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[10px] lg:gap-[5px]">
     {articles.map((article) => (
       <ArticleCard key={article.id} {...article} />
     ))}
@@ -119,7 +119,7 @@ const ReadRowData = () => {
 
   return (
     <main className="flex flex-col md:mt-[160px] mt-[100px] md:ml-[50px] ml-[10px] md:p-20 px-2">
-      <div className='md:pb-10 pb-2'>
+      <div className='md:pb-10 pb-2 mt-[50px]'>
         <h2 className='text-[#000] md:text-[42px] text-[24px] font-bold'>Other writing samples</h2>
           
         <div className='relative pt-10 pb-10  flex-row '>
