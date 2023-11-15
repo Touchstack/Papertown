@@ -1,6 +1,6 @@
 
-import UIfix from './UIfix';
-import ProfilePicture from "../../assets/Images/unsplash_4LunKr1gTd8.png"
+import UIfix from '../../Component/SubmitPage/UIfix';
+import ProfilePicture from "../../assets/unsplash_4LunKr1gTd8.png"
 
 /*const FileInput = () => {
     const handleFileChange = (event) => {
@@ -98,7 +98,7 @@ const SubmitComponent = () => {
       
       <button
         type="submit"
-        className="bg-[#099B96] font-Bold w-[250px] h-[45px] px-[30px] py-2.5 gap-2.5 justify-center text-center inline-flex text-white mt-6 rounded-full w-1/2"
+        className="bg-[#099B96] font-Bold w-[250px] h-[45px] px-[30px] py-2.5 gap-2.5 justify-center text-center inline-flex text-white mt-6 rounded-full"
       >
         Submit my writeup
       </button>
