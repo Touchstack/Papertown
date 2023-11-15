@@ -1,4 +1,4 @@
-import { useState,  Fragment,  } from "react";
+import { useState, Fragment } from "react";
 import Modal from "../Component/Modal";
 //import { useNavigate } from "react-router-dom";
 import { NavBarDropdown } from "./NavBarDropdown";
@@ -6,7 +6,6 @@ import { NewsDropdown } from "./NewsDropdown";
 import AppLogo from "../assets/Images/Logo.svg";
 import { useLocation } from "react-router-dom";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
-
 
 const SignUpNavbar = () => {
   //const [currentIndex, setCurrentIndex] = useState(0);
@@ -19,7 +18,7 @@ const SignUpNavbar = () => {
   const [open, cycleOpen] = useCycle(false, true);
   const location = useLocation();
 
-  const [showModal, setShowModal] = useState(false); 
+  const [showModal, setShowModal] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
 
   const navBarToggler = () => {
@@ -260,24 +259,12 @@ const SignUpNavbar = () => {
                   id="navbar-cta"
                 >
                   <ul className="flex flex-col text-lg p-4 md:p-0 mt-4 border text-center rounded-lg md:shadow-none sm:shadow-lg shadow-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
-                    <li className={`list-none inline-block text-[#FFF]`}>
+                    <li className={`list-none inline-block text-[#000]`}>
                       <button
                         onClick={handleShowDropdown}
                         className="flex justify-center items-center mx-auto"
                       >
                         Write
-                        <svg
-                          className="mr-1 ml-1 h-5 w-5 mt-1 text-white"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
                       </button>
                       {showDropdown && <NavBarDropdown />}
                     </li>
@@ -285,7 +272,7 @@ const SignUpNavbar = () => {
                       className={`list-none inline-block  ${
                         location.pathname === "/tips"
                           ? "font-Regular"
-                          : `text-[#FFF]`
+                          : `text-[#000]`
                       }`}
                     >
                       <a href="/submit" className="">
@@ -296,7 +283,7 @@ const SignUpNavbar = () => {
                       className={`list-none inline-block  ${
                         location.pathname === "/tips"
                           ? "font-Regular"
-                          : `text-[#FFF]`
+                          : `text-[#000]`
                       }`}
                     >
                       <a href="/read" className="">
@@ -307,10 +294,10 @@ const SignUpNavbar = () => {
                       className={`list-none inline-block  ${
                         location.pathname === "/tips"
                           ? "font-Regular"
-                          : `text-[#FFF]`
+                          : `text-[#000]`
                       }`}
                     >
-                      <a href="/" className="">
+                      <a href="/pressclub" className="">
                         Press Club
                       </a>
                     </li>
@@ -318,21 +305,21 @@ const SignUpNavbar = () => {
                       className={`list-none inline-block  ${
                         location.pathname === "/tips"
                           ? "font-SemiBold"
-                          : `text-[#FFF]`
+                          : `text-[#000]`
                       }`}
                     >
                       <a href="/" className="">
                         Publications
                       </a>
                     </li>
-                    <li className={`list-none inline-block text-[#FFF]`}>
+                    <li className={`list-none inline-block text-[#000]`}>
                       <button
                         onClick={handleDropdown}
                         className="flex justify-center items-center mx-auto"
                       >
                         News
                         <svg
-                          className="mr-1 ml-1 h-5 w-5 mt-1 text-white md:hover:text-fleetBlue hover:scale-105 duration-200 hover:font-SemiBold"
+                          className="mr-1 ml-1 h-5 w-5 mt-1 text-[#000] md:hover:text-fleetBlue hover:scale-105 duration-200 hover:font-SemiBold"
                           viewBox="0 0 20 20"
                           fill="currentColor"
                           aria-hidden="true"
