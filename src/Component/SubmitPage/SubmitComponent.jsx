@@ -1,6 +1,6 @@
-import React from 'react'
-import Carousel from './Carousel';
+
 import UIfix from './UIfix';
+import ProfilePicture from "../../assets/Images/unsplash_4LunKr1gTd8.png"
 
 /*const FileInput = () => {
     const handleFileChange = (event) => {
@@ -19,7 +19,7 @@ const SubmitComponent = () => {
       <h1 className="text-4xl font-Bold text-center pb-6 sm:pb-12">
         Submit your work here
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
+      <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-4 sm:gap-8">
         <div>
           <label className="block text-sm pb-2" htmlFor="Firstname">
             First name
@@ -65,7 +65,7 @@ const SubmitComponent = () => {
           />
           </div>
         </div>
-        <div>
+        <div className="grid">
           <label className="block text-sm pb-2 mt-5" htmlFor="email">
             Email address
           </label>
@@ -76,7 +76,7 @@ const SubmitComponent = () => {
             placeholder="name@domain.com"
           />
         </div><br/>
-        <div>
+        <div className="grid">
           <label className="block text-sm pb-2">School</label>
           <input
             className="border-gray-500 rounded-md p-2 w-full"
@@ -86,7 +86,7 @@ const SubmitComponent = () => {
           />
         </div><br/>
         <div>
-          <label className="block text-sm pb-2 sm:inline-flex">
+          <label className="block text-sm pb-2">
             Upload a pdf or Word document of your writeup
           </label><br/>
           <input
@@ -98,7 +98,7 @@ const SubmitComponent = () => {
       
       <button
         type="submit"
-        className="bg-[#099B96] font-SemiBold text-white py-3 mt-6 rounded-full w-1/2"
+        className="bg-[#099B96] font-Bold w-[250px] h-[45px] px-[30px] py-2.5 gap-2.5 justify-center text-center inline-flex text-white mt-6 rounded-full w-1/2"
       >
         Submit my writeup
       </button>
@@ -111,16 +111,19 @@ const SubmitComponent = () => {
     </div>
     <div className="text-center sm:text-left">
       <p className="text-sm font-Regular">
-        Writers will identify their favorite sensory memories and transfer them to a visual heart map.
+        Writers will identify their favorite sensory memories and transfer them to a visual heart map. Writers will identify their favorite sensory memories and transfer them to a visual heart map.         Writers will identify their favorite sensory memories and transfer them to a visual heart map.
+
+
       </p>
-      <div className="flex flex-col items-center">
-        <img src="src/assets/unsplash_4LunKr1gTd8.png" alt="Profile Picture" className="w-[39px] h-[39px] rounded-full border border-amber-400 inline-block" />
-        <span className="text-sm">Enoch Charway</span>
+      <div className="flex flex-col">
+        <img src={ProfilePicture} alt="Profile Picture" className="w-[39px] h-[39px] rounded-full border border-amber-400 inline-block" />
+        <span className="text-sm inline-block">Enoch Charway</span>
       </div>
     </div>
   </div>
   
 </div><UIfix/></div>
+
   )
 }
 export default SubmitComponent;

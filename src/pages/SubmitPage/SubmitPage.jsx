@@ -1,14 +1,23 @@
 import React from 'react'
 import SubmitComponent from '../../Component/SubmitPage/SubmitComponent'
-import Navbar from '../../Navbar/Navbar'
+import YellowBulbs from "../../assets/Images/bulb.png"
+import Footer from '../FooterPage/Footer'
+import SubmitBg from '../../Component/SubmitPage/SubmitBg'
+import SubmitSignUpNavbar from "../../Component/SubmitPage/SubmitSignUpNavbar"
+
 
 const SubmitPage = () => {
   return (
-    <div>
-      <Navbar/>
-        <div className="flex-col text-black mt-40 text-center items-center h-144px w-734px">
+    <div className='bg-white '>
+      <div className="bg-white bg-opacity-30 text-black"><br/>
+      <SubmitSignUpNavbar/>
+      
+      </div>
+      <SubmitBg/>
+        <div className=" flex-col text-black mt-40 text-center items-center h-144px w-734px">
             <h1 className="flex-col font-Bold lg:text-5xl md:text-4xl text-3xl justify-center mt-10" >Submit your personal <p>write-ups for review</p>
             </h1>
+            
             <div className="font-Light lg:text-sm text-sm lg:px-0 md:px-2 px-3 mt-5 mb-10">It has survived not only five centuries, but also the leap into electronic typsetting, remaining <p> essentially unchanged.
                 It was popularies in the 1960s with the release of Letraset sheets. </p>
             </div>
@@ -30,16 +39,17 @@ const SubmitPage = () => {
         <div className="flex justify-center items-center mt-10">
          
           <img className="bg-gradient-to-b from-yellow-500 to-white rounded-lg lg:h-full md:h-[400px] sm:h-[250px] md:mb-4 sm:mb-12"
-            src="src/assets/Images/3holdbulb.png"
-            alt="HoldBulb3"
+            src={YellowBulbs}
+            alt="bulb.png"
           />
         </div><br/><br/>
         </div>
             </div>
         <div>
         <SubmitComponent/>
-
+        
         </div>
+        <div className="bg-[#B44DB8]"><Footer/></div>
     </div>
   )
 }
