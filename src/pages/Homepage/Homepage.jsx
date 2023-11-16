@@ -1,21 +1,22 @@
-import React from "react";
-import SignUpNavbar from "../../Navbar/SignUpNavbar";
-import RedefiningWriting from "../../Component/RedefiningWriting";
-import Slidershow from "../Slidershow/Slidershow";
-import HomeWhyWeEXist from "../../Component/HomeWhyDoWeExist";
-import Footer from "../FooterPage/Footer";
+// import SignUpNavbar from "../../Navbar/SignUpNavbar";
+// import RedefiningWriting from "../../Component/RedefiningWriting";
+// import Slidershow from "../Slidershow/Slidershow";
+// import HomeWhyWeEXist from "../../Component/HomeWhyDoWeExist";
+// import Footer from "../FooterPage/Footer";
 // import Circle from "../../Component/Circle";
+import Tips from "../Tips/Tips";
 
 const Homepage = () => {
   return (
-    <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 font-Medium w-screen">
+    <div className="">
       {/* bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 font-Medium h-screen */}
       {/* <Circle> */}
-      <SignUpNavbar />
+      <Tips />
+      {/* <SignUpNavbar />
       <RedefiningWriting />
       <Slidershow />
       <HomeWhyWeEXist />
-      <Footer />
+      <Footer /> */}
       {/* </Circle> */}
     </div>
   );

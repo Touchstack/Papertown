@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { NavBarDropdown } from "./NavBarDropdown";
 import { NewsDropdown } from "./NewsDropdown";
 import AppLogo from "../assets/Images/Logo.svg";
@@ -8,8 +6,6 @@ import { useLocation } from "react-router-dom";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 
 const Navbar = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const navigate = useNavigate();
   const hidden = "hidden"; //show or hide navbar
   const [ariaExpanded, setAriaExpanded] = useState("false"); //expanded or collapsed state
   const [showMenu, setShowMenu] = useState(true);
