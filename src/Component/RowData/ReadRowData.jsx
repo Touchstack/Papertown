@@ -43,6 +43,15 @@ const articles = [
     contentPreview: 'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.',
     image: cricleBg,
   },
+  {
+    id: 5,
+    category: 'Fiction',
+    date: '23rd January, 2023',
+    title: 'Repetitive sounds of the echo',
+    author: 'Enoch Charway',
+    contentPreview: 'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.',
+    image: cricleBg,
+  },
 ];
 
 
@@ -88,7 +97,7 @@ ArticleCard.propTypes = {
 
 // Individual Articles List Component 
 const ArticlesList = ({ articles }) => (
-  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[10px] lg:gap-[5px]">
+  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[10px] lg:gap-[10px]">
     {articles.map((article) => (
       <ArticleCard key={article.id} {...article} />
     ))}
