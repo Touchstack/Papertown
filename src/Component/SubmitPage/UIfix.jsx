@@ -1,4 +1,3 @@
- import React from 'react'
 import Vector from "../../assets/Images/Vector.png";
 import Vector1 from "../../assets/Images/Vector1.png";
 import Vector2 from "../../assets/Images/Vector2.png";

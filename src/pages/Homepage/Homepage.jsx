@@ -7,12 +7,13 @@ import Footer from "../FooterPage/Footer";
 // import Circle from "../../Component/Circle";
 
 const Homepage = () => {
+
   return (
     <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 font-Medium h-screen pt-10">
       {/* bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 font-Medium h-screen */}
       {/* <Circle> */}
       {/* <SignUpNavbar /> */}
-      <GeneralNav color="white" btnColor="white" />
+      <GeneralNav color="white" btnColor="white"/>
       <RedefiningWriting />
       <Slidershow />
       <HomeWhyWeEXist />
