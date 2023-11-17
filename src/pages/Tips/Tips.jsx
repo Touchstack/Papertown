@@ -299,7 +299,7 @@ function Tips() {
                   </div>
                   {/* card section end */}
                 </div>
-                <div className="flex justify-center mt-10">
+                <div className="flex justify-center mt-10 mb-10">
                   <button className="border-[1px] leading-8 border-[#52B4AE] text-[#52B4AE] font-bold rounded-3xl text-[20px] w-[145px] h-[50px] mx-auto">
                     Load more
                   </button>
