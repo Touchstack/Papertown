@@ -1,4 +1,3 @@
-import React from "react";
 import BackgroundImg from "../assets/Images/Background.png";
 import Rectangle from "../assets/Images/Rectangle.png";
 

@@ -4,6 +4,7 @@ import AppLogo from "../assets/Images/Logo.svg";
 import EllipsePic from "../assets/Images/Ellipse.png";
 import { useLocation } from "react-router-dom";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
+import { useState } from "react";
 
 const Navbar = () => {
   const hidden = "hidden"; //show or hide navbar
