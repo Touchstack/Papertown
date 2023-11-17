@@ -265,7 +265,7 @@ const SubmitSignUpNavbar = () => {
                       >
                         Write
                         <svg
-                          className="mr-1 ml-1 h-5 w-5 mt-1 text-white"
+                          className="mr-1 ml-1 h-5 w-5 mt-1 text-black"
                           viewBox="0 0 20 20"
                           fill="currentColor"
                           aria-hidden="true"

@@ -1,20 +1,21 @@
 import React from 'react'
 import SubmitComponent from '../../Component/SubmitPage/SubmitComponent'
 import YellowBulbs from "../../assets/Images/bulb.png"
-import Footer from '../FooterPage/Footer'
+import Footer from '../../Component/Footer'
 import SubmitBg from '../../Component/SubmitPage/SubmitBg'
 import SubmitSignUpNavbar from "../../Component/SubmitPage/SubmitSignUpNavbar"
 
 
 const SubmitPage = () => {
   return (
-    <div className='bg-white '>
+    <div className=''>
       <div className="bg-white bg-opacity-30 text-black"><br/>
       <SubmitSignUpNavbar/>
       
       </div>
       <SubmitBg/>
-        <div className=" flex-col text-black mt-40 text-center items-center h-144px w-734px">
+        <div className="flex-col text-black mt-40 text-center items-center h-144px w-734px">
+        
             <h1 className="flex-col font-Bold lg:text-5xl md:text-4xl text-3xl justify-center mt-10" >Submit your personal <p>write-ups for review</p>
             </h1>
             
@@ -54,4 +55,4 @@ const SubmitPage = () => {
   )
 }
 
-export default SubmitPage
+export default SubmitPage;
