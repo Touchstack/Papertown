@@ -4,7 +4,7 @@ import Rectangle from "../assets/Images/Rectangle.png";
 
 const RedefiningWriting = () => {
   return (
-    <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 mt-12">
+    <div className="">
       <div className="lg:py-4 md:py-3 sm:py-2 py-4 px-2">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-y-4">

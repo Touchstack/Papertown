@@ -1,5 +1,5 @@
 import { useState, Fragment } from "react";
-import Modal from "../Component/Modal";
+import Modal from "../Component/Modal/Modal";
 //import { useNavigate } from "react-router-dom";
 import { NavBarDropdown } from "./NavBarDropdown";
 import { NewsDropdown } from "./NewsDropdown";

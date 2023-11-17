@@ -3,6 +3,7 @@ import Homepage from "./pages/Homepage/Homepage.jsx";
 import ReactDOM from "react-dom/client";
 import ErrorPage from "./pages/ErrorPage/ErrorPage.jsx";
 import Readpage from "./pages/ReadPage/Readpage.jsx";
+import SideNav from "./Component/SideNav.jsx";
 import PressClubPage from "./pages/PressClubPage/PressClubPage.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -12,6 +13,7 @@ const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
   { path: "/submit", element: <SubmitPage />, errorElement: <ErrorPage /> },
   { path: "/read", element: <Readpage />, errorElement: <ErrorPage /> },
+  { path: "/nav", element: <SideNav />, errorElement: <ErrorPage /> },
   {
     path: "/pressclub",
     element: <PressClubPage />,

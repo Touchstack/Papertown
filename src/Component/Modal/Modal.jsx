@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from 'prop-types';
 
 const Modal = ({ isVisible, onClose, children }) => {
   if (!isVisible) return null;
@@ -23,5 +23,13 @@ const Modal = ({ isVisible, onClose, children }) => {
     </div>
   );
 };
+
+// Correct way to define PropTypes
+Modal.propTypes = {
+  isVisible: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
+};
+
 
 export default Modal;
