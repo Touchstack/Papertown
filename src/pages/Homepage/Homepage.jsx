@@ -5,13 +5,13 @@ import Slidershow from "../Slidershow/Slidershow";
 import HomeWhyWeEXist from "../../Component/HomeWhyDoWeExist";
 import Footer from "../FooterPage/Footer";
 // import Circle from "../../Component/Circle";
-import Tips from "../Tips/Tips";
+// import Tips from "../Tips/Tips";
 
 const Homepage = () => {
   return (
     <div className="">
       {/* bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 font-Medium h-screen */}
-      <Tips />
+      {/* <Tips /> */}
       <GeneralNav color="white" btnColor="white" bgColor="transparent" />
       <RedefiningWriting />
       <Slidershow />
