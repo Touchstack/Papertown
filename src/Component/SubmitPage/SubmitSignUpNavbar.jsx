@@ -1,6 +1,6 @@
-import { useState, useEffect, Fragment } from "react";
-import Modal from "../../Component/Modal";
-import { useNavigate } from "react-router-dom";
+import { useState, Fragment } from "react";
+import Modal from "../Modal/Modal";
+//import { useNavigate } from "react-router-dom";
 import { NavBarDropdown } from "../../Navbar/NavBarDropdown";
 import { NewsDropdown } from "../../Navbar/NewsDropdown";
 import AppLogo from "../../assets/Images/Logo.svg";
@@ -8,8 +8,8 @@ import { useLocation } from "react-router-dom";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 
 const SubmitSignUpNavbar = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const navigate = useNavigate();
+ // const [currentIndex, setCurrentIndex] = useState(0);
+ // const navigate = useNavigate();
   const hidden = "hidden"; //show or hide navbar
   const [ariaExpanded, setAriaExpanded] = useState("false"); //expanded or collapsed state
   const [showMenu, setShowMenu] = useState(true);
@@ -439,14 +439,14 @@ const SubmitSignUpNavbar = () => {
               <path
                 d="M33.5791 78.5622V75.9666C33.5791 67.3653 40.772 60.3926 49.6449 60.3926H60.3554C69.2283 60.3926 76.4212 67.3653 76.4212 75.9666V78.5622"
                 stroke="#E1E1E1"
-                stroke-width="6"
-                stroke-linecap="round"
+                strokeWidth="6"
+                strokeLinecap="round"
               />
               <path
                 d="M55.0015 52.6071C49.0863 52.6071 44.291 47.9586 44.291 42.2244C44.291 36.4903 49.0863 31.8418 55.0015 31.8418C60.9167 31.8418 65.7121 36.4903 65.7121 42.2244C65.7121 47.9586 60.9167 52.6071 55.0015 52.6071Z"
                 stroke="#E1E1E1"
-                stroke-width="6"
-                stroke-linecap="round"
+                strokeWidth="6"
+                strokeLinecap="round"
               />
             </svg>
           </div>
