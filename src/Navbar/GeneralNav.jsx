@@ -8,7 +8,7 @@ import LogInModal from '../Component/Modal/LogInModal';
 import JoinUSModal from '../Component/Modal/JoinUSModal';
 import { useNavigate } from 'react-router-dom'
 
-const GeneralNav = ({ color, btnColor }) => {
+const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [Dropdown, setDropdown] = useState(false);
   const [showLogInModal, setShowLogInModal] = useState(false);
@@ -23,7 +23,9 @@ const GeneralNav = ({ color, btnColor }) => {
   // Define prop types
   GeneralNav.propTypes = {
     color: PropTypes.string.isRequired,
-    btnColor: PropTypes.string.isRequired
+    btnColor: PropTypes.string.isRequired,
+    bgColor: PropTypes.string.isRequired,
+    bgShadow: PropTypes.string,
   };
 
 
@@ -40,6 +42,15 @@ const GeneralNav = ({ color, btnColor }) => {
     white: "border-white"
   }
 
+  const bgcolorClasses = {
+      transparent: "bg-white-transparent",
+      white: 'bg-white',
+  }
+
+  const shadowClasses = {
+    shadow: "shadow-custom backdrop-blur-custom"
+  }
+
   const handleShowDropdown = () => {
     setShowDropdown(!showDropdown);
     setDropdown(false); // Close the other dropdown
@@ -49,13 +60,16 @@ const GeneralNav = ({ color, btnColor }) => {
     setDropdown(!Dropdown);
     setShowDropdown(false); // Close the other dropdown
   };
+  
   // Determine the appropriate class to apply
   const txColorClass = txtcolorClasses[color] || "text-gray-500"; // Default color
   const btColorClass = btncolorClasses[btnColor] || "border-white"; // Default button color
+  const bgColorClass = bgcolorClasses[bgColor] || "bg-white"; // Default BG color
+  const shadowClass = shadowClasses[bgShadow] || ""; // Default Shadow
 
   return (
     <>
-    <nav className="flex container mx-auto px-2 text-center font-Regular rounded-full max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-3 bg-white-transparent">
+    <nav className={`flex container mx-auto px-2 text-center font-Regular rounded-full max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-3 ${bgColorClass} ${shadowClass}`}>
     <div className="container md:pl-25 flex justify-between items-center m-auto">
       <a
         href="/"
@@ -156,10 +170,12 @@ const GeneralNav = ({ color, btnColor }) => {
           </button>
         </ul>
       </div>
-
+       
+       {/*Humberg button*/}
       <svg xmlns="http://www.w3.org/2000/svg" width="70" height="30" viewBox="0 0 25 25" fill="none" onClick={handleClick} className='md:hidden'>
-      <path d="M3.83301 12.6248H21.833M3.83301 6.62476H21.833M9.83301 18.6248H21.833" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M3.83301 12.6248H21.833M3.83301 6.62476H21.833M9.83301 18.6248H21.833" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
+
     </div>
   </nav>
  
