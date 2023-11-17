@@ -1,7 +1,7 @@
 import React from 'react'
 import SubmitComponent from '../../Component/SubmitPage/SubmitComponent'
 import YellowBulbs from "../../assets/Images/bulb.png"
-import Footer from '../../Component/Footer'
+import Footer from "../FooterPage/Footer"
 import SubmitBg from '../../Component/SubmitPage/SubmitBg'
 import SubmitSignUpNavbar from "../../Component/SubmitPage/SubmitSignUpNavbar"
 

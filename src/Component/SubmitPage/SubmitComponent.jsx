@@ -1,6 +1,6 @@
 
 import UIfix from '../../Component/SubmitPage/UIfix';
-import ProfilePicture from "../../assets/unsplash_4LunKr1gTd8.png"
+import ProfilePicture from "../../assets/Images/child1.png"
 
 /*const FileInput = () => {
     const handleFileChange = (event) => {
