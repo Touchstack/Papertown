@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Footer from "../FooterPage/Footer";
-import Navbar from "../../Navbar/Navbar";
+import GeneralNav from "../../Navbar/GeneralNav";
 import { CiSliderHorizontal } from "react-icons/ci";
 const tabsData = [
   { id: "all", label: "All" },
@@ -19,7 +19,9 @@ function Tips() {
 
   return (
     <div>
-      <Navbar />
+      <div className="pt-10">
+        <GeneralNav bgColor="transparent" bgShadow="shadow" btnColor="black" />
+      </div>
       <div className="mt-10 md:ml-20  font-Bold">
         <div className="ml-3">
           <span className="md:text-5xl text-[36px]">
@@ -29,7 +31,7 @@ function Tips() {
         {/* Tab and pill section start  */}
         <div className="container mt-8 ">
           <div className="">
-            <div className="flex mb-4">
+            <div className="md:flex grid grid-cols-3 gap-2 mb-4">
               {/* Tabs */}
               {tabsData.map((tab) => (
                 <div
@@ -44,8 +46,8 @@ function Tips() {
                   {tab.label}
                 </div>
               ))}
-              <div className="ml-auto float-right break-word">
-                <button className="flex ml-auto justify-center items-center text-grad-400 rounded-3xl py-2 px-6 text-lg border-2 border-grad-900 font-Bold text-center  ">
+              <div className="md:ml-[510px] md:flex md:justify-end">
+                <button className="flex  gap-5 justify-center items-center text-grad-400 rounded-3xl py-2 px-6 text-lg border-2 border-grad-900 font-Bold text-center  ">
                   <CiSliderHorizontal />
                   Filter
                 </button>
@@ -299,8 +301,8 @@ function Tips() {
                   </div>
                   {/* card section end */}
                 </div>
-                <div className="flex justify-center mt-10 mb-10">
-                  <button className="border-[1px] leading-8 border-[#52B4AE] text-[#52B4AE] font-bold rounded-3xl text-[20px] w-[145px] h-[50px] mx-auto">
+                <div className="flex items-center justify-center mt-10 mb-10">
+                  <button className="border-[1px] leading-8 border-[#52B4AE] text-[#52B4AE] font-bold rounded-3xl text-[20px] w-[145px] h-[50px]">
                     Load more
                   </button>
                 </div>

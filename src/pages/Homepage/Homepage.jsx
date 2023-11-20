@@ -5,20 +5,17 @@ import Slidershow from "../Slidershow/Slidershow";
 import HomeWhyWeEXist from "../../Component/HomeWhyDoWeExist";
 import Footer from "../FooterPage/Footer";
 // import Circle from "../../Component/Circle";
-import Tips from "../Tips/Tips";
-import PromptsPage from "../PromptsPage/PromptsPage";
 
 const Homepage = () => {
   return (
-    <div className="">
+    <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 font-Medium h-screen">
       {/* bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 font-Medium h-screen */}
-      {/* <Tips /> */}
-      <PromptsPage />
-      {/* <GeneralNav color="white" btnColor="white" bgColor="transparent" />
+
+      <GeneralNav color="white" btnColor="white" bgColor="transparent" />
       <RedefiningWriting />
       <Slidershow />
       <HomeWhyWeEXist />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 };

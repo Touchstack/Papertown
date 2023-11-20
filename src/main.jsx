@@ -8,12 +8,16 @@ import PressClubPage from "./pages/PressClubPage/PressClubPage.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SubmitPage from "./pages/SubmitPage/SubmitPage.jsx";
+import PromptsPage from "./pages/PromptsPage/PromptsPage.jsx";
+import Tips from "./pages/Tips/Tips.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
   { path: "/submit", element: <SubmitPage />, errorElement: <ErrorPage /> },
   { path: "/read", element: <Readpage />, errorElement: <ErrorPage /> },
   { path: "/nav", element: <SideNav />, errorElement: <ErrorPage /> },
+  { path: "/tips", element: <Tips />, errorElement: <ErrorPage /> },
+  { path: "/prompt", element: <PromptsPage />, errorElement: <ErrorPage /> },
   {
     path: "/pressclub",
     element: <PressClubPage />,
