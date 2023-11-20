@@ -112,7 +112,7 @@ const SubmitComponent = () => {
             Dont take our word for it. Hear what our past and current writers
             have to say
           </div>
-          <div className="text-center sm:text-left">
+          <div className="text-center sm:text-left inline-block mt-3">
             <p className="text-sm font-Regular">
               Writers will identify their favorite sensory memories and transfer
               them to a visual heart map. Writers will identify their favorite

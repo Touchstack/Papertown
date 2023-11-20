@@ -1,17 +1,16 @@
 import React from 'react'
 import SubmitComponent from '../../Component/SubmitPage/SubmitComponent'
 import YellowBulbs from "../../assets/Images/bulb.png"
-
 import SubmitBg from '../../Component/SubmitPage/SubmitBg'
-import SubmitSignUpNavbar from "../../Component/SubmitPage/SubmitSignUpNavbar"
 import Footer from '../FooterPage/Footer'
+import SubmitGeneralNav from '../../Component/SubmitPage/SubmitGeneralNav'
 
 
 const SubmitPage = () => {
   return (
     <div className=''>
-      <div className="bg-white bg-opacity-30 text-black"><br/>
-      <SubmitSignUpNavbar/>
+      <div className="pt-10"><br/>
+      <SubmitGeneralNav/>
       
       </div>
       <SubmitBg/>
@@ -28,7 +27,7 @@ const SubmitPage = () => {
             <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 gap-4 lg:px-24 mb-10 ">
         <div className="">
           <h2 className="text-black text-[42px] py-5 font-Bold text-center ">
-    Guidlines for submission
+    Guidelines for submission
           </h2><br/>
           <p className="font-Medium">Guide 1</p><br/>
          <p className="font-Regular "> Writers will identify their favorite sensory memories and transfer them to a visual heart map.</p><br/>
