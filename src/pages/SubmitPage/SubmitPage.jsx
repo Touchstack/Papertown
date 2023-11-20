@@ -1,4 +1,5 @@
 
+
 import SubmitComponent from '../../Component/SubmitPage/SubmitComponent'
 import YellowBulbs from "../../assets/Images/bulb.png"
 import SubmitBg from '../../Component/SubmitPage/SubmitBg'
@@ -6,12 +7,15 @@ import Footer from '../FooterPage/Footer'
 import SubmitGeneralNav from '../../Component/SubmitPage/SubmitGeneralNav'
 
 
+
 const SubmitPage = () => {
   return (
+
     <div className=''>
       <div className="pt-10"><br/>
       <SubmitGeneralNav/>
       
+
       </div>
       <SubmitBg/>
         <div className="flex-col text-black mt-40 text-center items-center h-144px w-734px">

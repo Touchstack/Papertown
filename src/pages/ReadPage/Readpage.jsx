@@ -1,14 +1,14 @@
-import SignUpNavbar from '../../Navbar/SignUpNavbar';
 import Readbg from "../../assets/Images/Readbg.png";
 import readSplash from "../../assets/Images/readSplash.png"
 import Footer from '../FooterPage/Footer';
 import ReadRowData from '../../Component/RowData/ReadRowData';
+import GeneralNav from '../../Navbar/GeneralNav';
 
 const Readpage = () => {
   return (
     <div className="bg-custom-gradient bg-no-repeat lg:bg-cover md:h-[722px] h-[500px]" style={{ backgroundImage: `url(${Readbg})`}}>
       <div className='pt-10'>
-         <SignUpNavbar />
+        <GeneralNav btnColor="black" bgShadow="shadow"/>
      </div>
 
       {/*Hero Text*/}
