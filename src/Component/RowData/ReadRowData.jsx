@@ -3,57 +3,7 @@ import PropTypes from 'prop-types';
 import search from "../../assets/Images/ri_search-line.png";
 import vector from "../../assets/Images/subVector.png"
 import target from "../../assets/Images/mingcute.png"
-import cricleBg from "../../assets/Images/Background.png"
-
-// Example data array
-const articles = [
-  {
-    id: 1,
-    category: 'Fiction',
-    date: '23rd January, 2023',
-    title: 'Repetitive sounds of the echo',
-    author: 'Enoch Charway',
-    contentPreview: 'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.',
-    image: cricleBg,
-  },
-  {
-    id: 2,
-    category: 'Fiction',
-    date: '23rd January, 2023',
-    title: 'Repetitive sounds of the echo',
-    author: 'Enoch Charway',
-    contentPreview: 'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.',
-    image: cricleBg,
-  },
-  {
-    id: 3,
-    category: 'Fiction',
-    date: '23rd January, 2023',
-    title: 'Repetitive sounds of the echo',
-    author: 'Enoch Charway',
-    contentPreview: 'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.',
-    image: cricleBg,
-  }, 
-  {
-    id: 4,
-    category: 'Fiction',
-    date: '23rd January, 2023',
-    title: 'Repetitive sounds of the echo',
-    author: 'Enoch Charway',
-    contentPreview: 'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.',
-    image: cricleBg,
-  },
-  {
-    id: 5,
-    category: 'Fiction',
-    date: '23rd January, 2023',
-    title: 'Repetitive sounds of the echo',
-    author: 'Enoch Charway',
-    contentPreview: 'It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.',
-    image: cricleBg,
-  },
-];
-
+import { articles } from '../../../ConstantData';
 
 
 // Single Article Card Component
