@@ -2,6 +2,7 @@ import { useState } from "react";
 import Footer from "../FooterPage/Footer";
 import Navbar from "../../Navbar/Navbar";
 import { CiSliderHorizontal } from "react-icons/ci";
+import ArrowNew from "../../assets/Images/arrownew.png";
 const tabsData = [
   { id: "all", label: "All" },
   { id: "sparks", label: "Sparks" },
@@ -10,7 +11,7 @@ const tabsData = [
   { id: "videos", label: "Videos" },
 ];
 
-function Tips() {
+function PromptsPage() {
   const [activeTab, setActiveTab] = useState(tabsData[0].id);
 
   const changeTab = (tabId) => {
@@ -19,12 +20,51 @@ function Tips() {
 
   return (
     <div>
-      <Navbar />
+      <div className="bg-[#FCF7E5] w-[1440px] h-[866px]">
+        <div>
+          {/* Nvavbar section start */}
+          <div>
+            <div className="  <Navbar />">
+              <Navbar />
+              {/* Nvavbar section end */}
+              <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[110px] h-[36px]">
+                Featured spark
+              </button>
+              <div className=" ">
+                <div>
+                  <h5 className="text-[72px] font-Bold mb-5">
+                    The pandemic effects on student learning
+                  </h5>
+                  <p className="text-[16px] mb-10">
+                    Submit your articles by 10 April, 2023
+                  </p>
+                  <button className=" leading-8 bg-[#52B4AE] text-white font-bold rounded-3xl text-[20px] w-[222px] h-[50px]">
+                    Submit your writing
+                  </button>
+                </div>
+                {/* crad image section start  */}
+                <div className="">
+                  <div className="bg-[#FFFFFF]  rounded-[25px] w-[488px] h-[113px] px-10 py-4 ">
+                    <span className=" flex text-[20px] font-[800]">
+                      <img src={ArrowNew} alt="" className="mr-2" />
+                      View Submission Guidelines
+                    </span>
+                    <p>
+                      It has survived not only five centuries, but also the leap
+                      into electronic typesetting, remaining essentially
+                      unchanged
+                    </p>
+                  </div>
+                </div>
+                {/* crad image section end  */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="mt-10 md:ml-20  font-Bold">
         <div className="ml-3">
-          <span className="md:text-5xl text-[36px]">
-            Tips for writing great pieces
-          </span>
+          <span className="md:text-5xl text-[36px]">Writing prompts</span>
         </div>
         {/* Tab and pill section start  */}
         <div className="container mt-8 ">
@@ -320,4 +360,4 @@ function Tips() {
   );
 }
 
-export default Tips;
+export default PromptsPage;

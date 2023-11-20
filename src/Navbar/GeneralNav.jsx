@@ -9,7 +9,6 @@ import JoinUSModal from '../Component/Modal/JoinUSModal';
 import SideNav from '../Component/SideNav';
 import "../Style/Style.css"
 
-
 const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [Dropdown, setDropdown] = useState(false);
