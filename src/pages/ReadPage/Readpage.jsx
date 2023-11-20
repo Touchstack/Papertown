@@ -8,7 +8,7 @@ const Readpage = () => {
   return (
     <div className="bg-custom-gradient bg-no-repeat lg:bg-cover md:h-[722px] h-[500px]" style={{ backgroundImage: `url(${Readbg})`}}>
       <div className='pt-10'>
-        <GeneralNav btnColor="black"/>
+        <GeneralNav btnColor="black" bgShadow="shadow"/>
      </div>
 
       {/*Hero Text*/}
