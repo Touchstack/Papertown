@@ -1,36 +1,40 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types'; // Import PropTypes
-import AppLogo from "../assets/Images/Logo.svg";
-import {FaChevronDown, FaBars} from "react-icons/fa";
-import { NavBarDropdown } from "./NavBarDropdown";
-import { NewsDropdown } from "./NewsDropdown";
-import LogInModal from '../Component/Modal/LogInModal';
-import JoinUSModal from '../Component/Modal/JoinUSModal';
-import SideNav from '../Component/SideNav';
-import "../Style/Style.css"
+import AppLogo from "../../assets/Images/Logo.svg";
+import {FaChevronDown} from "react-icons/fa";
+import { NavBarDropdown } from "../../Navbar/NavBarDropdown";
+import { NewsDropdown } from "../../Navbar/NewsDropdown";
+import LogInModal from '../../Component/Modal/LogInModal';
+import JoinUSModal from '../../Component/Modal/JoinUSModal';
+import { useNavigate } from 'react-router-dom'
 
-const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
+const SubmitGeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [Dropdown, setDropdown] = useState(false);
   const [showLogInModal, setShowLogInModal] = useState(false);
   const [showJoinUsModal, setShowJoinUsModal] = useState(false);
-  const [sideNav, setSideNav] = useState(false);
- 
 
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+     navigate('/nav')
+  }
   
   // Define prop types
-  GeneralNav.propTypes = {
+  SubmitGeneralNav.propTypes = {
     color: PropTypes.string.isRequired,
     btnColor: PropTypes.string.isRequired,
     bgColor: PropTypes.string.isRequired,
-    bgShadow: PropTypes.string.isRequired,
+    bgShadow: PropTypes.string,
   };
 
 
   // Define a mapping of color classes
   const txtcolorClasses = {
     white: "text-white",
-    black: "text-black"
+    red: "text-red-500",
+    green: "text-green-500",
+    // Add more colors as needed
   };
 
   const btncolorClasses = {
@@ -39,13 +43,12 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
   }
 
   const bgcolorClasses = {
-    white: "bg-white",
-    transparent: "bg-white-transparent",
-    black: "bg-black",
+      transparent: "bg-white-transparent",
+      white: 'bg-white',
   }
 
-  const bgShadowClasses = {
-    shadow: "custom-shadow"
+  const shadowClasses = {
+    shadow: "shadow-custom backdrop-blur-custom"
   }
 
   const handleShowDropdown = () => {
@@ -57,30 +60,16 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
     setDropdown(!Dropdown);
     setShowDropdown(false); // Close the other dropdown
   };
-
-  const toggleLoginModal = () => {
-    setShowLogInModal(!showLogInModal);
-    setSideNav(false); // Close SideNav when opening LoginModal
-  };
-
-  const toggleJoinModal = () => {
-    setShowJoinUsModal(!showJoinUsModal);
-    setSideNav(false); // Close SideNav when opening LoginModal
-  };
-
-  const toggleCloseNav = () => {
-    setSideNav(false);
-  }
   
   // Determine the appropriate class to apply
-  const txColorClass = txtcolorClasses[color] || "text-gray-500"; // Default color
-  const btColorClass = btncolorClasses[btnColor] || "border-white"; // Default button color
-  const bgColorClass =  bgcolorClasses[bgColor] || "bg-white-transparent";
-  const bgShadowClass = bgShadowClasses[bgShadow] || " "
+  const txColorClass = txtcolorClasses[color] || "text-black"; // Default color
+  const btColorClass = btncolorClasses[btnColor] || "border-black"; // Default button color
+  const bgColorClass = bgcolorClasses[bgColor] || "bg-white"; // Default BG color
+  const shadowClass = shadowClasses[bgShadow] || ""; // Default Shadow
 
   return (
     <>
-    <nav className={`flex container mx-auto px-2 text-center font-Regular rounded-full max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-3 ${bgColorClass} ${bgShadowClass}`}>
+    <nav className={`flex container mx-auto px-2 text-center font-Regular backdrop-blur-10 rounded-full max-w-6xl shadow-custom lg:pt-2 md:pt-2 sm:px-4 py-3 ${bgColorClass} ${shadowClass}`}>
     <div className="container md:pl-25 flex justify-between items-center m-auto">
       <a
         href="/"
@@ -98,8 +87,8 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
       >
         <ul className="md:flex flex-col text-lg p-4 md:p-0 mt-4 border text-center rounded-lg md:shadow-none sm:shadow-lg shadow-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 hidden">
         <li className="relative">
-          <div className={`list-none flex gap-1 items-center ${txColorClass} cursor-pointer`} onClick={handleDropdown}>
-            Write <FaChevronDown className='text-[20px] pt-2'/>
+          <div className={`list-none flex gap-1 text-black items-center ${txColorClass} cursor-pointer`} onClick={handleDropdown}>
+            Write <FaChevronDown className='text-[20px] pt-2 text-black'/>
           </div>
           {Dropdown && 
             <div className="absolute top-full left-0">
@@ -171,7 +160,7 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
             className={`border-[1px] ${btColorClass} ${txColorClass} px-7 p-3 mr-4 rounded-full`}
             onClick={() => setShowLogInModal(true)} 
           >
-            login
+            Login
           </button>
           <button
             className="bg-[#52B4AE] text-[#FFF] px-9 p-3 rounded-full"
@@ -181,17 +170,21 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
           </button>
         </ul>
       </div>
-      
-       {/*Humberg button*/}
-       <FaBars className={`md:hidden w-[70px] h-[30px] ${txColorClass}`} onClick={() => setSideNav(!sideNav)}/>
        
+       {/*Humberg button*/}
+      <svg xmlns="http://www.w3.org/2000/svg" width="70" height="30" viewBox="0 0 25 25" fill="none" onClick={handleClick} className='md:hidden'>
+        <path d="M3.83301 12.6248H21.833M3.83301 6.62476H21.833M9.83301 18.6248H21.833" stroke="black" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+
     </div>
   </nav>
-   {sideNav && <SideNav onLoginClick={toggleLoginModal} onJoinClick={toggleJoinModal} onCloseClick={toggleCloseNav} />}
+ 
    {showLogInModal && <LogInModal isVisible={showLogInModal} onClose={() => setShowLogInModal(false)} />}
    {showJoinUsModal && <JoinUSModal isVisible={showJoinUsModal} onClose={() => setShowJoinUsModal(false)} />}
    </>
   );
 };
 
-export default GeneralNav;
+export default SubmitGeneralNav;
+
+
