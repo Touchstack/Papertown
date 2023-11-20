@@ -22,7 +22,7 @@ function Tips() {
       <div className="pt-10">
         <GeneralNav bgColor="transparent" bgShadow="shadow" btnColor="black" />
       </div>
-      <div className="mt-10 md:ml-20  font-Bold">
+      <div className="md:mt-[99px] mt-10 md:ml-20  font-Bold">
         <div className="ml-3">
           <span className="md:text-5xl text-[36px]">
             Tips for writing great pieces
