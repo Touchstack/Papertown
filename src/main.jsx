@@ -15,9 +15,10 @@ const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
   { path: "/submit", element: <SubmitPage />, errorElement: <ErrorPage /> },
   { path: "/read", element: <Readpage />, errorElement: <ErrorPage /> },
-  { path: "/nav", element: <SideNav />, errorElement: <ErrorPage /> },
   { path: "/tips", element: <Tips />, errorElement: <ErrorPage /> },
   { path: "/prompt", element: <PromptsPage />, errorElement: <ErrorPage /> },
+  { path: "/nav", element: <SideNav />, errorElement: <ErrorPage /> },
+
   {
     path: "/pressclub",
     element: <PressClubPage />,
