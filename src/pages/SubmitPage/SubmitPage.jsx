@@ -1,4 +1,4 @@
-import React from 'react'
+
 import SubmitComponent from '../../Component/SubmitPage/SubmitComponent'
 import YellowBulbs from "../../assets/Images/bulb.png"
 import SubmitBg from '../../Component/SubmitPage/SubmitBg'
@@ -24,9 +24,9 @@ const SubmitPage = () => {
             </div>
             </div>
             <div>
-            <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 gap-4 lg:px-24 mb-10 ">
+            <div className="grid lg:grid-cols-2 md:grid-cols-1 grid-cols-1 gap-4 lg:px-24 mb-10 mt-20">
         <div className="">
-          <h2 className="text-black text-[42px] py-5 font-Bold text-center ">
+          <h2 className="text-black text-[42px] py-5 w-[437px] font-Bold text-center ">
     Guidelines for submission
           </h2><br/>
           <p className="font-Medium">Guide 1</p><br/>
@@ -39,7 +39,7 @@ const SubmitPage = () => {
 
         <div className="flex justify-center items-center mt-10">
          
-          <img className="bg-gradient-to-b from-yellow-500 to-white rounded-lg lg:h-full md:h-[400px] sm:h-[250px] md:mb-4 sm:mb-12"
+          <img className="bg-gradient-to-b from-yellow-500 to-white rounded-10xl lg:h-full md:h-[400px] sm:h-[250px] md:mb-4 sm:mb-12"
             src={YellowBulbs}
             alt="bulb.png"
           />

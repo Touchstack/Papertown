@@ -62,14 +62,14 @@ const SubmitGeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
   };
   
   // Determine the appropriate class to apply
-  const txColorClass = txtcolorClasses[color] || "text-gray-500"; // Default color
-  const btColorClass = btncolorClasses[btnColor] || "border-white"; // Default button color
+  const txColorClass = txtcolorClasses[color] || "text-black"; // Default color
+  const btColorClass = btncolorClasses[btnColor] || "border-black"; // Default button color
   const bgColorClass = bgcolorClasses[bgColor] || "bg-white"; // Default BG color
   const shadowClass = shadowClasses[bgShadow] || ""; // Default Shadow
 
   return (
     <>
-    <nav className={`flex container mx-auto px-2 text-center font-Regular rounded-full max-w-6xl shadow-custom lg:pt-2 md:pt-2 sm:px-4 py-3 ${bgColorClass} ${shadowClass}`}>
+    <nav className={`flex container mx-auto px-2 text-center font-Regular backdrop-blur-10 rounded-full max-w-6xl shadow-custom lg:pt-2 md:pt-2 sm:px-4 py-3 ${bgColorClass} ${shadowClass}`}>
     <div className="container md:pl-25 flex justify-between items-center m-auto">
       <a
         href="/"
@@ -87,8 +87,8 @@ const SubmitGeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
       >
         <ul className="md:flex flex-col text-lg p-4 md:p-0 mt-4 border text-center rounded-lg md:shadow-none sm:shadow-lg shadow-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 hidden">
         <li className="relative">
-          <div className={`list-none flex gap-1 items-center ${txColorClass} cursor-pointer`} onClick={handleDropdown}>
-            Write <FaChevronDown className='text-[20px] pt-2'/>
+          <div className={`list-none flex gap-1 text-black items-center ${txColorClass} cursor-pointer`} onClick={handleDropdown}>
+            Write <FaChevronDown className='text-[20px] pt-2 text-black'/>
           </div>
           {Dropdown && 
             <div className="absolute top-full left-0">
