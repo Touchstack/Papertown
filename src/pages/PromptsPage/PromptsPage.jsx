@@ -22,13 +22,14 @@ function PromptsPage() {
   return (
     <div className="overflow-x-hidden overlow-y-scroll ">
       <div className="bg-[#FCF7E5] md:w-[1440px] h-[866px] ">
-        <div className="pt-10">
+        <div className="mx-[77px] text-center rounded-full max-w-6xl pt-10 px-4 py-1 ">
           <GeneralNav
             bgColor="transparent"
             bgShadow="shadow"
             btnColor="black"
           />
         </div>
+
         {/* Nvavbar section start */}
         <div className="md:flex md:flex-row md:mt-20 mt-10 md:flex items-center justify-center ">
           {/* Text section */}

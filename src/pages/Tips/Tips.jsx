@@ -19,15 +19,13 @@ function Tips() {
 
   return (
     <div>
-      <div className="pt-10">
+      <div className="mx-[77px] text-center rounded-full max-w-6xl pt-10 px-4 py-1 ">
         <GeneralNav bgColor="transparent" bgShadow="shadow" btnColor="black" />
       </div>
-      <div className="md:mt-[99px] mt-10 md:ml-20  font-Bold">
-        <div className="ml-3">
-          <span className="md:text-5xl text-[36px]">
-            Tips for writing great pieces
-          </span>
-        </div>
+      <div className="md:mt-[99px] mt-10 px-10 font-Bold">
+        <span className="md:text-5xl text-[36px]">
+          Tips for writing great pieces
+        </span>
         {/* Tab and pill section start  */}
         <div className="container mt-8 ">
           <div className="">
