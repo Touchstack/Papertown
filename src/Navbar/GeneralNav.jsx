@@ -73,7 +73,7 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
   }
   
   // Determine the appropriate class to apply
-  const txColorClass = txtcolorClasses[color] || "text-gray-500"; // Default color
+  const txColorClass = txtcolorClasses[color] || "text-black"; // Default color
   const btColorClass = btncolorClasses[btnColor] || "border-white"; // Default button color
   const bgColorClass =  bgcolorClasses[bgColor] || "bg-white-transparent";
   const bgShadowClass = bgShadowClasses[bgShadow] || " "
@@ -146,7 +146,7 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
                 : `${txColorClass}`
             }`}
           >
-            <a href="/" className="">
+            <a href="/publication" className="">
               Publications
             </a>
           </li>

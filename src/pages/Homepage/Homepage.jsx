@@ -11,11 +11,11 @@ import Footer from "../FooterPage/Footer";
 const Homepage = () => {
 
   return (
-    <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 font-Medium h-screen ">
+    <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 font-Medium h-screen pt-10">
       {/**/}
       {/* <Circle> */}
       {/* <SignUpNavbar /> */}
-      <GeneralNav color="white" btnColor="white"/>
+      <GeneralNav color="white" btnColor="white" bgColor="transparent"/>
       <RedefiningWriting />
       <Slidershow />
       <HomeWhyWeEXist />
