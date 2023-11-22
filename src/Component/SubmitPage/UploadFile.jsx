@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { TbFileUpload } from "react-icons/tb";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faUpload } from '@fortawesome/free-solid-svg-icons';
 
 const UploadFile = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -15,7 +16,7 @@ const UploadFile = () => {
         htmlFor="fileInput"
         className="hover:bg-blue-700 text-black font-Regular py-2 px-4 rounded inline-flex items-center"
       >
-        <TbFileUpload className="mr-2" />
+        {/* <FontAwesomeIcon icon={faUpload} className="mr-2" /> */}
         <span>{selectedFile ? "Upload Another File" : "Upload File"}</span>
       </label>
       <input

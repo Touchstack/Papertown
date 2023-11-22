@@ -20,37 +20,16 @@ function PromptsPage() {
   };
 
   return (
-    <div className="overflow-x-hidden overlow-y-scroll ">
-      <div className="bg-[#FCF7E5] md:w-[1440px] h-[866px] ">
-        <div className="mx-[77px] text-center rounded-full max-w-6xl pt-10 px-4 py-1 ">
-          <GeneralNav
-            bgColor="transparent"
-            bgShadow="shadow"
-            btnColor="black"
-          />
-        </div>
-
-        {/* Nvavbar section start */}
-        <div className="md:flex md:flex-row md:mt-20 mt-10 md:flex items-center justify-center ">
-          {/* Text section */}
-          <div
-            style={{
-              marginLeft: "30px",
-            }}
-          >
-            {/* Add "mr-8" for right margin */}
-            <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[110px] h-[36px]">
-              Featured spark
-            </button>
-            <div>
-              <h5 className="md:text-[72px] text-[36px] font-Bold  md:mb-5 mb-2 md:w-[600px] w-[300px]">
-                The pandemic effects on student learning
-              </h5>
-              <p className="text-[16px] md:mb-10  mb-5">
-                Submit your articles by 10 April, 2023
-              </p>
-              <button className="leading-8 mb-10 bg-[#52B4AE] text-white font-Bold rounded-3xl md:text-[20px] text-[16px] md:w-[222px] h-[50px] w-[190px]">
-                Submit your writing
+    <div>
+      <div className="bg-[#FCF7E5] w-[1440px] h-[866px]">
+        <div>
+          {/* Nvavbar section start */}
+          <div>
+            <div className="">
+              <GeneralNav />
+              {/* Nvavbar section end */}
+              <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[110px] h-[36px]">
+                Featured spark
               </button>
             </div>
           </div>

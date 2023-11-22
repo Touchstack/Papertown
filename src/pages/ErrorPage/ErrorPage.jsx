@@ -1,5 +1,5 @@
 import { useRouteError } from "react-router-dom";
-import GeneralNav from '../../Navbar/GeneralNav';
+import GeneralNav from "../../Navbar/GeneralNav";
 export default function ErrorPage() {
   const error = useRouteError();
   return (
