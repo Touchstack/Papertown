@@ -95,9 +95,9 @@ code {
   cursor: pointer;
 }
 
-.cardimage {
+/* .cardimage {
   background-image: url(../src/assets/Images/pexels-katerina-holmes-5905479\ 1.png);
-}
+} */
 
 @keyframes marquee {
   0% {

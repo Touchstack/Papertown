@@ -10,12 +10,17 @@ import PublicationsPage from "./pages/PublicationsPage/PublicationsPage.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SubmitPage from "./pages/SubmitPage/SubmitPage.jsx";
+import PromptsPage from "./pages/PromptsPage/PromptsPage.jsx";
+import Tips from "./pages/Tips/Tips.jsx";
 import SinglePublicationData from "./pages/PublicationsPage/SinglePublicationData.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
   { path: "/submit", element: <SubmitPage />, errorElement: <ErrorPage /> },
   { path: "/read", element: <Readpage />, errorElement: <ErrorPage /> },
+  { path: "/tips", element: <Tips />, errorElement: <ErrorPage /> },
+  { path: "/prompt", element: <PromptsPage />, errorElement: <ErrorPage /> },
+
   {
     path: "/pressclub",
     element: <PressClubPage />,
@@ -38,6 +43,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-      <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
