@@ -3,14 +3,13 @@ import YellowBulbs from "../../assets/Images/bulb.png";
 import Footer from "../FooterPage/Footer";
 import SubmitBg from "../../Component/SubmitPage/SubmitBg";
 // import { isMotionComponent } from 'framer-motion'
-import SubmitSignUpNavbar from "../../Component/SubmitPage/SubmitSignUpNavbar";
+import GeneralNav from "../../Navbar/GeneralNav";
 
 const SubmitPage = () => {
   return (
     <div className="">
-      <div className="bg-white bg-opacity-30 text-black">
-        <br />
-        <SubmitSignUpNavbar />
+      <div className="bg-white bg-opacity-30 text-black pt-12">
+        <GeneralNav color="black" btnColor="black" bgShadow="shadow" />
       </div>
       <SubmitBg />
       <div className="flex-col text-black mt-40 text-center items-center h-144px w-734px">

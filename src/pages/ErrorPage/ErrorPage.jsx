@@ -1,10 +1,10 @@
 import { useRouteError } from "react-router-dom";
-import Navbar from "../../Navbar/Navbar";
+import GeneralNav from "../../Navbar/GeneralNav";
 export default function ErrorPage() {
   const error = useRouteError();
   return (
     <div className="">
-      <Navbar />
+      <GeneralNav />
       <div className="flex flex-col justify-center items-center pt-24 pb-24 font-Regular">
         <h1 className="font-Bold text-6xl">Oops!</h1>
         <p className="text-xl text-slate-600 py-8 text-center">

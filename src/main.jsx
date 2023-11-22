@@ -5,6 +5,8 @@ import ErrorPage from "./pages/ErrorPage/ErrorPage.jsx";
 import Readpage from "./pages/ReadPage/Readpage.jsx";
 import SideNav from "./Component/SideNav.jsx";
 import PressClubPage from "./pages/PressClubPage/PressClubPage.jsx";
+import WhyWeExistPage from "./pages/WhyWeExistPage/WhyWeExistPage.jsx";
+import TeamDetails from "./Component/WhyWeExist/TeamDetails.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SubmitPage from "./pages/SubmitPage/SubmitPage.jsx";
@@ -17,6 +19,16 @@ const router = createBrowserRouter([
   {
     path: "/pressclub",
     element: <PressClubPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/whyweexist",
+    element: <WhyWeExistPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/teamdetails",
+    element: <TeamDetails />,
     errorElement: <ErrorPage />,
   },
 ]);
