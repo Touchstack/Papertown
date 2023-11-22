@@ -1,31 +1,51 @@
 import { useState } from 'react';
 import {FaXmark} from 'react-icons/fa6'
 import {FaChevronDown} from "react-icons/fa";
-import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { textPop, slideIn } from '../Animations';
+import PropTypes from 'prop-types';
 
-const SideNav = () => {
+
+
+const SideNav = ({ onLoginClick, onCloseClick, onJoinClick }) => {
+ 
+  SideNav.propTypes = {
+    onLoginClick: PropTypes.func,
+    onCloseClick: PropTypes.func,
+    onJoinClick: PropTypes.func,
+  }
 
   const [showWriteSubMenu, setShowWriteSubMenu] = useState(false);
   const [showNewsSubMenu, setShowNewsSubMenu] = useState(false);
 
+  //Context
+  
   const handleWriteClick = () => {
     setShowWriteSubMenu(!showWriteSubMenu);
+    setShowNewsSubMenu(false)
   };
 
   const handleNewsClick = () => {
     setShowNewsSubMenu(!showNewsSubMenu);
-  };
-
-  const navigate = useNavigate();
-
-  const handleClose = () => {
-    navigate('/'); // This will take the user back to the previous page
+    setShowWriteSubMenu(false)
   };
   
+ 
+  
   return (
-    <div style={{ backgroundColor: '#9650fb', height: '110vh', width: '100vw'}}>
+    <motion.div style={{ 
+      backgroundColor: '#9650fb', 
+      height: '100vh', // viewport height
+      width: '100vw', // viewport width
+      position: 'fixed', // fixed position
+      top: 0, // start from the top
+      left: 0, // start from the left
+      zIndex: 1000, // high z-index to overlay other content
+    }}
+     {...slideIn}
+    >
        <div className="w-screen h-[57px] bg-[#ffffff33] flex justify-end items-center">
-           <div className='w-[30px] h-[30px] rounded-[8px] border border-white flex items-center justify-center mr-5' onClick={handleClose}>
+           <div className='w-[30px] h-[30px] rounded-[8px] border border-white flex items-center justify-center mr-5' onClick={onCloseClick}>
               <FaXmark className='text-white'/>
            </div>
        </div>
@@ -68,20 +88,26 @@ const SideNav = () => {
 
         {/*Buttons*/}
         <div className='flex flex-col gap-[24px] justify-center items-center '>
-              <button
+              <motion.button {...textPop}
                 className="w-[280px] h-[50px] border border-white rounded-[30px] text-white"
+                onClick={onLoginClick} 
               >
                 Login
-              </button>
+              </motion.button>
 
-            <button
+            <motion.button {...textPop}
               className="w-[280px] h-[50px] bg-[#52B4AE] rounded-[30px] text-white"
+              onClick={onJoinClick}
             >
               Join Papertown
-            </button>
+            </motion.button>
       </div>
-   </div>
+   </motion.div>
   );
 };
+
+
+
+
 
 export default SideNav;

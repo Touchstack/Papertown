@@ -4,7 +4,7 @@ export default function ErrorPage() {
   const error = useRouteError();
   return (
     <div className="">
-      <GeneralNav />
+      <GeneralNav color="black" btnColor="black" bgShadow="shadow"/>
       <div className="flex flex-col justify-center items-center pt-24 pb-24 font-Regular">
         <h1 className="font-Bold text-6xl">Oops!</h1>
         <p className="text-xl text-slate-600 py-8 text-center">
