@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Footer from "../FooterPage/Footer";
-import Navbar from "../../Navbar/Navbar";
+import GeneralNav from "../../Navbar/GeneralNav";
 import { CiSliderHorizontal } from "react-icons/ci";
 import ArrowNew from "../../assets/Images/arrownew.png";
 const tabsData = [
@@ -24,8 +24,8 @@ function PromptsPage() {
         <div>
           {/* Nvavbar section start */}
           <div>
-            <div className="  <Navbar />">
-              <Navbar />
+            <div className="">
+              <GeneralNav />
               {/* Nvavbar section end */}
               <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[110px] h-[36px]">
                 Featured spark

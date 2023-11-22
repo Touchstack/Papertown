@@ -8,7 +8,7 @@ import LogInModal from '../Component/Modal/LogInModal';
 import JoinUSModal from '../Component/Modal/JoinUSModal';
 import SideNav from '../Component/SideNav';
 import "../Style/Style.css"
-
+ 
 const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [Dropdown, setDropdown] = useState(false);
@@ -16,7 +16,7 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
   const [showJoinUsModal, setShowJoinUsModal] = useState(false);
   const [sideNav, setSideNav] = useState(false);
  
-
+ 
   
   // Define prop types
   GeneralNav.propTypes = {
@@ -25,29 +25,31 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
     bgColor: PropTypes.string.isRequired,
     bgShadow: PropTypes.string.isRequired,
   };
-
-
+ 
+ 
   // Define a mapping of color classes
   const txtcolorClasses = {
     white: "text-white",
     black: "text-black"
   };
-
+ 
   const btncolorClasses = {
     black: "border-black",
     white: "border-white"
   }
-
+ 
   const bgcolorClasses = {
     white: "bg-white",
     transparent: "bg-white-transparent",
     black: "bg-black",
+    pink: "bg-[#FFD8FF]",
   }
-
+ 
   const bgShadowClasses = {
     shadow: "custom-shadow"
+     whyShadow: "box-shadow",
   }
-
+ 
   const handleShowDropdown = () => {
     setShowDropdown(!showDropdown);
     setDropdown(false); // Close the other dropdown
@@ -57,17 +59,17 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
     setDropdown(!Dropdown);
     setShowDropdown(false); // Close the other dropdown
   };
-
+ 
   const toggleLoginModal = () => {
     setShowLogInModal(!showLogInModal);
     setSideNav(false); // Close SideNav when opening LoginModal
   };
-
+ 
   const toggleJoinModal = () => {
     setShowJoinUsModal(!showJoinUsModal);
     setSideNav(false); // Close SideNav when opening LoginModal
   };
-
+ 
   const toggleCloseNav = () => {
     setSideNav(false);
   }
@@ -77,7 +79,7 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
   const btColorClass = btncolorClasses[btnColor] || "border-white"; // Default button color
   const bgColorClass =  bgcolorClasses[bgColor] || "bg-white-transparent";
   const bgShadowClass = bgShadowClasses[bgShadow] || " "
-
+ 
   return (
     <>
     <nav className={`flex container mx-auto px-2 text-center font-Regular rounded-full max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-3 ${bgColorClass} ${bgShadowClass}`}>
@@ -101,7 +103,7 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
           <div className={`list-none flex gap-1 items-center ${txColorClass} cursor-pointer`} onClick={handleDropdown}>
             Write <FaChevronDown className='text-[20px] pt-2'/>
           </div>
-          {Dropdown && 
+          {Dropdown &&
             <div className="absolute top-full left-0">
               <NavBarDropdown />
             </div>
@@ -154,7 +156,7 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
           <div className={`list-none flex gap-1 items-center ${txColorClass} cursor-pointer`} onClick={handleShowDropdown}>
             News <FaChevronDown className='text-[20px] pt-2'/>
           </div>
-          {showDropdown && 
+          {showDropdown &&
             <div className="absolute top-full left-0">
               <NewsDropdown />
             </div>
@@ -169,7 +171,7 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
         <ul className="md:flex items-center py-2 font-Regular text-lg hidden">
           <button
             className={`border-[1px] ${btColorClass} ${txColorClass} px-7 p-3 mr-4 rounded-full`}
-            onClick={() => setShowLogInModal(true)} 
+            onClick={() => setShowLogInModal(true)}
           >
             login
           </button>
@@ -193,5 +195,5 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
    </>
   );
 };
-
+ 
 export default GeneralNav;
