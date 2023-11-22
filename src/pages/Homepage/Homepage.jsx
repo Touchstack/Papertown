@@ -1,8 +1,8 @@
 import GeneralNav from "../../Navbar/GeneralNav";
 import RedefiningWriting from "../../Component/RedefiningWriting";
-import Slidershow from "../Slidershow/Slidershow";
 import HomeWhyWeEXist from "../../Component/HomeWhyDoWeExist";
 import Footer from "../FooterPage/Footer";
+import MarqueeApp from "../../Component/MarqueeText";
 // import Circle from "../../Component/Circle";
 //import Tips from "../Tips/Tips";
 
@@ -13,7 +13,7 @@ const Homepage = () => {
       {/* <Circle> */}
       <GeneralNav color="white" btnColor="white" bgColor="transparent"/>
       <RedefiningWriting />
-      <Slidershow />
+      <MarqueeApp />
       <HomeWhyWeEXist />
       <Footer />
     </div>
