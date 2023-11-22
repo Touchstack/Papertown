@@ -9,7 +9,6 @@
 }
 
 body {
-
   font-family: Dosis-Regular, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -57,22 +56,20 @@ code {
   align-items: flex-start;
   white-space: nowrap;
   box-sizing: border-box;
-  animation: marquee 15s linear infinite ;
+  animation: marquee 15s linear infinite;
   animation-direction: alternate;
   animation-play-state: running;
   position: absolute;
-  top: 50%; 
-  
-  transform: translate(-100%, 0%)
-  
+  top: 50%;
+
+  transform: translate(-100%, 0%);
 }
 
 .marquee span {
   display: inline-block;
   direction: ltr;
-  padding-left: 15%; 
-  margin-top: 15px ;
-
+  padding-left: 15%;
+  margin-top: 15px;
 }
 .text-carousel {
   display: flex;
@@ -98,6 +95,9 @@ code {
   cursor: pointer;
 }
 
+.cardimage {
+  background-image: url(../src/assets/Images/pexels-katerina-holmes-5905479\ 1.png);
+}
 
 @keyframes marquee {
   0% {
