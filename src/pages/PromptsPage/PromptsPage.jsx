@@ -3,6 +3,7 @@ import Footer from "../FooterPage/Footer";
 import GeneralNav from "../../Navbar/GeneralNav";
 import { CiSliderHorizontal } from "react-icons/ci";
 import ArrowNew from "../../assets/Images/arrownew.png";
+import BGimage from "../../assets/Images/pexels-katerina-holmes-5905479 1.png";
 const tabsData = [
   { id: "all", label: "All" },
   { id: "sparks", label: "Sparks" },
@@ -30,34 +31,21 @@ function PromptsPage() {
               <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[110px] h-[36px]">
                 Featured spark
               </button>
-              <div className=" ">
-                <div>
-                  <h5 className="text-[72px] font-Bold mb-5">
-                    The pandemic effects on student learning
-                  </h5>
-                  <p className="text-[16px] mb-10">
-                    Submit your articles by 10 April, 2023
-                  </p>
-                  <button className=" leading-8 bg-[#52B4AE] text-white font-bold rounded-3xl text-[20px] w-[222px] h-[50px]">
-                    Submit your writing
-                  </button>
-                </div>
-                {/* crad image section start  */}
-                <div className="">
-                  <div className="bg-[#FFFFFF]  rounded-[25px] w-[488px] h-[113px] px-10 py-4 ">
-                    <span className=" flex text-[20px] font-[800]">
-                      <img src={ArrowNew} alt="" className="mr-2" />
-                      View Submission Guidelines
-                    </span>
-                    <p>
-                      It has survived not only five centuries, but also the leap
-                      into electronic typesetting, remaining essentially
-                      unchanged
-                    </p>
-                  </div>
-                </div>
-                {/* crad image section end  */}
-              </div>
+            </div>
+          </div>
+
+          {/* Card image section */}
+          <div className="md:mr-[140px] ml-[30px] md:w-[544px] md:h-[467px] w-[328px] h-[282px]  flex items-center justify-center ">
+            <img src={BGimage} alt="" />
+            <div className=" bg-[#FFFFFF] rounded-[25px] px-10 py-4   absolute md:top-[590px] top-[639px] md:w-[500px] w-[299px] ">
+              <span className="flex md:text-[20px] text-[16px] font-[800]">
+                <img src={ArrowNew} alt="" className="mr-2" />
+                View Submission Guidelines
+              </span>
+              <p className="text-[14px]">
+                It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged
+              </p>
             </div>
           </div>
         </div>
@@ -69,7 +57,7 @@ function PromptsPage() {
         {/* Tab and pill section start  */}
         <div className="container mt-8 ">
           <div className="">
-            <div className="flex mb-4">
+            <div className="md:flex grid grid-cols-3 gap-2 mb-4">
               {/* Tabs */}
               {tabsData.map((tab) => (
                 <div
@@ -84,15 +72,14 @@ function PromptsPage() {
                   {tab.label}
                 </div>
               ))}
-              <div className="ml-auto float-right break-word">
-                <button className="flex ml-auto justify-center items-center text-grad-400 rounded-3xl py-2 px-6 text-lg border-2 border-grad-900 font-Bold text-center  ">
+              <div className="md:ml-[510px] md:flex md:justify-end">
+                <button className="flex  gap-5 justify-center items-center text-grad-400 rounded-3xl py-2 px-6 text-lg border-2 border-grad-900 font-Bold text-center  ">
                   <CiSliderHorizontal />
                   Filter
                 </button>
               </div>
             </div>
           </div>
-
           {/* Display content based on active tab or pill */}
           <div className="">
             {activeTab && (
@@ -339,13 +326,12 @@ function PromptsPage() {
                   </div>
                   {/* card section end */}
                 </div>
-                <div className="flex justify-center mt-10 mb-10">
-                  <button className="border-[1px] leading-8 border-[#52B4AE] text-[#52B4AE] font-bold rounded-3xl text-[20px] w-[145px] h-[50px] mx-auto">
-                    Load more
+                {/* {activeTab} */}
+                <div className="flex items-center justify-center m-[50px]">
+                  <button className="border-[1px] leading-8 border-[#52B4AE] text-[#52B4AE] font-bold rounded-3xl text-[20px] w-[145px] h-[50px]">
+                    Load More
                   </button>
                 </div>
-
-                {/* {activeTab} */}
               </div>
             )}
           </div>

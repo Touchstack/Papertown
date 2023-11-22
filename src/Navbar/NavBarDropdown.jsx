@@ -19,7 +19,7 @@ export const NavBarDropdown = () => {
 
         <li>
           <a
-            href="/tips"
+            href="/prompt"
             className="block px-2 py-3 text-xl hover:bg-gray-100 rounded-xl"
           >
             Prompts
