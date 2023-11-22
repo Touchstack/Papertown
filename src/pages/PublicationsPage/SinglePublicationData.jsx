@@ -65,6 +65,7 @@ const SinglePublicationData = () => {
          </div>
 
           <div className="md:px-40 px-5 pb-20">
+            
              <div className="flex flex-row items-center justify-between">
                <h1 className="text-[42px] font-Bold hidden md:flex mr-[10rem]">Other related stories</h1>
                <h1 className="text-[42px] font-Bold md:hidden">Other Publication</h1>
@@ -81,7 +82,7 @@ const SinglePublicationData = () => {
                     <HiMiniChevronRight className="text-[50px]"/>
                 </div>
 
-               </div>
+              </div>
 
              </div>
 
