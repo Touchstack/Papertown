@@ -1,6 +1,7 @@
 import icon1 from "../../assets/Images/mingcute.svg";
 import icon2 from "../../assets/Images/mingcute2.svg";
 import icon3 from "../../assets/Images/mingcute3.svg";
+
 const Hero = () => {
   return (
     <div className="py-16 px-14 text-[#000] bg-[#FFF] font-Medium text-center">
@@ -20,9 +21,8 @@ const Hero = () => {
                 USP 1
               </h3>
               <p className="font-Medium leading-7 text-sm tracking-wider text-13 leading-26 text-start mt-2 max-w-[350px]">
-                {" "}
                 It has survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged{" "}
+                electronic typesetting, remaining essentially unchanged
               </p>
             </div>
             <div className="">
@@ -35,7 +35,7 @@ const Hero = () => {
 
               <p className="font-Medium leading-7 text-sm tracking-wider text-13 leading-26 text-start mt-2 max-w-[350px]">
                 It has survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged{" "}
+                electronic typesetting, remaining essentially unchanged
               </p>
             </div>
             <div className="">
@@ -48,7 +48,7 @@ const Hero = () => {
               </h3>
               <p className="font-Medium leading-7 text-sm tracking-wider text-13 leading-26 text-start mt-2 max-w-[350px]">
                 It has survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged{" "}
+                electronic typesetting, remaining essentially unchanged
               </p>
             </div>
           </div>
