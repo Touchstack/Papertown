@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUpload } from '@fortawesome/free-solid-svg-icons';
+import { useState } from "react";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faUpload } from '@fortawesome/free-solid-svg-icons';
 
 const UploadFile = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -16,20 +16,18 @@ const UploadFile = () => {
         htmlFor="fileInput"
         className="hover:bg-blue-700 text-black font-Regular py-2 px-4 rounded inline-flex items-center"
       >
-        <FontAwesomeIcon icon={faUpload} className="mr-2" />
-        <span>{selectedFile ? 'Upload Another File' : 'Upload File'}</span>
+        {/* <FontAwesomeIcon icon={faUpload} className="mr-2" /> */}
+        <span>{selectedFile ? "Upload Another File" : "Upload File"}</span>
       </label>
       <input
-      className=" bg-transparent hidden"
-      accept=".pdf, .doc, .docx"
-      type="file"
+        className=" bg-transparent hidden"
+        accept=".pdf, .doc, .docx"
+        type="file"
         id="fileInput"
         onChange={handleFileChange}
       />
       {selectedFile && (
-        <span className="ml-3">
-          Selected file: {selectedFile.name}
-        </span>
+        <span className="ml-3">Selected file: {selectedFile.name}</span>
       )}
     </div>
   );
