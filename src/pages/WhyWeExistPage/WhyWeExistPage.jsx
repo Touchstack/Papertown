@@ -6,7 +6,6 @@ import Team from "../../Component/WhyWeExist/Team";
 
 import Footer from "../FooterPage/Footer";
 import "../../Style/Style.css";
-import TeamDetails from "../../Component/WhyWeExist/TeamDetails";
 
 const WhyWeExistPage = () => {
   return (
@@ -28,7 +27,6 @@ const WhyWeExistPage = () => {
       <div className="bg-[#B44DB8]">
         <Footer />
       </div>
-      <TeamDetails />
     </div>
   );
 };
