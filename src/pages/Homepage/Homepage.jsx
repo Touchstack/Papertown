@@ -2,6 +2,7 @@ import GeneralNav from "../../Navbar/GeneralNav";
 import RedefiningWriting from "../../Component/RedefiningWriting";
 import HomeWhyWeEXist from "../../Component/HomeWhyDoWeExist";
 import Footer from "../FooterPage/Footer";
+import PatnersComponent from "../Slidershow/PatnersComponent";
 import MarqueeApp from "../../Component/MarqueeText";
 // import Circle from "../../Component/Circle";
 //import Tips from "../Tips/Tips";
@@ -15,6 +16,7 @@ const Homepage = () => {
       <RedefiningWriting />
       <MarqueeApp />
       <HomeWhyWeEXist />
+      <PatnersComponent />
       <Footer />
     </div>
   );
