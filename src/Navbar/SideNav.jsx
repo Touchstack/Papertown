@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 
 
 
+
 const SideNav = ({ onLoginClick, onCloseClick, onJoinClick }) => {
  
   SideNav.propTypes = {
@@ -61,16 +62,16 @@ const SideNav = ({ onLoginClick, onCloseClick, onJoinClick }) => {
                 </div>
                 { showWriteSubMenu && 
                 <ul className='p-3'>
-                  <li>Tips</li>
-                  <li>Prompts</li>
+                  <li><a href="/tips">Tips</a></li>
+                  <li><a href="/prompt">Prompts</a></li>
                 </ul>
                 }
               </li>
 
-              <li>Submit</li>
-              <li>Read</li>
-              <li>Press Club</li>
-              <li>Publications</li>
+              <li><a href="/submit">Submit</a></li>
+              <li><a href="/read">Read</a></li>
+              <li><a href="/pressclub">Press Club</a></li>
+              <li><a href="/publication">Publications</a></li>
               <li>
                 <div className='flex items-center gap-1' onClick={handleNewsClick}>
                   News 
@@ -78,8 +79,8 @@ const SideNav = ({ onLoginClick, onCloseClick, onJoinClick }) => {
                 </div>
                 { showNewsSubMenu && 
                 <ul className='p-3'>
-                  <li>News</li>
-                  <li>Event</li>
+                  <li><a href="">News</a></li>
+                  <li><a href="">Event</a></li>
                 </ul>
                }
               </li>
