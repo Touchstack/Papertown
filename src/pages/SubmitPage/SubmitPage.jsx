@@ -59,7 +59,7 @@ const SubmitPage = () => {
           </div>
           <div className="flex justify-center items-center mt-10">
             <img
-              className="bg-gradient-to-b from-yellow-500 to-white rounded-10xl lg:h-full md:h-[400px] sm:h-[250px] md:mb-4 sm:mb-12"
+              className="bg-gradient-to-b from-yellow-500 to-white rounded-3xl lg:h-full md:h-[400px] sm:h-[250px] md:mb-4 sm:mb-12"
               src={YellowBulbs}
               alt="bulb.png"
             />
