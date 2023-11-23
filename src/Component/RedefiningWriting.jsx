@@ -8,7 +8,7 @@ const RedefiningWriting = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-y-4">
             {/* Left Col */}
-            <div className="text-left items-center lg:p-24 md:p-18 sm:p-8 p-8">
+            <div className=" text-left items-center lg:p-24 md:p-18 sm:p-8 p-8">
               <p className="font-Bold lg:text-5xl md:text-4xl sm:text-4xl text-[#F2F2F2] text-4xl text-left">
                 Redefining writing, one
                 <span className="text-[#FBCA23]"> spark</span> at a time
