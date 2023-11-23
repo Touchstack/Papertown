@@ -4,6 +4,7 @@ import HomeWhyWeEXist from "../../Component/HomeWhyDoWeExist";
 import Footer from "../FooterPage/Footer";
 import PatnersComponent from "../Slidershow/PatnersComponent";
 import MarqueeApp from "../../Component/MarqueeText";
+import CallToAction from "../../Component/CallToAction/CallToAction";
 // import Circle from "../../Component/Circle";
 //import Tips from "../Tips/Tips";
 
@@ -15,6 +16,7 @@ const Homepage = () => {
       <GeneralNav color="white" btnColor="white" bgColor="transparent"/>
       <RedefiningWriting />
       <MarqueeApp />
+      <CallToAction />
       <HomeWhyWeEXist />
       <PatnersComponent />
       <Footer />

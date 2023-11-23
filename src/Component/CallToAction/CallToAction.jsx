@@ -1,21 +1,20 @@
-import React from "react";
-import ImageGallery from "./ImageGallery";
-
-/*import RightImage from "../assets/unsplash_O5EMzfdxedg.png"*/
+import LeftArrow from "../../assets/Images/iconLeft.png"
+import RightArrow from "../../assets/Images/iconRight.png"
+import RightImage from "../../assets/Images/unsplash_O5EMzfdxedg.png"
 
 
 
 const CallToAction = () => {
   return (
-    <div className="bg-transparent">
-      <div className="grid lg:grid-cols-2 grid-cols-1 gap-8 bg-gray-300 lg:mx-24 md:mx-16 mx-12 rounded-lg items-center mt-10">
-        <div className=" flex-col justify-center py-4 px-10 ">
-          <h1 className="lg:text-5xl md:text-3xl text-2xl text-black font-Bold mb-4 tracking-wider items-center ">
+    <div className="bg-transparent ">
+      <div className="w-[1241px] h-[548px] grid lg:grid-cols-2 grid-cols-1 gap-8 bg-white lg:mx-24 md:mx-16 mx-12 rounded-[43px] items-center mt-10">
+        <div className=" translate-x-6 flex-col justify-center py-4 px-10 items-start inline-flex ">
+          <h1 className=" lg:text-7xl md:text-5xl text-3xl text-black font-Bold mt-4 tracking-wider items-center ">
             Technovation 
             <p>announces</p> 
             <p>finalists</p>
           </h1>
-          <p className="text-black text-lg mb-2 items-center font-Regular">
+          <p className="text-black text-lg mb-2 items-center text-justify font-Regular"><br/>
            It was popularised in the 1960s with the release of Letraset sheets <p>containing Lorem Ipsum passages, and more recently</p><p> with desktop publishing software.</p>
           </p>
           <button
@@ -36,8 +35,16 @@ const CallToAction = () => {
           </button>
          
         </div>
-        <div className="inset-80 bg-gray-900 object-cover rounded-lg aspect-w-1 aspect-h-1">
-        <ImageGallery/>
+        <div className=" relative object-cover w-full h-auto mx-auto translate-x-5 inset-0 z-0">
+        <img src={RightImage} />
+        <div className="z-10 absolute right-1 bottom-5 gap-5 flex">
+        <button className="bg-translate text-white rounded-full">
+          <img src={LeftArrow} alt="Previous image"/>
+        </button>
+        <button className="bg-translate text-white rounded-full">
+        <img src={RightArrow} alt="Next image"/>
+        </button>
+        </div>
         </div>
        
        
