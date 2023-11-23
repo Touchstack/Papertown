@@ -7,8 +7,8 @@ const Sponsor = () => {
   return (
     <div className="bg-[#FFF] text-center py-11 md:px-4">
       <div className="py-2">
-        <div className="my-3 container mx-auto text-center text-dark">
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 lg:mt-5 md:mt-4 sm:mt-1 mt-1 px-4 gap-y-12 gap-x-20">
+        <div className="my-3 container mx-auto text-dark">
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 lg:mt-5 md:mt-4 sm:mt-1 mt-1 px-24 gap-y-12">
             <div className="flex">
               <img src={sponsor} alt="change.svg" />
             </div>
