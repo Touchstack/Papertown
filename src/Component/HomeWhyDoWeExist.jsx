@@ -1,4 +1,3 @@
-
 const HomeWhyWeEXist = () => {
   return (
     <div className="py-16 px-14 mt-40 bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 font-Medium text-center">
@@ -110,7 +109,7 @@ const HomeWhyWeEXist = () => {
           className="font-SemiBold bg-[#52B4AE] text-center text-xl 
       text-[#FFFFFF] rounded-full p-3 w-40 mt-16"
         >
-          Learn more
+          <a href="./whyweexist"> Learn more </a>
         </button>
       </div>
     </div>

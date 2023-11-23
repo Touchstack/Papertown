@@ -1,6 +1,7 @@
 import Team1 from "../../assets/Images/team1.svg";
 import Teampic from "../../assets/Images/team2.svg";
 import Teamimg from "../../assets/Images/team3.svg";
+import briefcase from "../../assets/Images/lucide.svg";
 
 const Team = () => {
   return (
@@ -11,7 +12,7 @@ const Team = () => {
             Meet the team behind Papertown Imaginarium
           </h3>
           <div className="py-6">
-            <p className="font-Medium max-w-[470px] lg:text-lg md:text-sm sm:text-sm text-sm lg:text-left md:text-left text-[#393939] leading-7 tracking-wider text-13 leading-26 text-start mt-2">
+            <p className="font-Medium max-w-[470px] lg:text-lg md:text-sm sm:text-sm text-sm lg:text-left md:text-left text-[#393939] leading-7 tracking-wider text-13 leading-26 text-start">
               It has survived not only five centuries, but also the leap into
               electronic typesetting, remaining essentially unchanged. It was
               popularised in the 1960s with the release of Letraset sheets
@@ -21,19 +22,165 @@ const Team = () => {
           </div>
         </div>
         <div className="container mx-auto relative">
-          <div className="inline-flex justify-center items-center img-fluid mx-8 gap-2 ">
-            <img src={Team1} alt="Benz" style={{ height: "auto" }} />
-            <img src={Teampic} alt="Benz" style={{ height: "auto" }} />
-            <img src={Teamimg} alt="Benz" style={{ height: "auto" }} />
-          </div>
-          <div className="inline-flex justify-center items-center img-fluid gap-2">
-            <img src={Team1} alt="Benz" style={{ height: "auto" }} />
-            <img src={Teampic} alt="Benz" style={{ height: "auto" }} />
+          <div className="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 grid-cols-2 gap-2 justify-center items-center img-fluid mx-8">
+            <a href="./teamdetails">
+              <div style={{ position: "relative", marginBottom: "10px" }}>
+                <img src={Team1} alt="" />
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "0",
+                    left: "0",
+                    width: "100%",
+                    color: "#fff",
+                    padding: "10px 18px",
+                  }}
+                >
+                  <p className="font-Bold text-[#FFF] text-sm">Ruth Dumany</p>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <img
+                      src={briefcase}
+                      style={{
+                        height: "11px",
+                        marginRight: "5px",
+                      }}
+                    />
+                    <span className="font-Regular text-xs leading-4 text-[#C0C0C0]">
+                      Quality Assurance
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./teamdetails">
+              <div style={{ position: "relative", marginBottom: "10px" }}>
+                <img src={Teampic} alt="" />
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "0",
+                    left: "0",
+                    width: "100%",
+                    color: "#fff",
+                    padding: "10px 18px",
+                  }}
+                >
+                  <p className="font-Bold text-[#FFF] text-sm">
+                    Bassey Effiong
+                  </p>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <img
+                      src={briefcase}
+                      style={{
+                        height: "11px",
+                        marginRight: "5px",
+                      }}
+                    />
+                    <span className="font-Regular text-xs leading-4 text-[#C0C0C0]">
+                      Quality Assurance
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./teamdetails">
+              <div style={{ position: "relative", marginBottom: "10px" }}>
+                <img src={Teamimg} alt="" />
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "0",
+                    left: "0",
+                    width: "100%",
+                    color: "#fff",
+                    padding: "10px 18px",
+                  }}
+                >
+                  <p className="font-Bold text-[#FFF] text-sm">
+                    Edwards Effiong
+                  </p>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <img
+                      src={briefcase}
+                      style={{
+                        height: "11px",
+                        marginRight: "5px",
+                      }}
+                    />
+                    <span className="font-Regular text-xs leading-4 text-[#C0C0C0]">
+                      Quality Assurance
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="./teamdetails">
+              <div style={{ position: "relative", marginBottom: "10px" }}>
+                <img src={Team1} alt="" />
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "0",
+                    left: "0",
+                    width: "100%",
+                    color: "#fff",
+                    padding: "10px 18px",
+                  }}
+                >
+                  <p className="font-Bold text-[#FFF] text-sm">
+                    Mamadu Philipe
+                  </p>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <img
+                      src={briefcase}
+                      style={{
+                        height: "11px",
+                        marginRight: "5px",
+                      }}
+                    />
+                    <span className="font-Regular text-xs leading-4 text-[#C0C0C0]">
+                      chief Writer
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="./teamdetails">
+              <div style={{ position: "relative", marginBottom: "10px" }}>
+                <img src={Teampic} alt="" />
+                <div
+                  style={{
+                    position: "absolute",
+                    bottom: "0",
+                    left: "0",
+                    width: "100%",
+                    color: "#fff",
+                    padding: "10px 18px",
+                  }}
+                >
+                  <p className="font-Bold text-[#FFF] text-sm">
+                    Abigail Adonami
+                  </p>
+                  <div style={{ display: "flex", alignItems: "center" }}>
+                    <img
+                      src={briefcase}
+                      style={{
+                        height: "11px",
+                        marginRight: "5px",
+                      }}
+                    />
+                    <span className="font-Regular text-xs leading-4 text-[#C0C0C0]">
+                      Quality Assurance
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
     </div>
   );
 };
-
 export default Team;

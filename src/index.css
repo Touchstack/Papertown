@@ -51,24 +51,36 @@ code {
   src: url("../src/assets/fonts/Dosis-SemiBold.ttf");
 }
 
-.marquee {
+.marquee1 {
   background-color: transparent;
   align-items: flex-start;
+  position: relative;
   white-space: nowrap;
   box-sizing: border-box;
-  animation: marquee 15s linear infinite;
-  animation-direction: alternate;
+  position: relative;
+  white-space: nowrap;
+  animation: marquee 15s infinite alternate ease-in-out;
   animation-play-state: running;
-  position: absolute;
-  top: 50%;
-
+  top: 110%;
+  transform: translate(-100%, 0%);
+}
+.marquee2 {
+  background-color: transparent;
+  align-items: flex-start;
+  position: relative;
+  white-space: nowrap;
+  box-sizing: border-box;
+  position: relative;
+  white-space: nowrap;
+  animation: marquee 10s infinite alternate ease-in-out;
+  animation-play-state: running;
+  top: 110%;
   transform: translate(-100%, 0%);
 }
 
 .marquee span {
   display: inline-block;
   direction: ltr;
-  padding-left: 15%;
   margin-top: 15px;
 }
 .text-carousel {
@@ -95,9 +107,9 @@ code {
   cursor: pointer;
 }
 
-.cardimage {
+/* .cardimage {
   background-image: url(../src/assets/Images/pexels-katerina-holmes-5905479\ 1.png);
-}
+} */
 
 @keyframes marquee {
   0% {
