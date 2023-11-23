@@ -6,7 +6,7 @@ import SubmitGeneralNav from "../../Component/SubmitPage/SubmitGeneralNav";
 
 const SubmitPage = () => {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <div className="pt-10">
         <br />
         <SubmitGeneralNav />
