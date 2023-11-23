@@ -31,7 +31,7 @@ function PromptsPage() {
         </div>
 
         {/* Nvavbar section start */}
-        <div className="md:flex md:flex-row md:mt-20 mt-10 md:flex md:items-center md:justify-center ">
+        <div className="md:flex md:flex-row md:mt-20 mt-[50px] md:flex md:items-center md:justify-center ">
           {/* Text section */}
           <div className="lg:ml-10 ml-5">
             {/* Add "mr-8" for right margin */}
@@ -60,7 +60,7 @@ function PromptsPage() {
                 className="lg:w-[544px] lg:h-[467px] w-[328px] h-[282px] items-center justify-center mb-10"
               />
               <div className="flex justify-center items-center h-screen">
-                <div className="bg-[#FFFFFF] rounded-[16px] lg:rounded-[25px] md:rounded-[20px] absolute lg:top-[310px] top-[150px] lg:w-[500px] md:w-[900] w-[310px] p-2  lg:p-4 md:p-2 ">
+                <div className="bg-[#FFFFFF] rounded-[16px] lg:rounded-[25px] md:rounded-[20px] absolute lg:top-[310px] top-[140px] lg:w-[500px] md:w-[900] w-[310px] p-2  lg:p-4 md:p-2 ">
                   <div className="flex items-center">
                     <img
                       src={ArrowNew}
