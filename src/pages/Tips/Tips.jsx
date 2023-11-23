@@ -63,13 +63,17 @@ function Tips() {
                 {/* card section start */}
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#52B4AE] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
+                    <a href="">
+                      <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#52B4AE] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
+                        Grade 6-12
+                      </button>
+                    </a>
 
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
-                    </button>
+                    <a href="">
+                      <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
+                        Menoir
+                      </button>
+                    </a>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
                     Sensory Heat Mapping
@@ -83,13 +87,68 @@ function Tips() {
                 {/* card section start */}
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#B44DB8] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
+                    <a href="">
+                      <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#B44DB8] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
+                        Grade 6-12
+                      </button>
+                    </a>
 
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
-                    </button>
+                    <a href="">
+                      <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
+                        Menoir
+                      </button>
+                    </a>
+                  </span>
+                  <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
+                    Processing elements of sound
+                  </h5>
+                  <span className="md:text-[16px] text-[15px]">
+                    Writers will identify their favorite sensory memories and
+                    transfer them to a visual heart map.
+                  </span>
+                </div>
+                {/* card section end */}
+                {/* card section start */}
+                <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
+                  <span className="flex md:mt-2 md:ml-2">
+                    <a href="">
+                      <a href="">
+                        <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#FBCA23] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
+                          Grade 6-12
+                        </button>
+                      </a>
+                    </a>
+                    <a href="">
+                      <a href="">
+                        <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
+                          Menoir
+                        </button>
+                      </a>
+                    </a>
+                  </span>
+                  <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
+                    A definition of superego
+                  </h5>
+                  <span className="md:text-[16px] text-[15px]">
+                    Writers will identify their favorite sensory memories and
+                    transfer them to a visual heart map.
+                  </span>
+                </div>
+                {/* card section end */}
+                {/* card section start */}
+                <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
+                  <span className="flex md:mt-2 md:ml-2">
+                    <a href="">
+                      <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#52B4AE] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
+                        Grade 6-12
+                      </button>
+                    </a>
+
+                    <a href="">
+                      <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
+                        Menoir
+                      </button>
+                    </a>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
                     Sensory Heat Mapping
@@ -103,13 +162,17 @@ function Tips() {
                 {/* card section start */}
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#FBCA23] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
+                    <a href="">
+                      <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#B44DB8] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
+                        Grade 6-12
+                      </button>
+                    </a>
 
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
-                    </button>
+                    <a href="">
+                      <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
+                        Menoir
+                      </button>
+                    </a>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
                     Sensory Heat Mapping
@@ -123,13 +186,17 @@ function Tips() {
                 {/* card section start */}
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#52B4AE] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
+                    <a href="">
+                      <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#FBCA23] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
+                        Grade 6-12
+                      </button>
+                    </a>
 
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
-                    </button>
+                    <a href="">
+                      <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
+                        Menoir
+                      </button>
+                    </a>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
                     Sensory Heat Mapping
@@ -143,13 +210,18 @@ function Tips() {
                 {/* card section start */}
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#B44DB8] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
+                    <a href="">
+                      <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#52B4AE] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
+                        Grade 6-12
+                      </button>
+                    </a>
 
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
-                    </button>
+                    <a href="">
+                      {" "}
+                      <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
+                        Menoir
+                      </button>
+                    </a>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
                     Sensory Heat Mapping
@@ -163,13 +235,17 @@ function Tips() {
                 {/* card section start */}
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#FBCA23] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
+                    <a href="">
+                      <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#B44DB8] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
+                        Grade 6-12
+                      </button>
+                    </a>
 
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
-                    </button>
+                    <a href="">
+                      <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
+                        Menoir
+                      </button>
+                    </a>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
                     Sensory Heat Mapping
@@ -183,13 +259,18 @@ function Tips() {
                 {/* card section start */}
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#52B4AE] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
+                    <a href="">
+                      {" "}
+                      <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#FBCA23] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
+                        Grade 6-12
+                      </button>
+                    </a>
 
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
-                    </button>
+                    <a href="">
+                      <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
+                        Menoir
+                      </button>
+                    </a>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
                     Sensory Heat Mapping
@@ -203,13 +284,19 @@ function Tips() {
                 {/* card section start */}
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#B44DB8] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
+                    <a href="">
+                      {" "}
+                      <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#52B4AE] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
+                        Grade 6-12
+                      </button>
+                    </a>
 
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
-                    </button>
+                    <a href="">
+                      {" "}
+                      <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
+                        Menoir
+                      </button>
+                    </a>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
                     Sensory Heat Mapping
@@ -223,13 +310,18 @@ function Tips() {
                 {/* card section start */}
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#FBCA23] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
+                    <a href="">
+                      <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#B44DB8] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
+                        Grade 6-12
+                      </button>
+                    </a>
 
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
-                    </button>
+                    <a href="">
+                      {" "}
+                      <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
+                        Menoir
+                      </button>
+                    </a>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
                     Sensory Heat Mapping
@@ -243,53 +335,17 @@ function Tips() {
                 {/* card section start */}
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#52B4AE] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
+                    <a href="">
+                      <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#FBCA23] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
+                        Grade 6-12
+                      </button>
+                    </a>
 
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
-                    </button>
-                  </span>
-                  <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
-                    Sensory Heat Mapping
-                  </h5>
-                  <span className="md:text-[16px] text-[15px]">
-                    Writers will identify their favorite sensory memories and
-                    transfer them to a visual heart map.
-                  </span>
-                </div>
-                {/* card section end */}
-                {/* card section start */}
-                <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
-                  <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#B44DB8] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
-
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
-                    </button>
-                  </span>
-                  <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
-                    Sensory Heat Mapping
-                  </h5>
-                  <span className="md:text-[16px] text-[15px]">
-                    Writers will identify their favorite sensory memories and
-                    transfer them to a visual heart map.
-                  </span>
-                </div>
-                {/* card section end */}
-                {/* card section start */}
-                <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
-                  <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#FBCA23] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
-
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
-                    </button>
+                    <a href="">
+                      <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
+                        Menoir
+                      </button>
+                    </a>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
                     Sensory Heat Mapping
