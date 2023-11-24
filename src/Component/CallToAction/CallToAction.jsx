@@ -5,7 +5,7 @@ import RightImage from "../../assets/Images/unsplash_O5EMzfdxedg.png";
 const CallToAction = () => {
   return (
     <div className="bg-transparent ">
-      <div className="w-[1241px] h-[548px] grid lg:grid-cols-2 grid-cols-1 gap-8 bg-white lg:mx-24 md:mx-16 mx-12 rounded-[43px] items-center mt-10">
+      <div className=" grid lg:grid-cols-2 grid-cols-1 gap-8 bg-white lg:mx-24 md:mx-16 mx-12 rounded-[43px] items-center mt-10">
         <div className=" translate-x-6 flex-col justify-center py-4 px-10 items-start inline-flex ">
           <h1 className=" lg:text-7xl md:text-5xl text-3xl text-black font-Bold mt-4 tracking-wider items-center ">
             Technovation
@@ -26,16 +26,21 @@ const CallToAction = () => {
             Read more
           </button>
         </div>
-        <div className=" relative object-cover w-full h-auto mx-auto translate-x-5 inset-0 z-0">
-          <img src={RightImage} />
-          <div className="z-10 absolute right-1 bottom-5 gap-5 flex">
-            <button className="bg-translate text-white rounded-full">
-              <img src={LeftArrow} alt="Previous image" />
-            </button>
-            <button className="bg-translate text-white rounded-full">
-              <img src={RightArrow} alt="Next image" />
-            </button>
-          </div>
+
+        <div className=" relative lg:left-10 overflow-auto object-cover w-full h-auto mx-auto grid-flow-row inset-0">
+        <img src={RightImage} className=" z-1 w-full h-full bg-transparent object-contain" />
+        <div className="z-10 absolute right-1 bottom-5 gap-5 flex">
+        <button className=" text-white rounded-full">
+          <img src={LeftArrow} alt="Previous image"/>
+        </button>
+        <button className=" text-white rounded-full">
+        <img src={RightArrow} alt="Next image"/>
+        </button>
+        </div>
+        </div>
+       
+       
+        
         </div>
       </div>
     </div>

@@ -104,13 +104,13 @@ const SubmitComponent = () => {
           </form>
         </main>
 
-        <div className="mt-10 py-8 grid grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 px-20">
-          <div className="font-Bold w-[558px] text-black text-[42px] text-left">
+        <div className="mt-10 py-8 grid grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 px-20 lg:items-center md:items-left sm:items-left overflow-hidden md:col-span-1 gap-8 ">
+          <div className="font-Bold w-[558px] text-black lg:text-[42px] md:text-3xl sm:text-2xl text-left ">
             Dont take our word for it. Hear what our past and current writers
             have to say
           </div>
           <div className=" sm:text-left inline-block mt-3 text-justify text-neutral-700">
-            <p className="text-sm font-Regular w-[583px]">
+            <p className="text-sm font-Regular">
               Writers will identify their favorite sensory memories and transfer
               them to a visual heart map. Writers will identify their favorite
               sensory memories and transfer them to a visual heart map. Writers
