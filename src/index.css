@@ -54,11 +54,9 @@ code {
 .marquee1 {
   background-color: transparent;
   align-items: flex-start;
-  position: relative;
   white-space: nowrap;
   box-sizing: border-box;
   position: relative;
-  white-space: nowrap;
   animation: marquee 15s infinite alternate ease-in-out;
   animation-play-state: running;
   top: 110%;
@@ -70,8 +68,6 @@ code {
   position: relative;
   white-space: nowrap;
   box-sizing: border-box;
-  position: relative;
-  white-space: nowrap;
   animation: marquee 10s infinite alternate ease-in-out;
   animation-play-state: running;
   top: 110%;

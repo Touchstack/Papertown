@@ -105,12 +105,15 @@ const HomeWhyWeEXist = () => {
           </div>
         </div>
 
-        <button
-          className="font-SemiBold bg-[#52B4AE] text-center text-xl 
-      text-[#FFFFFF] rounded-full p-3 w-40 mt-16"
-        >
-          <a href="./whyweexist"> Learn more </a>
-        </button>
+        <a href="./whyweexist">
+          <button
+            className="bg-[#099B96] hover:bg-[#099B96] cursor-pointer place-self-start mt-8 font-Bold lg:mb-16 space-y-4 sm:flex-row sm:justify-center 
+          sm:space-y-0 sm:space-x-4 transition-transform duration-700 ease-in-out transform hover:scale-110 justify-center items-center py-3 lg:px-8 md:px-6
+            sm:px-4 px-4 text-white rounded-full w-30 h-13 "
+          >
+            Learn More
+          </button>
+        </a>
       </div>
     </div>
   );

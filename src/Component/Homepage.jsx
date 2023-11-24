@@ -1,12 +1,8 @@
-// import SignUpNavbar from "../../Navbar/SignUpNavbar";
 import GeneralNav from "../../Navbar/GeneralNav";
 import RedefiningWriting from "../../Component/RedefiningWriting";
 import Slidershow from "../Slidershow/Slidershow";
 import HomeWhyWeEXist from "../../Component/HomeWhyDoWeExist";
 import Footer from "../FooterPage/Footer";
-// import Circle from "../../Component/Circle";
-//import Tips from "../Tips/Tips";
-//import PromptsPage from "../PromptsPage/PromptsPage";
 
 const Homepage = () => {
   return (

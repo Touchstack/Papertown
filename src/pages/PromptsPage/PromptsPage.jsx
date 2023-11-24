@@ -56,7 +56,7 @@ function PromptsPage() {
             <div className="relative lg:flex lg:flex-col">
               <img
                 src={BGimage}
-                alt=""
+                alt="image"
                 className="lg:w-[544px] lg:h-[467px] w-[328px] h-[282px] items-center justify-center mb-10"
               />
               <div className="flex justify-center items-center h-screen">
@@ -64,7 +64,7 @@ function PromptsPage() {
                   <div className="flex items-center">
                     <img
                       src={ArrowNew}
-                      alt=""
+                      alt="image"
                       className="lg:mr-2 ml-1 mr-2 mb-[70px] lg:mb-11 md:mr-3 md:mb-[89px]"
                     />
                     <div className="grow-0">
