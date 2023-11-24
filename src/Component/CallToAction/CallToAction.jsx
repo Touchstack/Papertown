@@ -28,19 +28,18 @@ const CallToAction = () => {
         </div>
 
         <div className=" relative lg:left-10 overflow-auto object-cover w-full h-auto mx-auto grid-flow-row inset-0">
-        <img src={RightImage} className=" z-1 w-full h-full bg-transparent object-contain" />
-        <div className="z-10 absolute right-1 bottom-5 gap-5 flex">
-        <button className=" text-white rounded-full">
-          <img src={LeftArrow} alt="Previous image"/>
-        </button>
-        <button className=" text-white rounded-full">
-        <img src={RightArrow} alt="Next image"/>
-        </button>
-        </div>
-        </div>
-       
-       
-        
+          <img
+            src={RightImage}
+            className=" z-1 w-full h-full bg-transparent object-contain"
+          />
+          <div className="z-10 absolute right-1 bottom-5 gap-5 flex">
+            <button className=" text-white rounded-full">
+              <img src={LeftArrow} alt="Previous image" />
+            </button>
+            <button className=" text-white rounded-full">
+              <img src={RightArrow} alt="Next image" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
