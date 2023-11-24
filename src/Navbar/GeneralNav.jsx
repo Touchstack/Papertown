@@ -6,8 +6,8 @@ import { NavBarDropdown } from "./NavBarDropdown";
 import { NewsDropdown } from "./NewsDropdown";
 import LogInModal from "../Component/Modal/LogInModal";
 import JoinUSModal from "../Component/Modal/JoinUSModal";
-import SideNav from "../Component/SideNav";
 import "../Style/Style.css";
+import SideNav from "./SideNav";
 
 const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -97,7 +97,7 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
             className={`lg:flex justify-between w-full md:w-auto`}
             id="navbar-cta"
           >
-            <ul className="md:flex flex-col text-lg p-4 md:p-0 mt-4 border text-center rounded-lg md:shadow-none sm:shadow-lg shadow-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 hidden">
+            <ul className="lg:flex flex-col text-lg p-4 md:p-0 mt-4 border text-center rounded-lg md:shadow-none sm:shadow-lg shadow-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 hidden">
               <li className="relative">
                 <div
                   className={`list-none flex gap-1 items-center ${txColorClass} cursor-pointer`}
@@ -171,15 +171,15 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
             </ul>
           </div>
           <div className={`w-full lg:flex md:w-auto`} id="navbar-buttons">
-            <ul className="md:flex items-center py-2 font-Regular text-lg hidden">
+            <ul className="lg:flex items-center py-2 font-Regular text-lg hidden">
               <button
                 className={`border-[1px] ${btColorClass} ${txColorClass} px-7 p-3 mr-4 rounded-full`}
                 onClick={() => setShowLogInModal(true)}
               >
-                login
+                Login
               </button>
               <button
-                className="bg-[#52B4AE] text-[#FFF] px-9 p-3 rounded-full"
+                className="bg-[#52B4AE] text-[#FFF] lg:px-9 lg:p-3 rounded-full"
                 onClick={() => setShowJoinUsModal(true)}
               >
                 Join Papertown
@@ -189,7 +189,7 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
 
           {/*Humberg button*/}
           <FaBars
-            className={`md:hidden w-[70px] h-[30px] ${txColorClass}`}
+            className={`lg:hidden w-[70px] h-[30px] ${txColorClass}`}
             onClick={() => setSideNav(!sideNav)}
           />
         </div>
