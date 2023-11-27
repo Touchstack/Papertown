@@ -61,10 +61,12 @@ const SideNav = ({ onLoginClick, onCloseClick, onJoinClick }) => {
                 <FaChevronDown className='text-[20px] pt-2'/>
                 </div>
                 { showWriteSubMenu && 
-                <ul className='p-3'>
-                  <li><a href="/tips">Tips</a></li>
-                  <li><a href="/prompt">Prompts</a></li>
-                </ul>
+                  <div className='bg-[#ffffff33] w-[250px] h-[100px] rounded-[20px] mt-3'>
+                     <ul className='p-5'>
+                       <li><a href="/tips">Tips</a></li>
+                       <li><a href="/prompt">Prompts</a></li>
+                     </ul>
+                  </div>
                 }
               </li>
 
@@ -78,10 +80,12 @@ const SideNav = ({ onLoginClick, onCloseClick, onJoinClick }) => {
                   <FaChevronDown className='text-[20px] pt-2'/>
                 </div>
                 { showNewsSubMenu && 
-                <ul className='p-3'>
-                  <li><a href="">News</a></li>
-                  <li><a href="">Event</a></li>
-                </ul>
+                <div className='bg-[#ffffff33] w-[250px] h-[100px] rounded-[20px] mt-3'>
+                  <ul className='p-5'>
+                    <li><a href="">News</a></li>
+                    <li><a href="">Event</a></li>
+                  </ul>
+                </div>
                }
               </li>
             </ul>
