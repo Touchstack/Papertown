@@ -7,10 +7,7 @@ import GeneralNav from '../../Navbar/GeneralNav';
 const Readpage = () => {
   return (
     <div className="bg-custom-gradient bg-no-repeat lg:bg-cover md:h-[722px] h-[500px]" style={{ backgroundImage: `url(${Readbg})`}}>
-      <div className='pt-10'>
         <GeneralNav btnColor="black" bgShadow="shadow"/>
-     </div>
- 
       {/*Hero Text*/}
        <div className='flex flex-row justify-center mt-[7%] items-center'>
  

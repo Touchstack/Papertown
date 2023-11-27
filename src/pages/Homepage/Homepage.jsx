@@ -10,7 +10,7 @@ import CallToAction from "../../Component/CallToAction/CallToAction";
 
 const Homepage = () => {
   return (
-    <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 font-Medium h-screen pt-10">
+    <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 font-Medium h-screen">
       {/* <Circle> */}
       <GeneralNav color="white" btnColor="white" bgColor="transparent" />
       <RedefiningWriting />
