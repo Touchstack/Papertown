@@ -7,16 +7,14 @@ import "../../Style/Style.css";
 
 const PressClubPage = () => {
   return (
-    <div>
-      <div className=" mx-auto px-2 text-center font-Regular rounded-full max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-1 mt-12">
-        <GeneralNav color="black" btnColor="black" bgShadow="shadow" />
-      </div>
+    <div> 
+      <GeneralNav color="black" btnColor="black" bgShadow="shadow" />
       <PressClubs />
       <PerkAndGoodies />
       <FeaturedPressClubs />
       <div className="bg-[#B44DB8]">
         <Footer />
-      </div>
+       </div>
     </div>
   );
 };

@@ -6,9 +6,7 @@ import TalkToUs from "../../Component/PublicationsRowData/TalkToUs";
 const PublicationsPage = () => {
   return (
     <div className="bg-[#fff]">
-         <div className="pt-10">
-            <GeneralNav bgShadow="shadow" btnColor="black" bgColor="transparent" />
-         </div>
+          <GeneralNav bgShadow="shadow" btnColor="black" bgColor="transparent" />
 
          <div className='flex flex-col mt-[70px] md:ml-[50px] ml-[10px] md:p-20 px-2'>
              <h2 className='text-[#000] md:text-[72px]  text-[40px] font-[900]'>Publications</h2>

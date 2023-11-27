@@ -2,15 +2,12 @@ import SubmitComponent from "../../Component/SubmitPage/SubmitComponent";
 import YellowBulbs from "../../assets/Images/bulb.png";
 import SubmitBg from "../../Component/SubmitPage/SubmitBg";
 import Footer from "../FooterPage/Footer";
-import SubmitGeneralNav from "../../Component/SubmitPage/SubmitGeneralNav";
+import GeneralNav from '../../Navbar/GeneralNav';
 
 const SubmitPage = () => {
   return (
     <div className="overflow-hidden">
-      <div className="pt-10">
-        <br />
-        <SubmitGeneralNav />
-      </div>
+      <GeneralNav bgColor="transparent" bgShadow="shadow" btnColor="black" />
       <SubmitBg />
       <div className="flex-col text-black mt-40 text-center items-center h-144px w-734px">
         <h1 className="flex-col font-Bold lg:text-5xl md:text-4xl text-3xl justify-center mt-10">

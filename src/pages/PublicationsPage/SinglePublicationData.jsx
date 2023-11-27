@@ -10,10 +10,7 @@ const SinglePublicationData = () => {
     //console.log(state);
   return (
     <div className="">
-       
-         <div className="pt-10">
-            <GeneralNav bgShadow="shadow" btnColor="black" bgColor="transparent" color="black" />
-         </div>
+         <GeneralNav bgShadow="shadow" btnColor="black" bgColor="transparent" color="black" />
 
          <div className="flex flex-col md:flex-row md:py-40 py-20 lg:px-40 px-5 gap-[100px]">
 

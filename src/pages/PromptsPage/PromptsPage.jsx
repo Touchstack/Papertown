@@ -22,16 +22,13 @@ function PromptsPage() {
   return (
     <div className="">
       <div className="bg-[#FCF7E5] ">
-        <div className="md:mx-[89px] text-center rounded-full max-w-6xl pt-10 px-4">
-          <GeneralNav
+      <GeneralNav
             bgColor="transparent"
             bgShadow="shadow"
             btnColor="black"
           />
-        </div>
-
-        {/* Nvavbar section start */}
-        <div className="md:flex md:flex-row md:mt-20 mt-[50px] md:flex md:items-center md:justify-center ">
+          
+        <div className="md:flex md:flex-row md:mt-20 mt-[50px] md:items-center md:justify-center ">
           {/* Text section */}
           <div className="lg:ml-10 ml-5">
             {/* Add "mr-8" for right margin */}
