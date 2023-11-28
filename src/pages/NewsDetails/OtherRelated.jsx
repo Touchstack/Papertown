@@ -31,7 +31,7 @@ function OtherRelated() {
         </div>
       </div>
       {/* Card section start  */}
-      <div className="mr-20">
+      <div className="mr-20 mb-20">
         <OtherCard />
       </div>
       {/* Card section end  */}
