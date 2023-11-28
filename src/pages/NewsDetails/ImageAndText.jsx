@@ -79,7 +79,7 @@ function ImageAndText() {
       </div>
       {/* text and date section end */}
       {/* Other related stories section start  */}
-      <div className="lg:ml-20">
+      <div className="lg:ml-20  mb-20">
         <OtherRelated />
       </div>
       {/* Other related stories section end  */}
