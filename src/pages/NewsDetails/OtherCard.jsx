@@ -6,7 +6,7 @@ function OtherCard() {
   return (
     <div className="grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1 gap-5">
       {/* card section start */}
-      <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
+      <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5  ">
         <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
           UNICEF to initiate Grade 7 spelling Bee
         </h5>
