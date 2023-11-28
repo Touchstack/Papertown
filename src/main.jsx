@@ -13,6 +13,7 @@ import SubmitPage from "./pages/SubmitPage/SubmitPage.jsx";
 import PromptsPage from "./pages/PromptsPage/PromptsPage.jsx";
 import Tips from "./pages/Tips/Tips.jsx";
 import SinglePublicationData from "./pages/PublicationsPage/SinglePublicationData.jsx";
+import EventsPage from "./pages/EventsPage/EventsPage.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
@@ -39,6 +40,7 @@ const router = createBrowserRouter([
   { path: "/pressclub", element: <PressClubPage />, errorElement: <ErrorPage />},
   { path: "/publication", element: <PublicationsPage />, errorElement: <ErrorPage /> },
   { path: "/publication/*", element: <SinglePublicationData />, errorElement: <ErrorPage /> },
+  { path: "/events", element: <EventsPage />, errorElement: <ErrorPage />},
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
