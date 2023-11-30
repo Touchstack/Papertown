@@ -7,6 +7,7 @@ import PressClubPage from "./pages/PressClubPage/PressClubPage.jsx";
 import WhyWeExistPage from "./pages/WhyWeExistPage/WhyWeExistPage.jsx";
 import TeamDetails from "./Component/WhyWeExist/TeamDetails.jsx";
 import PublicationsPage from "./pages/PublicationsPage/PublicationsPage.jsx";
+import AdminDashBoard from "./pages/AdminPage/AdminDashBoard.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SubmitPage from "./pages/SubmitPage/SubmitPage.jsx";
@@ -39,6 +40,7 @@ const router = createBrowserRouter([
   { path: "/pressclub", element: <PressClubPage />, errorElement: <ErrorPage />},
   { path: "/publication", element: <PublicationsPage />, errorElement: <ErrorPage /> },
   { path: "/publication/*", element: <SinglePublicationData />, errorElement: <ErrorPage /> },
+  { path: "/admin/*", element: <AdminDashBoard />, errorElement: <ErrorPage />}
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
