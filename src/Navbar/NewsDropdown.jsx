@@ -10,7 +10,7 @@ export const NewsDropdown = () => {
       >
         <li>
           <a
-            href="/tips"
+            href="/news"
             className="block px-2 py-3 hover:bg-gray-100 rounded-xl"
           >
             News
