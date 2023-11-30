@@ -42,7 +42,7 @@ const RightSection = () => {
         
         <hr className="mx-5"/>
 
-        <div className="flex flex-row mt-3 gap-5 pl-2">
+        <div className="flex flex-row mt-3 gap-3 pl-5">
           {data.map((data) => (
             <div key={data.name} className="flex flex-col">
               <img src={data.img} alt="" className="rounded-full w-full h-full" />
