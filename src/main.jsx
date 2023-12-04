@@ -13,8 +13,10 @@ import SubmitPage from "./pages/SubmitPage/SubmitPage.jsx";
 import PromptsPage from "./pages/PromptsPage/PromptsPage.jsx";
 import Tips from "./pages/Tips/Tips.jsx";
 import SinglePublicationData from "./pages/PublicationsPage/SinglePublicationData.jsx";
+import EventsPage from "./pages/EventsPage/EventsPage.jsx";
 import NewSection from "./pages/NewsPage/NewSection.jsx";
 import NewsDetails from "./pages/NewsDetails/NewsDetails.jsx";
+
 
 const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
@@ -40,6 +42,8 @@ const router = createBrowserRouter([
     element: <TeamDetails />,
     errorElement: <ErrorPage />,
   },
+
+  { path: "/events", element: <EventsPage />, errorElement: <ErrorPage />},
   {
     path: "/pressclub",
     element: <PressClubPage />,
