@@ -66,9 +66,9 @@ const RightSection = () => {
   ]
 
   return (
-    <div className="flex flex-col">
-        {/*Top views section*/}
-        <div className="w-[410px] bg-[#FFFFFF] h-[203px] rounded-[10px] mr-6">
+    <div className="flex flex-col items-center justify-center mt-6 md:ml-3 lg:mr-2">
+        {/*Top writers section*/}
+        <div className="lg:w-[410px] md:w-[670px] w-[360px] bg-[#FFFFFF] h-[203px] rounded-[10px] mt-5 md:mt-0">
             <div className="flex flex-row justify-between p-5">
                 <p>Top Writers</p>
                 
@@ -80,20 +80,20 @@ const RightSection = () => {
             </div>
             <hr className="mx-5"/>
 
-            <div className="flex flex-row mt-3 gap-3 pl-5">
+            <div className="flex flex-row mt-3 gap-3 items-center justify-center">
               {data.map((data) => (
                 <div key={data.name} className="flex flex-col">
                   <img src={data.img} alt="" className="rounded-full w-full h-full" />
-                  <p>{data.name}</p>
+                  <p className="text-center">{data.name}</p>
                 </div>
               ))}
             </div>
         </div>
-        {/*Top views section*/}
+        {/*Top writers section*/}
 
 
         {/*New Clubs section*/}
-        <div className="flex flex-col w-[410px] h-[588px] bg-[#FFFFFF] mr-5 mt-5 mb-5 rounded-[10px]">
+        <div className="flex flex-col lg:w-[410px] md:w-[670px] w-[360px] h-[588px] bg-[#FFFFFF] mt-5 mb-7 rounded-[10px]">
             <div className="flex flex-row justify-between p-5">
                 <p>News Clubs</p>
                 

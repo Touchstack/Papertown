@@ -3,18 +3,18 @@ import AppLogo from "../../../../../assets/Images/Logo.svg"
 
 const Header = () => {
   return (
-    <div className="flex flex-row items-center justify-between p-10">
-        <h1 className="text-[42px] font-[700]">Dashboard</h1>
+    <div className="flex flex-row items-center justify-between md:p-10 p-6">
+        <h1 className="md:text-[42px] text-[22px] font-[700]">Dashboard</h1>
 
-        <div className="flex flex-row items-center gap-5">
-            <HiBell className="text-[30px] text-[#BDBDBD]"/>
+        <div className="flex flex-row items-center md:gap-5 gap-3">
+            <HiBell className="md:text-[30px] text-[25px] text-[#BDBDBD]"/>
 
             <div>
-            <img src={AppLogo} alt="" className="w-[50px] h-[50px]" />
+            <img src={AppLogo} alt="" className="md:w-[50px] w-[40px] md:h-[50px] h-[40px]" />
             </div>
 
             <div className="flex flex-row items-center gap-2">
-            <p>Amaka Ndubisi</p>
+            <p >Amaka Ndubisi</p>
             <HiChevronDown className="text-[15px]"/>
             </div>
         </div>

@@ -5,9 +5,9 @@ import { Routes, Route } from 'react-router-dom'
 
 const DBRightSection = () => {
   return (
-    <div className='flex flex-col py-12 pr-5 flex-1 h-full'>
+    <div className="py-12 flex-1 m-2">
        {/*header*/}
-      <div className='flex flex-col flex-1 overflow-y-scroll scrollbar-none'> 
+      <div className='flex flex-col flex-1'> 
          <Routes>
            <Route path="/dashboard" element={<Dashboard />} />
            {/*

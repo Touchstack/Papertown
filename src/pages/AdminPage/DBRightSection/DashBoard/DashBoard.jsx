@@ -2,9 +2,9 @@ import { Header, LeftSection, RightSection} from "./components"
 
 const DashBoard = () => {
   return (
-    <div className="mt-2 bg-[#F6F6F6] h-[977px] rounded-[25px] items-center">
+    <div className="mt-2 bg-[#F6F6F6] rounded-[25px]">
       <Header />
-      <div className="flex flex-row">
+      <div className="flex lg:flex-row flex-col ">
       <LeftSection />
       <RightSection />
       </div>

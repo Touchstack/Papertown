@@ -9,7 +9,7 @@ import { MdCenterFocusStrong } from "react-icons/md";
 
 const DBLeftSection = () => {
   return (
-    <div className='h-full py-12 flex flex-col items-center min-w-210 w-[250px] gap-3'>
+    <div className='h-full py-12 hidden md:flex flex-col items-center min-w-210 w-[250px] gap-3'>
            <NavLink to={"/"} className="flex items-center justify-start px-6 gap-4 ">
             <img
               src={AppLogo}

@@ -60,10 +60,10 @@ const LeftSection = () => {
 
 
   return (
-    <div className="flex flex-col flex-1">
-       <div className="flex">
+    <div className="flex flex-col md:flex-1 items-center justify-center">
+       <div className="grid grid-cols-2 md:grid-cols-3 gap-[10px]">
         {data.map((info) => (
-            <div key={info.title} className="bg-white rounded-lg shadow px-5 py-3 w-[215px] ml-5">
+            <div key={info.title} className="bg-white rounded-lg shadow px-5 py-3 md:w-[215px] w-[170px]">
             <h2 className="text-[13px] text-[#BCBCBC] font-bold mb-2">{info.title}</h2>
             <p className="font-[700] text-[24px] text-[#242424]">{info.fig}</p>
             </div>
@@ -71,7 +71,7 @@ const LeftSection = () => {
        </div>
 
        {/*user growth*/}
-        <div className="w-[679px] h-[323px] bg-[#FFFFFF] px-5 py-3  ml-5 mt-5 rounded-[10px]">
+        <div className="md:w-[679px] w-[360px] h-[323px] bg-[#FFFFFF]  px-5 py-3  mt-5 rounded-[10px]">
            <div className="flex flex-col p-2">
                <div className="flex justify-between">
                      <p>User Growth</p>
@@ -113,7 +113,7 @@ const LeftSection = () => {
 
 
       {/* New Writers Section */}
-      <div className="w-[679px] h-[361px] bg-white px-5 py-3 ml-5 mt-5 rounded-2xl overflow-hidden">
+      <div className="md:w-[679px] w-[360px] h-[361px] bg-white px-5 py-3  mt-5 rounded-2xl overflow-hidden">
       <div className="flex justify-between items-center p-5">
          <h2 className="text-xl font-semibold">New Writers</h2>
          <a href="/" className="text-sm flex items-center text-[#BCBCBC]">
