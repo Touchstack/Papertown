@@ -79,6 +79,7 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
 
   return (
     <>
+    <div className="pt-10">
       <nav
         className={`flex container mx-auto px-2 text-center font-Regular rounded-full max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-3 ${bgColorClass} ${bgShadowClass}`}
       >
@@ -147,7 +148,7 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
               <li
                 className={`list-none inline-block  ${
                   location.pathname === "/tips"
-                    ? "font-SemiBold"
+                    ? ""
                     : `${txColorClass}`
                 }`}
               >
@@ -193,7 +194,8 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
             onClick={() => setSideNav(!sideNav)}
           />
         </div>
-      </nav>
+       </nav>
+      </div>
       {sideNav && (
         <SideNav
           onLoginClick={toggleLoginModal}

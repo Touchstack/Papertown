@@ -1,6 +1,6 @@
 const HomeWhyWeEXist = () => {
   return (
-    <div className="py-16 px-14 mt-40 bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 font-Medium text-center">
+    <div className="py-16 px-14 mt-40 bg-transparent font-Medium text-center">
       <h3 className="font-Bold text-[#F2F2F2] lg:text-4xl md:text-3xl sm:text-4xl text-3xl text-center ">
         Why we exist and delight in what we do
       </h3>

@@ -13,6 +13,10 @@ import SubmitPage from "./pages/SubmitPage/SubmitPage.jsx";
 import PromptsPage from "./pages/PromptsPage/PromptsPage.jsx";
 import Tips from "./pages/Tips/Tips.jsx";
 import SinglePublicationData from "./pages/PublicationsPage/SinglePublicationData.jsx";
+import EventsPage from "./pages/EventsPage/EventsPage.jsx";
+import NewSection from "./pages/NewsPage/NewSection.jsx";
+import NewsDetails from "./pages/NewsDetails/NewsDetails.jsx";
+
 
 const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
@@ -20,6 +24,8 @@ const router = createBrowserRouter([
   { path: "/read", element: <Readpage />, errorElement: <ErrorPage /> },
   { path: "/tips", element: <Tips />, errorElement: <ErrorPage /> },
   { path: "/prompt", element: <PromptsPage />, errorElement: <ErrorPage /> },
+  { path: "/news", element: <NewSection />, errorElement: <ErrorPage /> },
+  { path: "/det", element: <NewsDetails />, errorElement: <ErrorPage /> },
 
   {
     path: "/pressclub",
@@ -36,9 +42,23 @@ const router = createBrowserRouter([
     element: <TeamDetails />,
     errorElement: <ErrorPage />,
   },
-  { path: "/pressclub", element: <PressClubPage />, errorElement: <ErrorPage />},
-  { path: "/publication", element: <PublicationsPage />, errorElement: <ErrorPage /> },
-  { path: "/publication/*", element: <SinglePublicationData />, errorElement: <ErrorPage /> },
+
+  { path: "/events", element: <EventsPage />, errorElement: <ErrorPage />},
+  {
+    path: "/pressclub",
+    element: <PressClubPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/publication",
+    element: <PublicationsPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/publication/*",
+    element: <SinglePublicationData />,
+    errorElement: <ErrorPage />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

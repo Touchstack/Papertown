@@ -19,9 +19,8 @@ function Tips() {
 
   return (
     <div>
-      <div className="md:mx-[77px] text-center rounded-full max-w-6xl pt-10 px-4 py-1 ">
-        <GeneralNav bgColor="transparent" bgShadow="shadow" btnColor="black" />
-      </div>
+      <GeneralNav bgColor="transparent" bgShadow="shadow" btnColor="black" />
+      
       <div className="mt-20 font-Bold">
         <div className="ml-3 md:px-20">
           <span className="md:text-5xl text-[36px]">

@@ -4,7 +4,7 @@ import RightImage from "../../assets/Images/unsplash_O5EMzfdxedg.png";
 
 const CallToAction = () => {
   return (
-    <div className="bg-transparent ">
+    <div className="bg-transparent mt-[400px] lg:mt-5 md:mt-5  ">
       <div className=" grid lg:grid-cols-2 grid-cols-1 gap-8 bg-white lg:mx-24 md:mx-16 mx-12 rounded-[43px] items-center mt-10">
         <div className=" translate-x-6 flex-col justify-center py-4 px-10 items-start inline-flex ">
           <h1 className=" lg:text-7xl md:text-5xl text-3xl text-black font-Bold mt-4 tracking-wider items-center ">
