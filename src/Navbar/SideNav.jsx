@@ -2,7 +2,7 @@ import { useState } from 'react';
 import {FaXmark} from 'react-icons/fa6'
 import {FaChevronDown} from "react-icons/fa";
 import { motion } from 'framer-motion';
-import { textPop, slideIn } from '../Animations';
+import { textPop, slideIn , slideTop } from '../Animations';
 import PropTypes from 'prop-types';
 
 
@@ -46,7 +46,7 @@ const SideNav = ({ onLoginClick, onCloseClick, onJoinClick }) => {
      {...slideIn}
     >
        <div className="w-screen h-[57px] bg-[#ffffff33] flex justify-end items-center">
-           <div className='w-[30px] h-[30px] rounded-[8px] border border-white flex items-center justify-center mr-5' onClick={onCloseClick}>
+           <div className='w-[30px] h-[30px] rounded-[8px] border border-white flex items-center justify-center mr-5'  onClick={onCloseClick}>
               <FaXmark className='text-white'/>
            </div>
        </div>
@@ -61,12 +61,12 @@ const SideNav = ({ onLoginClick, onCloseClick, onJoinClick }) => {
                 <FaChevronDown className='text-[20px] pt-2'/>
                 </div>
                 { showWriteSubMenu && 
-                  <div className='bg-[#ffffff33] w-[250px] h-[100px] rounded-[20px] mt-3'>
+                  <motion.div className='bg-[#ffffff33] w-[250px] h-[100px] rounded-[20px] mt-3' {...slideTop}>
                      <ul className='p-5'>
                        <li><a href="/tips">Tips</a></li>
                        <li><a href="/prompt">Prompts</a></li>
                      </ul>
-                  </div>
+                  </motion.div>
                 }
               </li>
 
@@ -80,12 +80,12 @@ const SideNav = ({ onLoginClick, onCloseClick, onJoinClick }) => {
                   <FaChevronDown className='text-[20px] pt-2'/>
                 </div>
                 { showNewsSubMenu && 
-                <div className='bg-[#ffffff33] w-[250px] h-[100px] rounded-[20px] mt-3'>
+                <motion.div className='bg-[#ffffff33] w-[250px] h-[100px] rounded-[20px] mt-3' {...slideTop} >
                   <ul className='p-5'>
                     <li><a href="">News</a></li>
                     <li><a href="">Event</a></li>
                   </ul>
-                </div>
+                </motion.div>
                }
               </li>
             </ul>

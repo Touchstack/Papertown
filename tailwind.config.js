@@ -14,8 +14,7 @@ export default {
       },
       backgroundColor: {
         "white-transparent": "rgba(255, 255, 255, 0.40)",
-        "custom-gradient":
-          "linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)",
+        "custom-gradient":"linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)",
         "custom-prm": "var(--prm-1003, #B44DB8)",
       },
       boxShadow: {

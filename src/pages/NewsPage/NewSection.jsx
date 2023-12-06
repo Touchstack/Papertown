@@ -5,10 +5,7 @@ import FeaturedNew from "./FeaturedNew";
 function NewSection() {
   return (
     <div>
-      {/* Navbar section starts */}
-      <div className="md:mx-[77px] text-center rounded-full max-w-6xl pt-10 px-4 py-1 ">
         <GeneralNav bgColor="transparent" bgShadow="shadow" btnColor="black" />
-      </div>
       {/* Navbar section ends */}
       {/* News section start  */}
       <div className="lg:ml-20 lg:mt-14 md:ml-20 md:mt-12 ml-7 mt-10">
