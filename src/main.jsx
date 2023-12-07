@@ -15,6 +15,7 @@ import Tips from "./pages/Tips/Tips.jsx";
 import SinglePublicationData from "./pages/PublicationsPage/SinglePublicationData.jsx";
 import NewSection from "./pages/NewsPage/NewSection.jsx";
 import NewsDetails from "./pages/NewsDetails/NewsDetails.jsx";
+import Profile from "./pages/ProfilePage/Profile.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
   { path: "/prompt", element: <PromptsPage />, errorElement: <ErrorPage /> },
   { path: "/news", element: <NewSection />, errorElement: <ErrorPage /> },
   { path: "/det", element: <NewsDetails />, errorElement: <ErrorPage /> },
+  { path: "/profile", element: <Profile />, errorElement: <ErrorPage /> },
 
   {
     path: "/pressclub",
