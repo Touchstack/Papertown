@@ -123,6 +123,36 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
                     onClick={handleDropdown}
                   >
                     Write <FaChevronDown className="text-[20px] pt-2" />
+    <div className="pt-10 mx-3">
+      <nav
+        className={`flex container mx-auto px-2 text-center font-Regular rounded-full max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-3 ${bgColorClass} ${bgShadowClass}`}
+      >
+        <div className="container md:pl-25 flex justify-between items-center m-auto">
+          <a
+            href="/"
+            className="transition duration-500 ease-in-out hover:scale-110 flex items-center"
+          >
+            <img
+              src={AppLogo}
+              alt="Logo"
+              className="md:h-[80px] lg:w-[88px] sm:h-[70px]  h-[60px] w-[70px]"
+            />
+          </a>
+          <div
+            className={`lg:flex justify-between w-full md:w-auto`}
+            id="navbar-cta"
+          >
+            <ul className="lg:flex flex-col text-lg p-4 md:p-0 mt-4 border text-center rounded-lg md:shadow-none sm:shadow-lg shadow-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 hidden">
+              <li className="relative">
+                <div
+                  className={`list-none flex gap-1 items-center ${txColorClass} cursor-pointer`}
+                  onClick={handleDropdown}
+                >
+                  Write <FaChevronDown className="text-[20px] pt-2" />
+                </div>
+                {Dropdown && (
+                  <div className="absolute top-full left-0">
+                    <NavBarDropdown />
                   </div>
                   {Dropdown && (
                     <div className="absolute top-full left-0">
