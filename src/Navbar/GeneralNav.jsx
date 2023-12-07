@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PropTypes from "prop-types"; // Import PropTypes
 import AppLogo from "../assets/Images/Logo.svg";
 import { FaChevronDown, FaBars } from "react-icons/fa";
@@ -8,7 +8,8 @@ import LogInModal from "../Component/Modal/LogInModal";
 import JoinUSModal from "../Component/Modal/JoinUSModal";
 import "../Style/Style.css";
 import SideNav from "./SideNav";
-import fortune from "../assets/Images/fortune.svg";
+import { BsPersonCircle } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -16,6 +17,7 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
   const [showLogInModal, setShowLogInModal] = useState(false);
   const [showJoinUsModal, setShowJoinUsModal] = useState(false);
   const [sideNav, setSideNav] = useState(false);
+  const [verified, setVerified] = useState(false);
 
   // Define prop types
   GeneralNav.propTypes = {
@@ -24,6 +26,8 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
     bgColor: PropTypes.string.isRequired,
     bgShadow: PropTypes.string.isRequired,
   };
+
+  const navigate = useNavigate();
 
   // Define a mapping of color classes
   const txtcolorClasses = {
@@ -72,6 +76,19 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
     setSideNav(false);
   };
 
+  useEffect(() => {
+    const isVerified = () => {
+      // Check if the user is defined in local storage
+      const user = localStorage.getItem("user");
+
+      // Update the state based on the existence of the user
+      setVerified(!!user);
+    };
+
+    // Call the function to check user verification
+    isVerified();
+  }, []);
+
   // Determine the appropriate class to apply
   const txColorClass = txtcolorClasses[color] || "text-black"; // Default color
   const btColorClass = btncolorClasses[btnColor] || "border-white"; // Default button color
@@ -93,11 +110,6 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
                 src={AppLogo}
                 alt="Logo"
                 className="md:h-[80px] lg:w-[88px] sm:h-[70px]  h-[60px] w-[70px]"
-              />
-              <img
-                src={fortune}
-                alt="Profile Pic"
-                className="rounded-full h-10 w-10"
               />
             </a>
             <div
@@ -175,22 +187,33 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
                 </li>
               </ul>
             </div>
-            <div className={`w-full lg:flex md:w-auto`} id="navbar-buttons">
-              <ul className="lg:flex items-center py-2 font-Regular text-lg hidden">
-                <button
-                  className={`border-[1px] ${btColorClass} ${txColorClass} px-7 p-3 mr-4 rounded-full`}
-                  onClick={() => setShowLogInModal(true)}
-                >
-                  Login
-                </button>
-                <button
-                  className="bg-[#52B4AE] text-[#FFF] lg:px-9 lg:p-3 rounded-full"
-                  onClick={() => setShowJoinUsModal(true)}
-                >
-                  Join Papertown
-                </button>
-              </ul>
-            </div>
+
+            {!verified ? (
+              <div className={`w-full lg:flex md:w-auto`} id="navbar-buttons">
+                <ul className="lg:flex items-center py-2 font-Regular text-lg hidden">
+                  <button
+                    className={`border-[1px] ${btColorClass} ${txColorClass} px-7 p-3 mr-4 rounded-full`}
+                    onClick={() => setShowLogInModal(true)}
+                  >
+                    Login
+                  </button>
+                  <button
+                    className="bg-[#52B4AE] text-[#FFF] lg:px-9 lg:p-3 rounded-full"
+                    onClick={() => setShowJoinUsModal(true)}
+                  >
+                    Join Papertown
+                  </button>
+                </ul>
+              </div>
+            ) : (
+              <button
+                className="bg-[#52B4AE] text-[#FFF] lg:px-6 lg:p-3 rounded-full lg:flex items-center gap-2 hidden"
+                onClick={() => navigate("/profile")}
+              >
+                <BsPersonCircle size={30} />
+                Fortune
+              </button>
+            )}
 
             {/*Humberg button*/}
             <FaBars

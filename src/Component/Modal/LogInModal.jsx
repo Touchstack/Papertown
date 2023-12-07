@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Modal from "./Modal";
 import PropTypes from "prop-types";
 import { useFormik } from "formik";
@@ -6,8 +6,6 @@ import { basicSchema } from "../../schemas";
 import { logInUser } from "../../Api";
 
 const LogInModal = ({ isVisible, onClose }) => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
   if (!isVisible) {
@@ -15,8 +13,12 @@ const LogInModal = ({ isVisible, onClose }) => {
   }
   const handleLogin = async () => {
     try {
-      const res = await logInUser({ username, password });
-      console.log("This is the response", res);
+      const data = {
+        email: formik.values.email,
+        password: formik.values.password,
+      };
+      const res = await logInUser(data);
+
       if (res.status === 200) {
         localStorage.setItem("user", JSON.stringify(res.data));
         window.location.reload();
@@ -30,43 +32,17 @@ const LogInModal = ({ isVisible, onClose }) => {
     }
   };
 
-  const onSubmit = async (values, actions) => {
-    try {
-      await basicSchema.validate(values, { abortEarly: false });
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      actions.resetForm();
-      // Validation successful - make API call or handle login logic here
-
-      const res = await logInUser(JSON.stringify(values));
-      if (res.status === 200) {
-        localStorage.setItem("user", JSON.stringify(res.data));
-        window.location.reload();
-      } else {
-        console.error("Login failed. Unexpected status:", res.status);
-        setError("Login failed. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-    }
-  };
-
-  const {
-    values,
-    errors,
-    touched,
-    isSubmitting,
-    handleBlur,
-    handleChange,
-    handleSubmit,
-  } = useFormik({
+  const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
     },
     validationSchema: basicSchema,
-    onSubmit,
+    onSubmit: (values, actions) => {
+      handleLogin();
+      actions.resetForm();
+    },
   });
-  //console.log(errors);
 
   return (
     <Modal isVisible={isVisible} onClose={onClose}>
@@ -74,20 +50,21 @@ const LogInModal = ({ isVisible, onClose }) => {
         Log in
       </header>
 
-      <form onSubmit={onSubmit} name="contact" method="post">
+      <form onSubmit={formik.handleSubmit} name="contact" method="post">
         <div className="relative mb-6 group text-sm font-Regular text-[#858585] items-center justify-center flex">
           <input
             type="email"
             id="email"
+            name="email"
             placeholder="Email Address"
-            value={values.email}
-            onChange={handleChange}
-            onBlur={handleBlur} // validates the form when you click out of the input
+            value={formik.values.email}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             className="block w-[350px] h-[55px] p-3 text-[#666] font-Regular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
           />
-          {errors.email && touched.email && (
+          {formik.errors.email && formik.touched.email && (
             <p className="error absolute bottom-0 left-0 ml-8 mb-[-19px] text-red-500 text-xs">
-              {errors.email}
+              {formik.errors.email}
             </p>
           )}
         </div>
@@ -95,41 +72,30 @@ const LogInModal = ({ isVisible, onClose }) => {
           <input
             type="password"
             id="password"
+            name="password"
             placeholder="Password"
-            value={values.password}
-            onChange={handleChange}
-            onBlur={handleBlur}
+            value={formik.values.password}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
             className="block w-[350px] h-[55px] p-3 text-[#666] font-Regular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
           />
-          {errors.password && touched.password && (
+          {formik.errors.password && formik.touched.password && (
             <p className="error absolute bottom-0 left-0 ml-8 mb-[-19px] text-red-500 text-xs">
-              {errors.password}
+              {formik.errors.password}
             </p>
           )}
         </div>
         <a
           href="#"
-          className="text-sm font-Regular text-[#942D99] flex items justify-end m-4
-           hover:underline"
+          className="text-sm font-Regular text-[#942D99] flex items justify-end m-4 hover:underline"
         >
           Forgot Password?
         </a>
         <div className="flex justify-center items-center">
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-
           <button
-            onClick={onSubmit}
-            disabled={isSubmitting}
-            type="submit"
+            onClick={handleLogin}
+            disabled={formik.isSubmitting}
+            type="button"
             className="opacity-35 cursor-not-allowed text-[#FFF] bg-[#DF327B] hover:bg-[#A12356] mt-2 font-Regular rounded-full p-3 md:w-[350px] w-[300px]"
           >
             <p className="text-center font-bold text-xl">Log in</p>
