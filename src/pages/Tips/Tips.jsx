@@ -20,7 +20,6 @@ function Tips() {
   return (
     <div>
       <GeneralNav bgColor="transparent" bgShadow="shadow" btnColor="black" />
-
       <div className="mt-20 font-Bold">
         <div className="ml-3 md:px-20">
           <span className="md:text-5xl text-[36px]">

@@ -7,15 +7,19 @@ import PressClubPage from "./pages/PressClubPage/PressClubPage.jsx";
 import WhyWeExistPage from "./pages/WhyWeExistPage/WhyWeExistPage.jsx";
 import TeamDetails from "./Component/WhyWeExist/TeamDetails.jsx";
 import PublicationsPage from "./pages/PublicationsPage/PublicationsPage.jsx";
+import AdminDashBoard from "./pages/AdminPage/AdminDashBoard.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SubmitPage from "./pages/SubmitPage/SubmitPage.jsx";
 import PromptsPage from "./pages/PromptsPage/PromptsPage.jsx";
 import Tips from "./pages/Tips/Tips.jsx";
 import SinglePublicationData from "./pages/PublicationsPage/SinglePublicationData.jsx";
+import EventsPage from "./pages/EventsPage/EventsPage.jsx";
 import NewSection from "./pages/NewsPage/NewSection.jsx";
 import NewsDetails from "./pages/NewsDetails/NewsDetails.jsx";
 import Profile from "./pages/ProfilePage/Profile.jsx";
+import EventsDetails from "./pages/EventsDetails/EventsDetails.jsx";
+
 
 const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
@@ -42,6 +46,7 @@ const router = createBrowserRouter([
     element: <TeamDetails />,
     errorElement: <ErrorPage />,
   },
+
   {
     path: "/pressclub",
     element: <PressClubPage />,
@@ -55,6 +60,17 @@ const router = createBrowserRouter([
   {
     path: "/publication/*",
     element: <SinglePublicationData />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/admin/*",
+    element: <AdminDashBoard />,
+    errorElement: <ErrorPage />,
+  },
+  { path: "/events", element: <EventsPage />, errorElement: <ErrorPage /> },
+  {
+    path: "/eventsdet",
+    element: <EventsDetails />,
     errorElement: <ErrorPage />,
   },
 ]);
