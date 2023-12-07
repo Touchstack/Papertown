@@ -17,7 +17,9 @@ import SinglePublicationData from "./pages/PublicationsPage/SinglePublicationDat
 import EventsPage from "./pages/EventsPage/EventsPage.jsx";
 import NewSection from "./pages/NewsPage/NewSection.jsx";
 import NewsDetails from "./pages/NewsDetails/NewsDetails.jsx";
+import Profile from "./pages/ProfilePage/Profile.jsx";
 import EventsDetails from "./pages/EventsDetails/EventsDetails.jsx";
+
 
 const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
@@ -27,6 +29,7 @@ const router = createBrowserRouter([
   { path: "/prompt", element: <PromptsPage />, errorElement: <ErrorPage /> },
   { path: "/news", element: <NewSection />, errorElement: <ErrorPage /> },
   { path: "/det", element: <NewsDetails />, errorElement: <ErrorPage /> },
+  { path: "/profile", element: <Profile />, errorElement: <ErrorPage /> },
 
   {
     path: "/pressclub",
