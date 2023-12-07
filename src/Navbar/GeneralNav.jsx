@@ -8,6 +8,7 @@ import LogInModal from "../Component/Modal/LogInModal";
 import JoinUSModal from "../Component/Modal/JoinUSModal";
 import "../Style/Style.css";
 import SideNav from "./SideNav";
+import fortune from "../assets/Images/fortune.svg";
 
 const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -79,122 +80,125 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
 
   return (
     <>
-    <div className="pt-10">
-      <nav
-        className={`flex container mx-auto px-2 text-center font-Regular rounded-full max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-3 ${bgColorClass} ${bgShadowClass}`}
-      >
-        <div className="container md:pl-25 flex justify-between items-center m-auto">
-          <a
-            href="/"
-            className="transition duration-500 ease-in-out hover:scale-110 flex items-center"
-          >
-            <img
-              src={AppLogo}
-              alt="Logo"
-              className="md:h-[80px] lg:w-[88px] sm:h-[70px]  h-[60px] w-[70px]"
-            />
-          </a>
-          <div
-            className={`lg:flex justify-between w-full md:w-auto`}
-            id="navbar-cta"
-          >
-            <ul className="lg:flex flex-col text-lg p-4 md:p-0 mt-4 border text-center rounded-lg md:shadow-none sm:shadow-lg shadow-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 hidden">
-              <li className="relative">
-                <div
-                  className={`list-none flex gap-1 items-center ${txColorClass} cursor-pointer`}
-                  onClick={handleDropdown}
-                >
-                  Write <FaChevronDown className="text-[20px] pt-2" />
-                </div>
-                {Dropdown && (
-                  <div className="absolute top-full left-0">
-                    <NavBarDropdown />
+      <div className="pt-10">
+        <nav
+          className={`flex container mx-auto px-2 text-center font-Regular rounded-full max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-3 ${bgColorClass} ${bgShadowClass}`}
+        >
+          <div className="container md:pl-25 flex justify-between items-center m-auto">
+            <a
+              href="/"
+              className="transition duration-500 ease-in-out hover:scale-110 flex items-center"
+            >
+              <img
+                src={AppLogo}
+                alt="Logo"
+                className="md:h-[80px] lg:w-[88px] sm:h-[70px]  h-[60px] w-[70px]"
+              />
+              <img
+                src={fortune}
+                alt="Profile Pic"
+                className="rounded-full h-10 w-10"
+              />
+            </a>
+            <div
+              className={`lg:flex justify-between w-full md:w-auto`}
+              id="navbar-cta"
+            >
+              <ul className="lg:flex flex-col text-lg p-4 md:p-0 mt-4 border text-center rounded-lg md:shadow-none sm:shadow-lg shadow-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 hidden">
+                <li className="relative">
+                  <div
+                    className={`list-none flex gap-1 items-center ${txColorClass} cursor-pointer`}
+                    onClick={handleDropdown}
+                  >
+                    Write <FaChevronDown className="text-[20px] pt-2" />
                   </div>
-                )}
-              </li>
-              <li
-                className={`list-none inline-block  ${
-                  location.pathname === "/tips"
-                    ? "font-Regular"
-                    : `${txColorClass}`
-                }`}
-              >
-                <a href="/submit" className="">
-                  Submit
-                </a>
-              </li>
-              <li
-                className={`list-none inline-block  ${
-                  location.pathname === "/tips"
-                    ? "font-Regular"
-                    : `${txColorClass}`
-                }`}
-              >
-                <a href="/read" className="">
-                  Read
-                </a>
-              </li>
-              <li
-                className={`list-none inline-block  ${
-                  location.pathname === "/tips"
-                    ? "font-Regular"
-                    : `${txColorClass}`
-                }`}
-              >
-                <a href="/pressclub" className="">
-                  Press Club
-                </a>
-              </li>
-              <li
-                className={`list-none inline-block  ${
-                  location.pathname === "/tips"
-                    ? ""
-                    : `${txColorClass}`
-                }`}
-              >
-                <a href="/publication" className="">
-                  Publications
-                </a>
-              </li>
-              <li className="relative">
-                <div
-                  className={`list-none flex gap-1 items-center ${txColorClass} cursor-pointer`}
-                  onClick={handleShowDropdown}
+                  {Dropdown && (
+                    <div className="absolute top-full left-0">
+                      <NavBarDropdown />
+                    </div>
+                  )}
+                </li>
+                <li
+                  className={`list-none inline-block  ${
+                    location.pathname === "/tips"
+                      ? "font-Regular"
+                      : `${txColorClass}`
+                  }`}
                 >
-                  News <FaChevronDown className="text-[20px] pt-2" />
-                </div>
-                {showDropdown && (
-                  <div className="absolute top-full left-0">
-                    <NewsDropdown />
+                  <a href="/submit" className="">
+                    Submit
+                  </a>
+                </li>
+                <li
+                  className={`list-none inline-block  ${
+                    location.pathname === "/tips"
+                      ? "font-Regular"
+                      : `${txColorClass}`
+                  }`}
+                >
+                  <a href="/read" className="">
+                    Read
+                  </a>
+                </li>
+                <li
+                  className={`list-none inline-block  ${
+                    location.pathname === "/tips"
+                      ? "font-Regular"
+                      : `${txColorClass}`
+                  }`}
+                >
+                  <a href="/pressclub" className="">
+                    Press Club
+                  </a>
+                </li>
+                <li
+                  className={`list-none inline-block  ${
+                    location.pathname === "/tips" ? "" : `${txColorClass}`
+                  }`}
+                >
+                  <a href="/publication" className="">
+                    Publications
+                  </a>
+                </li>
+                <li className="relative">
+                  <div
+                    className={`list-none flex gap-1 items-center ${txColorClass} cursor-pointer`}
+                    onClick={handleShowDropdown}
+                  >
+                    News <FaChevronDown className="text-[20px] pt-2" />
                   </div>
-                )}
-              </li>
-            </ul>
-          </div>
-          <div className={`w-full lg:flex md:w-auto`} id="navbar-buttons">
-            <ul className="lg:flex items-center py-2 font-Regular text-lg hidden">
-              <button
-                className={`border-[1px] ${btColorClass} ${txColorClass} px-7 p-3 mr-4 rounded-full`}
-                onClick={() => setShowLogInModal(true)}
-              >
-                Login
-              </button>
-              <button
-                className="bg-[#52B4AE] text-[#FFF] lg:px-9 lg:p-3 rounded-full"
-                onClick={() => setShowJoinUsModal(true)}
-              >
-                Join Papertown
-              </button>
-            </ul>
-          </div>
+                  {showDropdown && (
+                    <div className="absolute top-full left-0">
+                      <NewsDropdown />
+                    </div>
+                  )}
+                </li>
+              </ul>
+            </div>
+            <div className={`w-full lg:flex md:w-auto`} id="navbar-buttons">
+              <ul className="lg:flex items-center py-2 font-Regular text-lg hidden">
+                <button
+                  className={`border-[1px] ${btColorClass} ${txColorClass} px-7 p-3 mr-4 rounded-full`}
+                  onClick={() => setShowLogInModal(true)}
+                >
+                  Login
+                </button>
+                <button
+                  className="bg-[#52B4AE] text-[#FFF] lg:px-9 lg:p-3 rounded-full"
+                  onClick={() => setShowJoinUsModal(true)}
+                >
+                  Join Papertown
+                </button>
+              </ul>
+            </div>
 
-          {/*Humberg button*/}
-          <FaBars
-            className={`lg:hidden w-[70px] h-[30px] ${txColorClass}`}
-            onClick={() => setSideNav(!sideNav)}
-          />
-        </div>
-       </nav>
+            {/*Humberg button*/}
+            <FaBars
+              className={`lg:hidden w-[70px] h-[30px] ${txColorClass}`}
+              onClick={() => setSideNav(!sideNav)}
+            />
+          </div>
+        </nav>
       </div>
       {sideNav && (
         <SideNav
