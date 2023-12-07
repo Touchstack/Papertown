@@ -2,6 +2,7 @@ import { MdCelebration } from "react-icons/md";
 import { FaGraduationCap } from "react-icons/fa";
 import { IoMdCall } from "react-icons/io";
 import { FaRegCalendar } from "react-icons/fa";
+import { Icon } from "@iconify/react";
 function TextDel() {
   return (
     <div>
@@ -28,8 +29,13 @@ function TextDel() {
         {/* start  */}
         <div>
           <div className="flex gap-2 items-center text-[#A3A3A3]">
-            <FaGraduationCap />
-            <p>School</p>
+            <Icon
+              icon="lets-icons:dimond-alt-light"
+              color="#a3a3a3"
+              width="23"
+              height="20"
+            />
+            <p>Grade</p>
           </div>
           <span className="font-Bold">Faith Montessori</span>
         </div>
