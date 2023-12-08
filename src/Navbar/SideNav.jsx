@@ -6,12 +6,6 @@ import { textPop, slideIn } from "../Animations";
 import PropTypes from "prop-types";
 import { BsPersonCircle } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
-import { useState } from 'react';
-import {FaXmark} from 'react-icons/fa6'
-import {FaChevronDown} from "react-icons/fa";
-import { motion } from 'framer-motion';
-import { textPop, slideIn , slideTop } from '../Animations';
-import PropTypes from 'prop-types';
 
 const SideNav = ({ onLoginClick, onCloseClick, onJoinClick }) => {
   SideNav.propTypes = {
@@ -57,6 +51,7 @@ const SideNav = ({ onLoginClick, onCloseClick, onJoinClick }) => {
         zIndex: 1000, // high z-index to overlay other content
       }}
       {...slideIn}
+    >
       <div className="w-screen h-[57px] bg-[#ffffff33] flex justify-end items-center">
         <div
           className="w-[30px] h-[30px] rounded-[8px] border border-white flex items-center justify-center mr-5"
@@ -67,51 +62,6 @@ const SideNav = ({ onLoginClick, onCloseClick, onJoinClick }) => {
       </div>
 
       {/*UL Elements*/}
-       <div className="w-screen h-[57px] bg-[#ffffff33] flex justify-end items-center">
-           <div className='w-[30px] h-[30px] rounded-[8px] border border-white flex items-center justify-center mr-5'  onClick={onCloseClick}>
-              <FaXmark className='text-white'/>
-           </div>
-       </div>
-        
-      {/*UL Elements*/}
-       
-          <div className='p-10'>
-            <ul className='list-none p-0 text-white space-y-5 text-[20px]'>
-              <li className='' >
-                <div className='flex items-center gap-1' onClick={handleWriteClick}>
-                 Write 
-                <FaChevronDown className='text-[20px] pt-2'/>
-                </div>
-                { showWriteSubMenu && 
-                  <motion.div className='bg-[#ffffff33] w-[250px] h-[100px] rounded-[20px] mt-3' {...slideTop}>
-                     <ul className='p-5'>
-                       <li><a href="/tips">Tips</a></li>
-                       <li><a href="/prompt">Prompts</a></li>
-                     </ul>
-                  </motion.div>
-                }
-              </li>
-
-              <li><a href="/submit">Submit</a></li>
-              <li><a href="/read">Read</a></li>
-              <li><a href="/pressclub">Press Club</a></li>
-              <li><a href="/publication">Publications</a></li>
-              <li>
-                <div className='flex items-center gap-1' onClick={handleNewsClick}>
-                  News 
-                  <FaChevronDown className='text-[20px] pt-2'/>
-                </div>
-                { showNewsSubMenu && 
-                <motion.div className='bg-[#ffffff33] w-[250px] h-[100px] rounded-[20px] mt-3' {...slideTop} >
-                  <ul className='p-5'>
-                    <li><a href="">News</a></li>
-                    <li><a href="">Event</a></li>
-                  </ul>
-                </motion.div>
-               }
-              </li>
-            </ul>
-          </div>
 
       <div className="p-10">
         <ul className="list-none p-0 text-white space-y-5 text-[20px]">
