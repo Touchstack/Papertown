@@ -3,8 +3,31 @@ import publicationBg from  "./src/assets/Images/publication.png";
 import Icon1 from "./src/assets/Images/icon1.png";
 import Icon2 from "./src/assets/Images/icon2.png";
 import Icon3 from "./src/assets/Images/icon3.png";
-
-
+import Featured1 from "./src/assets/Images/Featured1.jpeg"
+import Featured2 from "./src/assets/Images/Featured2.jpeg"
+import Featured3 from "./src/assets/Images/Featured3.jpeg"
+ 
+ 
+export const featuredEvents = [
+   {
+    id: 1,
+    title: "UNICEF to initiate Grade 7 spelling Bee",
+    msg: "It has survived not only five centuries, but also the leap into electronic",
+    img: Featured1
+   },
+   {
+    id: 2,
+    title: "UNICEF to initiate Grade 7 spelling Bee",
+    msg: "It has survived not only five centuries, but also the leap into electronic",
+    img: Featured2
+   },
+   {
+    id: 3,
+    title: "UNICEF to initiate Grade 7 spelling Bee",
+    msg: "It has survived not only five centuries, but also the leap into electronic",
+    img: Featured3
+   },
+]
 
 export const publication = [
     {
