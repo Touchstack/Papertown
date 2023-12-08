@@ -12,7 +12,6 @@ const AdminLogIn = () => {
   return (
     <div style={divStyle}>
       <LoginForm />
-      <img src="AdminBg" />
     </div>
     
   );
