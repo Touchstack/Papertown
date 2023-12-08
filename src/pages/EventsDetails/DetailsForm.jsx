@@ -1,4 +1,4 @@
-
+import React from "react"
 const DetailsForm = () => {
   return (
     <div> 
@@ -25,7 +25,6 @@ const DetailsForm = () => {
         <input
           className="border-gray-500 bg-neutral-200 rounded-md focus:outline-black p-2 w-[200px] h-[50px] sm:w-100px"
           type="text"
-          id="Lastname"
           name="Lastname"
           placeholder="Njoku"
         />

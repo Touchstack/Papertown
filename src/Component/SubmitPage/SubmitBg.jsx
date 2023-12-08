@@ -1,12 +1,12 @@
 /* eslint-disable no-irregular-whitespace */
-import React from "react";
+
 import "../../Style/CircleSubmit.css"
 
 function SubmitBg() {
   return (
     <>
 
-      <div className="circle bg-transparent z-0"> 
+      <div className="circle bg-transparent z-[-1]"> 
 
         <div className="py-24 flex space-x-[200px] ">
 

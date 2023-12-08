@@ -3,7 +3,7 @@ import "../Style/CircleSubmit.css";
 function Circle() {
   return (
     <>
-      <div className="circle z-0 ">
+      <div className="circle z-[-1] ">
         <div className="py-24 flex  space-x-[200px]  ">
         <div className="w-[59px] h-[59px] rounded-full border-4 opacity-60 border-opacity-50 translate-x-20 border-yellow-500" />
         
