@@ -20,7 +20,6 @@ function Tips() {
   return (
     <div>
       <GeneralNav bgColor="transparent" bgShadow="shadow" btnColor="black" />
-      
       <div className="mt-20 font-Bold">
         <div className="ml-3 md:px-20">
           <span className="md:text-5xl text-[36px]">
@@ -259,7 +258,6 @@ function Tips() {
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
                     <a href="">
-                      {" "}
                       <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#FBCA23] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
                         Grade 6-12
                       </button>

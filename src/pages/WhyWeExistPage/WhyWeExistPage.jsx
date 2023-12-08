@@ -3,22 +3,19 @@ import Hero from "../../Component/WhyWeExist/Hero";
 import Header from "../../Component/WhyWeExist/Header";
 import Sponsor from "../../Component/WhyWeExist/Sponsor";
 import Team from "../../Component/WhyWeExist/Team";
-
 import Footer from "../FooterPage/Footer";
 import "../../Style/Style.css";
 
 const WhyWeExistPage = () => {
   return (
     <div>
-      <div className="bg-[#FFD8FF] py-12">
-        <div className="mx-auto px-2 text-center font-Regular rounded-full max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-1">
-          <GeneralNav
-            color="black"
-            btnColor="black"
-            bgColor="pink"
-            bgShadow="whyShadow"
-          />
-        </div>
+      <div className="bg-[#FFD8FF]">
+        <GeneralNav
+          color="black"
+          btnColor="black"
+          bgColor="pink"
+          bgShadow="whyShadow"
+        />
       </div>
       <Header />
       <Hero />

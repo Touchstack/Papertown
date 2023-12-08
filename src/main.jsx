@@ -7,6 +7,7 @@ import PressClubPage from "./pages/PressClubPage/PressClubPage.jsx";
 import WhyWeExistPage from "./pages/WhyWeExistPage/WhyWeExistPage.jsx";
 import TeamDetails from "./Component/WhyWeExist/TeamDetails.jsx";
 import PublicationsPage from "./pages/PublicationsPage/PublicationsPage.jsx";
+import AdminDashBoard from "./pages/AdminPage/AdminDashBoard.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import SubmitPage from "./pages/SubmitPage/SubmitPage.jsx";
@@ -16,6 +17,7 @@ import SinglePublicationData from "./pages/PublicationsPage/SinglePublicationDat
 import EventsPage from "./pages/EventsPage/EventsPage.jsx";
 import NewSection from "./pages/NewsPage/NewSection.jsx";
 import NewsDetails from "./pages/NewsDetails/NewsDetails.jsx";
+import Profile from "./pages/ProfilePage/Profile.jsx";
 import EventsDetails from "./pages/EventsDetails/EventsDetails.jsx";
 import AdminLogIn from "./pages/Admin/AdminLogIn.jsx";
 
@@ -28,7 +30,7 @@ const router = createBrowserRouter([
   { path: "/prompt", element: <PromptsPage />, errorElement: <ErrorPage /> },
   { path: "/news", element: <NewSection />, errorElement: <ErrorPage /> },
   { path: "/det", element: <NewsDetails />, errorElement: <ErrorPage /> },
-
+  { path: "/profile", element: <Profile />, errorElement: <ErrorPage /> },
 
   {
     path: "/pressclub",
@@ -48,6 +50,8 @@ const router = createBrowserRouter([
 
   { path: "/events", element: <EventsPage />, errorElement: <ErrorPage />},
   { path: "/eventsdetails", element: <EventsDetails />, errorElement: <ErrorPage /> },
+
+
   {
     path: "/pressclub",
     element: <PressClubPage />,
@@ -63,7 +67,21 @@ const router = createBrowserRouter([
     element: <SinglePublicationData />,
     errorElement: <ErrorPage />,
   },
+
   { path: "/admin/login", element: <AdminLogIn />, errorElement: <ErrorPage /> },
+
+  {
+    path: "/admin/*",
+    element: <AdminDashBoard />,
+    errorElement: <ErrorPage />,
+  },
+  { path: "/events", element: <EventsPage />, errorElement: <ErrorPage /> },
+  {
+    path: "/eventsdet",
+    element: <EventsDetails />,
+    errorElement: <ErrorPage />,
+  },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
