@@ -3,7 +3,7 @@ import Modal from "./Modal";
 import PropTypes from "prop-types";
 import { useFormik } from "formik";
 import { basicSchema } from "../../schemas";
-import { logInUser } from "../../Api";
+import { logInUser } from "../../api";
 
 const LogInModal = ({ isVisible, onClose }) => {
   const [error, setError] = useState("");
