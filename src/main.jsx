@@ -49,7 +49,7 @@ const router = createBrowserRouter([
   { path: "/pressclub", element: <PressClubPage />, errorElement: <ErrorPage />},
   { path: "/publication", element: <PublicationsPage />, errorElement: <ErrorPage /> },
   { path: "/publication/*", element: <SinglePublicationData />, errorElement: <ErrorPage /> },
-  { path: "/admin/*", element: <AdminDashBoard />, errorElement: <ErrorPage />}
+  { path: "/admin/*", element: <AdminDashBoard />, errorElement: <ErrorPage />},
   { path: "/events", element: <EventsPage />, errorElement: <ErrorPage />},
   { path: "/eventsdet", element: <EventsDetails />, errorElement: <ErrorPage /> },
 ]);
