@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { useFormik } from "formik";
 import { basicSchema } from "../../schemas";
 import { logInUser } from "../../api";
+import { ClipLoader } from 'react-spinners';
 
 const LogInModal = ({ isVisible, onClose }) => {
   const [error, setError] = useState("");
@@ -38,9 +39,14 @@ const LogInModal = ({ isVisible, onClose }) => {
       password: "",
     },
     validationSchema: basicSchema,
-    onSubmit: (values, actions) => {
-      handleLogin();
-      actions.resetForm();
+    onSubmit: async (values, actions) => {
+      try {
+        await handleLogin();
+        actions.resetForm();
+      } catch (error) {
+        console.error("Login failed. Error:", error);
+        setError("Login failed. Please try again.");
+      }
     },
   });
 
@@ -92,14 +98,18 @@ const LogInModal = ({ isVisible, onClose }) => {
           Forgot Password?
         </a>
         <div className="flex justify-center items-center">
-          <button
-            onClick={handleLogin}
-            disabled={formik.isSubmitting}
-            type="button"
-            className="opacity-35 cursor-not-allowed text-[#FFF] bg-[#DF327B] hover:bg-[#A12356] mt-2 font-Regular rounded-full p-3 md:w-[350px] w-[300px]"
-          >
+        <button
+          disabled={formik.isSubmitting}
+          type="button"
+          onClick={formik.handleSubmit}
+          className="opacity-35 text-[#FFF] bg-[#DF327B] hover:bg-[#A12356] mt-2 font-Regular rounded-full p-3 md:w-[350px] w-[300px]"
+        >
+          {formik.isSubmitting ? (
+            <ClipLoader color="#FFF" size={20} />
+          ) : (
             <p className="text-center font-bold text-xl">Log in</p>
-          </button>
+          )}
+        </button>
         </div>
         <div className="flex items-center justify-center text-sm font-Regular m-8 text-[#828282]">
           Need an account?
