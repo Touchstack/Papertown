@@ -6,10 +6,11 @@ import { BsSuitClubFill } from "react-icons/bs";
 import { TbWriting } from "react-icons/tb";
 import { MdBubbleChart } from "react-icons/md";
 import { MdCenterFocusStrong } from "react-icons/md";
+import { FiLogOut } from "react-icons/fi";
 
 const DBLeftSection = () => {
   return (
-    <div className='h-full py-12 hidden md:flex flex-col items-center min-w-210 w-[250px] gap-3'>
+    <div className='h-full py-12 hidden md:flex flex-col justify-center items-center min-w-210 w-[250px] gap-3'>
       <NavLink to={"/"} className="flex items-center justify-start px-6 gap-4 ">
         <img
           src={AppLogo}
@@ -50,10 +51,17 @@ const DBLeftSection = () => {
         </NavLink>
       </ul>
 
+     
       {/* Logout section */}
-      <div className='mt-auto'>
-        <hr className="mx-5" />
-        {/* Add your logout component or link here */}
+      <div className='mt-auto flex flex-col mr-[5rem]'>
+          <hr className='text-[#D9D9D9] mb-4 ml-[70px] w-[200px]'/>
+          <div className="flex items-center justify-center gap-2 mb-5 cursor-pointer">
+            <FiLogOut className='font-bold'/>
+            <p className='text-[14px] font-[700]'>Log Out</p>
+          </div>
+        <p className='text-[#B44DB8] flex justify-center items-center text-[10px] ml-10'>
+          Papertown Imaginarium © 2022
+        </p>
       </div>
     </div>
   )
