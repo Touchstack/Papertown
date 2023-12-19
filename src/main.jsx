@@ -76,11 +76,6 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   { path: "/events", element: <EventsPage />, errorElement: <ErrorPage /> },
-  {
-    path: "/eventsdet",
-    element: <EventsDetails />,
-    errorElement: <ErrorPage />,
-  },
 
 ]);
 
