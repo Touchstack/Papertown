@@ -21,7 +21,6 @@ import Profile from "./pages/ProfilePage/Profile.jsx";
 import EventsDetails from "./pages/EventsDetails/EventsDetails.jsx";
 import AdminLogIn from "./pages/Admin/AdminLogIn.jsx";
 
-
 const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
   { path: "/submit", element: <SubmitPage />, errorElement: <ErrorPage /> },
@@ -48,9 +47,12 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
 
-  { path: "/events", element: <EventsPage />, errorElement: <ErrorPage />},
-  { path: "/eventsdetails", element: <EventsDetails />, errorElement: <ErrorPage /> },
-
+  { path: "/events", element: <EventsPage />, errorElement: <ErrorPage /> },
+  {
+    path: "/eventsdetails",
+    element: <EventsDetails />,
+    errorElement: <ErrorPage />,
+  },
 
   {
     path: "/pressclub",
@@ -68,7 +70,11 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
 
-  { path: "/admin/login", element: <AdminLogIn />, errorElement: <ErrorPage /> },
+  {
+    path: "/admin/login",
+    element: <AdminLogIn />,
+    errorElement: <ErrorPage />,
+  },
 
   {
     path: "/admin/*",
@@ -81,7 +87,6 @@ const router = createBrowserRouter([
     element: <EventsDetails />,
     errorElement: <ErrorPage />,
   },
-
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
