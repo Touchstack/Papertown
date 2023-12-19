@@ -5,7 +5,7 @@ import MapComponent from "./MapComponent";
 
 const DetailsContent = () => {
   return (
-    <div className="lg:ml-[10%] lg:mt-20 mt-10">
+    <div className="lg:ml-[10%] lg:mt-20 mt-10 z-[50]">
       <div className="lg:ml-5 md:ml-20 ml-5">
         <h5 className="lg:w-[800px] md:w-[500px] lg:text-[72px] font-Bold md:text-5xl text-5xl mb-5">
         Annual UNICEF spelling Bee 2023
