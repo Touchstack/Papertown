@@ -18,11 +18,10 @@ const DBRightSection = () => {
           <Route path="/team" element={<Team />} />
           <Route path="/writers" element={<Writers />} />
           {/*
-           
-            <Route path="/Clubs" element={} />
-            <Route path="/Submission" element={} />
-           
-            <Route path="/CSM" element={} /> 
+            <Route path="/writers" element={} />
+            <Route path="/clubs" element={} />
+            <Route path="/submission" element={} />           
+            <Route path="/cms" element={} /> 
             */}
         </Routes>
       </div>
