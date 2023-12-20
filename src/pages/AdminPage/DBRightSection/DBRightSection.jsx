@@ -1,6 +1,7 @@
 import Dashboard from "./DashBoard/DashBoard";
 import Team from "../Team/Team";
 import { Routes, Route } from "react-router-dom";
+// import NewMember from "../Team/NewMember";
 
 const DBRightSection = () => {
   return (
