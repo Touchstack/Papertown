@@ -60,10 +60,10 @@ const LeftSection = () => {
 
 
   return (
-    <div className="flex flex-col md:flex-1 items-center justify-center">
+    <div className="flex flex-col lg:flex-auto items-center justify-center">
        <div className="grid grid-cols-2 md:grid-cols-3 gap-[10px]">
         {data.map((info) => (
-            <div key={info.title} className="bg-white rounded-lg shadow px-5 py-3 md:w-[215px] w-[170px]">
+            <div key={info.title} className="bg-white rounded-lg shadow px-5 py-3 md:w-[215px] xl:w-[315px] w-[170px]">
             <h2 className="text-[13px] text-[#BCBCBC] font-bold mb-2">{info.title}</h2>
             <p className="font-[700] text-[24px] text-[#242424]">{info.fig}</p>
             </div>
@@ -71,7 +71,7 @@ const LeftSection = () => {
        </div>
 
        {/*user growth*/}
-        <div className="md:w-[679px] w-[360px] h-[323px] bg-[#FFFFFF]  px-5 py-3  mt-5 rounded-[10px]">
+        <div className="md:w-[679px] xl:w-[979px] w-[360px] xl:h-[393px] h-[323px] bg-[#FFFFFF]  px-5 py-3  mt-5 rounded-[10px]">
            <div className="flex flex-col p-2">
                <div className="flex justify-between">
                      <p>User Growth</p>
@@ -106,14 +106,14 @@ const LeftSection = () => {
            </div>
 
             <div>
-               <img src={dashStats} alt="stats" />
+               <img src={dashStats} alt="stats" className="xl:w-[900px]" />
             </div>
         </div>
        {/*user growth*/}
 
 
       {/* New Writers Section */}
-      <div className="md:w-[679px] w-[360px] h-[361px] bg-white px-5 py-3  mt-5 rounded-2xl overflow-hidden">
+      <div className="md:w-[679px] xl:w-[979px] w-[360px] h-[361px] bg-white px-5 py-3 mb-5  mt-5 rounded-2xl overflow-hidden">
       <div className="flex justify-between items-center p-5">
          <h2 className="text-xl font-semibold">New Writers</h2>
          <a href="/" className="text-sm flex items-center text-[#BCBCBC]">
@@ -128,9 +128,9 @@ const LeftSection = () => {
                <thead>
                <tr className="text-xs text-[#9A9A9A] bg-white">
                   <th scope="col" className="px-6 py-3 text-left">Name</th>
-                  <th scope="col" className=" px-10 text-left font-medium py-3">Age</th>
-                  <th scope="col" className=" px-10 text-left font-medium py-3">Grade</th>
-                  <th scope="col" className=" px-10 text-left font-medium py-3">Date</th>
+                  <th scope="col" className=" xl:px-[5rem] px-10 text-left font-medium py-3">Age</th>
+                  <th scope="col" className=" xl:px-[5rem] px-10 text-left font-medium py-3">Grade</th>
+                  <th scope="col" className=" xl:px-[5rem] px-10 text-left font-medium py-3">Date</th>
                </tr>
                </thead>
                <tbody>
@@ -140,9 +140,9 @@ const LeftSection = () => {
                      <img src={writer.img} alt={writer.name} className="h-8 w-8 rounded-full mr-3" />
                      <span className="font-medium text-gray-900">{writer.name}</span>
                      </td>
-                     <td className="px-10 py-4">{writer.age}</td>
-                     <td className="px-10 py-4">{writer.grade}</td>
-                     <td className="px-10 py-4">{writer.date}</td>
+                     <td className="xl:px-[5rem] px-10 py-4">{writer.age}</td>
+                     <td className="xl:px-[5rem] px-10 py-4">{writer.grade}</td>
+                     <td className="xl:px-[5rem] px-10 py-4">{writer.date}</td>
                   </tr>
                ))}
                </tbody>
