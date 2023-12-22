@@ -1,7 +1,10 @@
 import Dashboard from "./DashBoard/DashBoard";
-import Team from "../Team/Team";
+import NewMember from "./Team/NewMember";
+
+// import Team from "./Team/Team";
 import { Routes, Route } from "react-router-dom";
-// import NewMember from "../Team/NewMember";
+// import Profile from "./Team/Profile/Profile";
+// import NewMember from "";
 
 const DBRightSection = () => {
   return (
@@ -10,7 +13,8 @@ const DBRightSection = () => {
       <div className="flex flex-col flex-1">
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/team" element={<Team />} />
+          <Route path="/team" element={<NewMember />} />
+
           {/*
             <Route path="/Writers" element={} />
             <Route path="/Clubs" element={} />

@@ -88,7 +88,6 @@ const router = createBrowserRouter([
     element: <EventsDetails />,
     errorElement: <ErrorPage />,
   },
-
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

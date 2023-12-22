@@ -19,9 +19,7 @@ function Members() {
           <a
             href="#"
             className={`inline-block p-4 text-[#B44DB8] font-Bold text-[20px] border-b-2 border-[#B44DB8] rounded-t-lg ${
-              activeTab === "members"
-                ? "active dark:text-blue-500 dark:border-blue-500"
-                : ""
+              activeTab === "members" ? "active dark:borde" : ""
             }`}
             onClick={() => handleTabClick("members")}
           >
