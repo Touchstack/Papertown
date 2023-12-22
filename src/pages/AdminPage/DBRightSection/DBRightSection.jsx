@@ -3,7 +3,7 @@ import Team from "./Team/Team";
 import CsmPage from "./CMS/CmsPage";
 import { Routes, Route } from "react-router-dom";
 import Writers from "../DBRightSection/Writers/Writers";
-import NewMember from "../Team/NewMember";
+import NewMember from "./Team/NewMember";
 
 
 const DBRightSection = () => {
