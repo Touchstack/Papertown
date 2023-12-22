@@ -81,7 +81,9 @@ const router = createBrowserRouter([
     element: <AdminDashBoard />,
     errorElement: <ErrorPage />,
   },
+
   { path: "/events", element: <EventsPage />, errorElement: <ErrorPage /> },
+
 
   {
     path: "/eventsdet",
