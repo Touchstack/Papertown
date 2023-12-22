@@ -3,7 +3,7 @@ import icon from "../../assets/Images/base.svg";
 const Header = () => {
   return (
     <div className="bg-[#FFD8FF] py-10">
-      <div className="container mx-auto">
+      <div className="container mx-auto m-24">
         <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 lg:mb-20 md:mb-20 sm:mb-80 mb-80">
           {/* Left Col */}
           <h3 className="font-Bold text-[#000] lg:text-7xl md:text-6xl sm:text-6xl text-6xl mt-8 text-center">
