@@ -1,10 +1,5 @@
-import { useState } from "react";
-
-import Profile from "../../../../assets/Images/child5.png";
+import Profile from "../../../assets/Images/child5.png";
 import { useNavigate } from "react-router-dom";
-import Modal from "./Modal/Modal";
-
-// import NewMember from "./NewMember";
 
 function MemberPage() {
 
@@ -18,11 +13,7 @@ function MemberPage() {
     <div>
       {/* button start  */}
       <div className=" flex justify-end lg:mr-8 mr-5 gap-5 mt-0">
-        <button
-          type="button"
-          className="bg-[#F2F2F2] text-[#BDBDBD] rounded-full w-[111px] py-2"
-          onClick={handleRemoveClick}
-        >
+        <button className="bg-[#F2F2F2] text-[#BDBDBD] rounded-full w-[111px] py-2">
           Remove
         </button>
         <button onClick={handleNewmember} className="bg-[#DF327B] lg:inline-block hidden   text-[#FFFFFF] font-Bold rounded-full w-[185px] py-2">
@@ -30,7 +21,7 @@ function MemberPage() {
         </button>
       </div>
       {/* button end  */}
-      <div className="flex justify-between lg:ml-10 mt-10">
+      <div className="flex justify-between lg:ml-10 mt-10 border-b-2 border-[#EFEEEE]">
         <ul className="flex ml-3 md:ml-7 lg:ml-10">
           <li className="lg:mr-[200%] mr-16 md:mr-[140%]">Name</li>
           <li className="lg:mr-[200%] mr-16 md:mr-[140%]">Email</li>
@@ -38,7 +29,6 @@ function MemberPage() {
           <li className="">Role</li>
         </ul>
       </div>
-      <hr className="text-[#D9D9D9] mt-5 ml-[50px] w-[990px]" />
       <div className="mt-10 lg:ml-10 ml-4">
         {/* start  */}
         <div className="flex gap-3 text-center items-center mb-5">
@@ -195,10 +185,6 @@ function MemberPage() {
         </p>
         {/* end  */}
       </div>
-      {/* Modal start */}
-      <Modal isOpen={isModalOpen} onClose={closeModal} />
-
-      {/* Modal end */}
     </div>
   );
 }
