@@ -83,6 +83,13 @@ const router = createBrowserRouter([
   },
 
   { path: "/events", element: <EventsPage />, errorElement: <ErrorPage /> },
+
+
+  {
+    path: "/eventsdet",
+    element: <EventsDetails />,
+    errorElement: <ErrorPage />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

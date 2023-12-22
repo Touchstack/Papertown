@@ -66,7 +66,7 @@ const RightSection = () => {
   ]
 
   return (
-    <div className="flex flex-col items-center justify-center mt-6 md:ml-3 lg:mr-2">
+    <div className="flex flex-col items-center lg:flex-auto justify-center mt-6 md:ml-3 lg:mr-2">
         {/*Top writers section*/}
         <div className="lg:w-[410px] md:w-[670px] w-[360px] bg-[#FFFFFF] h-[203px] rounded-[10px] mt-5 md:mt-0">
             <div className="flex flex-row justify-between p-5">
