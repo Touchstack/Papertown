@@ -4,7 +4,13 @@ import NewMember from "./Team/NewMember";
 // import Team from "./Team/Team";
 import { Routes, Route } from "react-router-dom";
 // import Profile from "./Team/Profile/Profile";
-// import NewMember from "";
+
+
+import Writers from "../DBRightSection/Writers/Writers";
+
+
+// import NewMember from "../Team/NewMember";
+
 
 const DBRightSection = () => {
   return (
@@ -14,13 +20,13 @@ const DBRightSection = () => {
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/team" element={<NewMember />} />
-
+          <Route path="/team" element={<Team />} />
+          <Route path="/writers" element={<Writers />} />
           {/*
-            <Route path="/Writers" element={} />
-            <Route path="/Clubs" element={} />
-            <Route path="/Submission" element={} />
-           
-            <Route path="/CSM" element={} /> 
+            <Route path="/writers" element={} />
+            <Route path="/clubs" element={} />
+            <Route path="/submission" element={} />           
+            <Route path="/cms" element={} /> 
             */}
         </Routes>
       </div>
