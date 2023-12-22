@@ -12,13 +12,14 @@ function Roles() {
         </button>
       </div>
       {/* button end  */}
-      <div className="flex justify-between lg:ml-10 mt-10 border-b-2 border-[#EFEEEE]">
+      <div className="flex justify-between lg:ml-10 mt-10">
         <ul className="flex ml-3 md:ml-7 lg:ml-10">
           <li className="">Role</li>
           <li className="">Description</li>
           <li className="">Date created</li>
         </ul>
       </div>
+      <hr className="text-[#D9D9D9] mt-5 ml-[50px] w-[990px]" />
       <div className="mt-10 lg:ml-10 ml-4">
         {/* start  */}
         <div className="flex text-center items-center mb-5">
