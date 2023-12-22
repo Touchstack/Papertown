@@ -1,5 +1,5 @@
 import Dashboard from "./DashBoard/DashBoard";
-import Team from "../Team/Team";
+import Team from "./Team/Team";
 import CsmPage from "./CMS/CmsPage";
 import { Routes, Route } from "react-router-dom";
 import Writers from "../DBRightSection/Writers/Writers";
