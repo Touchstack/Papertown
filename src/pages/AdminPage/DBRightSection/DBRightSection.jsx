@@ -1,12 +1,10 @@
 import Dashboard from "./DashBoard/DashBoard";
 import Team from "../Team/Team";
 import { Routes, Route } from "react-router-dom";
-
 import Writers from "../DBRightSection/Writers/Writers";
-
+import Clubs from "./Clubs/Clubs";
 
 // import NewMember from "../Team/NewMember";
-
 
 const DBRightSection = () => {
   return (
@@ -17,9 +15,9 @@ const DBRightSection = () => {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/team" element={<Team />} />
           <Route path="/writers" element={<Writers />} />
+          <Route path="/clubs" element={<Clubs />} />
           {/*
             <Route path="/writers" element={} />
-            <Route path="/clubs" element={} />
             <Route path="/submission" element={} />           
             <Route path="/cms" element={} /> 
             */}
