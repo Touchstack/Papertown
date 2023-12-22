@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="font-medium text-gray-500 dark:text-gray-400 dark:border-gray-700">
+    <div className="font-medium text-gray-500 dark:text-gray-400 dark:border-gray-700 ">
        
       <ul className="flex gap-10 px-10 mb-10">
         {tabs.map((tab) => (
