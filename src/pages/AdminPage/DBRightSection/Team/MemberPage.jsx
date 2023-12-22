@@ -8,6 +8,8 @@ import Modal from "./Modal/Modal";
 
 function MemberPage() {
 
+  const [isModalOpen, setisModalOpen] = useState(false)
+
   const navigate = useNavigate();
 
   const handleNewmember = () => {
@@ -21,7 +23,7 @@ function MemberPage() {
         <button
           type="button"
           className="bg-[#F2F2F2] text-[#BDBDBD] rounded-full w-[111px] py-2"
-          onClick={handleRemoveClick}
+          //onClick={handleRemoveClick}
         >
           Remove
         </button>
@@ -196,8 +198,9 @@ function MemberPage() {
         {/* end  */}
       </div>
       {/* Modal start */}
-      <Modal isOpen={isModalOpen} onClose={closeModal} />
-
+      <Modal isOpen={isModalOpen} //onClose={closeModal} 
+      />
+      
       {/* Modal end */}
     </div>
   );
