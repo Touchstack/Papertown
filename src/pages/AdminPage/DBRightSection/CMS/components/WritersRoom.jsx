@@ -3,6 +3,7 @@ import { inspiration } from '../../../../../../ConstantData';
 import close from '../../../../../assets/Images/x-close.svg';
 import add from '../../../../../assets/Images/add.svg';
 import { HiCalendar } from "react-icons/hi2";
+import Modal from './Modal';
 
 const WritersRoom = () => {
   const [marqueInput, setMarqueInput] = useState('');
@@ -11,6 +12,15 @@ const WritersRoom = () => {
   const [Day, setDay] = useState('');
   const [startDate, setstartDate] = useState('');
   const [endDate, setendDate] = useState('');
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+    const openModal = () => {
+        setIsModalVisible(true);
+    }
+
+    const closeModal = () => {
+        setIsModalVisible(false);
+    }
 
 
   const handlemarqueChange = (e) => {
@@ -186,10 +196,16 @@ const WritersRoom = () => {
 
       <div className="flex flex-col justify-end mt-5 md:ml-[14rem] mb-5">
         <p className="text-[10px] flex pt-3">Updated 10 Apr 17:23</p>
-        <button className="flex w-auto md:w-[216px] items-center justify-center h-[54px] mt-5 md:mt-10 bg-[#DF327B] rounded-[50px]">
-        <p className="flex text-[#FFF] font-[700]">Save Changes</p>
+
+        <button className="flex w-auto md:w-[216px] items-center justify-center h-[54px] mt-5 md:mt-10 bg-[#DF327B] rounded-[50px]" onClick={openModal}>
+          <p className="flex text-[#FFF] font-[700]">Save Changes</p>
         </button>    
       </div>
+
+
+      {isModalVisible && 
+                <Modal isVisible={isModalVisible} text="Changes Saved!" onClose={closeModal} />
+            }
     </div>
   );
 }
