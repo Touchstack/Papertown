@@ -1,11 +1,12 @@
 import Dashboard from "./DashBoard/DashBoard";
-import Team from "./Team/Team"
+import Team from "./Team/Team";
 import CsmPage from "./CMS/CmsPage";
 import { Routes, Route } from "react-router-dom";
 import Writers from "../DBRightSection/Writers/Writers";
 import Clubs from "./Clubs/Clubs";
 import NewMember from "./Team/NewMember";
-
+import AddRole from "./Team/Roles/AddRole";
+import PermissionsRole from "./Team/Roles/PermissionsRole";
 
 const DBRightSection = () => {
   return (
@@ -15,11 +16,14 @@ const DBRightSection = () => {
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/team" element={<Team />} />
-          <Route path="/cms" element={<CsmPage />} />        
+          <Route path="/cms" element={<CsmPage />} />
           <Route path="/writers" element={<Writers />} />
-          <Route path="/team/NewMember" element={<NewMember />} />
+          <Route path="/team/new-member" element={<NewMember />} />
+          <Route path="/team/add-role" element={<AddRole />} />
+          <Route path="/team/role-permissions" element={<PermissionsRole />} />
+
           <Route path="/clubs" element={<Clubs />} />
-            
+
           {/* 
             <Route path="/submission" element={} />           
             <Route path="/cms" element={} /> 
