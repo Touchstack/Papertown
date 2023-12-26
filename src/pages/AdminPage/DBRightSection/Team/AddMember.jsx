@@ -9,9 +9,7 @@ function AddMember() {
       <div className="flex flex-row items-center mt-10 lg:mt-0 justify-between md:p-10 p-6">
         <Link to="/admin/team" className="flex items-center lg:gap-3">
           <MdArrowBackIosNew className="text-[22px]" />
-          <h1 className="md:text-[42px] lg:text-[22px] text-[18px] font-Bold">
-            New Member
-          </h1>
+          <h1 className="md:text-[42px] text-[18px] font-Bold">New Member</h1>
         </Link>
 
         <div className="flex flex-row items-center md:gap-5 gap-2">

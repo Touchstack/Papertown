@@ -34,7 +34,6 @@ function RoleForm() {
                 Description
               </label>
               <textarea
-                id="message"
                 rows="4"
                 className="appearance-none  block lg:w-[400px] w-[300px] bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 placeholder="Write your description here..."
