@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { LuPencil } from 'react-icons/lu';
+import Modal from './Modal';
 
 const Home = () => {
   const [marqueInput, setMarqueInput] = useState('');
@@ -8,6 +9,15 @@ const Home = () => {
   const [description, setDescription] = useState('');
   const [file, setFile] = useState([]);
   const [fileUrl, setFileUrl] = useState('');
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const openModal = () => {
+      setIsModalVisible(true);
+  }
+
+  const closeModal = () => {
+      setIsModalVisible(false);
+  }
 
   const handlemarqueChange = (e) => {
     setMarqueInput(e.target.value);
@@ -39,7 +49,7 @@ const Home = () => {
   return (
     <div className="px-4 md:px-10 flex flex-col">
       {/* Marque section */}
-      <div className="flex flex-col md:flex-row md:mb-10 gap-4 md:gap-12">
+      <section className="flex flex-col md:flex-row md:mb-10 gap-4 md:gap-12">
         <p className="text-[#000] font-[700] mb-3 md:mb-0">Marque</p>
 
         <div>
@@ -52,13 +62,13 @@ const Home = () => {
             placeholder="Type something..."
           />
         </div>
-      </div>
+      </section>
       {/* Marque section */}
 
       <hr className="mx-5" />
 
       {/* Notice Board */}
-      <div className="mt-5 flex flex-col md:flex-row gap-4 md:gap-12">
+      <section className="mt-5  flex flex-col md:flex-row gap-4 md:gap-12">
         <p className="text-[#000] font-[700] mb-3 md:mb-0">Notice board</p>
 
         <div className="flex flex-col w-full md:w-[60%]">
@@ -76,12 +86,13 @@ const Home = () => {
 
           <div className="mt-5">
             <p className="text-[#393939] mb-2">Description</p>
-            <input
+            <textarea
               type="text"
               value={description}
               onChange={handledescriptionChange}
-              className="w-[350px] md:w-[500px] h-[140px] p-4 rounded-[10px] bg-[#F4F5F7] border-[#F4F5F7]"
+              className=" w-[350px] md:w-[500px] h-[140px] p-4 rounded-[10px] bg-[#F4F5F7] border-[#F4F5F7]"
               placeholder="Type something..."
+              maxLength={5000}
             />
           </div>
 
@@ -105,14 +116,18 @@ const Home = () => {
             </div>
             <div className="flex flex-col mt-5">
               <p className="text-[10px] flex pt-3">Updated 10 Apr 17:23</p>
-              <button className="flex w-full md:w-[216px] items-center justify-center h-[54px] mt-5 md:mt-10 bg-[#DF327B] rounded-[50px]">
+              <button className="flex w-full md:w-[216px] items-center justify-center h-[54px] mt-5 md:mt-10 bg-[#DF327B] rounded-[50px]" onClick={openModal}>
                 <p className="flex text-[#FFF] font-[700]">Save Changes</p>
               </button>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       {/* Notice Board */}
+
+      {isModalVisible && 
+                <Modal isVisible={isModalVisible} text="Changes Saved!" onClose={closeModal} />
+            }
     </div>
   );
 };
