@@ -19,7 +19,7 @@ const Navbar = () => {
         {tabs.map((tab) => (
           <li
             key={tab}
-            className={`cursor-pointer text-[16px] ${
+            className={`cursor-pointer text-[14px] md:text-[16px] ${
               activeTab === tab ? "border-b-[1px] border-[#B44DB8] text-[#B44DB8]" : ""
             }`}
             onClick={() => handleTabClick(tab)}
