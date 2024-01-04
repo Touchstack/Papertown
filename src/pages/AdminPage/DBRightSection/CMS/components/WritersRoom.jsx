@@ -194,12 +194,14 @@ const WritersRoom = () => {
       </div>
       {/* Dates */}
 
-      <div className="flex flex-col justify-end mt-5 md:ml-[14rem] mb-5">
-        <p className="text-[10px] flex pt-3">Updated 10 Apr 17:23</p>
-
-        <button className="flex w-auto md:w-[216px] items-center justify-center h-[54px] mt-5 md:mt-10 bg-[#DF327B] rounded-[50px]" onClick={openModal}>
-          <p className="flex text-[#FFF] font-[700]">Save Changes</p>
-        </button>    
+      <div className='flex justify-end  mx-[15%]'>
+         <div className='flex flex-col items-center justify-center'>
+         <p className='text-[10px] mb-2'>Updated 10 Apr 17:23</p> 
+         
+         <button className="flex w-full md:w-[216px] items-center justify-center h-[54px] mb-5 mt-5  bg-[#DF327B] rounded-[50px]" onClick={openModal}>
+                <p className="flex text-[#FFF] font-[700]">Save Changes</p>
+         </button>
+         </div> 
       </div>
 
 
