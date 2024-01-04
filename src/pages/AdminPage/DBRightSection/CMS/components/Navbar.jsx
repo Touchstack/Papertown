@@ -3,6 +3,8 @@ import Home from './Home';
 import News from "./News";
 import WriteNow from "./WriteNow";
 import WritersRoom from "./WritersRoom";
+//import AddNewsItem from "./AddNewsItem";
+// import NewsAndEvents from "./NewsAndEvents";
 
 const Navbar = () => {
   const tabs = ["Home", "Writer's Room", "Write Now", "News"];
@@ -13,7 +15,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="font-medium text-gray-500 dark:text-gray-400 dark:border-gray-700 ">
+    <div className="font-medium px-10  text-gray-500 dark:text-gray-400 dark:border-gray-700 ">
        
       <ul className="flex gap-10 px-10 mb-10">
         {tabs.map((tab) => (
@@ -47,7 +49,9 @@ const Navbar = () => {
       )}
       {activeTab === "News" && (
         <div>
-          <News />
+           <News />
+          {/* <AddNewsItem /> */}
+          {/* <NewsAndEvents /> */}
         </div>
       )}
     </div>

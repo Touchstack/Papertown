@@ -1,7 +1,7 @@
 import { HiPlus } from "react-icons/hi2";
 
-
 const News = () => {
+ 
   return (
     <div>
       {/* Buttons */}
