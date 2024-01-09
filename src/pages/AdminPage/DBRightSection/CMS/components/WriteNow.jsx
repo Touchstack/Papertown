@@ -1,11 +1,22 @@
 import { useState } from 'react';
 import { HiMiniChevronLeft, HiMiniChevronRight, HiPlus, HiCalendar } from "react-icons/hi2";
+import PromptCard from './PromptCard';
+import AddNewPrompt from './AddNewPrompt';
 
 
 const WriteNow = () => {
 
   const [title, setTitle] = useState('');
   const [Date, setDate] = useState('');
+  const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const openModal = () => {
+      setIsModalVisible(true);
+  }
+
+  const closeModal = () => {
+      setIsModalVisible(false);
+  }
 
   const handleDueDateChange = (e) => {
     setDate(e.target.value);
@@ -67,14 +78,14 @@ const WriteNow = () => {
               </div>
 
               {/* Cards */}
-                <div className='mb-10'>
-                   
+                <div className='mb-10 max-w-[800px]'>
+                   <PromptCard />
                 </div>
               {/* Cards */}
 
               {/* add new prompt */}
                  <div className='flex justify-end mx-[20%]'>
-                     <p className='flex items-center text-[#DF327B] font-[600]'>
+                     <p className='flex items-center text-[#DF327B] font-[600] cursor-pointer'  onClick={openModal}>
                        <HiPlus width={5} />
                        Add new prompt
                      </p>
@@ -115,6 +126,10 @@ const WriteNow = () => {
          </button>
          </div> 
       </div>
+
+      {isModalVisible && 
+                <AddNewPrompt isVisible={isModalVisible} onClose={closeModal} />
+            }
     </div>
   )
 }
