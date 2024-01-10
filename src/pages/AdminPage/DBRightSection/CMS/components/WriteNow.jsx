@@ -8,14 +8,14 @@ const WriteNow = () => {
 
   const [title, setTitle] = useState('');
   const [Date, setDate] = useState('');
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isPromptModalVisible, setisPromptModalVisible] = useState(false);
 
   const openModal = () => {
-      setIsModalVisible(true);
+    setisPromptModalVisible(true);
   }
 
   const closeModal = () => {
-      setIsModalVisible(false);
+    setisPromptModalVisible(false);
   }
 
   const handleDueDateChange = (e) => {
@@ -127,8 +127,8 @@ const WriteNow = () => {
          </div> 
       </div>
 
-      {isModalVisible && 
-                <AddNewPrompt isVisible={isModalVisible} onClose={closeModal} />
+      {isPromptModalVisible && 
+                <AddNewPrompt isVisible={isPromptModalVisible} onClose={closeModal} />
             }
     </div>
   )

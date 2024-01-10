@@ -1,7 +1,7 @@
 
 const PromptCard = () => {
   return (
-    <div className="flex flex-col md:flex-row mt-3 overflow-x-auto md:ml-[9rem] gap-5">
+    <div className="flex flex-col md:flex-row mt-3 overflow-x-auto md:ml-[9rem] gap-3">
       {Array.from({ length: 5 }).map((_, index) => (
         <div key={index} className="flex-shrink-0 w-[207px] h-[155px] rounded-[16px] border-[1px] border-[#E8E8E8] bg-[#FFF] p-5">
            <div className="flex flex-row gap-2 text-[6.99px]">
