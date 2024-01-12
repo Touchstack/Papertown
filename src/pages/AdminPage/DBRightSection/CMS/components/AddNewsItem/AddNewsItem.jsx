@@ -2,7 +2,7 @@ import { HiChevronLeft } from 'react-icons/hi2';
 import { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { LuUpload } from 'react-icons/lu';
-import Modal from './Modal';
+import Modal from '../Modal/Modal';
 
 
 const AddNewsItem = () => {
@@ -67,7 +67,7 @@ const AddNewsItem = () => {
             <p className="text-[#393939] mb-2">Upload cover photo</p>
             <div {...getRootProps()} className="cursor-pointer">
               <input {...getInputProps()} />
-              <div className="w-full md:w-[522px] h-[200px] border-dashed border-4 rounded-[10px] relative">
+              <div className="w-full md:w-[80%] h-[200px] border-dashed border-4 rounded-[10px] relative">
                 {fileUrl && (
                   <img
                     src={fileUrl}
@@ -75,7 +75,7 @@ const AddNewsItem = () => {
                     className="w-full md:w-[422px] h-[195px] rounded-[10px] object-cover"
                   />
                 )}
-                <button className="absolute  flex items-center justify-center gap-2 border-[1px] border-[#FFF] rounded-[10px] p-2 top-[5rem] left-[8rem] md:left-[10rem]">
+                <button className="absolute  flex items-center justify-center gap-2 border-[1px] border-[#FFF] rounded-[10px] p-2 top-[5rem] left-[8rem] md:left-[20rem]">
                   <LuUpload color="#FFF" />
                   <p className="text-[#FFF] font-[700]">Upload image</p>
                 </button>
@@ -88,7 +88,7 @@ const AddNewsItem = () => {
                 <textarea
                   type='text'
                   placeholder="About the writer"
-                  className='w-[50%] h-[200px] rounded-[10px] px-2 py-2'
+                  className='w-[80%] h-[200px] rounded-[10px] px-2 py-2'
                   value={about}
                   onChange={handleAboutChange}
                 />

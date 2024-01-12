@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { LuPencil } from 'react-icons/lu';
-import Modal from './Modal';
+import Modal from '../Modal/Modal';
 
 const Home = () => {
   const [marqueInput, setMarqueInput] = useState('');

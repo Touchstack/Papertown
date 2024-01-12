@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { HiMiniChevronLeft, HiMiniChevronRight, HiPlus, HiCalendar } from "react-icons/hi2";
-import PromptCard from './PromptCard';
-import AddNewPrompt from './AddNewPrompt';
+import PromptCard from '../PromptCard/PromptCard';
+import AddNewPrompt from '../AddNewPropmt/AddNewPrompt';
 
 
 const WriteNow = () => {

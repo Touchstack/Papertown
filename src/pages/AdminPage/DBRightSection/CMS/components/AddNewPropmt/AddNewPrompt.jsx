@@ -3,10 +3,10 @@ import { IoCloseSharp } from "react-icons/io5";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { ClipLoader } from "react-spinners";
-import { IoIosArrowDown } from 'react-icons/io';
+
 
 const AddNewPrompt = ({ isVisible, onClose }) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setIsLoading] = useState(false);
 
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm();
  
@@ -17,6 +17,7 @@ const AddNewPrompt = ({ isVisible, onClose }) => {
       };
 
       const onSubmit = async () => {
+        setIsLoading(true)
         // do something or make an API call
       };
 

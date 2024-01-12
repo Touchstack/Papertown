@@ -1,10 +1,12 @@
 import { useState } from "react";
-import Home from './Home';
-import News from "./News";
-import WriteNow from "./WriteNow";
-import WritersRoom from "./WritersRoom";
-//import AddNewsItem from "./AddNewsItem";
-// import NewsAndEvents from "./NewsAndEvents";
+import Home from '../Home/Home';
+// import News from "../News/News";
+// import WriteNow from "../WriteNow/WriteNow";
+import WritersRoom from "../WritersRoom/WritersRoom";
+// import AddNewsItem from "../AddNewsItem/AddNewsItem";
+// import NewsAndEvents from "../NewsAndEvents/NewsAndEvents";
+// import AllPrompt from "../AllPrompt/AllPrompt";
+import SinglePrompt from "../SinglePrompt/SinglePrompt";
 
 const Navbar = () => {
   const tabs = ["Home", "Writer's Room", "Write Now", "News"];
@@ -44,14 +46,16 @@ const Navbar = () => {
       )}
        {activeTab === "Write Now" && (
         <div>
-          <WriteNow />
+          {/* <WriteNow /> */}
+          {/* <AllPrompt /> */}
+           <SinglePrompt />
         </div>
       )}
       {activeTab === "News" && (
         <div>
-           <News />
-          {/* <AddNewsItem /> */}
-          {/* <NewsAndEvents /> */}
+           {/* <News /> */}
+           {/* <AddNewsItem /> */}
+           {/* <NewsAndEvents /> */}
         </div>
       )}
     </div>
