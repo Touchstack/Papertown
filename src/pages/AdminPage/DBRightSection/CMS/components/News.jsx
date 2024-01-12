@@ -26,9 +26,9 @@ const News = () => {
         </button>
       </div>
 
-      <div className="flex flex-row justify-between items-center justify-center">
+      <div className="flex flex-row justify-between items-center">
         {/* Left */}
-        <div className="flex flex-col items-center justify-start mb-5 gap-10">
+        <div className="flex flex-col items-center  mb-5 gap-10">
           {Array.from({length: 6}).map((_, index) => (
             <div key={index} className="flex items-center">
               <input
@@ -48,13 +48,11 @@ const News = () => {
           ))}
         </div>
         {/* Left */}
-
-        {/* Right */}
-        <div className="flex flex-col items-center justify-end mb-5  gap-8">
+       
+      {/* Right */}
+        <div className="flex flex-col items-center mb-8  gap-8">
           {Array.from({length: 6}).map((_, index) => (
             <div key={index} className="">
-            
-
               <div className="flex flex-col justify-center ml-2 w-[457px]">
                 <p className=" text-[#393939] text-[16px]">
                   Christmas writing contest . Dec 17 ‘23 Writers will identify their favorite sensory memories and transfer them to a visual heart map.
@@ -63,7 +61,7 @@ const News = () => {
             </div>
           ))}
         </div>
-        {/* Right */}
+      {/* Right */}
       </div>
     </div>
   )

@@ -54,7 +54,7 @@ const WriteNow = () => {
             className="w-[350px] md:w-[522px] h-full p-4 rounded-[10px] bg-[#F4F5F7] border-[#F4F5F7] text-[#000]"
             placeholder="Type something..."
           /> 
-          <HiCalendar className='absolute right-4 top-5 text-[#A3A3A3] cursor-pointer w-[50px]' />
+          <HiCalendar className='absolute right-4 top-5 text-[#A3A3A3] cursor-pointer w-[50px] hidden md:block' />
         </div>  
         </div>
       </section>
