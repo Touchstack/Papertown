@@ -21,14 +21,15 @@ const News = () => {
       <button className="w-[124px] h-[50px] bg-[#F2F2F2] text-[#BDBDBD] rounded-[30px]">
         Remove
       </button>
-      <button className="md:w-[175px] w-[104px] text-[10px] h-[50px] bg-[#DF327B] text-[#F2F2F2] rounded-[50px] flex items-center justify-center font-[700]">
+      <button className="md:w-[175px] w-[104px] md:text-[16px] text-[10px] h-[50px] bg-[#DF327B] text-[#F2F2F2] rounded-[50px] flex items-center justify-center font-[700]">
         <HiPlus /> Add news item
       </button>
     </div>
   
     <div className="flex flex-col">
       {Array.from({ length: 6 }).map((_, index) => (
-        <div key={index} className="flex flex-row justify-between w-full mb-5">
+        <div key={index} className="flex flex-col">
+         <div className="flex flex-row justify-between w-full mb-5">
           {/* Left */}
           <div className="flex items-center w-[48%]">
             <input
@@ -48,7 +49,7 @@ const News = () => {
           {/* Left */}
   
           {/* Right */}
-          <div className="w-[48%] mt-3">
+          <div className="w-[35%] mt-3">
             <p className="text-[#393939] text-[10px] md:text-[16px]">
               Christmas writing contest. Dec 17 ‘23 Writers will 
               identify their favorite sensory memories and transfer 
@@ -57,6 +58,9 @@ const News = () => {
           </div>
           {/* Right */}
         </div>
+        
+        <hr />
+      </div>
       ))}
     </div>
   </div>
