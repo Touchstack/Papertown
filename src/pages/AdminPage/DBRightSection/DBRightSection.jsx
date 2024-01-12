@@ -5,8 +5,10 @@ import { Routes, Route } from "react-router-dom";
 import Writers from "../DBRightSection/Writers/Writers";
 import Clubs from "./Clubs/Clubs";
 import NewMember from "./Team/NewMember";
+import Submissions from "./Submissions/Submissions";
 import AddRole from "./Team/Roles/AddRole";
 import PermissionsRole from "./Team/Roles/PermissionsRole";
+
 
 const DBRightSection = () => {
   return (
@@ -23,9 +25,11 @@ const DBRightSection = () => {
           <Route path="/team/role-permissions" element={<PermissionsRole />} />
 
           <Route path="/clubs" element={<Clubs />} />
+          <Route path="/submissions" element={<Submissions />} /> 
+            
 
           {/* 
-            <Route path="/submission" element={} />           
+                      
             <Route path="/cms" element={} /> 
           */}
         </Routes>
