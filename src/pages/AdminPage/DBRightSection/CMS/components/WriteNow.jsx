@@ -121,7 +121,7 @@ const WriteNow = () => {
          <div className='flex flex-col items-center justify-center'>
          <p className='text-[10px] mb-2'>Updated 10 Apr 17:23</p> 
          
-         <button className="flex w-full md:w-[216px] items-center justify-center h-[54px] mt-2 mb-5  bg-[#DF327B] rounded-[50px]">
+         <button className="flex w-[216px] items-center justify-center h-[54px] mt-2 mb-5  bg-[#DF327B] rounded-[50px]">
                 <p className="flex text-[#FFF] font-[700]">Save Changes</p>
          </button>
          </div> 
