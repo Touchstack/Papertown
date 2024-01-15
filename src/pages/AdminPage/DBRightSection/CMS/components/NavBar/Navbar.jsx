@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Home from '../Home/Home';
-// import News from "../News/News";
+import News from "../News/News";
 // import WriteNow from "../WriteNow/WriteNow";
 import WritersRoom from "../WritersRoom/WritersRoom";
 // import AddNewsItem from "../AddNewsItem/AddNewsItem";
@@ -53,7 +53,7 @@ const Navbar = () => {
       )}
       {activeTab === "News" && (
         <div>
-           {/* <News /> */}
+           <News />
            {/* <AddNewsItem /> */}
            {/* <NewsAndEvents /> */}
         </div>
