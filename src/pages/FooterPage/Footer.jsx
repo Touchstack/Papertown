@@ -368,12 +368,12 @@ const Footer = () => {
 
           <div className="flex px-[20px] pb-[20px] sm:flex sm:items-center sm:justify-between justify-between">
             <div className="flex lg:w-2/6 md:w-3/6 sm:w-auto w-auto justify-around">
-              <div className="text-sm sm:text-center text-[#D0D0D0]">
+              <div className="text-sm sm:text-center text-[#D0D0D0] pr-2">
                 <a href="/privacypolicy" className="hover:underline">
                   Copyright Papertown 2022
                 </a>
               </div>
-              <div className="text-sm sm:text-center text-[#D0D0D0]">
+              <div className="text-sm sm:text-center text-[#D0D0D0] pr-2">
                 <a href="/termsofuse" className="hover:underline">
                   Terms of use
                 </a>
