@@ -5,6 +5,7 @@ import AddNewsItem from '../AddNewsItem/AddNewsItem';
 const News = () => {
   const [isChecked, setIsChecked] = useState(Array(6).fill(false));
   const [addNewsItem, setAddNewsItem] = useState(false);
+  const [showNews, setshowNews] = useState(true);
 
   const handleCheckboxChange = (index) => {
     const updatedChecked = [...isChecked];
@@ -48,7 +49,7 @@ const News = () => {
                     />
 
                     <div className="flex flex-col justify-center ml-2">
-                      <h1 className="font-[700] hover:cursor-pointer text-[#000] text-[10px] md:text-[16px]">
+                      <h1  className="font-[700] hover:cursor-pointer text-[#000] text-[10px] md:text-[16px]">
                         UNICEF to initiate Grade 7 spelling Bee
                       </h1>
 
