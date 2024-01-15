@@ -1,10 +1,11 @@
 import { HiChevronLeft} from 'react-icons/hi2';
 import { HiCalendar } from "react-icons/hi2";
+import PropTypes from 'prop-types';
 
-const SinglePrompt = () => {
+const SinglePrompt = ({ onGoBack }) => {
   return (
     <div className="flex flex-col">
-        <div className='flex flex-row items-center gap-3 text-[#040A1D] font-[700] cursor-pointer mb-3'>
+        <div onClick={onGoBack} className='flex flex-row items-center gap-3 text-[#040A1D] font-[700] cursor-pointer mb-3'>
           <HiChevronLeft />
           <p className='text-[26px]'>Processing elements of sound</p>
        </div>
@@ -94,5 +95,9 @@ const SinglePrompt = () => {
     </div>
   )
 }
+
+SinglePrompt.propTypes = {
+    onGoBack: PropTypes.func.isRequired,
+  };
 
 export default SinglePrompt

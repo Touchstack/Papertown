@@ -1,8 +1,10 @@
-const PromptCard = () => {
+import PropTypes from 'prop-types';
+
+const PromptCard = ({ onClick }) => {
   return (
     <div className="flex flex-col md:flex-row mt-3 md:overflow-x-auto overflow-y-auto md:ml-[9rem] gap-3 max-h-[400px]">
       {Array.from({ length: 5 }).map((_, index) => (
-        <div key={index} className="flex-shrink-0 w-[207px] h-[155px] rounded-[16px] border-[1px] border-[#E8E8E8] bg-[#FFF] p-5">
+        <div key={index} className="flex-shrink-0 w-[207px] h-[155px] rounded-[16px] border-[1px] border-[#E8E8E8] bg-[#FFF] p-5" onClick={onClick}>
           <div className="flex flex-row gap-2 text-[6.99px]">
             <div className="w-[47px] h-[19px] text-[#fff] bg-[#B44DB8] rounded-[26px] flex items-center justify-center">
               Grade 6-12
@@ -24,6 +26,10 @@ const PromptCard = () => {
       ))}
     </div>
   );
+};
+
+PromptCard.propTypes = {
+  onClick: PropTypes.func.isRequired,
 };
 
 export default PromptCard

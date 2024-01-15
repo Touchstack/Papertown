@@ -3,8 +3,7 @@ import Home from '../Home/Home';
 import News from "../News/News";
 import WriteNow from "../WriteNow/WriteNow";
 import WritersRoom from "../WritersRoom/WritersRoom";
-// import NewsAndEvents from "../NewsAndEvents/NewsAndEvents";
-// import SinglePrompt from "../SinglePrompt/SinglePrompt";
+
 
 const Navbar = () => {
   const tabs = ["Home", "Writer's Room", "Write Now", "News"];
@@ -51,7 +50,6 @@ const Navbar = () => {
       {activeTab === "News" && (
         <div>
            <News />
-           {/* <NewsAndEvents /> */}
         </div>
       )}
     </div>
