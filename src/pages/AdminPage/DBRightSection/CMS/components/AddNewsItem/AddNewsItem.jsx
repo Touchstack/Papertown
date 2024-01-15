@@ -3,9 +3,10 @@ import { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { LuUpload } from 'react-icons/lu';
 import Modal from '../Modal/Modal';
+import PropTypes from 'prop-types';
 
 
-const AddNewsItem = () => {
+const AddNewsItem = ({ onGoBack }) => {
    const [title, setTitle] = useState("")
    const [file, setFile] = useState([]);
    const [fileUrl, setFileUrl] = useState('');
@@ -46,7 +47,7 @@ const AddNewsItem = () => {
 
   return (
     <div className="px-10 flex flex-col">
-        <div className='flex flex-row items-center gap-3 text-[#040A1D] font-[700] cursor-pointer'>
+        <div onClick={onGoBack} className='flex flex-row items-center gap-3 text-[#040A1D] font-[700] cursor-pointer'>
           <HiChevronLeft />
           <p className='text-[26px]'>Add news item</p>
         </div>
@@ -105,5 +106,9 @@ const AddNewsItem = () => {
     </div>
   )
 }
+
+AddNewsItem.propTypes = {
+  onGoBack: PropTypes.func.isRequired,
+};
 
 export default AddNewsItem

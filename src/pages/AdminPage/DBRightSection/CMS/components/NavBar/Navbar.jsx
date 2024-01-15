@@ -3,9 +3,7 @@ import Home from '../Home/Home';
 import News from "../News/News";
 import WriteNow from "../WriteNow/WriteNow";
 import WritersRoom from "../WritersRoom/WritersRoom";
-// import AddNewsItem from "../AddNewsItem/AddNewsItem";
 // import NewsAndEvents from "../NewsAndEvents/NewsAndEvents";
-// import AllPrompt from "../AllPrompt/AllPrompt";
 // import SinglePrompt from "../SinglePrompt/SinglePrompt";
 
 const Navbar = () => {
@@ -47,14 +45,12 @@ const Navbar = () => {
        {activeTab === "Write Now" && (
         <div>
           <WriteNow />
-          {/* <AllPrompt /> */}
-           {/* <SinglePrompt /> */}
+          {/* <SinglePrompt /> */}
         </div>
       )}
       {activeTab === "News" && (
         <div>
            <News />
-           {/* <AddNewsItem /> */}
            {/* <NewsAndEvents /> */}
         </div>
       )}
