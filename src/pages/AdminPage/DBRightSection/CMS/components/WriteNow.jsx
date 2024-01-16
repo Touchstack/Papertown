@@ -54,7 +54,7 @@ const WriteNow = () => {
             className="w-[350px] md:w-[522px] h-full p-4 rounded-[10px] bg-[#F4F5F7] border-[#F4F5F7] text-[#000]"
             placeholder="Type something..."
           /> 
-          <HiCalendar className='absolute right-4 top-5 text-[#A3A3A3] cursor-pointer w-[50px]' />
+          <HiCalendar className='absolute right-4 top-5 text-[#A3A3A3] cursor-pointer w-[50px] hidden md:block' />
         </div>  
         </div>
       </section>
@@ -121,7 +121,7 @@ const WriteNow = () => {
          <div className='flex flex-col items-center justify-center'>
          <p className='text-[10px] mb-2'>Updated 10 Apr 17:23</p> 
          
-         <button className="flex w-full md:w-[216px] items-center justify-center h-[54px] mt-2 mb-5  bg-[#DF327B] rounded-[50px]">
+         <button className="flex w-[216px] items-center justify-center h-[54px] mt-2 mb-5  bg-[#DF327B] rounded-[50px]">
                 <p className="flex text-[#FFF] font-[700]">Save Changes</p>
          </button>
          </div> 
