@@ -8,6 +8,7 @@ import NewMember from "./Team/NewMember";
 import Submissions from "./Submissions/Submissions";
 import NewSubmission from "./Submissions/Components/NewSubmission";
 import NewWriter from "./Writers/NewWriter";
+import Profile from "./Writers/Profile/Profile"
 
 
 const DBRightSection = () => {
@@ -25,6 +26,7 @@ const DBRightSection = () => {
           <Route path="/submissions/NewSubmission" element={<NewSubmission/>} />
           <Route path="/clubs" element={<Clubs />} />
           <Route path="/submissions" element={<Submissions />} /> 
+          <Route path="/writers/Profile" element={<Profile />} />
             
           {/* 
                       

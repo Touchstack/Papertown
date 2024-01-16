@@ -2,6 +2,12 @@ import Profile from "../../../../assets/Images/Profile.png"
 import WritersSlider from "./WritersSlider";
 
 const WritersBody = () => {
+  
+  const handleClick = () => {
+    // Navigate to another page
+    window.location.href = 'writers/Profile';
+  }
+
   return (
     <div>
         <div className="flex justify-between lg:ml-10 mt-10 border-b-2 border-[#EFEEEE]">
@@ -15,8 +21,9 @@ const WritersBody = () => {
   </div>
   <div className="mt-10 lg:ml-10 ml-4">
     {/* start  */}
-    <div className="flex gap-3 text-center items-center mb-5">
-      
+   
+   {Array.from({ length: 12}).map((_, index) => (
+    <div onClick={ handleClick} key={index} className="flex gap-3 text-center items-center mb-5 cursor-pointer">
       <img src={Profile} alt="" className="w-[51px] h-[51px]"/>
       <p className=" lg:inline-flex md:inline-flex hidden">
         Fortune Adeleke
@@ -28,206 +35,8 @@ const WritersBody = () => {
       <span className="lg:ml-[16%] md:ml-[20%]">9</span>
       <span className="lg:ml-[16%] md:ml-[20%]">Grade 6</span>
     </div>
+   ))}
 
-    {/* end  */}
-    {/* start  */}
-    <div className="flex gap-3 text-center items-center mb-5 ">
-      
-      <img src={Profile} alt="" className="w-[51px] h-[51px]"/>
-      <p className=" lg:inline-flex md:inline-flex hidden">
-        Fortune Adeleke
-      </p>
-      <span className="lg:ml-[10%] md:ml-5">
-        fortune.adeleke@gmail.com
-      </span>
-      <span className="lg:ml-[8%] md:ml-16">0200 234 567</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">9</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">Grade 6</span>
-    </div>
-    <p className="lg:hidden md:hidden inline-block ">
-      Fortune Adeleke
-    </p>
-    {/* end  */}
-    {/* start  */}
-    <div className="flex gap-3 text-center items-center mb-5">
-      
-      <img src={Profile} alt="" className="w-[51px] h-[51px]"/>
-      <p className=" lg:inline-flex md:inline-flex hidden">
-        Fortune Adeleke
-      </p>
-      <span className="lg:ml-[10%] md:ml-5">
-        fortune.adeleke@gmail.com
-      </span>
-      <span className="lg:ml-[8%] md:ml-16">0200 234 567</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">9</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">Grade 6</span>
-    </div>
-    <p className="lg:hidden md:hidden inline-block ">
-      Fortune Adeleke
-    </p>
-    {/* end  */}
-    {/* start  */}
-    <div className="flex gap-3 text-center items-center mb-5">
-      
-      <img src={Profile} alt="" className="w-[51px] h-[51px]"/>
-      <p className=" lg:inline-flex md:inline-flex hidden">
-        Fortune Adeleke
-      </p>
-      <span className="lg:ml-[10%] md:ml-5">
-        fortune.adeleke@gmail.com
-      </span>
-      <span className="lg:ml-[8%] md:ml-16">0200 234 567</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">9</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">Grade 6</span>
-    </div>
-    <p className="lg:hidden md:hidden inline-block ">
-      Fortune Adeleke
-    </p>
-    {/* end  */}
-    {/* start  */}
-    <div className="flex gap-3 text-center items-center mb-5">
-      
-      <img src={Profile} alt="" className="w-[51px] h-[51px]"/>
-      <p className=" lg:inline-flex md:inline-flex hidden">
-        Fortune Adeleke
-      </p>
-      <span className="lg:ml-[10%] md:ml-5">
-        fortune.adeleke@gmail.com
-      </span>
-      <span className="lg:ml-[8%] md:ml-16">0200 234 567</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">9</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">Grade 6</span>
-    </div>
-    <p className="lg:hidden md:hidden inline-block ">
-      Fortune Adeleke
-    </p>
-    {/* end  */}
-    {/* start  */}
-    <div className="flex gap-3 text-center items-center mb-5">
-      
-      <img src={Profile} alt="" className="w-[51px] h-[51px]"/>
-      <p className=" lg:inline-flex md:inline-flex hidden">
-        Fortune Adeleke
-      </p>
-      <span className="lg:ml-[10%] md:ml-5">
-        fortune.adeleke@gmail.com
-      </span>
-      <span className="lg:ml-[8%] md:ml-16">0200 234 567</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">9</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">Grade 6</span>
-    </div>
-    <p className="lg:hidden md:hidden inline-block ">
-      Fortune Adeleke
-    </p>
-    {/* end  */}
-    {/* start  */}
-    <div className="flex gap-3 text-center items-center mb-5">
-      
-      <img src={Profile} alt="" className="w-[51px] h-[51px]"/>
-      <p className=" lg:inline-flex md:inline-flex hidden">
-        Fortune Adeleke
-      </p>
-      <span className="lg:ml-[10%] md:ml-5">
-        fortune.adeleke@gmail.com
-      </span>
-      <span className="lg:ml-[8%] md:ml-16">0200 234 567</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">9</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">Grade 6</span>
-    </div>
-    <p className="lg:hidden md:hidden inline-block ">
-      Fortune Adeleke
-    </p>
-    {/* end  */}
-    {/* start  */}
-    <div className="flex gap-3 text-center items-center mb-5">
-      
-      <img src={Profile} alt="" className="w-[51px] h-[51px]"/>
-      <p className=" lg:inline-flex md:inline-flex hidden">
-        Fortune Adeleke
-      </p>
-      <span className="lg:ml-[10%] md:ml-5">
-        fortune.adeleke@gmail.com
-      </span>
-      <span className="lg:ml-[8%] md:ml-16">0200 234 567</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">9</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">Grade 6</span>
-    </div>
-    <p className="lg:hidden md:hidden inline-block ">
-      Fortune Adeleke
-    </p>
-    {/* end  */}
-    {/* start  */}
-    <div className="flex gap-3 text-center items-center mb-5">
-      
-      <img src={Profile} alt="" className="w-[51px] h-[51px]"/>
-      <p className=" lg:inline-flex md:inline-flex hidden">
-        Fortune Adeleke
-      </p>
-      <span className="lg:ml-[10%] md:ml-5">
-        fortune.adeleke@gmail.com
-      </span>
-      <span className="lg:ml-[8%] md:ml-16">0200 234 567</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">9</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">Grade 6</span>
-    </div>
-    <p className="lg:hidden md:hidden inline-block ">
-      Fortune Adeleke
-    </p>
-    {/* end  */}
-    {/* start  */}
-    <div className="flex gap-3 text-center items-center mb-5">
-      
-      <img src={Profile} alt="" className="w-[51px] h-[51px]"/>
-      <p className=" lg:inline-flex md:inline-flex hidden">
-        Fortune Adeleke
-      </p>
-      <span className="lg:ml-[10%] md:ml-5">
-        fortune.adeleke@gmail.com
-      </span>
-      <span className="lg:ml-[8%] md:ml-16">0200 234 567</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">9</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">Grade 6</span>
-    </div>
-    <p className="lg:hidden md:hidden inline-block ">
-      Fortune Adeleke
-    </p>
-    {/* end  */}
-    {/* start  */}
-    <div className="flex gap-3 text-center items-center mb-5">
-      
-      <img src={Profile} alt="" className="w-[51px] h-[51px]"/>
-      <p className=" lg:inline-flex md:inline-flex hidden">
-        Fortune Adeleke
-      </p>
-      <span className="lg:ml-[10%] md:ml-5">
-        fortune.adeleke@gmail.com
-      </span>
-      <span className="lg:ml-[8%] md:ml-16">0200 234 567</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">9</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">Grade 6</span>
-    </div>
-    <p className="lg:hidden md:hidden inline-block ">
-      Fortune Adeleke
-    </p>
-    {/* end  */}
-     {/* start  */}
-     <div className="flex gap-3 text-center items-center mb-5">
-      
-      <img src={Profile} alt="" className="w-[51px] h-[51px]"/>
-      <p className=" lg:inline-flex md:inline-flex hidden">
-        Fortune Adeleke
-      </p>
-      <span className="lg:ml-[10%] md:ml-5">
-        fortune.adeleke@gmail.com
-      </span>
-      <span className="lg:ml-[8%] md:ml-16">0200 234 567</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">9</span>
-      <span className="lg:ml-[16%] md:ml-[20%]">Grade 6</span>
-    </div>
-    <p className="lg:hidden md:hidden inline-block">
-      Fortune Adeleke
-    </p>
-    {/* end  */}
   </div>
   <div className="lg:ml-[3%] md:ml-[5%] lg:mt-[3%]">
   <div className="flex items-center justify-between ">
