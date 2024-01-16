@@ -234,7 +234,9 @@ const WritersBody = () => {
   <p>
   <span className="font-Bold opacity-100">1</span>
   <span className="opacity-75"> of 10 </span>
-  <span className="flex-right text-right ml-[] "><WritersSlider /></span>
+  <span className="flex-right text-right ml-[] ">
+   {/*<WritersSlider />*/ }
+    </span>
 </p>
       </div>
  

@@ -1,24 +1,28 @@
 import { HiBell, HiChevronDown } from "react-icons/hi2";
 import AppLogo from "../../../../assets/Images/Ellipse 27.png";
-import { IoChevronBackSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
-const WriterSearchBar = () => {
+import { MdArrowBackIosNew } from "react-icons/md";
+function NarrativeHeader() {
   return (
     <div>
       <div className="flex flex-row items-center justify-between md:p-10 p-6">
-        <Link to="/admin/writers" className="flex items-center">
-          <div className="md:text-[42px] text-[22px] mr-2 font-Bold">
-            <IoChevronBackSharp className="text-3xl" />
-            Add Writer
-          </div>
+        <Link to="/admin/submission" className="flex items-center gap-3">
+          <MdArrowBackIosNew className="text-[22px]" />
+          <h1 className="md:text-[42px] text-[22px] font-Bold">Narrative</h1>
         </Link>
 
         <div className="flex flex-row items-center md:gap-5 gap-3">
-          <HiBell className="md:text-[30px] text-[25px] text-[#BDBDBD]" />
+          <HiBell className="md:text-[30px] text-[25px]  text-[#BDBDBD]" />
+
           <div>
-            <img src={AppLogo} alt="" className="md:w-[50px] w-[40px] md:h-[50px] h-[40px]" />
+            <img
+              src={AppLogo}
+              alt=""
+              className="md:w-[50px] w-[40px] md:h-[50px] h-[40px]"
+            />
           </div>
+
           <div className="flex flex-row items-center gap-2">
             <p>Amaka Ndubisi</p>
             <HiChevronDown className="text-[15px]" />
@@ -27,6 +31,6 @@ const WriterSearchBar = () => {
       </div>
     </div>
   );
-};
+}
 
-export default WriterSearchBar;
+export default NarrativeHeader;

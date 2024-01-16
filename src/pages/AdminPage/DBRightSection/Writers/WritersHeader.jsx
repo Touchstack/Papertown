@@ -6,7 +6,7 @@ import { CiSearch } from "react-icons/ci";
 
 const handleButtonClick = () => {
   // Navigate to another page
-  window.location.href = '/addwriter';
+  window.location.href = 'writers/NewWriter';
 }
 
 
