@@ -7,14 +7,13 @@ import Modal from "./Modal/Modal";
 // import NewMember from "./NewMember";
 
 function MemberPage() {
-
-  const [isModalOpen, setisModalOpen] = useState(false)
+  const [isModalOpen, setisModalOpen] = useState(false);
 
   const navigate = useNavigate();
 
   const handleNewmember = () => {
-     navigate("/admin/team/NewMember")
-  }
+    navigate("/admin/team/new-member");
+  };
 
   return (
     <div>
@@ -27,7 +26,10 @@ function MemberPage() {
         >
           Remove
         </button>
-        <button onClick={handleNewmember} className="bg-[#DF327B] lg:inline-block hidden   text-[#FFFFFF] font-Bold rounded-full w-[185px] py-2">
+        <button
+          onClick={handleNewmember}
+          className="bg-[#DF327B] lg:inline-block hidden   text-[#FFFFFF] font-Bold rounded-full w-[185px] py-2"
+        >
           + Add team member
         </button>
       </div>
@@ -198,9 +200,10 @@ function MemberPage() {
         {/* end  */}
       </div>
       {/* Modal start */}
-      <Modal isOpen={isModalOpen} //onClose={closeModal} 
+      <Modal
+        isOpen={isModalOpen} //onClose={closeModal}
       />
-      
+
       {/* Modal end */}
     </div>
   );

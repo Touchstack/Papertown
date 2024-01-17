@@ -1,6 +1,6 @@
 import { useState } from "react";
 import MemberPage from "./MemberPage";
-import Roles from "./Roles";
+import Roles from "./Roles/Roles";
 
 function Members() {
   const tabs = ["members", "roles"];

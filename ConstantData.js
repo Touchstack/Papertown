@@ -150,3 +150,22 @@ export const publication = [
       logo: Icon3,
     },
   ];
+
+  export const inspiration = [
+    {
+      id: 1,
+      msg: 'Sensation'
+    },
+    {
+      id: 2,
+      msg: 'Commotion'
+    },
+    {
+      id: 3,
+      msg: 'Excitement'
+    },
+    { 
+      id: 4,
+      msg: 'Greate Success'
+    }
+  ]
