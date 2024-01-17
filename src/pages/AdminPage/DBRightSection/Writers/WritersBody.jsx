@@ -36,7 +36,7 @@ const WritersBody = () => {
       <span className="lg:ml-[16%] md:ml-[20%]">Grade 6</span>
     </div>
    ))}
-
+      
   </div>
   <div className="lg:ml-[3%] md:ml-[5%] lg:mt-[3%]">
   <div className="flex items-center justify-between ">

@@ -9,6 +9,9 @@ import Submissions from "./Submissions/Submissions";
 import NewSubmission from "./Submissions/Components/NewSubmission";
 import NewWriter from "./Writers/NewWriter";
 import Profile from "./Writers/Profile/Profile"
+import Narrative from "./Submissions/Category/Narrative";
+import SingleSubmission from "./Submissions/SingleSubmission/SingleSubmission";
+import NewWriter2 from "./Writers/NewWriter2";
 
 
 const DBRightSection = () => {
@@ -22,8 +25,11 @@ const DBRightSection = () => {
           <Route path="/cms" element={<CsmPage />} />        
           <Route path="/writers" element={<Writers />} />
           <Route path="/writers/NewWriter" element={<NewWriter/>} />
+          <Route path="/writers/NewWriter2" element={<NewWriter2/>} />
           <Route path="/team/NewMember" element={<NewMember />} />
           <Route path="/submissions/NewSubmission" element={<NewSubmission/>} />
+          <Route path="/submissions/Narrative" element={<Narrative/>} />
+          <Route path="/submissions/SingleSubmission" element={<SingleSubmission/>} />
           <Route path="/clubs" element={<Clubs />} />
           <Route path="/submissions" element={<Submissions />} /> 
           <Route path="/writers/Profile" element={<Profile />} />

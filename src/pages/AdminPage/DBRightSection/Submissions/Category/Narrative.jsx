@@ -1,10 +1,14 @@
+import NarrativeBody from "./NarrativeBody"
+import NarrativeCards from "./NarrativeCards"
 import NarrativeHeader from "./NarrativeHeader"
 
 const Narrative = () => {
   return (
-    <div>
+    <div className="mt-2 bg-[#F6F6F6] rounded-[25px]">
         <NarrativeHeader/>
-    </div>
+        <NarrativeBody/>
+        <NarrativeCards/>
+        </div>
   )
 }
 

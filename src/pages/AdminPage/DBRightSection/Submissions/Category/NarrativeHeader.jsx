@@ -1,13 +1,13 @@
 import { HiBell, HiChevronDown } from "react-icons/hi2";
-import AppLogo from "../../../../assets/Images/Ellipse 27.png";
+import AppLogo from "../../../../../assets/Images/Ellipse 27.png";
 import { Link } from "react-router-dom";
-
 import { MdArrowBackIosNew } from "react-icons/md";
+
 function NarrativeHeader() {
   return (
     <div>
-      <div className="flex flex-row items-center justify-between md:p-10 p-6">
-        <Link to="/admin/submission" className="flex items-center gap-3">
+      <div className="flex flex-row items-center justify-between md:px-10 px-6">
+        <Link to="/admin/submissions" className="flex items-center gap-3 mt-[70px]">
           <MdArrowBackIosNew className="text-[22px]" />
           <h1 className="md:text-[42px] text-[22px] font-Bold">Narrative</h1>
         </Link>
