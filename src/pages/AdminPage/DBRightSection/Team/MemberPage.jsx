@@ -1,22 +1,40 @@
-import Profile from "../../../assets/Images/child5.png";
+import { useState } from "react";
+
+import Profile from "../../../../assets/Images/child5.png";
+import { useNavigate } from "react-router-dom";
+import Modal from "./Modal/Modal";
+
+// import NewMember from "./NewMember";
 
 function MemberPage() {
+  const [isModalOpen, setisModalOpen] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleNewmember = () => {
+    navigate("/admin/team/new-member");
+  };
+
   return (
     <div>
       {/* button start  */}
       <div className=" flex justify-end lg:mr-8 mr-5 gap-5 mt-0">
-        <button className="bg-[#F2F2F2] text-[#BDBDBD] rounded-full w-[111px] py-2">
+        <button
+          type="button"
+          className="bg-[#F2F2F2] text-[#BDBDBD] rounded-full w-[111px] py-2"
+          //onClick={handleRemoveClick}
+        >
           Remove
         </button>
-        <button className="bg-[#DF327B] lg:inline-block hidden   text-[#FFFFFF] font-Bold rounded-full w-[185px] py-2">
-          <a href="/new-member">+ Add team member</a>
-        </button>
-        <button className="bg-[#DF327B]  lg:hidden inline-block text-[#FFFFFF] font-Bold rounded-full w-[111px] py-2">
-          <a href="/new-member">+ Add</a>
+        <button
+          onClick={handleNewmember}
+          className="bg-[#DF327B] lg:inline-block hidden   text-[#FFFFFF] font-Bold rounded-full w-[185px] py-2"
+        >
+          + Add team member
         </button>
       </div>
       {/* button end  */}
-      <div className="flex justify-between lg:ml-10 mt-10 border-b-2 border-[#EFEEEE]">
+      <div className="flex justify-between lg:ml-10 mt-10">
         <ul className="flex ml-3 md:ml-7 lg:ml-10">
           <li className="lg:mr-[200%] mr-16 md:mr-[140%]">Name</li>
           <li className="lg:mr-[200%] mr-16 md:mr-[140%]">Email</li>
@@ -24,6 +42,7 @@ function MemberPage() {
           <li className="">Role</li>
         </ul>
       </div>
+      <hr className="text-[#D9D9D9] mt-5 ml-[50px] w-[990px]" />
       <div className="mt-10 lg:ml-10 ml-4">
         {/* start  */}
         <div className="flex gap-3 text-center items-center mb-5">
@@ -180,6 +199,12 @@ function MemberPage() {
         </p>
         {/* end  */}
       </div>
+      {/* Modal start */}
+      <Modal
+        isOpen={isModalOpen} //onClose={closeModal}
+      />
+
+      {/* Modal end */}
     </div>
   );
 }

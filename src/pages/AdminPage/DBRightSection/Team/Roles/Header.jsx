@@ -1,11 +1,17 @@
 import { HiBell, HiChevronDown } from "react-icons/hi2";
-import AppLogo from "../../../assets/Images/Ellipse 27.png";
+import AppLogo from "../../../../../assets/Images/Ellipse 27.png";
+import { Link } from "react-router-dom";
+import { MdArrowBackIosNew } from "react-icons/md";
+import RoleForm from "./RoleForm";
 
-function TeamHeader() {
+function Header() {
   return (
     <div>
-      <div className="flex flex-row items-center justify-between md:p-10 p-6">
-        <h1 className="md:text-[42px] text-[22px] font-Bold">Team</h1>
+      <div className="flex flex-row items-center justify-between mt-10 lg:mt-0 md:p-10 p-6">
+        <Link to="/admin/team" className="flex items-center gap-3">
+          <MdArrowBackIosNew className="text-[22px]" />
+          <h1 className="md:text-[42px] text-[22px] font-Bold">Add Role</h1>
+        </Link>
 
         <div className="flex flex-row items-center md:gap-5 gap-3">
           <HiBell className="md:text-[30px] text-[25px]  text-[#BDBDBD]" />
@@ -24,8 +30,10 @@ function TeamHeader() {
           </div>
         </div>
       </div>
+
+      <RoleForm />
     </div>
   );
 }
 
-export default TeamHeader;
+export default Header;

@@ -19,7 +19,8 @@ import NewSection from "./pages/NewsPage/NewSection.jsx";
 import NewsDetails from "./pages/NewsDetails/NewsDetails.jsx";
 import Profile from "./pages/ProfilePage/Profile.jsx";
 import EventsDetails from "./pages/EventsDetails/EventsDetails.jsx";
-import AdminLogIn from "./pages/Admin/AdminLogIn.jsx";
+import PrivacyPolicy from "./pages/Doc/PrivacyPolicy.jsx";
+import TermsOfUse from "./pages/Doc/TermsOfUse.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
@@ -70,17 +71,18 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
 
-  {
-    path: "/admin/login",
-    element: <AdminLogIn />,
-    errorElement: <ErrorPage />,
-  },
+  // {
+  //   path: "/admin/login",
+  //   element: <AdminLogIn />,
+  //   errorElement: <ErrorPage />,
+  // },
 
   {
     path: "/admin/*",
     element: <AdminDashBoard />,
     errorElement: <ErrorPage />,
   },
+
   { path: "/events", element: <EventsPage />, errorElement: <ErrorPage /> },
 
   {
@@ -88,7 +90,16 @@ const router = createBrowserRouter([
     element: <EventsDetails />,
     errorElement: <ErrorPage />,
   },
-
+  {
+    path: "/privacypolicy",
+    element: <PrivacyPolicy />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/termsofuse",
+    element: <TermsOfUse />,
+    errorElement: <ErrorPage />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
