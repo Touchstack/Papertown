@@ -145,7 +145,7 @@ const TermsOfUse = () => {
               <a href="#" className="text-blue-500 hover:underline">
                 hello@papertownimaginarium.org
               </a>
-              <span className="m-1"> //hello@papertown.africa</span>
+              <span className="m-1">//hello@papertown.africa</span>
             </span>
           </p>
         </div>
