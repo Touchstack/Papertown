@@ -1,5 +1,5 @@
 import { HiBell, HiChevronDown } from "react-icons/hi2";
-import AppLogo from "../../../../../assets/Images/Logo.svg";
+import AppLogo from "../../../../../../assets/Images/Logo.svg";
 
 const Header = () => {
   return (

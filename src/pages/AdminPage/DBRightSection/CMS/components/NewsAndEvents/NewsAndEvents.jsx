@@ -1,10 +1,11 @@
 import { HiChevronLeft, HiCalendar } from 'react-icons/hi2';
+import PropTypes from 'prop-types';
 
-const NewsAndEvents = () => {
+const NewsAndEvents = ({ onGoBack }) => {
   return (
     <div className="px-10 flex flex-col">
          <section className='flex flex-col mb-5'>
-            <div className='flex flex-row items-center gap-3 text-[#040A1D] font-[700] cursor-pointer'>
+            <div onClick={onGoBack} className='flex flex-row items-center gap-3 text-[#040A1D] font-[700] cursor-pointer'>
               <HiChevronLeft />
              <p className='text-[42px]'>UNICEF to initiate Grade 7 spelling Bee</p>
             </div>
@@ -40,5 +41,9 @@ const NewsAndEvents = () => {
     </div>
   )
 }
+
+NewsAndEvents.propTypes = {
+   onGoBack: PropTypes.func.isRequired,
+ };
 
 export default NewsAndEvents
