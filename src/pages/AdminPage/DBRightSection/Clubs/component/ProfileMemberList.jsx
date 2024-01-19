@@ -265,7 +265,6 @@ const ProfileMemberList = () => {
               type="button"
               className="opacity-35 text-[#FFF] bg-[#DF327B] hover:bg-[#A12356] mt-2 font-Regular rounded-full p-3 md:w-[350px] w-[300px] h-[48px] mb-4"
             >
-              {/* <ClipLoader color="#FFF" size={20} /> */}
               <p
                 className="text-center font-bold text-lg text-[#FFF] font-Bold leading-[130.5%] mb-3"
                 onClick={() => openModal(2)}
