@@ -34,7 +34,7 @@ const News = () => {
           {/* Buttons */}
           {!newsAndEvents && showNews && (
             <div className="flex justify-end gap-5 mx-[5%] mb-10">
-              <button className="w-[124px] h-[50px] bg-[#F2F2F2] text-[#BDBDBD] rounded-[30px]">
+              <button className="w-[124px] h-[50px] bg-[#e8e9ec] text-[#BDBDBD] rounded-[30px]">
                 Remove
               </button>
               <button
@@ -66,19 +66,19 @@ const News = () => {
                       <div className="flex flex-col justify-center ml-2">
                         <h1
                           onClick={() => setNewsAndEvents(true)}
-                          className="font-[700] hover:cursor-pointer text-[#000] text-[10px] md:text-[16px]"
+                          className="font-[700] font-['Dosis-Bold'] hover:cursor-pointer text-[#000] text-[10px] md:text-[16px]"
                         >
                           UNICEF to initiate Grade 7 spelling Bee
                         </h1>
 
-                        <p className="text-[10px]">Updated 10 Apr 17:23</p>
+                        <p className="text-[10px] font-['Varela-Regular']">Updated 10 Apr 17:23</p>
                       </div>
                     </div>
                     {/* Left */}
 
                     {/* Right */}
-                    <div className="w-[35%] mt-3">
-                      <p className="text-[#393939] text-[10px] md:text-[16px]">
+                    <div className="w-[40%] mt-3">
+                      <p className="text-[#393939] font-['Varela-Regular'] text-[10px] md:text-[14px]">
                         Christmas writing contest. Dec 17 ‘23 Writers will
                         identify their favorite sensory memories and transfer
                         them to a visual heart map.

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { IoCloseSharp } from "react-icons/io5";
-//import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { ClipLoader } from "react-spinners";
 

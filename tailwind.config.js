@@ -7,7 +7,7 @@ export default {
         Bold: ["Dosis-Bold", "sans-serif"],
         ExtraBold: ["Dosis-ExtraBold", "sans-serif"],
         ExtraLight: ["Dosis-ExtraLight", "sans-serif"],
-        Light: ["Dosis-Light", "sans-serif"],
+        Light: ["Dosis-Light", "sans-serif", "Varela-Regular"],
         Medium: ["Dosis-Medium", "sans-serif"],
         Regular: ["Dosis-Regular", "sans-serif"],
         SemiBold: ["Dosis-SemiBold", "sans-serif"],
