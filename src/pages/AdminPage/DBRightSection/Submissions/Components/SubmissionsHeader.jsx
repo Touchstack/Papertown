@@ -1,10 +1,10 @@
 import { HiBell, HiChevronDown } from "react-icons/hi2";
 import AppLogo from "../../../../../assets/Images/Logo.svg";
 
-const Header = () => {
+const SubmissionsHeader = () => {
   return (
     <div className="flex flex-row items-center justify-between md:p-10 p-6">
-      <h1 className="md:text-[42px] text-[22px] font-[700]">Web CMS</h1>
+      <h1 className="md:text-[42px] text-[22px] font-[700]">Submissions</h1>
 
       <div className="flex flex-row items-center md:gap-5 gap-3">
         <HiBell className="md:text-[30px] text-[25px] text-[#BDBDBD]" />
@@ -26,4 +26,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default SubmissionsHeader;
