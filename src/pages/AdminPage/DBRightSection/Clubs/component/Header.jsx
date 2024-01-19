@@ -12,7 +12,7 @@ const handleButtonClick = () => {
 const Header = () => {
   return (
     <div className="mx-auto">
-      <div className="flex flex-row items-center justify-between  md:p-10 p-6 mt-8 lg:text-4xl md:text-3xl sm:text-3xl text-3xl lg:text-left text-center">
+      <div className="flex flex-row items-center justify-between md:p-10 p-6 mt-8 lg:text-4xl md:text-3xl sm:text-3xl text-3xl lg:text-left text-center">
         <h1 className="font-Bold text-4xl">Clubs</h1>
         <div className="flex gap-4">
           <img src={Bell} alt="NotificationBell.svg" />
