@@ -7,7 +7,8 @@ import Modal from "./Modal/Modal";
 // import NewMember from "./NewMember";
 
 function MemberPage() {
-  const [isModalOpen, setisModalOpen] = useState(false);
+  const [isModalOpen] = useState(false);
+  // setisModalOpen
 
   const navigate = useNavigate();
 
@@ -28,13 +29,13 @@ function MemberPage() {
         </button>
         <button
           onClick={handleNewmember}
-          className="bg-[#DF327B] lg:inline-block hidden   text-[#FFFFFF] font-Bold rounded-full w-[185px] py-2"
+          className="bg-[#DF327B] lg:inline-block hidden text-[#FFFFFF] font-Bold rounded-full w-[185px] py-2"
         >
           + Add team member
         </button>
       </div>
       {/* button end  */}
-      <div className="flex justify-between lg:ml-10 mt-10">
+      <div className="lg:flex hidden justify-between lg:ml-10 mt-10">
         <ul className="flex ml-3 md:ml-7 lg:ml-10">
           <li className="lg:mr-[200%] mr-16 md:mr-[140%]">Name</li>
           <li className="lg:mr-[200%] mr-16 md:mr-[140%]">Email</li>
@@ -42,161 +43,115 @@ function MemberPage() {
           <li className="">Role</li>
         </ul>
       </div>
-      <hr className="text-[#D9D9D9] mt-5 ml-[50px] w-[990px]" />
+      <hr className="text-[#D9D9D9] mt-5 ml-[50px] w-[990px] hidden lg:inline-block" />
       <div className="mt-10 lg:ml-10 ml-4">
         {/* start  */}
-        <div className="flex gap-3 text-center items-center mb-5">
-          <input
-            id="helper-checkbox"
-            aria-describedby="helper-checkbox-text"
-            type="checkbox"
-            value=""
-            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded  dark:bg-gray-700"
-          />
+        <div className="lg:flex gap-3 lg:text-center items-center mb-5 lg:ml-0 ml-5">
+          <div className="flex gap-3 items-center justify-between mr-10">
+            <label>
+              <input type="checkbox" className=" accent-pink-400 w-5 h-5" />
+            </label>
 
-          <img src={Profile} alt="" />
-          <p className="font-Bold lg:inline-flex md:inline-flex hidden">
+            <img src={Profile} alt="" className="w-[30%] lg:w-[70%]" />
+          </div>
+          <p className="font-Bold lg:inline-flex text-2xl lg:text-sm ">
             Agnes Okparolu
           </p>
-          <span className="lg:ml-[10%] md:ml-5">fortune.adeleke@gmail.com</span>
-          <span className="lg:ml-[18%] md:ml-16">0200 234 567</span>
-          <span className="lg:ml-[13%] md:ml-[20%]">Admin</span>
+          <p className="lg:ml-[10%] md:ml-5">fortune.adeleke@gmail.com</p>
+          <p className="hidden lg:inline-block lg:ml-[18%] md:ml-16">
+            0200 234 567
+          </p>
+          <div className="lg:hidden flex justify-between mr-10">
+            <p className="lg:ml-[18%] md:ml-16">0200 234 567</p>
+            <button className="lg:hidden inline-block bg-[#F2F2F2] text-[#BDBDBD] px-2 py-1 rounded-full font-Bold mt-5">
+              Admin
+            </button>
+          </div>
+          <p className="hidden lg:inline-block lg:ml-[13%] md:ml-[20%]">
+            Admin
+          </p>
         </div>
-        <p className="lg:hidden md:hidden inline-block font-Bold">
-          Agnes Okparolu
-        </p>
         {/* end  */}
         {/* start  */}
-        <div className="flex lg:gap-3  bg-[#F9F9F9]  text-center items-center mb-5 lg:mx-auto">
-          <input
-            id="helper-checkbox"
-            aria-describedby="helper-checkbox-text"
-            type="checkbox"
-            value=""
-            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded  dark:bg-gray-700"
-          />
+        <div className="lg:flex gap-3 lg:text-center items-center mb-5 lg:ml-0 ml-5">
+          <div className="flex gap-3 items-center justify-between mr-10">
+            <label>
+              <input type="checkbox" className=" accent-pink-400 w-5 h-5" />
+            </label>
 
-          <img src={Profile} alt="" />
-          <p className="font-Bold lg:inline-flex md:inline-flex hidden">
+            <img src={Profile} alt="" className="w-[30%] lg:w-[70%]" />
+          </div>
+          <p className="font-Bold lg:inline-flex text-2xl lg:text-sm ">
             Agnes Okparolu
           </p>
-          <span className="lg:ml-[10%] md:ml-5">fortune.adeleke@gmail.com</span>
-          <span className="lg:ml-[18%] md:ml-16">0200 234 567</span>
-          <span className="lg:ml-[13%] md:ml-[20%]">Contributor</span>
+          <p className="lg:ml-[10%] md:ml-5">fortune.adeleke@gmail.com</p>
+          <p className="hidden lg:inline-block lg:ml-[18%] md:ml-16">
+            0200 234 567
+          </p>
+          <div className="lg:hidden flex justify-between mr-10">
+            <p className="lg:ml-[18%] md:ml-16">0200 234 567</p>
+            <button className="lg:hidden inline-block bg-[#F2F2F2] text-[#BDBDBD] px-2 py-1 rounded-full font-Bold mt-5">
+              Contributor
+            </button>
+          </div>
+          <p className="hidden lg:inline-block lg:ml-[13%] md:ml-[20%]">
+            Contributor
+          </p>
         </div>
-        <p className="lg:hidden md:hidden inline-block font-Bold">
-          Agnes Okparolu
-        </p>
         {/* end  */}
         {/* start  */}
-        <div className="flex gap-3 text-center items-center mb-5">
-          <input
-            id="helper-checkbox"
-            aria-describedby="helper-checkbox-text"
-            type="checkbox"
-            value=""
-            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded  dark:bg-gray-700"
-          />
+        <div className="lg:flex gap-3 lg:text-center items-center mb-5 lg:ml-0 ml-5">
+          <div className="flex gap-3 items-center justify-between mr-10">
+            <label>
+              <input type="checkbox" className=" accent-pink-400 w-5 h-5" />
+            </label>
 
-          <img src={Profile} alt="" />
-          <p className="font-Bold lg:inline-flex md:inline-flex hidden">
+            <img src={Profile} alt="" className="w-[30%] lg:w-[70%]" />
+          </div>
+          <p className="font-Bold lg:inline-flex text-2xl lg:text-sm ">
             Agnes Okparolu
           </p>
-          <span className="lg:ml-[10%] md:ml-5">fortune.adeleke@gmail.com</span>
-          <span className="lg:ml-[18%] md:ml-16">0200 234 567</span>
-          <span className="lg:ml-[13%] md:ml-[20%]">Editor</span>
+          <p className="lg:ml-[10%] md:ml-5">fortune.adeleke@gmail.com</p>
+          <p className="hidden lg:inline-block lg:ml-[18%] md:ml-16">
+            0200 234 567
+          </p>
+          <div className="lg:hidden flex justify-between mr-10">
+            <p className="lg:ml-[18%] md:ml-16">0200 234 567</p>
+            <button className="lg:hidden inline-block bg-[#F2F2F2] text-[#BDBDBD] px-2 py-1 rounded-full font-Bold mt-5">
+              Contributor
+            </button>
+          </div>
+          <p className="hidden lg:inline-block lg:ml-[13%] md:ml-[20%]">
+            Contributor
+          </p>
         </div>
-        <p className="lg:hidden md:hidden inline-block font-Bold">
-          Agnes Okparolu
-        </p>
         {/* end  */}
         {/* start  */}
-        <div className="flex gap-3 text-center items-center mb-5">
-          <input
-            id="helper-checkbox"
-            aria-describedby="helper-checkbox-text"
-            type="checkbox"
-            value=""
-            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded  dark:bg-gray-700"
-          />
+        <div className="lg:flex gap-3 lg:text-center items-center mb-5 lg:ml-0 ml-5">
+          <div className="flex gap-3 items-center justify-between mr-10">
+            <label>
+              <input type="checkbox" className=" accent-pink-400 w-5 h-5" />
+            </label>
 
-          <img src={Profile} alt="" />
-          <p className="font-Bold lg:inline-flex md:inline-flex hidden">
+            <img src={Profile} alt="" className="w-[30%] lg:w-[70%]" />
+          </div>
+          <p className="font-Bold lg:inline-flex text-2xl lg:text-sm ">
             Agnes Okparolu
           </p>
-          <span className="lg:ml-[10%] md:ml-5">fortune.adeleke@gmail.com</span>
-          <span className="lg:ml-[18%] md:ml-16">0200 234 567</span>
-          <span className="lg:ml-[13%] md:ml-[20%]">Admin</span>
-        </div>
-        <p className="lg:hidden md:hidden inline-block font-Bold">
-          Agnes Okparolu
-        </p>
-        {/* end  */}
-        {/* start  */}
-        <div className="flex gap-3 text-center items-center mb-5">
-          <input
-            id="helper-checkbox"
-            aria-describedby="helper-checkbox-text"
-            type="checkbox"
-            value=""
-            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded  dark:bg-gray-700"
-          />
-
-          <img src={Profile} alt="" />
-          <p className="font-Bold lg:inline-flex md:inline-flex hidden">
-            Agnes Okparolu
+          <p className="lg:ml-[10%] md:ml-5">fortune.adeleke@gmail.com</p>
+          <p className="hidden lg:inline-block lg:ml-[18%] md:ml-16">
+            0200 234 567
           </p>
-          <span className="lg:ml-[10%] md:ml-5">fortune.adeleke@gmail.com</span>
-          <span className="lg:ml-[18%] md:ml-16">0200 234 567</span>
-          <span className="lg:ml-[13%] md:ml-[20%]">Contributor</span>
-        </div>
-        <p className="lg:hidden md:hidden inline-block font-Bold">
-          Agnes Okparolu
-        </p>
-        {/* end  */}
-        {/* start  */}
-        <div className="flex gap-3 text-center items-center mb-5">
-          <input
-            id="helper-checkbox"
-            aria-describedby="helper-checkbox-text"
-            type="checkbox"
-            value=""
-            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded  dark:bg-gray-700"
-          />
-
-          <img src={Profile} alt="" />
-          <p className="font-Bold lg:inline-flex md:inline-flex hidden">
-            Agnes Okparolu
+          <div className="lg:hidden flex justify-between mr-10">
+            <p className="lg:ml-[18%] md:ml-16">0200 234 567</p>
+            <button className="lg:hidden inline-block bg-[#F2F2F2] text-[#BDBDBD] px-2 py-1 rounded-full font-Bold mt-5">
+              Editor
+            </button>
+          </div>
+          <p className="hidden lg:inline-block lg:ml-[13%] md:ml-[20%]">
+            Editor
           </p>
-          <span className="lg:ml-[10%] md:ml-5">fortune.adeleke@gmail.com</span>
-          <span className="lg:ml-[18%] md:ml-16">0200 234 567</span>
-          <span className="lg:ml-[13%] md:ml-[20%]">Editor</span>
         </div>
-        <p className="lg:hidden md:hidden inline-block font-Bold">
-          Agnes Okparolu
-        </p>
-        {/* end  */}
-        {/* start  */}
-        <div className="flex gap-3 text-center items-center mb-5">
-          <input
-            id="helper-checkbox"
-            aria-describedby="helper-checkbox-text"
-            type="checkbox"
-            value=""
-            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded  dark:bg-gray-700"
-          />
-
-          <img src={Profile} alt="" />
-          <p className="font-Bold lg:inline-flex md:inline-flex hidden">
-            Agnes Okparolu
-          </p>
-          <span className="lg:ml-[10%] md:ml-5">fortune.adeleke@gmail.com</span>
-          <span className="lg:ml-[18%] md:ml-16">0200 234 567</span>
-          <span className="lg:ml-[13%] md:ml-[20%]">Admin</span>
-        </div>
-        <p className="lg:hidden md:hidden inline-block font-Bold">
-          Agnes Okparolu
-        </p>
         {/* end  */}
       </div>
       {/* Modal start */}
