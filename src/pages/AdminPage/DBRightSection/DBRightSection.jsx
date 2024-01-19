@@ -14,7 +14,7 @@ import SingleSubmission from "./Submissions/SingleSubmission/SingleSubmission";
 import NewWriter2 from "./Writers/NewWriter2";
 import AddRole from "./Team/Roles/AddRole";
 import PermissionsRole from "./Team/Roles/PermissionsRole";
-
+import ClubProfile from "./Clubs/ClubProfile";
 
 
 const DBRightSection = () => {
@@ -39,7 +39,8 @@ const DBRightSection = () => {
           <Route path="/clubs" element={<Clubs />} />
           <Route path="/submissions" element={<Submissions />} /> 
           <Route path="/writers/Profile" element={<Profile />} />
-            
+          <Route path="/clubsprofile" element={<ClubProfile />} />
+
 
           {/* 
                       
