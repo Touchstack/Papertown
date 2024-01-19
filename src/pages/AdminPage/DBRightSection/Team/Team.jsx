@@ -1,4 +1,4 @@
-import Members from "./Members";
+import Members from "./MembersMain";
 import TeamHeader from "./TeamHeader";
 
 function Team() {

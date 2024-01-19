@@ -8,6 +8,8 @@ import NewMember from "./Team/NewMember";
 import AddRole from "./Team/Roles/AddRole";
 import PermissionsRole from "./Team/Roles/PermissionsRole";
 
+// import Profile from "./Team/Profile/Profile";
+
 const DBRightSection = () => {
   return (
     <div className="py-12 flex-1 m-2">
@@ -21,6 +23,7 @@ const DBRightSection = () => {
           <Route path="/team/new-member" element={<NewMember />} />
           <Route path="/team/add-role" element={<AddRole />} />
           <Route path="/team/role-permissions" element={<PermissionsRole />} />
+          {/* <Route path="/team/member-profile" element={<Profile />} /> */}
 
           <Route path="/clubs" element={<Clubs />} />
 

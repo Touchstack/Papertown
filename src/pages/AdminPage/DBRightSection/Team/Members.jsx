@@ -1,57 +1,144 @@
 import { useState } from "react";
-import MemberPage from "./MemberPage";
-import Roles from "./Roles/Roles";
+
+import Profile from "../../../../assets/Images/child5.png";
+import { Link } from "react-router-dom";
+import Modal from "./Modal/Modal";
+
+// import NewMember from "./NewMember";
 
 function Members() {
-  const tabs = ["members", "roles"];
-  const [activeTab, setActiveTab] = useState(tabs[0]);
-
-  const handleTabClick = () => {
-    const currentIndex = tabs.indexOf(activeTab);
-    const nextIndex = (currentIndex + 1) % tabs.length;
-    setActiveTab(tabs[nextIndex]);
-  };
+  const [isModalOpen] = useState(false);
+  // setisModalOpen
 
   return (
-    <div className="font-medium text-gray-500 dark:text-gray-400 dark:border-gray-700">
-      <ul className="flex flex-wrap -mb-px lg:ml-10 ml-2 lg:mt-0 mt-5">
-        <li className="me-2">
-          <a
-            href="#"
-            className={`inline-block p-4 text-[#B44DB8] font-Bold text-[20px] border-b-2 border-[#B44DB8] rounded-t-lg ${
-              activeTab === "members" ? "active dark:borde" : ""
-            }`}
-            onClick={() => handleTabClick("members")}
-          >
-            Members
-          </a>
-        </li>
-        <li className="me-2">
-          <a
-            href="#"
-            className={`inline-block p-4 font-Bold text-[20px] border-b-2 border-transparent rounded-t-lg ${
-              activeTab === "roles"
-                ? "hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-                : ""
-            }`}
-            onClick={() => handleTabClick("roles")}
-          >
-            Roles
-          </a>
-        </li>
-      </ul>
+    <div>
+      <div className="lg:flex hidden justify-between lg:ml-10 mt-5">
+        <ul className="flex ml-3 md:ml-7 lg:ml-10">
+          <li className="lg:mr-[200%] mr-16 md:mr-[140%]">Name</li>
+          <li className="lg:mr-[200%] mr-16 md:mr-[140%]">Email</li>
+          <li className="lg:mr-[130%] mr-16 md:mr-[140%]">Contact</li>
+          <li className="">Role</li>
+        </ul>
+      </div>
+      <hr className="text-[#D9D9D9] mt-5 ml-[50px] w-[990px] hidden lg:inline-block" />
+      <div className="mt-10 lg:ml-10 ml-4">
+        {/* start  */}
+        <Link to="admin/team/member-profile">
+          <div className="lg:flex gap-3 lg:text-center items-center mb-5 lg:ml-0 ml-5">
+            <div className="flex gap-3 items-center justify-between mr-10">
+              <label>
+                <input type="checkbox" className=" accent-pink-400 w-5 h-5" />
+              </label>
 
-      {/* Render content based on the active tab */}
-      {activeTab === "members" && (
-        <div>
-          <MemberPage />
+              <img src={Profile} alt="" className="w-[30%] lg:w-[70%]" />
+            </div>
+            <p className="font-Bold lg:inline-flex text-2xl lg:text-sm ">
+              Agnes Okparolu
+            </p>
+            <p className="lg:ml-[10%] md:ml-5">fortune.adeleke@gmail.com</p>
+            <p className="hidden lg:inline-block lg:ml-[18%] md:ml-16">
+              0200 234 567
+            </p>
+            <div className="lg:hidden flex justify-between mr-10">
+              <p className="lg:ml-[18%] md:ml-16">0200 234 567</p>
+              <button className="lg:hidden inline-block bg-[#F2F2F2] text-[#BDBDBD] px-2 py-1 rounded-full font-Bold mt-5">
+                Admin
+              </button>
+            </div>
+            <p className="hidden lg:inline-block lg:ml-[13%] md:ml-[20%]">
+              Admin
+            </p>
+          </div>
+        </Link>
+        {/* end  */}
+        {/* start  */}
+        <div className="lg:flex gap-3 lg:text-center items-center mb-5 lg:ml-0 ml-5">
+          <div className="flex gap-3 items-center justify-between mr-10">
+            <label>
+              <input type="checkbox" className=" accent-pink-400 w-5 h-5" />
+            </label>
+
+            <img src={Profile} alt="" className="w-[30%] lg:w-[70%]" />
+          </div>
+          <p className="font-Bold lg:inline-flex text-2xl lg:text-sm ">
+            Agnes Okparolu
+          </p>
+          <p className="lg:ml-[10%] md:ml-5">fortune.adeleke@gmail.com</p>
+          <p className="hidden lg:inline-block lg:ml-[18%] md:ml-16">
+            0200 234 567
+          </p>
+          <div className="lg:hidden flex justify-between mr-10">
+            <p className="lg:ml-[18%] md:ml-16">0200 234 567</p>
+            <button className="lg:hidden inline-block bg-[#F2F2F2] text-[#BDBDBD] px-2 py-1 rounded-full font-Bold mt-5">
+              Contributor
+            </button>
+          </div>
+          <p className="hidden lg:inline-block lg:ml-[13%] md:ml-[20%]">
+            Contributor
+          </p>
         </div>
-      )}
-      {activeTab === "roles" && (
-        <div>
-          <Roles />
+        {/* end  */}
+        {/* start  */}
+        <div className="lg:flex gap-3 lg:text-center items-center mb-5 lg:ml-0 ml-5">
+          <div className="flex gap-3 items-center justify-between mr-10">
+            <label>
+              <input type="checkbox" className=" accent-pink-400 w-5 h-5" />
+            </label>
+
+            <img src={Profile} alt="" className="w-[30%] lg:w-[70%]" />
+          </div>
+          <p className="font-Bold lg:inline-flex text-2xl lg:text-sm ">
+            Agnes Okparolu
+          </p>
+          <p className="lg:ml-[10%] md:ml-5">fortune.adeleke@gmail.com</p>
+          <p className="hidden lg:inline-block lg:ml-[18%] md:ml-16">
+            0200 234 567
+          </p>
+          <div className="lg:hidden flex justify-between mr-10">
+            <p className="lg:ml-[18%] md:ml-16">0200 234 567</p>
+            <button className="lg:hidden inline-block bg-[#F2F2F2] text-[#BDBDBD] px-2 py-1 rounded-full font-Bold mt-5">
+              Contributor
+            </button>
+          </div>
+          <p className="hidden lg:inline-block lg:ml-[13%] md:ml-[20%]">
+            Contributor
+          </p>
         </div>
-      )}
+        {/* end  */}
+        {/* start  */}
+        <div className="lg:flex gap-3 lg:text-center items-center mb-5 lg:ml-0 ml-5">
+          <div className="flex gap-3 items-center justify-between mr-10">
+            <label>
+              <input type="checkbox" className=" accent-pink-400 w-5 h-5" />
+            </label>
+
+            <img src={Profile} alt="" className="w-[30%] lg:w-[70%]" />
+          </div>
+          <p className="font-Bold lg:inline-flex text-2xl lg:text-sm ">
+            Agnes Okparolu
+          </p>
+          <p className="lg:ml-[10%] md:ml-5">fortune.adeleke@gmail.com</p>
+          <p className="hidden lg:inline-block lg:ml-[18%] md:ml-16">
+            0200 234 567
+          </p>
+          <div className="lg:hidden flex justify-between mr-10">
+            <p className="lg:ml-[18%] md:ml-16">0200 234 567</p>
+            <button className="lg:hidden inline-block bg-[#F2F2F2] text-[#BDBDBD] px-2 py-1 rounded-full font-Bold mt-5">
+              Editor
+            </button>
+          </div>
+          <p className="hidden lg:inline-block lg:ml-[13%] md:ml-[20%]">
+            Editor
+          </p>
+        </div>
+        {/* end  */}
+      </div>
+      {/* Modal start */}
+      <Modal
+        isOpen={isModalOpen} //onClose={closeModal}
+      />
+
+      {/* Modal end */}
     </div>
   );
 }
