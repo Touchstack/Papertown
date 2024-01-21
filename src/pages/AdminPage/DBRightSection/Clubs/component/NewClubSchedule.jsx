@@ -1,33 +1,25 @@
-import PhotoCover from "../../../../../assets/Images/CoverPhoto.svg";
+import PhotoCover from "../../../../../assets/Images/UploadIcon.svg";
 import RoundedPink from "../../../../../assets/Images/PinkPlus.svg";
+import RectanglePic from "../../../../../assets/Images/Rectangle.svg";
+import Calender from "../../../../../assets/Images/bi_calendar.svg";
+import Tick from "../../../../../assets/Images/Tick.svg";
+import Modal from "../../../../../Component/Modal/Modal";
+import { useState } from "react";
+import PropTypes from "prop-types";
 
-const handleButtonClick = () => {
-  // Navigate to another page
-  window.location.href = "/admin/clubsprofile";
-};
-const ManageClubSchedule = () => {
+const NewClubSchedule = () => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <div>
       <p className="text-[#393939] pt-4 text-sm pl-12">Upload cover photo</p>
       <div className="text-center py-2">
-        <div className="m-12 mt-1 font-Bold lg:text-4xl md:text-3xl sm:text-3xl text-3xl max-w-[9000px] text-[#FFFFFF] relative">
-          <img src={PhotoCover} alt="Pencil.svg" />
+        <div className="m-12 mt-1 font-Bold lg:text-4xl md:text-3xl sm:text-3xl text-3xl max-w-[9000px] text-[#B6B6B6] relative">
+          <img src={RectanglePic} alt="Pencil.svg" />
 
-          <button className="gap-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 inline-flex text-[#FFFFFF] font-SemiBold text-lg rounded-full w-[170px] text-sm py-2 text-[#FFF] justify-center items-center rounded-md border border-white p-4 ">
-            <span className="inline-flex mr-2 "></span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="10"
-              height="10"
-              viewBox="0 0 10 10"
-              fill="none"
-            >
-              <path
-                d="M8.91878 3.38356L6.59333 1.08219L7.35936 0.315069C7.56911 0.105023 7.82682 0 8.13251 0C8.43782 0 8.69535 0.105023 8.9051 0.315069L9.67113 1.08219C9.88088 1.29224 9.99031 1.54575 9.99943 1.84274C10.0085 2.13936 9.90824 2.39269 9.69849 2.60274L8.91878 3.38356ZM0.547164 10C0.392135 10 0.262274 9.9474 0.157583 9.84219C0.0525278 9.73735 0 9.60731 0 9.45205V7.90411C0 7.83105 0.0136791 7.76037 0.0410374 7.69205C0.0683956 7.62338 0.109433 7.56164 0.164149 7.50685L5.79994 1.86301L8.12539 4.19178L2.4896 9.83562C2.43488 9.89041 2.37342 9.93151 2.3052 9.9589C2.23663 9.9863 2.16586 10 2.0929 10H0.547164Z"
-                fill="white"
-              />
-            </svg>
-            Change image
+          <button className="gap-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 inline-flex font-SemiBold text-lg rounded-full w-[170px] text-sm py-2 text-[#B6B6B6] justify-center items-center rounded-md border border-[#B6B6B6] p-4 ">
+            <span className="inline-flex"></span>
+            <img src={PhotoCover} alt="Pencil.svg" />
+            Upload image
           </button>
         </div>
       </div>
@@ -62,6 +54,11 @@ const ManageClubSchedule = () => {
                       placeholder="Wednesday"
                       className="block w-[175px] tracking-wider h-[55px] p-3 text-[#000000] font-SemiBold rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
                     />
+                    <img
+                      src={Calender}
+                      alt="Pencil.svg"
+                      className="absolute right-3 mt-2 top-1/2 transform -translate-y-1/2"
+                    />
                   </div>
                   <div className="relative z-0 w-full mb-6 group text-sm tracking-wider font-Medium text-[#393939] ">
                     End time
@@ -71,6 +68,11 @@ const ManageClubSchedule = () => {
                       name="name"
                       placeholder="Wednesday"
                       className="block w-[175px] tracking-wider h-[55px] p-3 text-[#000000] font-SemiBold rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
+                    />
+                    <img
+                      src={Calender}
+                      alt="Pencil.svg"
+                      className="absolute right-3 mt-2 top-1/2 transform -translate-y-1/2"
                     />
                   </div>
                 </div>
@@ -110,23 +112,32 @@ const ManageClubSchedule = () => {
           </div>
         </div>
       </div>
-      <div
-        className="flex justify-between lg:ml-10 border-b-2 border-[#D9D9D9]
-                  border-dashed"
-      ></div>
-      <div className="flex gap-4 m-16">
-        <button className="inline-flex text-[#BDBDBD] font-Medium rounded-full w-[170px] text-sm h-[50px] py-2 text-[#000000] bg-[#F2F2F2] justify-center items-center">
-          <span className="inline-flex mr-2"></span> Delete profile
-        </button>
+      <div className="flex justify-between lg:ml-10 border-b-2 border-[#D9D9D9] bg-[#000000]"></div>
+
+      <div className="flex ml-32 mt-16">
         <button
-          className="inline-flex text-[#FFFFFF] font-Bold text-lg rounded-full w-[170px] text-sm py-2 text-[#DF327B] justify-center items-center bg-[#DB2E78]"
-          onClick={handleButtonClick}
+          className="inline-flex text-[#FFFFFF] font-Bold text-lg rounded-full w-[340px] h-[45px] text-sm py-2 text-[#DF327B] justify-center items-center bg-[#DB2E78]"
+          onClick={() => setShowModal(true)}
         >
           <span className="inline-flex mr-2"></span>Save Changes
         </button>
       </div>
+      <Modal isVisible={showModal}>
+        <div className="flex justify-center items-center pb-5">
+          <img src={Tick} alt="Tick.svg" />
+        </div>
+        <div className="lg:text-3xl md:text-2xl sm:text-xl text-xl flex justify-center items-center max-w-[350px] ml-5 text-center mb-8 font-Bold text-[#040A1D]">
+          You’ve added a new club profile.
+        </div>
+        <p className="flex justify-center items-center max-w-[300px] ml-12 tracking-wider text-center mb-8 font-Medium text-[#4C536A] text-md">
+          Club chaperon will receive a confirmation email to start running their
+          account
+        </p>
+      </Modal>
     </div>
   );
 };
-
-export default ManageClubSchedule;
+NewClubSchedule.propTypes = {
+  showModal: PropTypes.bool.isRequired,
+};
+export default NewClubSchedule;

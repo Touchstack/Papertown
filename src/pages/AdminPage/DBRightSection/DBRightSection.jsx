@@ -10,6 +10,7 @@ import AddRole from "./Team/Roles/AddRole";
 import PermissionsRole from "./Team/Roles/PermissionsRole";
 import ClubProfile from "./Clubs/ClubProfile";
 import ManageClub from "./Clubs/ManageClub";
+import NewClub from "./Clubs/NewClub";
 
 const DBRightSection = () => {
   return (
@@ -27,6 +28,7 @@ const DBRightSection = () => {
           <Route path="/clubs" element={<Clubs />} />
           <Route path="/clubsprofile" element={<ClubProfile />} />
           <Route path="/manageclub" element={<ManageClub />} />
+          <Route path="/newclub" element={<NewClub />} />
           <Route path="/submissions" element={<Submissions />} />
           {/* 
                       

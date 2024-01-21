@@ -6,7 +6,7 @@ import HorizontalSlider from "../../../../../assets/Images/Slider.svg";
 
 const handleButtonClick = () => {
   // Navigate to another page
-  window.location.href = "/addwriter";
+  window.location.href = "/admin/newclub";
 };
 
 const Header = () => {

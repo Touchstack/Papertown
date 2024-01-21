@@ -1,8 +1,9 @@
 import Profile from "../../../../../assets/Images/Profile.png";
 import Modal from "../../../../../Component/Modal/Modal";
+import Tick from "../../../../../assets/Images/Tick.svg";
+import Warning from "../../../../../assets/Images/Warning.svg";
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { ClipLoader } from "react-spinners";
 
 const ProfileMemberList = () => {
   const [showModal, setShowModal] = useState(false);
@@ -358,23 +359,7 @@ const ProfileMemberList = () => {
       </Modal>
       <Modal isVisible={showModal3} onClose={() => closeModal(3)}>
         <div className="flex justify-center items-center pb-8">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="86"
-            height="86"
-            viewBox="0 0 86 86"
-            fill="none"
-          >
-            <path
-              opacity="0.32"
-              d="M42.9998 78.8332C62.79 78.8332 78.8332 62.79 78.8332 42.9998C78.8332 23.2096 62.79 7.1665 42.9998 7.1665C23.2096 7.1665 7.1665 23.2096 7.1665 42.9998C7.1665 62.79 23.2096 78.8332 42.9998 78.8332Z"
-              fill="#83C303"
-            />
-            <path
-              d="M39.4172 57.3337C38.4999 57.3337 37.5826 56.9826 36.8838 56.2838L26.1338 45.5338C24.7327 44.1327 24.7327 41.8681 26.1338 40.467C27.5349 39.0659 29.7996 39.0659 31.2007 40.467L39.4172 48.6836L54.8005 33.3003C56.2016 31.8992 58.4662 31.8992 59.8673 33.3003C61.2684 34.7014 61.2684 36.9661 59.8673 38.3672L41.9507 56.2838C41.2519 56.9826 40.3346 57.3337 39.4172 57.3337Z"
-              fill="#83C303"
-            />
-          </svg>
+          <img src={Tick} alt="Tick.svg" />
         </div>
         <div className="lg:text-3xl md:text-2xl sm:text-xl text-xl flex justify-center items-center max-w-[370px] ml-3 text-center mb-8 font-Bold text-[#040A1D]">
           3 writers added to Smartgenes Club
@@ -382,38 +367,7 @@ const ProfileMemberList = () => {
       </Modal>
       <Modal isVisible={showModal4} onClose={() => closeModal(4)}>
         <div className="flex justify-center items-center pb-8">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="43"
-            height="40"
-            viewBox="0 0 43 40"
-            fill="none"
-          >
-            <g clipPath="url(#clip0_285_2716)">
-              <path
-                d="M26.3522 6.47617C25.1561 4.41515 23.5281 3.27856 21.768 3.27856C20.0079 3.27856 18.3788 4.41515 17.1827 6.47617L3.90191 29.3519C2.68955 31.4595 2.55965 33.6482 3.5447 35.3553C4.48211 36.979 6.32122 37.9131 8.59332 37.9175H34.9427C37.218 37.9131 39.0604 36.9822 39.9946 35.3618C40.9742 33.6655 40.8421 31.4854 39.6319 29.3811L26.3522 6.47617ZM39.0582 34.8205C38.3211 36.0978 36.8208 36.8317 34.9405 36.835H8.5944C6.72065 36.8317 5.22252 36.0946 4.48211 34.814C3.69516 33.4501 3.82614 31.6565 4.83933 29.8931L18.119 7.01956C19.1138 5.30494 20.4095 4.36103 21.768 4.36103C23.1265 4.36103 24.4222 5.30494 25.4159 7.01956L38.6956 29.9213C39.7077 31.6814 39.8398 33.4674 39.0582 34.8205Z"
-                fill="#E1B300"
-                stroke="#E1B300"
-                strokeWidth="2.38889"
-              />
-              <path
-                d="M21.7686 24.9279C21.9122 24.9279 22.0498 24.8708 22.1513 24.7693C22.2528 24.6678 22.3099 24.5302 22.3099 24.3866V13.562C22.3099 13.4184 22.2528 13.2808 22.1513 13.1793C22.0498 13.0778 21.9122 13.0208 21.7686 13.0208C21.6251 13.0208 21.4874 13.0778 21.3859 13.1793C21.2844 13.2808 21.2274 13.4184 21.2274 13.562V24.3866C21.2274 24.5302 21.2844 24.6678 21.3859 24.7693C21.4874 24.8708 21.6251 24.9279 21.7686 24.9279ZM21.6994 27.634C20.5054 27.634 19.5344 28.605 19.5344 29.799C19.5344 30.9929 20.5054 31.9639 21.6994 31.9639C22.8933 31.9639 23.8643 30.9929 23.8643 29.799C23.8643 28.605 22.8933 27.634 21.6994 27.634ZM21.6994 30.8814C21.4206 30.869 21.1575 30.7495 20.9647 30.5478C20.7718 30.3462 20.6642 30.078 20.6642 29.799C20.6642 29.52 20.7718 29.2517 20.9647 29.0501C21.1575 28.8485 21.4206 28.729 21.6994 28.7165C21.9781 28.729 22.2412 28.8485 22.434 29.0501C22.6269 29.2517 22.7345 29.52 22.7345 29.799C22.7345 30.078 22.6269 30.3462 22.434 30.5478C22.2412 30.7495 21.9781 30.869 21.6994 30.8814Z"
-                fill="#E1B300"
-                stroke="#E1B300"
-                strokeWidth="2.38889"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0_285_2716">
-                <rect
-                  width="41.8056"
-                  height="38.2222"
-                  fill="white"
-                  transform="translate(0.5 0.888916)"
-                />
-              </clipPath>
-            </defs>
-          </svg>
+          <img src={Warning} alt="Warning.svg" />
         </div>
         <div className="lg:text-3xl md:text-2xl sm:text-xl text-xl flex justify-center items-center max-w-[370px] ml-3 text-center mb-8 font-Bold text-[#040A1D]">
           You’re removing 2 writers from this club
@@ -436,23 +390,7 @@ const ProfileMemberList = () => {
       </Modal>
       <Modal isVisible={showModal5} onClose={() => closeModal(5)}>
         <div className="flex justify-center items-center pb-5">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="86"
-            height="86"
-            viewBox="0 0 86 86"
-            fill="none"
-          >
-            <path
-              opacity="0.32"
-              d="M42.9998 78.8332C62.79 78.8332 78.8332 62.79 78.8332 42.9998C78.8332 23.2096 62.79 7.1665 42.9998 7.1665C23.2096 7.1665 7.1665 23.2096 7.1665 42.9998C7.1665 62.79 23.2096 78.8332 42.9998 78.8332Z"
-              fill="#83C303"
-            />
-            <path
-              d="M39.4172 57.3337C38.4999 57.3337 37.5826 56.9826 36.8838 56.2838L26.1338 45.5338C24.7327 44.1327 24.7327 41.8681 26.1338 40.467C27.5349 39.0659 29.7996 39.0659 31.2007 40.467L39.4172 48.6836L54.8005 33.3003C56.2016 31.8992 58.4662 31.8992 59.8673 33.3003C61.2684 34.7014 61.2684 36.9661 59.8673 38.3672L41.9507 56.2838C41.2519 56.9826 40.3346 57.3337 39.4172 57.3337Z"
-              fill="#83C303"
-            />
-          </svg>
+          <img src={Tick} alt="Tick.svg" />
         </div>
         <div className="lg:text-3xl md:text-2xl sm:text-xl text-xl flex justify-center items-center max-w-[350px] ml-5 text-center mb-8 font-Bold text-[#040A1D]">
           2 writers removed from Mary Mother Writer’s Club
