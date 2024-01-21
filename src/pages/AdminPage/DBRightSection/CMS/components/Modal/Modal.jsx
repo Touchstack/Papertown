@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 // import { FaTimes } from 'react-icons/fa';
-import CheckMark from '../../../../../assets/Images/CheckMark.svg';
+import CheckMark from '../../../../../../assets/Images/CheckMark.svg';
 
 const Modal = ({ isVisible, onClose, text }) => {
     if (!isVisible) return null;

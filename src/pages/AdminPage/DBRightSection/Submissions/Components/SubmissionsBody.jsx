@@ -1,8 +1,15 @@
 
+import { useNavigate } from "react-router-dom";
 import { PiSlidersHorizontalThin } from "react-icons/pi";
 import SubmissionsCards from "./SubmissionsCards";
 
-const SubmissionsBody = () => {
+function SubmissionsBody () {
+    const navigate = useNavigate();
+  
+    const handleNewCategory = () => {
+        navigate("/admin/submissions/NewSubmission") }
+
+
   return (
     <div>
         <div className="flex items-center justify-between lg:px-10 px:6 gap-5">
@@ -21,7 +28,7 @@ const SubmissionsBody = () => {
   <p className="inline-block">Filter</p>
 </div>
   {/* Button */}
-  <button className="bg-[#DF327B] lg:inline-block hidden text-[#FFFFFF] font-Bold rounded-full w-[185px] py-2 " >
+  <button className="bg-[#DF327B] lg:inline-block hidden text-[#FFFFFF] font-Bold rounded-full w-[185px] py-2 " onClick={handleNewCategory} >
     + Add New Category
   </button>
   
@@ -31,4 +38,4 @@ const SubmissionsBody = () => {
   )
 }
 
-export default SubmissionsBody
+export default SubmissionsBody;
