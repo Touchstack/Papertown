@@ -1,7 +1,7 @@
 import Location from "../../../../../assets/Images/LocationSymbol.svg";
 import Meeting from "../../../../../assets/Images/MeetingIcon.svg";
 import Phone from "../../../../../assets/Images/LocalPhone.svg";
-import MapView from "../../../../../assets/Images/Map.svg";
+import MapView from "../../../../../assets/Images/map.svg";
 
 const ProfileLocation = () => {
   return (

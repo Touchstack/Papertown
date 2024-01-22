@@ -58,7 +58,7 @@ const AddNewsItem = ({ onGoBack }) => {
                 <input
                   type='text'
                   placeholder="News title"
-                  className='w-[40%] h-[50px] rounded-[10px] px-5'
+                  className='w-[40%] h-[50px] rounded-[10px] px-5 bg-[#F4F5F7]'
                   value={title}
                   onChange={handleTitleChange}
                 />
@@ -76,9 +76,9 @@ const AddNewsItem = ({ onGoBack }) => {
                     className="w-full md:w-[422px] h-[195px] rounded-[10px] object-cover"
                   />
                 )}
-                <button className="absolute  flex items-center justify-center gap-2 border-[1px] border-[#FFF] rounded-[10px] p-2 top-[5rem] left-[8rem] md:left-[20rem]">
-                  <LuUpload color="#FFF" />
-                  <p className="text-[#FFF] font-[700]">Upload image</p>
+                <button className="absolute  flex items-center justify-center gap-2 border-[1px] border-[#F4F5F7] rounded-[10px] p-2 top-[5rem] left-[8rem] md:left-[20rem]">
+                  <LuUpload color="#efeff1" />
+                  <p className="text-[#F4F5F7] font-[700]">Upload image</p>
                 </button>
               </div>
             </div>
@@ -89,14 +89,14 @@ const AddNewsItem = ({ onGoBack }) => {
                 <textarea
                   type='text'
                   placeholder="About the writer"
-                  className='w-[80%] h-[200px] rounded-[10px] px-2 py-2'
+                  className='w-[80%] h-[200px] rounded-[10px] px-2 py-2 bg-[#F4F5F7]'
                   value={about}
                   onChange={handleAboutChange}
                 />
             </div>
         </section>
 
-          <button className="flex w-full md:w-[216px] items-center justify-center h-[54px] mb-5 mt-5  bg-[#DF327B] rounded-[50px]" onClick={openModal}>
+          <button className="flex w-full md:w-[316px] items-center justify-center h-[44px] mb-5 mt-5  bg-[#DF327B] rounded-[50px]" onClick={openModal}>
             <p className="flex text-[#FFF] font-[700]">Submit News</p>
           </button>
 
