@@ -4,7 +4,7 @@ import Arrow from "../../../../../assets/Images/ArrowUp.svg";
 import ChildrenPic from "../../../../../assets/Images/Children.svg";
 import Boy from "../../../../../assets/Images/SmilingBoy.svg";
 import Girl from "../../../../../assets/Images/SmilingGirl.svg";
-import Student from "../../../../../assets/Images/Student.svg";
+import Student from "../../../../../assets/Images/student.svg";
 import Pupil from "../../../../../assets/Images/Pupil.svg";
 import Calender from "../../../../../assets/Images/bi_calendar.svg";
 import PencilPic from "../../../../../assets/Images/Pencil.svg";
@@ -16,11 +16,11 @@ const ProfileHero = () => {
     window.location.href = "/admin/manageclub";
   };
   return (
-    <div className="mx-auto">
-      <div className="flex flex-row items-center justify-between md:p-10 p-6 mt-8 lg:text-4xl md:text-3xl sm:text-3xl text-3xl lg:text-left text-center">
-        <h1 className="font-Bold text-4xl">
+    <div className="mx-auto ">
+      <div className="flex flex-row items-center justify-between md:p-10 p-6 mt-8 lg:text-4xl md:text-3xl sm:text-3xl text-3xl lg:text-left md:text-left sm: text-right text-left text-center">
+        {/* <div className="flex flex-row items-center lg:justify-between md:p-10 p-6"> */}
+        <h1 className="font-Bold">
           <span className="inline-flex mr-2">
-            {" "}
             <img src={ArrowIcon} alt="ArrowLeft.svg" />
           </span>
           Clubs Profile
