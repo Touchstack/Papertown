@@ -57,10 +57,11 @@ function MembersMain() {
                 + Add role
               </button>
             </Link>
-
-            <button className="bg-[#DF327B]  lg:hidden inline-block text-[#FFFFFF] font-Bold rounded-full w-[111px] py-2">
-              <a href="/add-role">+ Add</a>
-            </button>
+            <Link to="/admin/team/add-role">
+              <button className="bg-[#DF327B]  lg:hidden inline-block text-[#FFFFFF] font-Bold rounded-full w-[111px] py-2">
+                + Add
+              </button>
+            </Link>
           </div>
           {/* button end  */}
         </div>
