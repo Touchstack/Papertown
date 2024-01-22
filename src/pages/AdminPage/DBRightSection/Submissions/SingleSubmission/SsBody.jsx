@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import child1 from "../../../../../assets/Images/child1.png";
 import DateLogo from "../../../../../assets/Images/DateLogo.png";
 
-const SsHeader = () => {
+const SsBody = () => {
   return (
     <div>
       <div className="flex flex-row items-center justify-between md:px-14 px-6">
@@ -107,4 +107,4 @@ const SsHeader = () => {
   );
 };
 
-export default SsHeader;
+export default SsBody;
