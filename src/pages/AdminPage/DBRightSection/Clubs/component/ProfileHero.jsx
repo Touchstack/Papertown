@@ -4,7 +4,7 @@ import Arrow from "../../../../../assets/Images/ArrowUp.svg";
 import ChildrenPic from "../../../../../assets/Images/Children.svg";
 import Boy from "../../../../../assets/Images/SmilingBoy.svg";
 import Girl from "../../../../../assets/Images/SmilingGirl.svg";
-import Student from "../../../../../assets/Images/Student.svg";
+import Student from "../../../../../assets/Images/student.svg";
 import Pupil from "../../../../../assets/Images/Pupil.svg";
 import Calender from "../../../../../assets/Images/bi_calendar.svg";
 import PencilPic from "../../../../../assets/Images/Pencil.svg";
