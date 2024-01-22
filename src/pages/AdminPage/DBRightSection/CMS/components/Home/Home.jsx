@@ -52,7 +52,7 @@ const Home = () => {
       <section className="flex flex-col md:flex-row md:mb-10 gap-4 md:gap-12">
         <p className="text-[#000] font-[700] mb-3 md:mb-0">Marque</p>
 
-        <div className=''>
+        <div className='md:ml-[2rem]'>
           {/* Create an input field here */}
           <input
             type="text"
