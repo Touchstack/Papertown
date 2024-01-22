@@ -10,7 +10,7 @@
 
 body {
   font-family: Dosis-Regular, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Varela",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -49,6 +49,10 @@ code {
 @font-face {
   font-family: "Dosis-SemiBold";
   src: url("../src/assets/fonts/Dosis-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Varela-Regular";
+  src: url("../src/assets/fonts/Varela-Regular.ttf");
 }
 
 .marquee1 {
