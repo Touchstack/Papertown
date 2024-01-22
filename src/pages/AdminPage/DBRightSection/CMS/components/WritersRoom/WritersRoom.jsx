@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { inspiration } from '../../../../../../ConstantData';
-import close from '../../../../../assets/Images/x-close.svg';
-import add from '../../../../../assets/Images/add.svg';
+import { inspiration } from '../../../../../../../ConstantData';
+import close from '../../../../../../assets/Images/x-close.svg';
+import add from '../../../../../../assets/Images/add.svg';
 import { HiCalendar } from "react-icons/hi2";
-import Modal from './Modal';
+import Modal from '../Modal/Modal';
 
 const WritersRoom = () => {
   const [marqueInput, setMarqueInput] = useState('');
@@ -23,13 +23,13 @@ const WritersRoom = () => {
     }
 
 
-  const handlemarqueChange = (e) => {
-    setMarqueInput(e.target.value);
-  };
+    const handlemarqueChange = (e) => {
+      setMarqueInput(e.target.value);
+    };
 
-  const handleaddress1Change = (e) => {
-    setaddressOne(e.target.value);
-  };
+    const handleaddress1Change = (e) => {
+      setaddressOne(e.target.value);
+    };
 
   const handleaddress2Change = (e) => {
     setaddressTwo(e.target.value);

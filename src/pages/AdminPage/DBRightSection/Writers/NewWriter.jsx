@@ -1,5 +1,11 @@
 import WriterSearchBar from "./WriterSearchBar";
 import WriterLogo from "../../../../assets/Images/WriterLogo.svg"
+
+const handleClick = () => {
+  // Navigate to another page
+  window.location.href = 'writers/NewWriter2';
+}
+
 const NewWriter = () => {
   return (
    <div className="bg-[#FFFFFF] rounded-[25px] mt-2">
@@ -67,8 +73,9 @@ const NewWriter = () => {
             </div>
             <br />
             <button
-              type="submit"
+              type=""
               className="bg-[#DB2E78] font-Bold text-white rounded-full p-2 w-[500px] h-[55px]"
+              onClick={handleClick}
             >
               Continue
             </button>
