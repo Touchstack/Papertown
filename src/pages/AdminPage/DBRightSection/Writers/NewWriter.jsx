@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import WriterSearchBar from "./WriterSearchBar";
-import NewWriter1 from './NewWriterForm'; // Import the actual file paths
-import NewWriter2 from './NewWriterForm2'; // Import the actual file paths
+import NewWriter1 from './NewWriterForm'; 
+import NewWriter2 from './NewWriterForm2'; 
 
 const NewWriter = () => {
   const [currentView, setCurrentView] = useState('NewWriter1');
@@ -18,7 +18,7 @@ const NewWriter = () => {
     <div className="bg-[#FFFFFF] rounded-[25px] mt-2">
       <WriterSearchBar />
       <main className="flex items-center justify-center lg:ml-[5%]">
-        {/* Conditionally render the current view */}
+        {/*render the current view */}
         {currentView === 'NewWriter1' && <NewWriter1 />}
         {currentView === 'NewWriter2' && <NewWriter2 />}
       </main>

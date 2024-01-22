@@ -1,5 +1,5 @@
 import WriterLogo from "../../../../assets/Images/WriterLogo.svg"
-
+import EditIcon from "../../../../assets/Images/edit.png"
 //const handleClick = () => {
   // Navigate to another page
  // window.location.href = 'writers/NewWriter2';}
@@ -10,7 +10,7 @@ const NewWriterForm = () => {
         <form className="w-full sm:w-11/12 md:w-10/12 lg:w-8/12 xl:w-6/12 rounded-lg p-6">
     <div className="lg:ml-[40%] lg:mb-3 relative">
       <img src={WriterLogo} alt="Writer Logo" />
-       <div className="rounded-full bg-[#DF327B] w-6 h-6"></div>
+       <div className="absolute bottom-[1%] right-[55%] rounded-full w-6 h-6"><img src={EditIcon}/></div>
        </div>
       <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-4 sm:gap-8">
         <div>
