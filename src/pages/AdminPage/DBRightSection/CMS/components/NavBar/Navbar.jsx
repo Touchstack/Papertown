@@ -14,13 +14,13 @@ const Navbar = () => {
   };
 
   return (
-    <div className="font-medium px-10  text-gray-500 dark:text-gray-400 dark:border-gray-700 ">
+    <div className="font-medium px-10 text-gray-500 dark:text-gray-400 dark:border-gray-700 ">
        
-      <ul className="flex gap-10 px-10 mb-10">
+      <ul className="flex md:gap-10 gap-5 mb-10">
         {tabs.map((tab) => (
           <li
             key={tab}
-            className={`cursor-pointer text-[14px] md:text-[16px] ${
+            className={`cursor-pointer text-[16px] ${
               activeTab === tab ? "border-b-[1px] border-[#B44DB8] text-[#B44DB8]" : ""
             }`}
             onClick={() => handleTabClick(tab)}

@@ -47,33 +47,33 @@ const Home = () => {
   });
 
   return (
-    <div className="px-4 md:px-10 flex flex-col text-[#000]">
+    <div className="sm:px-4 md:px-10 lg:px-20 flex flex-col text-[#000]">
       {/* Marque section */}
       <section className="flex flex-col md:flex-row md:mb-10 gap-4 md:gap-12">
         <p className="text-[#000] font-[700] mb-3 md:mb-0">Marque</p>
 
-        <div className='ml-[6.5rem]'>
+        <div className=''>
           {/* Create an input field here */}
           <input
             type="text"
             value={marqueInput}
             onChange={handlemarqueChange}
-            className="w-[350px] font-['Varela-Regular'] md:w-[522px] h-full p-4 rounded-[10px] bg-[#e8e9ec] border-[#F4F5F7]"
+            className="w-[300px] font-['Varela-Regular'] md:w-[522px] h-full p-4 rounded-[10px] bg-[#e8e9ec] border-[#F4F5F7]"
             placeholder="Type something..."
           />
         </div>
       </section>
       {/* Marque section */}
 
-      <hr className="mx-5" />
+      <hr className="my-5" />
 
       {/* Notice Board */}
-      <section className="mt-5  flex flex-col md:flex-row gap-4 md:gap-12">
-        <p className="text-[#000] font-[700] mb-3 md:mb-0">Notice board</p>
+      <section className="mt-5  flex flex-col md:flex-row gap-4 sm:gap-5 md:gap-12">
+        <p className="text-[#000]  font-[700] mb-3 md:mb-0">Notice board</p>
 
-        <div className="flex flex-col w-full md:w-[60%]">
+        <div className="flex flex-col w-full ">
           {/* Create input fields here */}
-          <div className="mt-5 ml-[5.5rem]">
+          <div className="mt-5">
             <p className="text-[#393939] mb-2">Board Title</p>
             <input
               type="text"
@@ -84,7 +84,7 @@ const Home = () => {
             />
           </div>
 
-          <div className="mt-5  ml-[5.5rem]">
+          <div className="mt-5  ">
             <p className="text-[#393939] mb-2">Description</p>
             <textarea
               type="text"
@@ -96,7 +96,7 @@ const Home = () => {
             />
           </div>
 
-          <div className="mt-5 mb-5 ml-[5.5rem]">
+          <div className="mt-5 mb-5">
             <p className="text-[#393939] mb-2">Upload cover photo</p>
             <div {...getRootProps()} className="cursor-pointer">
               <input {...getInputProps()} />
@@ -127,6 +127,7 @@ const Home = () => {
                <p className="flex text-[#FFF] font-[700]">Save Changes</p>
              </button>
            </div>
+           
           </div>
         </div>
       </section>

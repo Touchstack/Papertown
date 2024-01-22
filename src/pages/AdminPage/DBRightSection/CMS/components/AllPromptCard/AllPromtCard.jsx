@@ -1,9 +1,9 @@
 
 const AllPromtCard = () => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-5 mb-10">
+    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
     {Array.from({ length: 12 }).map((_, index) => (
-      <div key={index} className="w-[11/12] h-[11/12] rounded-[16px] border-[1px] border-[#E8E8E8] bg-[#FFF] p-5">
+      <div key={index} className="sm:w-[6/12] md:w-[11/12] h-[11/12] rounded-[16px] border-[1px] border-[#E8E8E8] bg-[#FFF] p-5">
         <div className="flex gap-2 text-[6.99px]">
           <div className="w-[87px] h-[36px] text-[#fff] text-[10px] md:text-[13px] bg-[#B44DB8] rounded-[26px] flex items-center justify-center">
             Grade 6-12

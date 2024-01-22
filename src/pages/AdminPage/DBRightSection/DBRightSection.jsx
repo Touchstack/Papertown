@@ -12,7 +12,7 @@ import PermissionsRole from "./Team/Roles/PermissionsRole";
 
 const DBRightSection = () => {
   return (
-    <div className="py-12 flex-1 m-2">
+    <div className="py-10 sm:px-3 md:px-5 lg:px-8 flex-1 m-2">
       {/*header*/}
       <div className="flex flex-col flex-1">
         <Routes>
