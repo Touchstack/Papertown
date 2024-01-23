@@ -192,7 +192,7 @@ const WritersRoom = () => {
       </div>
       {/* Dates */}
 
-      <div className='flex justify-end my-3'>
+      <div className='flex md:justify-end my-3 ml-[20rem]'>
          <div className='flex flex-col items-center justify-center'>
           <p className='text-[10px] mb-2 ml-7'>Updated 10 Apr 17:23</p> 
          

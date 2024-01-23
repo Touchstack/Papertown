@@ -1,5 +1,6 @@
 import { HiBell, HiChevronDown } from "react-icons/hi2";
-import AppLogo from "../../../../../../assets/Images/Logo.svg";
+import AppLogo from "../../../../../../assets/Images/Ellipse 27.png";
+
 
 const Header = () => {
   return (
@@ -13,7 +14,7 @@ const Header = () => {
           <img
             src={AppLogo}
             alt=""
-            className="lg:w-[50px] md:w-[40px] md:h-[50px] h-[40px]"
+            className="lg:w-[40px] md:w-[40px] md:h-[40px] h-[40px]"
           />
         </div>
 
