@@ -1,5 +1,5 @@
 import { HiBell, HiChevronDown } from "react-icons/hi2";
-import AppLogo from "../../../../../assets/Images/Logo.svg";
+import Logo from "../../../../../assets/Images/Ellipse 27.png";
 
 const SubmissionsHeader = () => {
   return (
@@ -11,7 +11,7 @@ const SubmissionsHeader = () => {
 
         <div>
           <img
-            src={AppLogo}
+            src={Logo}
             alt=""
             className="md:w-[50px] w-[40px] md:h-[50px] h-[40px]"
           />
