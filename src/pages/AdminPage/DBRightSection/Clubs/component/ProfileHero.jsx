@@ -11,12 +11,16 @@ import PencilPic from "../../../../../assets/Images/Pencil.svg";
 import ArrowIcon from "../../../../../assets/Images/ArrowLeft.svg";
 
 const ProfileHero = () => {
+  const handleButtonClick = () => {
+    // Navigate to another page
+    window.location.href = "/admin/manageclub";
+  };
   return (
-    <div className="mx-auto">
-      <div className="flex flex-row items-center justify-between md:p-10 p-6 mt-8 lg:text-4xl md:text-3xl sm:text-3xl text-3xl lg:text-left text-center">
-        <h1 className="font-Bold text-4xl">
+    <div className="mx-auto ">
+      <div className="flex flex-row items-center justify-between md:p-10 p-6 mt-8 lg:text-4xl md:text-3xl sm:text-3xl text-3xl lg:text-left md:text-left sm: text-right text-left text-center">
+        {/* <div className="flex flex-row items-center lg:justify-between md:p-10 p-6"> */}
+        <h1 className="font-Bold">
           <span className="inline-flex mr-2">
-            {" "}
             <img src={ArrowIcon} alt="ArrowLeft.svg" />
           </span>
           Clubs Profile
@@ -71,7 +75,10 @@ const ProfileHero = () => {
           </div>
         </div>
         <div className="flex m-4">
-          <button className="inline-flex text-[#FFFFFF] font-Bold rounded-full w-[115px] py-2 text-[#000000] bg-[#DB2E78] rounded-full justify-center items-center mt-40">
+          <button
+            className="inline-flex text-[#FFFFFF] font-Bold rounded-full w-[115px] py-2 text-[#000000] bg-[#DB2E78] rounded-full justify-center items-center mt-40"
+            onClick={handleButtonClick}
+          >
             <span className="inline-flex mr-2 ">
               <img src={PencilPic} alt="Pencil.svg" />
             </span>
