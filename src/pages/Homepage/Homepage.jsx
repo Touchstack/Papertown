@@ -5,15 +5,18 @@ import Footer from "../FooterPage/Footer";
 import PatnersComponent from "../Slidershow/PatnersComponent";
 import MarqueeApp from "../../Component/MarqueeText";
 import CallToAction from "../../Component/CallToAction/CallToAction";
-import Circle from "../../Component/Circle";
+
 //import Tips from "../Tips/Tips";
 
 const Homepage = () => {
+  const gradientStyle = {
+    background: 'linear-gradient(180deg, #9747FF 7.29%, #DF327B 84.19%, #9747FF 100%)',
+  };
+
   return (
-    <div className="bg-gradient-to-b bg-fixed from-purple-600 via-pink-500 to-purple-600 font-Medium h-screen">
-      
+    <div className="font-Medium h-screen" style={gradientStyle}>
       <GeneralNav color="white" btnColor="white" bgColor="transparent" />
-      <Circle />
+      
       <RedefiningWriting />
       <MarqueeApp />
       <CallToAction />
@@ -22,6 +25,6 @@ const Homepage = () => {
       <Footer />
     </div>
   );
-};
+}
 
 export default Homepage;

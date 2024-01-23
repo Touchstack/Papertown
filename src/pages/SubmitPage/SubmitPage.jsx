@@ -6,7 +6,7 @@ import GeneralNav from '../../Navbar/GeneralNav';
 
 const SubmitPage = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="">
       <GeneralNav bgColor="transparent" bgShadow="shadow" btnColor="black" />
       <SubmitBg />
       <div className="flex-col text-black mt-40 text-center items-center h-144px w-734px">
@@ -65,12 +65,13 @@ const SubmitPage = () => {
           <br />
         </div>
       </div>
-      <div>
+      
         <SubmitComponent />
-      </div>
+  
       <div className="bg-[#B44DB8]">
-        <Footer />
+         <Footer />
       </div>
+        
     </div>
   );
 };

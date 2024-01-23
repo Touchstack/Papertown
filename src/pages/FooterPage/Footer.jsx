@@ -108,7 +108,7 @@ const Footer = () => {
 
   return (
     <div className="">
-      <div className="">
+      <div>
         {/* bg-gradient-to-r */}
         <footer className="md:px-[50px] sm:p-6  from-purple-600 via-pink-500 to-purple-600 font-Medium">
           <div className="md:flex md:justify-center md:p-[50px] p-[20px]">
