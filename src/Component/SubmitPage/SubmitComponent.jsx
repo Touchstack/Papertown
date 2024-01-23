@@ -15,7 +15,7 @@ const SubmitComponent = () => {
     <div>
       <div>
         <main className="min-h-screen flex items-center justify-center bg-[#52B4AE1A]">
-          <form className="w-full sm:w-11/12 md:w-10/12 lg:w-8/12 xl:w-6/12 rounded-lg p-6">
+          <form className="w-full sm:w-11/12 md:w-11/12 lg:w-8/12 xl:w-6/12 rounded-lg p-6">
             <h1 className="text-4xl font-Bold text-center pb-6 sm:pb-12">
               Submit your work here
             </h1>
