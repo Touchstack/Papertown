@@ -15,7 +15,7 @@ const NewWriter2 = () => {
                   className="border-gray-500 bg-[#F4F5F7] rounded-md p-2 w-[500px] h-[150px] sm:w-200px"
                   type="text"
                   name="Firstname"
-                  placeholder="Mary"
+                  placeholder="About the writer"
                 />
               </div>
             </div>
