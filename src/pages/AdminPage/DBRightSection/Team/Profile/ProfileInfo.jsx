@@ -3,8 +3,8 @@ import { FaPencilAlt } from "react-icons/fa";
 import DateInfor from "./DateInfor";
 function ProfileInfo() {
   return (
-    <div className="lg:mt-0 mt-10">
-      <div className="lg:ml-20 ml-5 mt-5 flex items-center gap-3">
+    <div className="lg:mt-0 mt-3">
+      <div className="lg:ml-20 ml-5 lg:mt-5 flex items-center gap-3">
         <img
           src={AppLogo}
           alt=""

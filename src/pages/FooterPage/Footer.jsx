@@ -345,7 +345,8 @@ const Footer = () => {
                       placeholder="Email Address"
                       name="subscriptionemail"
                       required
-                      className="block w-[300px] h-14 p-4 text-[#B0B0B0] rounded-full border border-white border-opacity-100 bg-opacity-20  mb-4 font-SemiBold  bg-[#FFFAF5] sm:text-md focus:ring-blue-500 focus:border-blue-500"
+                      className="block w-[300px] outline-none h-14 p-4 placeholder-white text-white rounded-full border border-whit  mb-4  bg-[#FFFAF5] font-SemiBold  sm:text-md   bg-opacity-20 border-opacity-100  "
+                      //   focus:ring-blue-500 focus:border-blue-500
                       onChange={handleChange}
                       value={text}
                     />
@@ -354,7 +355,7 @@ const Footer = () => {
                       <button
                         type="button"
                         onClick={() => subscribeNewsLetter()}
-                        className="font-SemiBold text-[#FFFFFF] bg-[#52B4AE] block w-[300px] h-14 p-4 hover:bg-amber-400 focus:ring-1 focus:outline-none focus:ring-amber-100 font-medium rounded-full text-xl px-5 py-3 
+                        className="font-SemiBold text-[#FFFFFF] bg-[#52B4AE] block w-[300px] h-14 p-4 hover:bg-[#3a8783]  rounded-full text-xl px-5 py-3 
                       text-center mr-3 md:mr-0"
                       >
                         Subscribe
