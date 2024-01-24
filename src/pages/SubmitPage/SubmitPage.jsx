@@ -3,7 +3,7 @@ import GeneralNav from '../../Navbar/GeneralNav';
 import SubmitBg from '../../Component/SubmitPage/SubmitBg';
 import SubmitComponent from '../../Component/SubmitPage/SubmitComponent';
 import Footer from '../FooterPage/Footer';
-import YellowBulbs from '../../assets/Images/bulb.png';
+import YellowBulbs from '../../assets/Images/submitIdea.png';
 
 const SubmitPage = () => {
   return (
@@ -12,11 +12,11 @@ const SubmitPage = () => {
       <SubmitBg />
 
       <div className="text-black text-center mt-40">
-        <h1 className="font-Bold text-3xl md:text-4xl lg:text-5xl mt-10">
-          Submit your personal <p>write-ups for review</p>
-        </h1>
+      <h1 class="text-black text-center text-6xl font-extrabold leading-100 tracking-widest mt-10">
+        Submit your personal <p>write-ups for review</p>
+      </h1>
 
-        <div className="font-Light text-sm px-3 mt-5 mb-10">
+        <div className="mt-5 font-['Varela-Regular']">
           It has survived not only five centuries, but also the leap into
           electronic typesetting, remaining
           <p>essentially unchanged. It was popularies in the 1960s with the release of Letraset sheets.</p>
@@ -42,7 +42,7 @@ const SubmitPage = () => {
 
         <div className="flex justify-center items-center mt-10">
           <img
-            className="bg-gradient-to-b from-yellow-500 to-white rounded-3xl lg:h-full md:h-[400px] sm:h-[250px] md:mb-4 sm:mb-12"
+            className=" lg:h-full md:h-[400px] sm:h-[250px]"
             src={YellowBulbs}
             alt="bulb.png"
           />
