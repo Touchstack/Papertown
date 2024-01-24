@@ -12,8 +12,8 @@ function SubmitBg() {
 
 
          <div className="w-36 h-36 border-4 border-[#FFFFFF1A] mt-10 -ms-9 rounded-full">
-<div className="w-[59px] h-[59px] absolute flex-auto bg-pink-400 opacity-30 rounded-full" />
-</div>
+          <div className="w-[59px] h-[59px] absolute flex-auto bg-pink-400 opacity-30 rounded-full" />
+        </div>
           <div className="w-[40px] h-[40px] border-4 border-[#E1B300] m-[5px] rounded-full"></div>
 
           <div className="w-[40px] h-[40px] border-4 border-[#FFC5FF] m-[5px] mt-[10%] ml-[100%] border-opacity-30 rounded-full"></div>

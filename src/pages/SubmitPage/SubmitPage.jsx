@@ -47,13 +47,11 @@ const SubmitPage = () => {
             alt="bulb.png"
           />
         </div>
+      </div>  
+      <div className="bg-[#B44DB8]">
+         <Footer />  
       </div>
-
-      <SubmitComponent />
-
-      <div className="bg-[#B44DB8] mt-[100px]">
-        <Footer />
-      </div>
+        
     </div>
   );
 };
