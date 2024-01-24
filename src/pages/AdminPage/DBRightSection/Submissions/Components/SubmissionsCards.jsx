@@ -8,7 +8,7 @@ const handleClick = () => {
 
 function SubmissionsCards() {
   return (
-    <div className="grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1 gap-[30px] px-[30px] mt-12 ">
+    <div className="grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1 gap-[30px] px-[30px] mt-12 mb-4">
       {/* card section start */}
       <a>
   <div
@@ -49,7 +49,7 @@ function SubmissionsCards() {
   <div
     className="bg-white border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto"
   >
-    <p className="rounded-full mr-[70%] text-lg border-[1px] items-center text-center text-black" onClick={handleClick}>All</p>
+    <p className="rounded-full mr-[70%] text-lg border-[1px] items-center text-center text-black" onClick={handleClick}>Memoir</p>
     
     <div className="grid lg:grid-cols-2  md:grid-cols-2 grid-cols-1 gap-[10px] ">
         <div className="text-black text-[42px] font-Bold mt-4"> 125 </div>
@@ -118,7 +118,7 @@ function SubmissionsCards() {
   <div
     className="bg-white border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto"
   >
-    <p className="rounded-full mr-[70%] text-lg border-[1px] items-center text-center text-black" onClick={handleClick}>All</p>
+    <p className="rounded-full mr-[70%] text-lg border-[1px] items-center text-center text-black" onClick={handleClick}>Narrative</p>
     
     <div className="grid lg:grid-cols-2  md:grid-cols-2 grid-cols-1 gap-[10px] ">
         <div className="text-black text-[42px] font-Bold mt-4"> 125 </div>
@@ -151,7 +151,7 @@ function SubmissionsCards() {
   <div
     className="bg-white border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto"
   >
-    <p className="rounded-full mr-[70%] text-lg border-[1px] items-center text-center text-black" onClick={handleClick}>All</p>
+    <p className="rounded-full mr-[70%] text-lg border-[1px] items-center text-center text-black" onClick={handleClick}>Memoir</p>
     
     <div className="grid lg:grid-cols-2  md:grid-cols-2 grid-cols-1 gap-[10px] ">
         <div className="text-black text-[42px] font-Bold mt-4"> 125 </div>
@@ -184,7 +184,7 @@ function SubmissionsCards() {
   <div
     className="bg-white border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto"
   >
-    <p className="rounded-full mr-[70%] text-lg border-[1px] items-center text-center text-black" onClick={handleClick}>All</p>
+    <p className="rounded-full mr-[70%] text-lg border-[1px] items-center text-center text-black" onClick={handleClick}>Narrative</p>
     
     <div className="grid lg:grid-cols-2  md:grid-cols-2 grid-cols-1 gap-[10px] ">
         <div className="text-black text-[42px] font-Bold mt-4"> 125 </div>
@@ -217,7 +217,7 @@ function SubmissionsCards() {
   <div
     className="bg-white border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto"
   >
-    <p className="rounded-full mr-[70%] text-lg border-[1px] items-center text-center text-black" onClick={handleClick}>All</p>
+    <p className="rounded-full mr-[70%] text-lg border-[1px] items-center text-center text-black" onClick={handleClick}>Memoir</p>
     
     <div className="grid lg:grid-cols-2  md:grid-cols-2 grid-cols-1 gap-[10px] ">
         <div className="text-black text-[42px] font-Bold mt-4"> 125 </div>
@@ -250,7 +250,7 @@ function SubmissionsCards() {
   <div
     className="bg-white border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto"
   >
-    <p className="rounded-full mr-[70%] text-lg border-[1px] items-center text-center text-black" onClick={handleClick}>All</p>
+    <p className="rounded-full mr-[70%] text-lg border-[1px] items-center text-center text-black" onClick={handleClick}>Narrative</p>
     
     <div className="grid lg:grid-cols-2  md:grid-cols-2 grid-cols-1 gap-[10px] ">
         <div className="text-black text-[42px] font-Bold mt-4"> 125 </div>
