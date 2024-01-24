@@ -3,7 +3,7 @@ import child1 from "../../../../../assets/Images/child1.png";
 
 const ProfileBody = () => {
   return (
-    <div className="lg:px-[70px]">
+    <div className="lg:px-[70px] px-[30px]">
       <div className="border-t border-dotted border-gray-200 mb-4"></div>
 
       <h2 className="text-xl font-bold mb-4 mt-20 lg:px-[70px]">Interests</h2>
