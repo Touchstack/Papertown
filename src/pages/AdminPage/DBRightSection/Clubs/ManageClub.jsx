@@ -4,7 +4,7 @@ import ManageClubSchedule from "./component/ManageClubSchedule";
 const ManageClub = () => {
   return (
     <div>
-      <div className="mt-2 bg-[#FFFFFF] h-[2000px] rounded-[25px]">
+      <div className="mt-2 bg-[#FFFFFF] rounded-[25px]">
         <ManageClubHeader />
         <ManageClubDetails />
         <ManageClubSchedule />

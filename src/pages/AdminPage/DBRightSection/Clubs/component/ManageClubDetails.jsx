@@ -3,12 +3,12 @@ const ManageClubDetails = () => {
   return (
     <div className="container mx-auto rounded-md py-4">
       <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-4">
-        <div className="py-12 px-8 lg:ml-14">
-          <h3 className="font-Bold mt-4 lg:text-4xl md:text-3xl sm:text-3xl text-3xl lg:text-left text-center py-4 text-[#000]">
-            School Details
-          </h3>
+        <div className="py-12 flex items-center justify-center ">
           <div className="py-6">
-            <div className="font-Regular max-w-[470px] lg:text-xl md:text-lg sm:text-lg text-lg lg:text-left md:text-left text-[#000] text-center">
+            <h3 className="font-Bold mt-4 lg:text-4xl md:text-3xl sm:text-3xl text-3xl lg:text-left text-center py-4 text-[#000]">
+              School Details
+            </h3>
+            <div className="font-Regular flex flex-col items-center justify-center max-w-[470px] lg:text-xl md:text-lg sm:text-lg text-lg lg:text-left md:text-left text-[#000] text-center">
               <form name="contact" method="post">
                 <div className="relative z-0 w-full mb-6 group text-sm tracking-wider font-Medium text-[#393939]">
                   Name of School
@@ -35,7 +35,7 @@ const ManageClubDetails = () => {
             </div>
           </div>
         </div>
-        <div className="inline-flex mb-8 justify-center items-center img-fluid mx-8 mb-20">
+        <div className="inline-flex justify-center items-center img-fluid mx-8 mb-20">
           <div className="py-14 px-8 lg:ml-14">
             <h3 className="font-Bold lg:text-4xl md:text-3xl sm:text-3xl text-3xl lg:text-left text-center py-4 text-[#000]">
               Chaperon details
