@@ -50,7 +50,7 @@ const Header = () => {
         </form>
         {/* Button */}
         <button
-          className="bg-[#DF327B] lg:inline-block hidden text-[#FFFFFF] font-Bold rounded-full w-[165px] py-2 "
+          className="bg-[#DF327B] inline-block  text-[#FFFFFF] font-Bold rounded-full w-[165px] py-2 "
           onClick={handleButtonClick}
         >
           + Add new club

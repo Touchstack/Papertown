@@ -5,20 +5,20 @@ import ArrowIcon from "../../../../../assets/Images/ArrowLeft.svg";
 
 const NewClubHeader = () => {
   return (
-    <div className="mx-auto">
-      <div className="flex flex-row items-center justify-between md:p-10 p-6 mt-8 lg:text-4xl md:text-3xl sm:text-3xl text-3xl lg:text-left text-center">
-        <h1 className="font-Bold text-4xl">
-          <span className="inline-flex mr-2">
-            {" "}
-            <img src={ArrowIcon} alt="ArrowLeft.svg" />
-          </span>
-          New Club Profile
-        </h1>
-        <div className="flex gap-4">
+    <div className="m-10">
+      <div className="flex items-center justify-between">
+        <div className="flex flex-row">
+          <img src={ArrowIcon} alt="ArrowLeft.svg" />
+          <h1 className="font-Bold text-[16px] sm:text-2xl md:text-3xl lg:text-4xl">
+            New Club Profile
+          </h1>
+        </div>
+
+        <div className="flex gap-4 items-center">
           <img src={Bell} alt="NotificationBell.svg" />
           <img src={AmakaImg} alt="Amaka.svg" />
-          <p className="inline-block">Amaka Ndubisi </p>
-          <img src={Arrow} alt="ArrowUp.svg" className="mt-2 w-[20px]" />
+          <p className="md:text-[15px]">Amaka Ndubisi </p>
+          <img src={Arrow} alt="ArrowUp.svg" className="mt-2 sm:w-[15px] md:w-[20px]" />
         </div>
       </div>
     </div>
