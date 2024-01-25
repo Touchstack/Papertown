@@ -5,7 +5,7 @@ import MapView from "../../../../../assets/Images/map.svg";
 
 const ProfileLocation = () => {
   return (
-    <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 gap-80 justify-between items-between mt-12">
+    <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-80 justify-items items-between mt-12">
       <div className="flex justify-center items-center mx-8 lg:mt-0 md:mt-0 mt-12">
         <div className="ml-16">
           <div>
