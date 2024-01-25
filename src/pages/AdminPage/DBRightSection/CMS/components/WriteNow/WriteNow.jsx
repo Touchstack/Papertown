@@ -18,6 +18,10 @@ const WriteNow = () => {
     setisPromptModalVisible(true);
   }
 
+  const closeModal2 = () => {
+    setIsModalVisible(false);
+  }
+
   const closeModal = () => {
     setisPromptModalVisible(false);
   }
@@ -157,7 +161,7 @@ const WriteNow = () => {
         }
 
         {isModalVisible && 
-                <Modal isVisible={isModalVisible} text="Changes Saved!" onClose={closeModal} />
+                <Modal isVisible={isModalVisible} text="Changes Saved!" onClose={closeModal2} />
             }
       </div>
     </>
