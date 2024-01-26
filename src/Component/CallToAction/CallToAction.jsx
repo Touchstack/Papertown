@@ -1,47 +1,39 @@
-import LeftArrow from "../../assets/Images/iconLeft.png";
-import RightArrow from "../../assets/Images/iconRight.png";
-import RightImage from "../../assets/Images/unsplash_O5EMzfdxedg.png";
+import ChildRightImage from "../../assets/Images/ChildRightImage.png";
+import { TfiArrowCircleRight, TfiArrowCircleLeft } from "react-icons/tfi";
 
 const CallToAction = () => {
   return (
-    <div className="bg-transparent mt-[400px] lg:mt-5 md:mt-5  ">
-      <div className=" grid lg:grid-cols-2 grid-cols-1 gap-8 bg-white lg:mx-24 md:mx-16 mx-12 rounded-[43px] items-center mt-10">
-        <div className=" translate-x-6 flex-col justify-center py-4 px-10 items-start inline-flex ">
-          <h1 className=" lg:text-7xl md:text-5xl text-3xl text-black font-Bold mt-4 tracking-wider items-center ">
-            Technovation
-            <p>announces</p>
-            <p>finalists</p>
-          </h1>
-          <p className="text-black text-lg mb-2 items-center text-justify font-Regular">
-            <br />
-            It was popularised in the 1960s with the release of Letraset sheets{" "}
-            <p>containing Lorem Ipsum passages, and more recently</p>
-            <p> with desktop publishing software.</p>
+    <div className="relative mt-[6rem] flex flex-col items-center z-50 lg:px-[60px] px-[40px]">
+    <div className="bg-transparent md:mt-[50px] mt-8  w-full max-w-[1400px]  lg:rounded-[40px] rounded-[30px] lg:h-[500px] text-left  overflow-hidden">
+      <a
+        className="flex flex-col items-center bg-white border border-gray-200  rounded-2xl shadow md:flex-row relative"
+      >
+        <div className="flex flex-col justify-between leading-normal lg:px-[60px] xl:px-[100px] px-[20px] lg:py-[10px] ">
+          <h5 className="text-6xl font-Bold tracking-tight text-gray-900 dark:text-white lg:mb-10">
+            Technovation announces finalists
+          </h5>
+          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.
           </p>
-          <button
-            className="bg-[#099B96] hover:bg-[#099B96] cursor-pointer place-self-start mt-8 font-Bold lg:mb-16 space-y-4 sm:flex-row sm:justify-center 
+          <button className="bg-[#099B96] hover:bg-[#099B96] cursor-pointer place-self-start mt-8 font-Bold lg:mb-16 mb-4 space-y-4 sm:flex-row sm:justify-center 
           sm:space-y-0 sm:space-x-4 transition-transform duration-700 ease-in-out transform hover:scale-110 justify-center items-center py-3 lg:px-8 md:px-6
-            sm:px-4 px-4 text-white rounded-full w-30 h-13 "
-          >
+           px-4 text-white rounded-full w-30 h-13 ">
             Read more
           </button>
         </div>
-
-        <div className=" relative lg:left-10 overflow-auto object-cover w-full h-auto mx-auto grid-flow-row inset-0">
-          <img
-            src={RightImage}
-            className=" z-1 w-full h-full bg-transparent object-contain"
-          />
-          <div className="z-10 absolute right-1 bottom-5 gap-5 flex">
-            <button className=" text-white rounded-full">
-              <img src={LeftArrow} alt="Previous image" />
-            </button>
-            <button className=" text-white rounded-full">
-              <img src={RightArrow} alt="Next image" />
-            </button>
-          </div>
-        </div>
-      </div>
+        <div className="max-w-600px">
+        <img className=" md:w-full md:h-[500px] w-full rounded-r-[40px]" src={ChildRightImage} alt="" />
+        <div className="absolute right-5 bottom-5 gap-4 flex">
+          <button className="text-white lg:text-[40px] text-[30px]">
+            <TfiArrowCircleLeft />
+          </button>
+          <button className="text-white lg:text-[40px] text-[30px]">
+            <TfiArrowCircleRight />
+          </button>
+  </div>
+  </div>
+      </a>
+    </div>
     </div>
   );
 };

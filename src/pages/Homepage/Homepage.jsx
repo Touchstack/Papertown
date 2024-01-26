@@ -10,13 +10,13 @@ import Circle from "../../Component/Circle";
 
 const Homepage = () => {
   return (
-    <div className="bg-gradient-to-b bg-fixed from-purple-600 via-pink-500 to-purple-600 font-Medium h-screen">
+    <div className="bg-gradient-to-b bg-fixed from-purple-600 via-pink-500 to-purple-600 font-Medium overflow-hidden h-screen">
       
       <GeneralNav color="white" btnColor="white" bgColor="transparent" />
       <Circle />
       <RedefiningWriting />
       <MarqueeApp />
-      <CallToAction />
+      <CallToAction className="overflow-hidden justify-center" />
       <HomeWhyWeEXist />
       <PatnersComponent />
       <Footer />
