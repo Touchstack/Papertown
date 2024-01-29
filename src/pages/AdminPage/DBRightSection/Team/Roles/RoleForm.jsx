@@ -1,13 +1,14 @@
-import { Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function RoleForm() {
+  const navigate = useNavigate();
   const handleNewmember = () => {
-    Navigate("/team/role-permissions");
+    navigate("/admin/team/role-permissions");
   };
 
   return (
     <div>
-      <div className="flex mt-10  justify-center">
+      <div className="flex mt-10  lg:ml-[31%]  md:ml-8 ml-10">
         <h6 className="lg:w-[400px] w-[280px] text-[16px] ">
           Enter the email address of the member you wish to add. They’ll receive
           an email with instructions to setup their account.
@@ -42,13 +43,15 @@ function RoleForm() {
             {/* end  */}
           </div>
 
-          <button
-            onClick={handleNewmember}
-            className="mx-auto shadow bg-[#DF327B]  mt-3 text-white font-bold py-3 px- rounded-full lg:w-[400px] w-[300px]"
-            type="submit"
-          >
-            Continue
-          </button>
+          <Link to="/admin/team/role-permissions">
+            <button
+              onClick={handleNewmember}
+              className="mx-auto shadow bg-[#DF327B]  mt-3 text-white font-bold py-3 px- rounded-full lg:w-[400px] w-[300px]"
+              type="submit"
+            >
+              Continue
+            </button>
+          </Link>
         </form>
       </div>
     </div>

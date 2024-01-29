@@ -2,7 +2,7 @@ import { FaAngleDown } from "react-icons/fa6";
 function MemberForm() {
   return (
     <div>
-      <div className="flex mt-10  justify-center">
+      <div className="flex mt-10  lg:ml-[31%]  md:ml-8 sm:ml-10 ml-10">
         <h6 className="lg:w-[400px] w-[280px] text-[16px] ">
           Enter the email address of the member you wish to add. They’ll receive
           an email with instructions to setup their account.
@@ -33,14 +33,14 @@ function MemberForm() {
                 <option>Contributor</option>
                 <option>Editor</option>
               </select>
-              <div className="pointer-events-none absolute inset-y-0  lg:top-4 lg:right-[47%] right-[10%] top-4 items-center px-2 text-gray-700">
+              <div className="pointer-events-none absolute  lg:top-4 lg:right-[47%] sm:right-28 right-[10%]  top-4 items-center px-2  text-gray-700">
                 <FaAngleDown />
               </div>
             </div>
           </div>
           <button
             className="shadow bg-[#DF327B] mt-5 text-white font-bold py-3 px-20 rounded-full"
-            type="submit"
+            type="button"
           >
             Submit
           </button>
