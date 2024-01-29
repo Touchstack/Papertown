@@ -1,30 +1,7 @@
-import { Link, Navigate } from "react-router-dom";
-
 function Roles() {
-  const handleNewmember = () => {
-    Navigate("/admin/team/add-role");
-  };
-
   return (
     <div>
-      {/* button start  */}
-      <div className=" flex justify-end lg:mr-8 mr-5 gap-5 mt-0">
-        <Link to="/admin/team/add-role">
-          <button
-            onClick={handleNewmember}
-            className="bg-[#DF327B] lg:inline-block hidden   text-[#FFFFFF] font-Bold rounded-full w-[111px] py-2"
-          >
-            + Add role
-          </button>
-        </Link>
-
-        <button className="bg-[#DF327B]  lg:hidden inline-block text-[#FFFFFF] font-Bold rounded-full w-[111px] py-2">
-          <a href="/add-role">+ Add</a>
-        </button>
-      </div>
-      {/* button end  */}
-
-      <div className="hidden lg:inline-block lg:flex mt-10">
+      <div className="hidden lg:inline-block lg:flex mt-5">
         <table className="table-auto ml-20">
           <thead>
             <tr>

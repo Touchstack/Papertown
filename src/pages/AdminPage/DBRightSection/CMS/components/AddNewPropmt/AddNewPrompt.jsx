@@ -1,12 +1,11 @@
 import PropTypes from "prop-types";
 import { IoCloseSharp } from "react-icons/io5";
-//import { useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { ClipLoader } from "react-spinners";
-import { IoIosArrowDown } from "react-icons/io";
 
 const AddNewPrompt = ({ isVisible, onClose }) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setIsLoading] = useState(false);
 
   const {
     register,
@@ -19,9 +18,10 @@ const AddNewPrompt = ({ isVisible, onClose }) => {
     onClose();
   };
 
-  const onSubmit = async () => {
-    // do something or make an API call
-  };
+      const onSubmit = async () => {
+        setIsLoading(true)
+        // do something or make an API call
+      };
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-[60] flex items-center justify-center px-5 py-5">
