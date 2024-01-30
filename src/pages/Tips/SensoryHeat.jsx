@@ -4,7 +4,7 @@ import WritingSamples from "./WritingSamples";
 
 function SensoryHeat() {
   return (
-    <div className="lg:mt-40 mt-20 md:ml-28 lg:ml-48 ml-5">
+    <div className="lg:mt-20 mt-20 md:ml-28 lg:ml-48 ml-5">
       <div>
         <h6 className="text-[#000000] lg:text-5xl md:text-5xl text-4xl font-Bold">
           Sensory Heat Mapping

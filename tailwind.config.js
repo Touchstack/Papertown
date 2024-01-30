@@ -7,14 +7,17 @@ export default {
         Bold: ["Dosis-Bold", "sans-serif"],
         ExtraBold: ["Dosis-ExtraBold", "sans-serif"],
         ExtraLight: ["Dosis-ExtraLight", "sans-serif"],
-        Light: ["Dosis-Light", "sans-serif", "Varela-Regular"],
+        Light: ["Dosis-Light", "sans-serif"],
         Medium: ["Dosis-Medium", "sans-serif"],
         Regular: ["Dosis-Regular", "sans-serif"],
         SemiBold: ["Dosis-SemiBold", "sans-serif"],
+        VarelaRegular: ["Varela-Regular", "sans-serif"],
       },
+
       backgroundColor: {
         "white-transparent": "rgba(255, 255, 255, 0.40)",
-        "custom-gradient":"linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)",
+        "custom-gradient":
+          "linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)",
         "custom-prm": "var(--prm-1003, #B44DB8)",
       },
       boxShadow: {
