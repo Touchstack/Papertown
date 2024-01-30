@@ -199,7 +199,7 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
                   </button>
                   <button
                     className="bg-[#52B4AE] text-[#FFF] lg:px-9 lg:p-3 rounded-full"
-                    onClick={() => setShowJoinUsModal(true)}
+                    // onClick={() => setShowJoinUsModal(true)}
                   >
                     Join Papertown
                   </button>
