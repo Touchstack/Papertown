@@ -347,7 +347,9 @@ const Footer = () => {
                       placeholder="Email Address"
                       name="subscriptionemail"
                       required
-                      className="block md:w-[300px] h-14 p-4 text-[#B0B0B0] rounded-full border border-white border-opacity-100 bg-opacity-20  mb-4 font-SemiBold  bg-[#FFFAF5] sm:text-md focus:ring-blue-500 focus:border-blue-500"
+                      className="block w-[300px] outline-none h-14 p-4 placeholder-white text-white rounded-full border border-whit  mb-4  bg-[#FFFAF5] font-SemiBold  sm:text-md   bg-opacity-20 border-opacity-100  "
+                      //   focus:ring-blue-500 focus:border-blue-500
+
                       onChange={handleChange}
                       value={text}
                     />
