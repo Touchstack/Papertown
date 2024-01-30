@@ -21,7 +21,7 @@ import Profile from "./pages/ProfilePage/Profile.jsx";
 import EventsDetails from "./pages/EventsDetails/EventsDetails.jsx";
 import PrivacyPolicy from "./pages/Doc/PrivacyPolicy.jsx";
 import TermsOfUse from "./pages/Doc/TermsOfUse.jsx";
-import TipRead from "./pages/Tips/TipRead.JSX";
+import TipRead from "./pages/Tips/TipRead.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
