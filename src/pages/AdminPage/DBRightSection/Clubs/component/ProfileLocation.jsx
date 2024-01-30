@@ -6,11 +6,12 @@ import MapView from "../../../../../assets/Images/map.svg";
 
 const ProfileLocation = () => {
   return (
-    <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-80">
-      <div className="flex mx-8 mt-12">
-        <div className="">
-          <div className="flex-col flex items-center justify-center">
-            <h3 className="font-Bold text-xl text-[#000000]">
+    <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-80 justify-items items-between mt-12">
+      <div className="flex justify-center items-center mx-8 lg:mt-0 md:mt-0 mt-12">
+        <div className="ml-16">
+          <div>
+            <h3 className="font-Bold lg:text-xl md:text-xl sm:text-xl text-xl lg:text-left text-center text-[#000000]">
+
               <span className="inline-flex gap-2">
                 <img
                   style={{ height: "auto" }}

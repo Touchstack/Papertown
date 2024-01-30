@@ -21,7 +21,7 @@ const ProfileCards = () => {
   ));
 
   return (
-    <div className="grid grid-cols-3 gap-3 md:overflow-x-auto overflow-y-auto md:ml-[9rem] mt-3 max-h-[400px]">
+    <div className="grid lg:grid-cols-3 grid-cols-1  gap-3 md:overflow-x-auto overflow-y-auto md:ml-[9rem] mt-3 mb-4 max-h-[400px]">
       {cards}
     </div>
   );

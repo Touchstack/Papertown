@@ -14,12 +14,13 @@ const Homepage = () => {
   };
 
   return (
+
     <div className="font-Medium h-screen" style={gradientStyle}>
       <GeneralNav color="white" btnColor="white" bgColor="transparent" />
       
       <RedefiningWriting />
       <MarqueeApp />
-      <CallToAction />
+      <CallToAction className="overflow-hidden justify-center" />
       <HomeWhyWeEXist />
       <PatnersComponent />
       <Footer />

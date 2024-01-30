@@ -122,7 +122,7 @@ const Footer = () => {
                   />
                 </a>
 
-                <div className="font-Regular text-[#D0D0D0] mt-6 text-sm sm:text-start">
+                <div className="font-Regular text-[#D0D0D0] mt-6 text-[14px] md:text-sm sm:text-start">
                   Quick Links
                 </div>
 
@@ -130,12 +130,14 @@ const Footer = () => {
                   className="items-start text-xl font-SemiBold leading-normal
                absolute flex justify-start gap-[20px]  mt-3"
                 >
-                  <span className="text-[#FFF] text-lg font-Bold">
+                  <span className="text-[#FFF] text-[14px] md:text-lg font-Bold">
                     <a href="./whyweexist"> Why We Exist </a>
                   </span>
 
-                  <span className="text-[#FFF] text-lg font-Bold">FAQs</span>
-                  <span className="text-[#FFF] text-lg font-Bold">
+                  <span className="text-[#FFF] text-[14px] md:text-lg font-Bold">
+                    FAQs
+                  </span>
+                  <span className="text-[#FFF] text-[14px] md:text-lg font-Bold">
                     Contact Us
                   </span>
                 </div>
@@ -327,7 +329,7 @@ const Footer = () => {
               </div>
             </div>
             <div>
-              <h2 className="mb-4 p-0 py-0 text-xl w-[270px] text-[18px] font-SemiBold text-[#FFFFFF]">
+              <h2 className="mb-4 p-0 py-0 text-xl  text-[18px] font-SemiBold text-[#FFFFFF]">
                 Receive weekly writing prompts when you subscribe to our
                 newsletter
               </h2>
@@ -345,7 +347,7 @@ const Footer = () => {
                       placeholder="Email Address"
                       name="subscriptionemail"
                       required
-                      className="block w-[300px] h-14 p-4 text-[#B0B0B0] rounded-full border border-white border-opacity-100 bg-opacity-20  mb-4 font-SemiBold  bg-[#FFFAF5] sm:text-md focus:ring-blue-500 focus:border-blue-500"
+                      className="block md:w-[300px] h-14 p-4 text-[#B0B0B0] rounded-full border border-white border-opacity-100 bg-opacity-20  mb-4 font-SemiBold  bg-[#FFFAF5] sm:text-md focus:ring-blue-500 focus:border-blue-500"
                       onChange={handleChange}
                       value={text}
                     />
@@ -354,8 +356,7 @@ const Footer = () => {
                       <button
                         type="button"
                         onClick={() => subscribeNewsLetter()}
-                        className="font-SemiBold text-[#FFFFFF] bg-[#52B4AE] block w-[300px] h-14 p-4 hover:bg-amber-400 focus:ring-1 focus:outline-none focus:ring-amber-100 font-medium rounded-full text-xl px-5 py-3 
-                      text-center mr-3 md:mr-0"
+                        className="font-SemiBold text-[#FFFFFF] bg-[#52B4AE] block w-[300px] h-14 p-4 hover:bg-[#3a8783]  rounded-full text-xl px-5 py-3 "
                       >
                         Subscribe
                       </button>

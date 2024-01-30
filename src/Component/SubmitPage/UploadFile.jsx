@@ -14,7 +14,7 @@ const UploadFile = () => {
     <div className="flex items-center text-sm text-opacity-30 border-2 border-dashed border-neutral-400 w-[149px] h-[55px] rounded-lg p-2 sm:w-1/4 ">
       <label
         htmlFor="fileInput"
-        className="hover:bg-blue-700 text-black font-Regular py-2 px-4 rounded inline-flex items-center"
+        className="hover:bg-[#099B96] text-black font-Regular py-2 px-4 rounded inline-flex items-center"
       >
         {/* <FontAwesomeIcon icon={faUpload} className="mr-2" /> */}
         <span>{selectedFile ? "Upload Another File" : "Upload File"}</span>

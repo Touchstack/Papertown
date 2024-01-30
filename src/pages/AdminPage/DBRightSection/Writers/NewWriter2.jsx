@@ -1,10 +1,10 @@
 import WriterSearchBar from "./WriterSearchBar";
 const NewWriter2 = () => {
   return (
-   <div className="bg-[#FFFFFF] rounded-[25px] mt-2 h-screen w-screen">
+   <div className="bg-[#FFFFFF] rounded-[25px] mt-2 ">
       <WriterSearchBar />
-      <main className="min-h-screen flex items-center justify-center lg:ml-[5%] lg:px-[40%]">
-          <form className="w-full sm:w-11/12 md:w-10/12 lg:w-8/12 xl:w-6/12 rounded-lg p-6">
+      <main className="flex items-center justify-center lg:ml-[5%] lg:px-[40%]">
+          <form className="w-full sm:w-11/12 md:w-10/12 lg:w-8/12 xl:w-6/12 rounded-lg px-6">
        
             <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-4 sm:gap-8">
               <div>
@@ -15,7 +15,7 @@ const NewWriter2 = () => {
                   className="border-gray-500 bg-[#F4F5F7] rounded-md p-2 w-[500px] h-[150px] sm:w-200px"
                   type="text"
                   name="Firstname"
-                  placeholder="Mary"
+                  placeholder="About the writer"
                 />
               </div>
             </div>
