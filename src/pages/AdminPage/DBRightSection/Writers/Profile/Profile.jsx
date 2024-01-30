@@ -5,7 +5,7 @@ import ProfileHero from "./ProfileHero";
 
 function Profile() {
   return (
-    <div className="mt-2 bg-[#FFFFFF] w-[1210px] h-[1510px] rounded-[25px]">
+    <div className="mt-2 bg-[#FFFFFF] lg:w-full w-full lg:h-full h-full rounded-[25px] overflow-x-auto">
       <ProfileHero />
       <ProfileHeader />
       <ProfileBody />
