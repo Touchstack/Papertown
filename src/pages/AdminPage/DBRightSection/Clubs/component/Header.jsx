@@ -6,13 +6,13 @@ import HorizontalSlider from "../../../../../assets/Images/Slider.svg";
 
 const handleButtonClick = () => {
   // Navigate to another page
-  window.location.href = "/addwriter";
+  window.location.href = "/admin/newclub";
 };
 
 const Header = () => {
   return (
     <div className="mx-auto">
-      <div className="flex flex-row items-center justify-between  md:p-10 p-6 mt-8 lg:text-4xl md:text-3xl sm:text-3xl text-3xl lg:text-left text-center">
+      <div className="flex flex-row items-center justify-between md:p-10 p-6 mt-8 lg:text-4xl md:text-3xl sm:text-3xl text-3xl lg:text-left text-center">
         <h1 className="font-Bold text-4xl">Clubs</h1>
         <div className="flex gap-4">
           <img src={Bell} alt="NotificationBell.svg" />
@@ -50,7 +50,7 @@ const Header = () => {
         </form>
         {/* Button */}
         <button
-          className="bg-[#DF327B] lg:inline-block hidden text-[#FFFFFF] font-Bold rounded-full w-[165px] py-2 "
+          className="bg-[#DF327B] inline-block  text-[#FFFFFF] font-Bold rounded-full w-[165px] py-2 "
           onClick={handleButtonClick}
         >
           + Add new club
