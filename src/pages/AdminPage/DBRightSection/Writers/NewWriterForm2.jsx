@@ -1,8 +1,8 @@
-import WriterSearchBar from "./WriterSearchBar";
-const NewWriter2 = () => {
+ 
+
+const NewWriterForm2 = () => {
   return (
    <div className="bg-[#FFFFFF] rounded-[25px] mt-2 h-screen w-screen">
-      <WriterSearchBar />
       <main className="min-h-screen flex items-center justify-center lg:ml-[5%] lg:px-[40%]">
           <form className="w-full sm:w-11/12 md:w-10/12 lg:w-8/12 xl:w-6/12 rounded-lg p-6">
        
@@ -63,4 +63,4 @@ const NewWriter2 = () => {
   );
 };
 
-export default NewWriter2;
+export default NewWriterForm2;

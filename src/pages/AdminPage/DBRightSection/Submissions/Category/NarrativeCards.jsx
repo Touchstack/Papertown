@@ -1,10 +1,12 @@
 import child1 from "../../../../../assets/Images/child1.png";
 import DateLogo from "../../../../../assets/Images/DateLogo.png";
+import { useNavigate } from "react-router-dom";
+
 
 const handleClick = () => {
-  // Navigate to another page
-  window.location.href = 'submissions/SingleSubmission';
-}
+  const navigate = useNavigate();
+  navigate('/SingleSubmission');
+};
 const NarrativeCards = () => {
   const cards = Array.from({ length: 9 }).map((_, index) => (
     <div
