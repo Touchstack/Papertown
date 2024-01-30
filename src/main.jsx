@@ -21,12 +21,14 @@ import Profile from "./pages/ProfilePage/Profile.jsx";
 import EventsDetails from "./pages/EventsDetails/EventsDetails.jsx";
 import PrivacyPolicy from "./pages/Doc/PrivacyPolicy.jsx";
 import TermsOfUse from "./pages/Doc/TermsOfUse.jsx";
+import TipRead from "./pages/Tips/TipRead.JSX";
 
 const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
   { path: "/submit", element: <SubmitPage />, errorElement: <ErrorPage /> },
   { path: "/read", element: <Readpage />, errorElement: <ErrorPage /> },
   { path: "/tips", element: <Tips />, errorElement: <ErrorPage /> },
+  { path: "/tip-read", element: <TipRead />, errorElement: <ErrorPage /> },
   { path: "/prompt", element: <PromptsPage />, errorElement: <ErrorPage /> },
   { path: "/news", element: <NewSection />, errorElement: <ErrorPage /> },
   { path: "/det", element: <NewsDetails />, errorElement: <ErrorPage /> },

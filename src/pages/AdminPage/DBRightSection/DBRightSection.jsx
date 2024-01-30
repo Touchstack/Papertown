@@ -18,6 +18,7 @@ import ClubProfile from "./Clubs/ClubProfile";
 import ManageClub from "./Clubs/ManageClub";
 import NewClub from "./Clubs/NewClub";
 import ProfileTeam from "./Team/Profile/Profile";
+import Manage from "./Team/Profile/Manage";
 
 const DBRightSection = () => {
   return (
@@ -45,6 +46,9 @@ const DBRightSection = () => {
           <Route path="/team/add-role" element={<AddRole />} />
           <Route path="/team/member-profile" element={<ProfileTeam />} />
           <Route path="/team/role-permissions" element={<PermissionsRole />} />
+
+          <Route path="/team/manage-profile" element={<Manage />} />
+
           {/* <Route path="/team/member-profile" element={<Profile />} /> */}
           <Route path="/clubs" element={<Clubs />} />
           <Route path="/submissions" element={<Submissions />} />
