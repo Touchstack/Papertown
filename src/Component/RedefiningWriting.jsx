@@ -4,12 +4,12 @@ import Rectangle from "../assets/Images/Rectangle.png";
 const RedefiningWriting = () => {
   return (
     <div className="py-18 px-2">
-      <div className="container mx-auto">
+      <div className="container mx-auto xl:w-8/12 lg:w-9/12 md:w-10/12 sm:w-10/12 w-10/12">
         <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 gap-y-4">
           {/* Left Col */}
 
-          <div className="text-left items-center lg:p-24 md:p-18 sm:p-8 p-8">
-            <h5 className="font-Bold lg:text-5xl md:text-4xl sm:text-4xl text-[#FFF] text-4xl mt-6 text-left">
+          <div className="text-left items-center lg:p-18 md:p-18 sm:p-8 p-8">
+            <h5 className="font-Bold lg:text-6xl md:text-5xl sm:text-4xl text-[#FFF] text-4xl mt-6 text-left">
               Redefining writing, one
               <span className="text-[#FBCA23]"> spark</span> at a time
             </h5>
@@ -33,12 +33,12 @@ const RedefiningWriting = () => {
               <img
                 src={Rectangle}
                 alt="Rectangle.png"
-                className="absolute lg:top-24 md:top-12 top-10 w-full h-full"
+                className="absolute lg:top-2 md:top-12 top-10 w-full h-full self-center"
               />
               <img
                 src={BackgroundImg}
                 alt="Background.png"
-                className="absolute lg:top-16 md:top-5 top-[21px] w-full h-full "
+                className="absolute lg:top-2 md:top-5 top-[21px] w-full h-full self-center"
               />
             </div>
           </div>
