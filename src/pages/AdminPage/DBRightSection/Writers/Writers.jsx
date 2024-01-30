@@ -4,7 +4,7 @@ import WritersSlider from "./WritersSlider"
 
 const Writers = () => {
   return (
-    <div className="mt-2 min-h-screen bg-[#FFFFFF] h-[1210px] rounded-[25px]">
+    <div className="mt-2 min-h-screen bg-[#FFFFFF] h-full rounded-[25px]">
     <WritersHeader />
     <div>
     <WritersBody/>
