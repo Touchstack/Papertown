@@ -33,7 +33,7 @@ function MemberForm() {
                 <option>Contributor</option>
                 <option>Editor</option>
               </select>
-              <div className="pointer-events-none absolute  lg:top-4 lg:right-[47%] sm:right-28 right-[10%]  top-4 items-center px-2  text-gray-700">
+              <div className="pointer-events-none absolute  lg:top-4 lg:right-[47%] xl:right-[48%] sm:right-28 right-[10%]  top-4 items-center px-2  text-gray-700">
                 <FaAngleDown />
               </div>
             </div>
