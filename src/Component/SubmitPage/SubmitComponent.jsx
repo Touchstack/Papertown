@@ -19,9 +19,9 @@ const SubmitComponent = () => {
 
   return (
     <div>
-        <main className=" flex items-center justify-center bg-[#52B4AE1A]">
-          <form onSubmit={handleSubmit(onSubmit)} className="sm:w-11/12 md:w-11/12 lg:w-8/12 xl:w-6/12 rounded-lg p-6">
-            <h1 className="text-4xl font-Bold text-center pb-6 sm:pb-12">
+        <main className=" flex items-center justify-center bg-[#52B4AE1A] w-full">
+          <form onSubmit={handleSubmit(onSubmit)} className=" ">
+            <h1 className="lg:text-4xl md:text-3xl sm:text-2xl font-Bold text-center pt-6 sm:pb-12">
               Submit your work here
             </h1>
             <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-4 sm:gap-8">
