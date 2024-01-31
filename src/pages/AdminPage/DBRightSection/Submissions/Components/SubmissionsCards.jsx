@@ -11,9 +11,9 @@ function SubmissionsCards() {
       {/* card section start */}
       <a>
   <div
-    className="bg-fuchsia-700 border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto w-full"
+    className="bg-fuchsia-700 border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-full mx-auto w-full"
   >
-    <p className="rounded-[50px] mr-[70%] text-lg md:border-[1px] items-center mt-2 text-center text-white" onClick={handleClick}>All</p>
+    <p className="lg:rounded-[50px] rounded-[20px] lg:mr-[70%] mr-[35%] text-lg md:border-[1px] items-center mt-2 text-center text-white" onClick={handleClick}>All</p>
     
     <div className="grid lg:grid-cols-2  md:grid-cols-2 grid-cols-1 lg:gap-[10px] gap-[5px] ">
         <div className="text-white text-[42px] font-Bold mt-4 "> 125 </div>
@@ -47,8 +47,8 @@ function SubmissionsCards() {
       {/* card section end */}
       {/* card section start */}
       <a>
-  <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto w-full">
-    <p className="rounded-[50px] mr-[70%] text-lg md:border-[1px] items-center mt-2 text-center text-black" onClick={handleClick}>
+  <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-full mx-auto w-full">
+    <p className="lg:rounded-[50px] rounded-[20px] lg:mr-[70%] mr-[35%] text-lg md:border-[1px] items-center mt-2 text-center text-black" onClick={handleClick}>
       Memoir
     </p>
 
@@ -56,7 +56,7 @@ function SubmissionsCards() {
       <div className="text-black text-[42px] font-Bold mt-4 lg:w-full md:w-full">
         125
       </div>
-      <div className="flex items-center justify-end lg:ml-[60px] ml-[20px] mt-4 lg:w-full md:w-full">
+      <div className="flex items-center justify-end lg:ml-[60px] ml-[20px] mt-4">
         {[...Array(5)].map((_, index) => (
           <img
             key={index}
@@ -87,9 +87,9 @@ function SubmissionsCards() {
       {/* card section start */}
       <a>
   <div
-    className="bg-white border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto"
+    className="bg-white border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-full mx-auto"
   >
-    <p className="rounded-[50px] mr-[70%] text-lg md:border-[1px] items-center mt-2 text-center text-black" onClick={handleClick}>Memoir</p>
+    <p className="lg:rounded-[50px] rounded-[20px] lg:mr-[70%] mr-[35%] text-lg md:border-[1px] items-center mt-2 text-center text-black" onClick={handleClick}>Memoir</p>
     
     <div className="grid lg:grid-cols-2  md:grid-cols-2 grid-cols-1 gap-[10px] ">
         <div className="text-black text-[42px] font-Bold mt-4"> 125 </div>
@@ -120,9 +120,9 @@ function SubmissionsCards() {
       {/* card section start */}
       <a>
   <div
-    className="bg-white border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto"
+    className="bg-white border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-full mx-auto"
   >
-    <p className="rounded-[50px] mr-[70%] text-lg md:border-[1px] items-center mt-2 text-center text-black" onClick={handleClick}>Narrative</p>
+    <p className="lg:rounded-[50px] rounded-[20px] lg:mr-[70%] mr-[35%] text-lg md:border-[1px] items-center mt-2 text-center text-black" onClick={handleClick}>Narrative</p>
     
     <div className="grid lg:grid-cols-2  md:grid-cols-2 grid-cols-1 gap-[10px] ">
         <div className="text-black text-[42px] font-Bold mt-4"> 125 </div>
@@ -153,9 +153,9 @@ function SubmissionsCards() {
       {/* card section start */}
       <a>
   <div
-    className="bg-white border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto"
+    className="bg-white border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-full mx-auto"
   >
-    <p className="rounded-[50px] mr-[70%] text-lg md:border-[1px] items-center mt-2 text-center text-black" onClick={handleClick}>Memoir</p>
+    <p className="lg:rounded-[50px] rounded-[20px] lg:mr-[70%] mr-[35%] text-lg md:border-[1px] items-center mt-2 text-center text-black" onClick={handleClick}>Memoir</p>
     
     <div className="grid lg:grid-cols-2  md:grid-cols-2 grid-cols-1 gap-[10px] ">
         <div className="text-black text-[42px] font-Bold mt-4"> 125 </div>
@@ -186,9 +186,9 @@ function SubmissionsCards() {
       {/* card section start */}
       <a>
   <div
-    className="bg-white border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto"
+    className="bg-white border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-full mx-auto"
   >
-    <p className="rounded-[50px] mr-[70%] text-lg md:border-[1px] items-center mt-2 text-center text-black" onClick={handleClick}>Narrative</p>
+    <p className="lg:rounded-[50px] rounded-[20px] lg:mr-[70%] mr-[35%] text-lg md:border-[1px] items-center mt-2 text-center text-black" onClick={handleClick}>Narrative</p>
     
     <div className="grid lg:grid-cols-2  md:grid-cols-2 grid-cols-1 gap-[10px] ">
         <div className="text-black text-[42px] font-Bold mt-4"> 125 </div>
@@ -219,9 +219,9 @@ function SubmissionsCards() {
       {/* card section start */}
       <a>
   <div
-    className="bg-white border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto"
+    className="bg-white border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-full mx-auto"
   >
-    <p className="rounded-[50px] mr-[70%] text-lg md:border-[1px] items-center mt-2 text-center text-black" onClick={handleClick}>Memoir</p>
+    <p className="lg:rounded-[50px] rounded-[20px] lg:mr-[70%] mr-[35%] text-lg md:border-[1px] items-center mt-2 text-center text-black" onClick={handleClick}>Memoir</p>
     
     <div className="grid lg:grid-cols-2  md:grid-cols-2 grid-cols-1 gap-[10px] ">
         <div className="text-black text-[42px] font-Bold mt-4"> 125 </div>
@@ -252,9 +252,9 @@ function SubmissionsCards() {
       {/* card section start */}
       <a>
   <div
-    className="bg-white border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-2/3 xl:w-1/2 mx-auto"
+    className="bg-white border-[1px] border-grad-100 rounded-2xl md:py-[30px] md:px-[20px] px-[10px] md:w-3/4 lg:w-full mx-auto"
   >
-    <p className="rounded-[50px] mr-[70%] text-lg md:border-[1px] items-center mt-2 text-center text-black" onClick={handleClick}>Narrative</p>
+    <p className="lg:rounded-[50px] rounded-[20px] lg:mr-[70%] mr-[35%] text-lg md:border-[1px] items-center mt-2 text-center text-black" onClick={handleClick}>Narrative</p>
     
     <div className="grid lg:grid-cols-2  md:grid-cols-2 grid-cols-1 gap-[10px] ">
         <div className="text-black text-[42px] font-Bold mt-4"> 125 </div>

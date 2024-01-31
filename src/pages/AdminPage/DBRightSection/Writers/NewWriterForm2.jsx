@@ -15,8 +15,8 @@ const NewWriterForm2 = () => {
   }
 
   return (
-    <div className="bg-[#FFFFFF] rounded-[25px] mt-2 h-screen w-screen">
-      <main className="min-h-screen flex items-center justify-center lg:ml-[5%] lg:px-[40%]">
+    <div className="bg-[#FFFFFF] rounded-[25px] mt-10 h-screen">
+      <main className="flex items-center justify-center lg:ml-[5%]">
         <form className="w-full sm:w-11/12 md:w-10/12 lg:w-8/12 xl:w-6/12 rounded-lg p-6">
           <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-4 sm:gap-8">
             <div>

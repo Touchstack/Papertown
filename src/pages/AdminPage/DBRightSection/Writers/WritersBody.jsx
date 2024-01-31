@@ -11,8 +11,8 @@ const WritersBody = () => {
   return (
       <div>
         <div className="justify center">
-          <div className="w-full h-screen flex items-center justify-center mt-10 overflow-x-auto">
-            <table className="table-auto w-full">
+          <div className="w-full h-screen flex items-center justify-center mt-10 ">
+            <table className="table-auto lg:w-11/12 md:w-8/12 w-6/12 ">
               <thead>
                 {/*Column Headings*/}
                 <tr className="border-b">

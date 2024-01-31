@@ -29,7 +29,7 @@ function WriterHeader() {
           </div>
         </div>
       </div>
-      <div className="flex items-center justify-between lg:px-10 px:6 gap-5">
+      <div className="flex items-center justify-between lg:px-10 px:6 lg:gap-2 ">
         {/* Search Bar */}
         <form className="flex items-center">
           <label htmlFor="simple-search" className="sr-only">
@@ -55,13 +55,15 @@ function WriterHeader() {
           </div>
         </form>
         {/* Button */}
+        
         <button
-          className="bg-[#DF327B] inline-block text-[#FFFFFF] min-w-[150px] px-3 mr-1 font-Bold lg:rounded-full rounded-full lg:w-full w-full py-2 lg:py-2"
+          className="bg-[#DF327B] inline-block text-[#FFFFFF] md:w-1/6 sm:w-2/6 h-2/6 py-2 px-3 mr-1 font-Bold lg:rounded-full rounded-full"
           style={{ maxWidth: '100%' }}
           onClick={handleButtonClick}
         >
           + Add New Writer
         </button>
+     
       </div>
     </div>
   );
