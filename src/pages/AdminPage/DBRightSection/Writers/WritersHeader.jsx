@@ -56,7 +56,8 @@ function WriterHeader() {
         </form>
         {/* Button */}
         <button
-          className="bg-[#DF327B] lg:inline-block hidden text-[#FFFFFF] font-Bold rounded-full w-[185px] py-2 "
+          className="bg-[#DF327B] inline-block text-[#FFFFFF] min-w-[150px] px-3 mr-1 font-Bold lg:rounded-full rounded-full lg:w-full w-full py-2 lg:py-2"
+          style={{ maxWidth: '100%' }}
           onClick={handleButtonClick}
         >
           + Add New Writer

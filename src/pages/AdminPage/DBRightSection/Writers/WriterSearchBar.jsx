@@ -8,9 +8,9 @@ const WriterSearchBar = () => {
     <div>
       <div className="flex flex-row items-center justify-between md:p-10 p-6">
         <Link to="/admin/writers" className="flex items-center">
-          <div className="md:text-[42px] text-[22px] mr-2 font-Bold">
-            <IoChevronBackSharp className="text-3xl" />
-            Add Writer
+          <div className="flex items-center">
+            <IoChevronBackSharp className="text-3xl mr-2" />
+            <div className="md:text-[42px] text-[22px] font-Bold">Add Writer</div>
           </div>
         </Link>
 
