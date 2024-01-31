@@ -2,13 +2,13 @@ import { FaAngleDown } from "react-icons/fa6";
 function MemberForm() {
   return (
     <div>
-      <div className="flex mt-10  lg:ml-[31%]  md:ml-8 sm:ml-10 ml-10">
+      <div className="flex mt-20 lg:ml-[31%]  md:ml-48 ml-10 sm:ml-10 lg:mr-32 md:mr-36 ">
         <h6 className="lg:w-[400px] w-[280px] text-[16px] ">
           Enter the email address of the member you wish to add. They’ll receive
           an email with instructions to setup their account.
         </h6>
       </div>
-      <div className="lg:ml-[32%] ml-10 mt-10  justify-center items-center h-full">
+      <div className="lg:ml-[32%] ml-10 mt-10 md:ml-48 justify-center sm:ml-[19%] ml-10 lg:mr-32 md:mr-36 items-center h-full">
         <form action="" className="overflow-x-hidden">
           <div className="flex flex-wrap -mx-3 mb-3">
             <div className="w-full px-3">
