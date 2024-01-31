@@ -22,6 +22,8 @@ import EventsDetails from "./pages/EventsDetails/EventsDetails.jsx";
 import PrivacyPolicy from "./pages/Doc/PrivacyPolicy.jsx";
 import TermsOfUse from "./pages/Doc/TermsOfUse.jsx";
 import TipRead from "./pages/Tips/TipRead.jsx";
+import Details from "./pages/PromptsPage/Details/Details.jsx";
+
 
 const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
@@ -30,6 +32,7 @@ const router = createBrowserRouter([
   { path: "/tips", element: <Tips />, errorElement: <ErrorPage /> },
   { path: "/tip-read", element: <TipRead />, errorElement: <ErrorPage /> },
   { path: "/prompt", element: <PromptsPage />, errorElement: <ErrorPage /> },
+  { path: "/promptdetails", element: <Details />, errorElement: <ErrorPage /> },
   { path: "/news", element: <NewSection />, errorElement: <ErrorPage /> },
   { path: "/det", element: <NewsDetails />, errorElement: <ErrorPage /> },
   { path: "/profile", element: <Profile />, errorElement: <ErrorPage /> },
