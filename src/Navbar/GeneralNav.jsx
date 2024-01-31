@@ -99,7 +99,7 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
     <>
       <div className="pt-10 mx-3">
         <nav
-          className={`flex container mx-auto px-2 text-center font-Regular rounded-full max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-3 ${bgColorClass} ${bgShadowClass}`}
+          className={`flex container mx-auto px-2 text-center font-VarelaRegular rounded-full max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-3 ${bgColorClass} ${bgShadowClass}`}
         >
           <div className="container md:pl-25 flex justify-between items-center m-auto">
             <a
@@ -113,10 +113,10 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
               />
             </a>
             <div
-              className={`lg:flex justify-between w-full md:w-auto`}
+              className={`lg:flex justify-between w-full md:w-auto `}
               id="navbar-cta"
             >
-              <ul className="lg:flex flex-col text-lg p-4 md:p-0 mt-4 border text-center rounded-lg md:shadow-none sm:shadow-lg shadow-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 hidden">
+              <ul className="lg:flex flex-col text-[16px]  p-4 md:p-0 mt-4 border text-center rounded-lg md:shadow-none sm:shadow-lg shadow-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 hidden">
                 <li className="relative">
                   <div
                     className={`list-none flex gap-1 items-center ${txColorClass} cursor-pointer`}
