@@ -72,33 +72,33 @@ const SsBody = () => {
       </div>
 
       <div className="w-full border-b border-dotted mt-5"></div>
-<div className="w-full md:px-14 px-6 leading-relaxed lg:mt-10 mt-6 lg:mb-10 mb-6">
-  <p className="text-[30px]">Score</p>
+      <div className="w-full md:px-14 px-6 leading-relaxed lg:mt-10 mt-6 lg:mb-10 mb-6">
+  <p>Score</p>
   
   {/* Two input boxes */}
   <div className="flex mt-3">
     <input
       type="text"
-      className="bg-gray-200 rounded-md px-3 py-2 mr-3"
+      className="bg-gray-200 rounded-md px-3 py-2 mr-3 max-w-[100px] w-full"
     />
     <p className="text-black">out of</p>
     <input
       type="text"
-      className="bg-gray-200 rounded-md px-3 py-2 ml-3"
+      className="bg-gray-200 rounded-md px-3 py-2 ml-3 max-w-[100px] w-full"
     />
     <p className="text-black ml-1"> marks</p>
   </div>
 
   {/* Large input box */}
-  <input
+  <textarea
     placeholder="Leave your comments"
-    className="bg-gray-200 rounded-md px-3 py-2 mt-3 w-[500px] h-[200px] max-w-[600px]"
+    className="bg-gray-200 rounded-md px-3 py-2 mt-3 w-full max-w-[500px] lg:w-[400px] lg:h-[200px] h-[140px]"
   />
 </div>
 <div className="lg:px-14 px-6 lg:mb-10 mb-6">
 <button
               type="submit"
-              className="bg-[#DB2E78] font-Bold text-white rounded-full  p-2 w-[500px] h-[55px]"
+              className="bg-[#DB2E78] font-Bold text-white rounded-full  p-2 w-[250px] h-[55px]"
             >
               Submit
             </button>

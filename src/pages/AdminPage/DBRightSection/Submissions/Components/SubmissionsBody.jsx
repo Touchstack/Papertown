@@ -16,17 +16,17 @@ function SubmissionsBody() {
   };
 
   return (
-    <div>
-      <div className="flex items-center justify-between lg:px-10 px:6 gap-5">
+    <div >
+      <div className="flex justify-end items-center gap-2 ">
         {/* Search Bar */}
-        <form className="flex items-center">
+     { /*  <form className="flex items-center">
           <label htmlFor="simple-search" className="sr-only">
             Search
           </label>
-        </form>
-        <div className="relative ml-[74%]">
+        </form>*/}
+        <div className="relative items-center">
           <div
-            className="border border-black text-black text-sm font-medium rounded-lg p-2.5 cursor-pointer flex items-center"
+            className="border border-black text-black text-sm font-Medium rounded-lg p-2.5 flex cursor-pointer items-center"
             onClick={handleFilterClick}
           >
             <div className="inline-block mr-1">
@@ -44,12 +44,18 @@ function SubmissionsBody() {
           )}
         </div>
         {/* Button */}
-        <button
-          className="bg-[#DF327B] lg:inline-block hidden text-[#FFFFFF] font-Bold lg:rounded-full rounded-2xl lg:w-[185px] w-[140px] py-2"
-          onClick={handleNewCategory}
-        >
-          + Add New Category
-        </button>
+        <div className="lg:px-6 px-4">
+  <button
+    className="bg-[#DF327B] inline-block text-[#FFFFFF] min-w-[150px] font-Bold lg:rounded-full rounded-full lg:w-full w-full py-2 lg:py-2"
+    style={{ maxWidth: '100%' }}
+    onClick={handleNewCategory}
+  >
+    + Add New Category 
+  </button>
+</div>
+
+
+
       </div>
       <SubmissionsCards />
     </div>
