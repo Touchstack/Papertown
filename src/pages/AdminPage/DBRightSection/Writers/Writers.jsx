@@ -7,8 +7,9 @@ const Writers = () => {
     <div className="mt-2 bg-[#FFFFFF] rounded-[25px]">
     <WritersHeader />
     <div>
-     <WritersBody/>
-   <WritersSlider/>
+      
+   <WritersBody/>
+   <WritersSlider/> 
     </div>
   </div>
   )

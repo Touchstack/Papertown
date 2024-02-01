@@ -19,7 +19,7 @@ const Slider = () => {
           alt="Previous.svg"
           className="w-34.644 px-0 py-18 justify-center items-center"
         />
-        <button className="bg-[#B44DB8] text-[#FFFFFF] w-[20px] rounded-sm">
+        <button className="bg-[#B44DB8] text-[#FFFFFF] lg:w-[20px] w-1/6 rounded-sm">
           1
         </button>
         <span className="text-[#C5C5C5]">

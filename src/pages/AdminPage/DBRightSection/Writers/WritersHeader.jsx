@@ -57,12 +57,18 @@ function WriterHeader() {
         {/* Button */}
         
         <button
-          className="bg-[#DF327B] inline-block text-[#FFFFFF] md:w-1/6 sm:w-2/6 h-2/6 py-2 px-3 mr-1 font-Bold lg:rounded-full rounded-full"
+          className="bg-[#DF327B] lg:inline-block hidden text-[#FFFFFF] md:w-1/6 sm:w-2/6 h-2/6 py-2 px-3 mr-1 mb-2 font-Bold lg:rounded-full rounded-full"
           style={{ maxWidth: '100%' }}
           onClick={handleButtonClick}
         >
           + Add New Writer
         </button>
+        <button
+              onClick={handleButtonClick}
+              className="bg-[#DF327B] inline-block lg:hidden text-[#FFFFFF] font-Bold rounded-full px-4 mr-2 mb-2 py-1"
+            >
+              + Add writer
+            </button>
      
       </div>
     </div>
