@@ -6,7 +6,7 @@ import ProfileSliders from "./component/ProfileSliders";
 const ClubProfile = () => {
   return (
     <div>
-      <div className="mt-2 bg-[#FFFFFF] h-[2000px] rounded-[25px]">
+      <div className="mt-2 bg-[#FFFFFF]  rounded-[25px]">
         <ProfileHero />
         <ProfileLocation />
         <ProfileMemberList />

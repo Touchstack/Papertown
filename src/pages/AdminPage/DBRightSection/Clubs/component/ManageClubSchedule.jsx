@@ -31,7 +31,7 @@ const ManageClubSchedule = () => {
           </button>
         </div>
       </div>
-      <div className="inline-flex mb-8 justify-center items-center img-fluid mx-8 mb-20">
+      <div className="inline-flex flex-col md:flex-row justify-center items-center img-fluid mx-8 mb-20">
         <div className="py-14 px-8 lg:ml-14">
           <h3 className="flex font-Bold lg:text-4xl md:text-3xl sm:text-3xl text-3xl lg:text-left text-center py-4 text-[#000000]">
             Meeting Schedule
@@ -114,15 +114,15 @@ const ManageClubSchedule = () => {
         className="flex justify-between lg:ml-10 border-b-2 border-[#D9D9D9]
                   border-dashed"
       ></div>
-      <div className="flex gap-4 m-16">
-        <button className="inline-flex text-[#BDBDBD] font-Medium rounded-full w-[170px] text-sm h-[50px] py-2 text-[#000000] bg-[#F2F2F2] justify-center items-center">
-          <span className="inline-flex mr-2"></span> Delete profile
+      <div className="flex gap-4 m-16 ">
+        <button className="inline-flex mb-5 text-[#BDBDBD] font-Medium rounded-full w-[170px] text-sm h-[50px] py-2  bg-[#F2F2F2] justify-center items-center">
+          Delete profile
         </button>
         <button
-          className="inline-flex text-[#FFFFFF] font-Bold text-lg rounded-full w-[170px] text-sm py-2 text-[#DF327B] justify-center items-center bg-[#DB2E78]"
+          className="inline-flex mb-5 text-[#FFFFFF] font-Bold  rounded-full w-[170px] text-sm py-2  justify-center items-center bg-[#DB2E78]"
           onClick={handleButtonClick}
         >
-          <span className="inline-flex mr-2"></span>Save Changes
+         Save Changes
         </button>
       </div>
     </div>

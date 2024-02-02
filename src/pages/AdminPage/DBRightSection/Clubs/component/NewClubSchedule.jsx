@@ -23,7 +23,7 @@ const NewClubSchedule = () => {
           </button>
         </div>
       </div>
-      <div className="inline-flex mb-8 justify-center items-center img-fluid mx-8 mb-20">
+      <div className="md:inline-flex justify-center items-center img-fluid mx-8 mb-20">
         <div className="py-14 px-8 lg:ml-14">
           <h3 className="flex font-Bold lg:text-4xl md:text-3xl sm:text-3xl text-3xl lg:text-left text-center py-4 text-[#000000]">
             Meeting Schedule
@@ -114,7 +114,7 @@ const NewClubSchedule = () => {
       </div>
       <div className="flex justify-between lg:ml-10 border-b-2 border-[#D9D9D9] bg-[#000000]"></div>
 
-      <div className="flex ml-32 mt-16">
+      <div className="flex ml-32 mt-16 mb-10">
         <button
           className="inline-flex text-[#FFFFFF] font-Bold text-lg rounded-full w-[340px] h-[45px] text-sm py-2 text-[#DF327B] justify-center items-center bg-[#DB2E78]"
           onClick={() => setShowModal(true)}

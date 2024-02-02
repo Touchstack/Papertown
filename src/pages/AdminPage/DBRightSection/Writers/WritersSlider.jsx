@@ -1,33 +1,35 @@
-import { FaAngleRight } from "react-icons/fa6";
-import { FaAngleLeft } from "react-icons/fa6";
+import PreviousSlider from "../../../../assets/Images/Previous.svg";
+import NextSlider from "../../../../assets/Images/Next.svg";
+const handleButtonClick = () => {
+  // Navigate to another page
+  window.location.href = "/admin";
+};
 
-const WritersSlider = () => {
+const Slider = () => {
   return (
-    <div>
+    <div className="flex justify-between items-center mt-[50px] px-5">
       <div>
-        <div className="absolute flex items-center justify-between">
-          {/* slider icons section start */}
-          <div className="flex items-center lg:mr-20 md:mr-10 mr-3">
-            <a
-              href="#"
-              className="mr-3  p-2 rounded-full text-gray-200 hover:bg-green-100 hover:ring-green-200 "
-            >
-              <FaAngleLeft />
-            </a>
-            <span className="items-center">1  2  3  4  5  6  7  8  9</span>
-            <a
-              href="#"
-              className="mr-3 border-[#52B4AE] border-2 p-2 rounded-full text-[#52B4AE] hover:bg-green-100 hover:ring-green-200 "
-            >
-              <FaAngleRight />
-            </a>
-          </div>
-          {/* slider icons section end */}
+        <div className="m-10">
+          1 <span className="text-[#C5C5C5]">0f 10</span>
         </div>
       </div>
+      <div className="flex gap-4 self-end m-10">
+        <img
+          src={PreviousSlider}
+          alt="Previous.svg"
+          className="w-34.644 px-0 py-18 justify-center items-center"
+        />
+        <button className="bg-[#B44DB8] text-[#FFFFFF] lg:w-[20px] w-1/6 rounded-sm">
+          1
+        </button>
+        <span className="text-[#C5C5C5]">
+          2 3
+          <span onClick={handleButtonClick}> 4 </span> 5  .... 10
+        </span>
+        <img src={NextSlider} alt="Next.svg" />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default WritersSlider
-
+export default Slider;

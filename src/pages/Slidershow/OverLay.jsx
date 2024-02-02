@@ -12,6 +12,8 @@ const OverLay = () => {
           className="w-[90vw] md:h-[600px] h-[770px] rounded-[30px] object-cover"
         />
       </div>
+      {/* className="w-[90vw]  md:h-[501px] h-[670px] rounded-[30px] object-cover"
+        /> */}
 
       {/* Overlay content */}
       <div className="absolute md:bottom-[0rem] w-full h-full p-6 flex flex-col justify-between">

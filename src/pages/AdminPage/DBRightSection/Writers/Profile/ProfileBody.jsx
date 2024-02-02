@@ -3,12 +3,12 @@ import child1 from "../../../../../assets/Images/child1.png";
 
 const ProfileBody = () => {
   return (
-    <div className="lg:px-[70px]">
+    <div className="lg:px-[70px] px-[30px]">
       <div className="border-t border-dotted border-gray-200 mb-4"></div>
 
       <h2 className="text-xl font-bold mb-4 mt-20 lg:px-[70px]">Interests</h2>
 
-      <div className="flex gap-4 lg:px-[70px]">
+      <div className="flex gap-4 lg:px-[70px] lg:mb-10 mb-5">
         <div className=" w-[60px] h-[40px] rounded-full bg-blue-200 text-blue-500 flex items-center justify-center">
           Fiction
         </div>

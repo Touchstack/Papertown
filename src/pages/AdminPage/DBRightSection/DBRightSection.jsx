@@ -18,10 +18,11 @@ import ClubProfile from "./Clubs/ClubProfile";
 import ManageClub from "./Clubs/ManageClub";
 import NewClub from "./Clubs/NewClub";
 import ProfileTeam from "./Team/Profile/Profile";
+import Manage from "./Team/Profile/Manage";
 
 const DBRightSection = () => {
   return (
-    <div className="py-12 flex-1 m-2">
+    <div className="py-12 flex-1 m-2 overflow-x-auto">
       {/*header*/}
       <div className="flex flex-col flex-1">
         <Routes>
@@ -45,6 +46,9 @@ const DBRightSection = () => {
           <Route path="/team/add-role" element={<AddRole />} />
           <Route path="/team/member-profile" element={<ProfileTeam />} />
           <Route path="/team/role-permissions" element={<PermissionsRole />} />
+
+          <Route path="/team/manage-profile" element={<Manage />} />
+
           {/* <Route path="/team/member-profile" element={<Profile />} /> */}
           <Route path="/clubs" element={<Clubs />} />
           <Route path="/submissions" element={<Submissions />} />
