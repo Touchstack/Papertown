@@ -78,7 +78,7 @@ const WritersRoom = () => {
       </div>
       {/* Header Marque section */}
 
-      <hr className="mx-5" />
+      <hr className="my-5" />
 
       {/* Locations */}
       <div className="mt-5 flex flex-col md:flex-row gap-4 md:gap-[180px]">
@@ -113,7 +113,7 @@ const WritersRoom = () => {
       {/* Locations */}
 
       {/* Address */}
-      <div className="flex flex-col md:flex-row mt-3 overflow-x-auto md:ml-[14rem] w-[600px]">
+      <div className="flex flex-col md:flex-row mt-3 overflow-x-auto lg:ml-[14rem] md:w-[500px] lg:w-[600px]">
         {Array.from({ length: 4 }).map((_, index) => (
           <div key={index} className="flex-shrink-0 p-2 m-5 rounded text-[#000]">
             <h1 className='text-[16px]'>East Cantonments</h1>
@@ -123,7 +123,7 @@ const WritersRoom = () => {
       </div>
       {/* Address */}
 
-      <hr className="mx-5" />
+      <hr className="my-3" />
 
      {/* Opening Hours */}
       <div className="mt-5 flex flex-col md:flex-row gap-4 md:gap-[180px]">
@@ -156,7 +156,7 @@ const WritersRoom = () => {
                     className="w-[350px] font-['Varela-Regular'] md:w-[250px] h-full p-4 rounded-[10px] bg-[#e8e9ec] border-[#F4F5F7] mt-3 text-[#000]"
                     placeholder="Type something..."
                   />
-                  <HiCalendar className='absolute right-4 top-8 text-[#A3A3A3] cursor-pointer' />
+                  <HiCalendar className='absolute right-4 top-8 text-[#A3A3A3] cursor-pointer hidden md:flex' />
                 </div>
                </div>
 
@@ -170,11 +170,11 @@ const WritersRoom = () => {
                       className="w-[350px] font-['Varela-Regular'] md:w-[250px] h-full p-4 rounded-[10px] bg-[#e8e9ec] border-[#F4F5F7] mt-3 text-[#000]"
                       placeholder="Type something..."
                     />
-                    <HiCalendar className='absolute right-4 top-8 text-[#A3A3A3] cursor-pointer' />
+                    <HiCalendar className='absolute right-4 top-8 text-[#A3A3A3] cursor-pointer hidden md:flex' />
                   </div>
                 </div>
              </div>
-               <hr className="mx-5 mt-5" />
+               <hr className="my-3" />
             </div>
           </div>
         </div>
@@ -192,7 +192,7 @@ const WritersRoom = () => {
       </div>
       {/* Dates */}
 
-      <div className='flex justify-end my-3 mx-[15%]'>
+      <div className='flex md:justify-end my-3 ml-[20rem]'>
          <div className='flex flex-col items-center justify-center'>
           <p className='text-[10px] mb-2 ml-7'>Updated 10 Apr 17:23</p> 
          

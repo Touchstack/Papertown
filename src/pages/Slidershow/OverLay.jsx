@@ -1,7 +1,6 @@
 import BGimage from "../../assets/Images/image.png";
 import { HiMiniChevronLeft, HiMiniChevronRight } from "react-icons/hi2";
 import { partners } from "../../../ConstantData";
-
 const OverLay = () => {
   return (
     <div className="relative mt-[6rem] flex flex-col items-center z-50 px-1">

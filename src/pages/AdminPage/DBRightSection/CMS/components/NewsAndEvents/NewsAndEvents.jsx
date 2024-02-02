@@ -7,7 +7,7 @@ const NewsAndEvents = ({ onGoBack }) => {
          <section className='flex flex-col mb-5'>
             <div onClick={onGoBack} className='flex flex-row items-center gap-3 text-[#040A1D] font-[700] cursor-pointer'>
               <HiChevronLeft />
-             <p className='text-[42px]'>UNICEF to initiate Grade 7 spelling Bee</p>
+             <p className='lg:text-[32px] md:text-[30px] sm:text-[20px]'>UNICEF to initiate Grade 7 spelling Bee</p>
             </div>
 
              <div className='flex flex-row'>
