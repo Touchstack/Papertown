@@ -1,9 +1,9 @@
 import BackgroundImg from "../assets/Images/Background.png";
 import Rectangle from "../assets/Images/Rectangle.png";
-
+import Student from "../assets/Images/Boy.svg";
 const RedefiningWriting = () => {
   return (
-    <div className="py-18 px-2">
+    <div className="py-18 px-2 mt-12">
       <div className="container mx-auto xl:w-8/12 lg:w-9/12 md:w-10/12 sm:w-10/12 w-10/12">
         <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 gap-y-4">
           {/* Left Col */}
@@ -28,7 +28,7 @@ const RedefiningWriting = () => {
             </a>
           </div>
           {/* Right Col */}
-          <div className="relative">
+          {/* <div className="relative">
             <div className="flex justify-center items-center">
               <img
                 src={Rectangle}
@@ -39,6 +39,19 @@ const RedefiningWriting = () => {
                 src={BackgroundImg}
                 alt="Background.png"
                 className="absolute lg:top-2 md:top-5 top-[21px] w-full h-full self-center"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> */}
+          <div className="relative">
+            <div className="flex justify-center items-center pb-5">
+              <img
+                src={Student}
+                alt="Boy.svg"
+                style={{ height: "auto" }}
+                className="mt-8"
               />
             </div>
           </div>
