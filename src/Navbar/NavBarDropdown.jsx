@@ -5,7 +5,7 @@ export const NavBarDropdown = () => {
       className="z-10 absolute text-left mt-5 bg-white-transparent shadow-custom backdrop-blur-custom  divide-y divide-gray-100 rounded-[20px] lg:w-[200px] md:w-60 sm:w-80 w-90 drop-shadow-lg"
     >
       <ul
-        className="p-1 text-xl text-gray-900"
+        className="p-1 text-xl text-gray-900 font-VarelaRegular"
         aria-labelledby="dropdownLargeButton"
       >
         <li>

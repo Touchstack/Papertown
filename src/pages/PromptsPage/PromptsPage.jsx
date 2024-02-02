@@ -49,6 +49,7 @@ function PromptsPage() {
           </div>
 
           {/* Card image section */}
+          
           <div className="flex items-center justify-center ">
             <div className="relative lg:flex lg:flex-col">
               <img
@@ -118,6 +119,7 @@ function PromptsPage() {
             <div className="items-center justify-center">
               <div className="grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1 gap-5 ">
                 {/* card section start */}
+                <a href="/promptdetails">
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
                     <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#52B4AE] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
@@ -125,7 +127,7 @@ function PromptsPage() {
                     </button>
 
                     <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
+                      Memoir
                     </button>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
@@ -136,8 +138,10 @@ function PromptsPage() {
                     transfer them to a visual heart map.
                   </span>
                 </div>
+                </a>
                 {/* card section end */}
                 {/* card section start */}
+                <a href="/promptdetails">
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
                     <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#B44DB8] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
@@ -145,7 +149,7 @@ function PromptsPage() {
                     </button>
 
                     <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
+                      Memoir
                     </button>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
@@ -156,8 +160,10 @@ function PromptsPage() {
                     transfer them to a visual heart map.
                   </span>
                 </div>
+                </a>
                 {/* card section end */}
                 {/* card section start */}
+                <a href="/promptdetails">
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
                     <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#FBCA23] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
@@ -165,7 +171,7 @@ function PromptsPage() {
                     </button>
 
                     <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
+                      Memoir
                     </button>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
@@ -176,8 +182,10 @@ function PromptsPage() {
                     transfer them to a visual heart map.
                   </span>
                 </div>
+                </a>
                 {/* card section end */}
                 {/* card section start */}
+                <a href="/promptdetails">
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
                     <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#52B4AE] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
@@ -185,7 +193,7 @@ function PromptsPage() {
                     </button>
 
                     <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
+                      Memoir
                     </button>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
@@ -196,8 +204,10 @@ function PromptsPage() {
                     transfer them to a visual heart map.
                   </span>
                 </div>
+                </a>
                 {/* card section end */}
                 {/* card section start */}
+                <a href="/promptdetails">
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
                     <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#B44DB8] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
@@ -205,7 +215,7 @@ function PromptsPage() {
                     </button>
 
                     <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
+                      Memoir
                     </button>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
@@ -216,8 +226,10 @@ function PromptsPage() {
                     transfer them to a visual heart map.
                   </span>
                 </div>
+                </a>
                 {/* card section end */}
                 {/* card section start */}
+                <a href="/promptdetails">
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
                     <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#FBCA23] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
@@ -225,7 +237,7 @@ function PromptsPage() {
                     </button>
 
                     <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
+                      Memoir
                     </button>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
@@ -236,8 +248,10 @@ function PromptsPage() {
                     transfer them to a visual heart map.
                   </span>
                 </div>
+                </a>
                 {/* card section end */}
                 {/* card section start */}
+                <a href="/promptdetails">
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
                     <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#52B4AE] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
@@ -245,7 +259,7 @@ function PromptsPage() {
                     </button>
 
                     <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
+                      Memoir
                     </button>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
@@ -256,8 +270,10 @@ function PromptsPage() {
                     transfer them to a visual heart map.
                   </span>
                 </div>
+                </a>
                 {/* card section end */}
                 {/* card section start */}
+                <a href="/promptdetails">
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
                     <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#B44DB8] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
@@ -265,7 +281,7 @@ function PromptsPage() {
                     </button>
 
                     <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
+                      Memoir
                     </button>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
@@ -276,8 +292,10 @@ function PromptsPage() {
                     transfer them to a visual heart map.
                   </span>
                 </div>
+                </a>
                 {/* card section end */}
                 {/* card section start */}
+                <a href="/promptdetails">
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
                     <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#FBCA23] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
@@ -285,7 +303,7 @@ function PromptsPage() {
                     </button>
 
                     <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
+                      Memoir
                     </button>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
@@ -296,8 +314,10 @@ function PromptsPage() {
                     transfer them to a visual heart map.
                   </span>
                 </div>
+                </a>
                 {/* card section end */}
                 {/* card section start */}
+                <a href="/promptdetails">
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
                     <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#52B4AE] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
@@ -305,7 +325,7 @@ function PromptsPage() {
                     </button>
 
                     <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
+                      Memoir
                     </button>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
@@ -316,8 +336,10 @@ function PromptsPage() {
                     transfer them to a visual heart map.
                   </span>
                 </div>
+                </a>
                 {/* card section end */}
                 {/* card section start */}
+                <a href="/promptdetails">
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
                     <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#B44DB8] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
@@ -325,7 +347,7 @@ function PromptsPage() {
                     </button>
 
                     <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
+                      Memoir
                     </button>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
@@ -336,8 +358,10 @@ function PromptsPage() {
                     transfer them to a visual heart map.
                   </span>
                 </div>
+                </a>
                 {/* card section end */}
                 {/* card section start */}
+                <a href="/promptdetails">
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
                     <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#FBCA23] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
@@ -345,7 +369,7 @@ function PromptsPage() {
                     </button>
 
                     <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Menoir
+                      Memoir
                     </button>
                   </span>
                   <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
@@ -356,6 +380,7 @@ function PromptsPage() {
                     transfer them to a visual heart map.
                   </span>
                 </div>
+                </a>
                 {/* card section end */}
               </div>
               {/* {activeTab} */}

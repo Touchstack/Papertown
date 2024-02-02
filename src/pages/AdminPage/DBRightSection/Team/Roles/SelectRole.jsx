@@ -1,4 +1,14 @@
+import { useState } from "react";
+import { FaCheck } from "react-icons/fa6";
+import { IoMdClose } from "react-icons/io";
+
 function SelectRole() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleModal = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div>
       <div className="lg:mt-20 mt-5 ml-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -238,11 +248,49 @@ function SelectRole() {
       </div>
       <div className="ml-20">
         <button
+          onClick={toggleModal}
           className="shadow bg-[#DF327B] mt-5 text-white font-bold py-3 px-20 rounded-full"
-          type="submit"
+          type="button"
         >
           Submit
         </button>
+
+        {/* Modal section start  */}
+        {isOpen && (
+          <div className="fixed top-0 right-0 left-0 bottom-0 z-50 flex justify-center items-center bg-black bg-opacity-50">
+            {/* Modal Content */}
+            <div className="relative p-4 w-full max-w-md">
+              {/* Content */}
+              <div className="relative bg-white rounded-lg px-20 shadow dark:bg-gray-700">
+                <button
+                  onClick={toggleModal}
+                  type="button"
+                  className="absolute top-3 end-2.5 text-gray-400 bg-transparent bg-[#DF327B] rounded-lg text-lg w-8 h-8 ms-auto inline-flex justify-center items-center "
+                >
+                  <IoMdClose />
+                  <span className="sr-only">Close modal</span>
+                </button>
+                {/* Modal Body */}
+                <div className="p-4 md:p-5 text-center">
+                  {/* Icon */}
+                  <div className="flex justify-center">
+                    <button className="bg-[#d9f99d] rounded-full p-4">
+                      <FaCheck className="text-[#83C303] text-2xl " />
+                    </button>
+                  </div>
+                  {/* Text Content */}
+                  <div className="mb-5">
+                    <h3 className="mb-5 text-3xl font-normal text-[#040A1D] dark:text-gray-400 font-Bold">
+                      New role addedd <br /> successfully
+                    </h3>
+                  </div>
+                  {/* Buttons */}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+        {/* Modal section end  */}
       </div>
     </div>
   );
