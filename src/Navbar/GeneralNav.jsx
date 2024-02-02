@@ -12,6 +12,10 @@ import { BsPersonCircle } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
 const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/accountsetup");
+  };
   const [showDropdown, setShowDropdown] = useState(false);
   const [Dropdown, setDropdown] = useState(false);
   const [showLogInModal, setShowLogInModal] = useState(false);
@@ -26,8 +30,6 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
     bgColor: PropTypes.string.isRequired,
     bgShadow: PropTypes.string.isRequired,
   };
-
-  const navigate = useNavigate();
 
   // Define a mapping of color classes
   const txtcolorClasses = {
@@ -200,6 +202,8 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
                   <button
                     className="bg-[#52B4AE] text-[#FFF] lg:px-9 lg:p-3 rounded-full"
                     // onClick={() => setShowJoinUsModal(true)}
+                    // onClick={() => navigate("/accountsetup")}
+                    onClick={handleClick}
                   >
                     Join Papertown
                   </button>

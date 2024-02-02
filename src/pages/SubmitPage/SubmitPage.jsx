@@ -15,11 +15,11 @@ const SubmitPage = () => {
       <SubmitBg />
           
     <div className="flex flex-col  mt-40">
-      <h1 className="text-[#000000] text-center text-2xl sm:text-2xl md:text-4xl lg:text-6xl font-extrabold leading-100 tracking-widest mt-10">
+      <h1 className="text-[#000000] text-center font-[700] text-[36px] sm:text-[36px] md:text-4xl lg:text-6xl leading-100 tracking-widest p-5 mt-10">
         Submit your personal <br /> write-ups for review
       </h1>
 
-      <div className="font-Varela-Regular text-center text-[10px] sm:text-sm md:text-base lg:text-base px-3 mt-5 mb-10">
+      <div className="font-[Varela-Regular] text-center mt-5 px-5">
         It has survived not only five centuries, but also the leap into electronic typesetting,
          ,remaining
          <br />
@@ -28,9 +28,9 @@ const SubmitPage = () => {
     </div>
 
 
-    <div className="flex flex-col md:flex-row items-center justify-between px-10 lg:px-[7rem] mb-10 mt-[4rem]">
-      <div className="flex flex-col items-start px-10">
-        <h2 className="text-[#000000] text-[20px] sm:text-[22px] md:text-[32px] lg:text-[42px] pb-5 font-bold">Guidelines for submission</h2>
+    <div className="flex flex-col md:flex-row items-center justify-between px-5 lg:px-[7rem] mb-10 mt-[4rem]">
+      <div className="flex flex-col items-start px-5">
+        <h2 className="text-[#000000] text-[28px] sm:text-[28px] md:text-[32px] lg:text-[42px] pb-5 font-bold">Guidelines for submission</h2>
 
         <div className='w-[300px] sm:w-[300px] md:w-[400px]'>
           <p className="font-bold text-[20px] mb-4">Guide 1</p>
@@ -61,11 +61,11 @@ const SubmitPage = () => {
 
       <div className='flex md:flex-row flex-col items-center justify-center px-[10rem] py-[3rem] gap-[5rem]'>
           <div className=''>
-             <p className='text-[32px] w-[400px] font-Bold'>
+             <p className='text-[32px] w-[400px] font-Bold p-5'>
              Don’t take our word for it. Hear what our past and current writers have to say
              </p>
 
-            <div className='flex items-center gap-3 pt-5'>
+            <div className='flex items-center gap-3 pt-5 px-5'>
                <div className='w-[34.5px] flex items-center justify-center h-[34.5px] border-[1px] rounded-full border-[#52B4AE]'>
                   <HiChevronLeft color='#52B4AE'  width={70}/>
                </div>
@@ -79,11 +79,15 @@ const SubmitPage = () => {
           </div>
 
           <div className='flex flex-col'>
-              <p className='w-[400px] md:w-[503px] text-[16px]'>
-                Writers will identify their favourite sensory memories and transfer them to a visual heart map. Writers will identify their favourite sensory memories and transfer them to a visual heart map. Writers will identify their favourite sensory memories and transfer them to a visual heart map. 
+              <p className='w-[400px] md:w-[503px] text-[16px] p-5'>
+                Writers will identify their favourite sensory memories and 
+                transfer them to a visual heart map. Writers will identify
+                their favourite sensory memories and transfer 
+                them to a visual heart map. Writers will identify their 
+                favourite sensory memories and transfer them to a visual heart map. 
               </p>
 
-              <div className='flex items-center gap-5 pt-5'>
+              <div className='flex items-center gap-5 pt-5 px-5'>
                 <img
                   src={ProfilePicture}
                   alt="Profile Picture"

@@ -22,7 +22,7 @@ import Manage from "./Team/Profile/Manage";
 
 const DBRightSection = () => {
   return (
-    <div className="py-12 flex-1 m-2">
+    <div className="py-12 flex-1 m-2 overflow-x-auto">
       {/*header*/}
       <div className="flex flex-col flex-1">
         <Routes>

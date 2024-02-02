@@ -7,31 +7,26 @@ const handleButtonClick = () => {
 
 const Slider = () => {
   return (
-    <div className="relative mt-[50px]">
+    <div className="flex justify-between items-center mt-[50px] px-5">
       <div>
-        <div>
-          <div className="m-10">
-            1 <span className="text-[#C5C5C5]">0f 10</span>
-          </div>
+        <div className="m-10">
+          1 <span className="text-[#C5C5C5]">0f 10</span>
         </div>
       </div>
-      <div className="absolute inset-y-0 right-0 flex">
-        <div className="inline-flex gap-8">
-          <img
-            src={PreviousSlider}
-            alt="Previous.svg"
-            className="flex w-34.644 px-0 py-18 justify-center items-center"
-          />
-          <button className="bg-[#B44DB8] text-[#FFFFFF] w-[25px] rounded-sm">
-            1
-          </button>
-          <span className="text-[#C5C5C5]">
-            2 3
-            
-            <span onClick={handleButtonClick}> 4</span>5 6 .... 10
-          </span>
-          <img src={NextSlider} alt="Next.svg" />
-        </div>
+      <div className="flex gap-4 self-end m-10">
+        <img
+          src={PreviousSlider}
+          alt="Previous.svg"
+          className="w-34.644 px-0 py-18 justify-center items-center"
+        />
+        <button className="bg-[#B44DB8] text-[#FFFFFF] lg:w-[20px] w-1/6 rounded-sm">
+          1
+        </button>
+        <span className="text-[#C5C5C5]">
+          2 3
+          <span onClick={handleButtonClick}> 4 </span> 5  .... 10
+        </span>
+        <img src={NextSlider} alt="Next.svg" />
       </div>
     </div>
   );
