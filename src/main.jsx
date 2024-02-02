@@ -23,7 +23,14 @@ import PrivacyPolicy from "./pages/Doc/PrivacyPolicy.jsx";
 import TermsOfUse from "./pages/Doc/TermsOfUse.jsx";
 import TipRead from "./pages/Tips/TipRead.jsx";
 import Details from "./pages/PromptsPage/Details/Details.jsx";
-
+import AccountSetupJourney from "./Navbar/SignUpForm/AccountSetupJourney.jsx";
+import SetUpAccount from "./Navbar/SignUpForm/SetUpAccount.jsx";
+import GetToKnowYou from "./Navbar/SignUpForm/GetToKnowYou.jsx";
+import SchoolInformation from "./Navbar/SignUpForm/SchoolInformation.jsx";
+import GuardianInformation from "./Navbar/SignUpForm/GuardianInformation.jsx";
+import GuardianAccountSetup from "./Navbar/GuardianSignUpForm.jsx/GuardianAccountSetUp.jsx";
+import AboutYourself from "./Navbar/GuardianSignUpForm.jsx/AboutYourSelf.jsx";
+import AboutTheChild from "./Navbar/GuardianSignUpForm.jsx/AboutTheChild.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
@@ -75,6 +82,11 @@ const router = createBrowserRouter([
     element: <SinglePublicationData />,
     errorElement: <ErrorPage />,
   },
+  {
+    path: "/setupaccount",
+    element: <SetUpAccount />,
+    errorElement: <ErrorPage />,
+  },
 
   // {
   //   path: "/admin/login",
@@ -103,6 +115,46 @@ const router = createBrowserRouter([
   {
     path: "/termsofuse",
     element: <TermsOfUse />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/accountsetup",
+    element: <AccountSetupJourney />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/setupaccount",
+    element: <SetUpAccount />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/gettoknowyou",
+    element: <GetToKnowYou />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/schoolinformation",
+    element: <SchoolInformation />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/guardianinformation",
+    element: <GuardianInformation />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/guardianaccountsetup",
+    element: <GuardianAccountSetup />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/aboutyourself",
+    element: <AboutYourself />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/aboutthechild",
+    element: <AboutTheChild />,
     errorElement: <ErrorPage />,
   },
 ]);
