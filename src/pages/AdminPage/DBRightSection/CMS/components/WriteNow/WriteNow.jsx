@@ -18,6 +18,10 @@ const WriteNow = () => {
     setisPromptModalVisible(true);
   }
 
+  const closeModal2 = () => {
+    setIsModalVisible(false);
+  }
+
   const closeModal = () => {
     setisPromptModalVisible(false);
   }
@@ -81,14 +85,14 @@ const WriteNow = () => {
               </section>
               {/* Featured spark section */}
 
-              <hr className="mx-5" />
+              <hr className="my-5" />
 
               {/* Writing prompts section */}
               <section className='mt-10 flex flex-col'>
                 <div className='flex justify-between '>
                   <p className="text-[#000] font-[700]" >Writing prompts</p>
                   
-                  <div className="flex flex-row text-[#52B4AE]  items-center gap-2 mx-[20%] cursor-pointer">
+                  <div className="flex flex-row text-[#52B4AE]  items-center gap-2 mx-[10%] cursor-pointer">
                     <p onClick={()=> setShowAllPrompt(true)}>View all</p>
                     <div className="rounded-full border border-[#52B4AE] md:h-[30px] h-[20px] md:w-[30px] w-[20px] flex items-center justify-center">
                       <HiMiniChevronLeft className="text-[50px]" />
@@ -107,7 +111,7 @@ const WriteNow = () => {
                 {/* Cards */}
 
                 {/* Add new prompt */}
-                <div className='flex justify-end mx-[20%]'>
+                <div className='flex justify-end mx-[10%]'>
                   <p className='flex items-center text-[#DF327B] font-[600] cursor-pointer' onClick={openModal}>
                     <HiPlus width={5} />
                     Add new prompt
@@ -116,7 +120,7 @@ const WriteNow = () => {
                 {/* Add new prompt */}
               </section>
               {/* Writing prompts section */}
-              <hr className="mx-5 mt-10" />
+              <hr className="mx-5 my-5" />
 
               {/* Submission Guidelines */}
               <section className="flex flex-col md:flex-row md:mt-10 gap-4 md:gap-[150px]">
@@ -157,7 +161,7 @@ const WriteNow = () => {
         }
 
         {isModalVisible && 
-                <Modal isVisible={isModalVisible} text="Changes Saved!" onClose={closeModal} />
+                <Modal isVisible={isModalVisible} text="Changes Saved!" onClose={closeModal2} />
             }
       </div>
     </>
