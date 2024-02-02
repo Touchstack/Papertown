@@ -51,14 +51,16 @@ function PromptsPage() {
           {/* Card image section */}
           
           <div className="flex items-center justify-center ">
-            <div className="relative lg:flex lg:flex-col">
+            <div className="relative lg:flex lg:flex-col md:px-5">
               <img
                 src={BGimage}
                 alt="image"
                 className="lg:w-[544px] lg:h-[467px] w-[328px] h-[282px] items-center justify-center mb-10"
               />
-              <div className="flex justify-center items-center h-screen">
-                <div className="bg-[#FFFFFF] rounded-[16px] lg:rounded-[25px] md:rounded-[20px] absolute lg:top-[310px] top-[140px] lg:w-[500px] md:w-[900] w-[310px] p-2  lg:p-4 md:p-2 ">
+
+              
+              <div className="flex justify-center items-center md:px-5">
+                <div className="bg-[#FFFFFF] rounded-[16px] lg:rounded-[25px] md:rounded-[20px] absolute lg:top-[310px] top-[140px] xl:min-w-[500px] lg:min-w-[350px] md:w-[200] w-[310px] p-2  lg:p-4 md:p-2 ">
                   <div className="flex items-center">
                     <img
                       src={ArrowNew}
