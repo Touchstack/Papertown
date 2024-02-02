@@ -1,13 +1,14 @@
 import child1 from "../../../../../assets/Images/child1.png";
 import DateLogo from "../../../../../assets/Images/DateLogo.png";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NarrativeCards = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
     // Navigate to another page
-    navigate('/SingleSubmission');
+    navigate('/admin/submissions/SingleSubmission');
   };
 
   const cards = Array.from({ length: 9 }).map((_, index) => (
@@ -36,8 +37,12 @@ const NarrativeCards = () => {
   ));
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-5 lg:gap-x-5 lg:px-10 px-6 mt-3">
-      {cards}
+    <div >
+       <Link to="/admin/submissions/SingleSubmission">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-5 lg:gap-x-5 lg:px-10 px-6 mt-3">
+     {cards} 
+     </div>
+     </Link>
     </div>
   );
 };
