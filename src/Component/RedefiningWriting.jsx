@@ -13,7 +13,6 @@ const RedefiningWriting = () => {
               Redefining writing, one
               <span className="text-[#FBCA23]"> spark</span> at a time
             </h5>
-
             <p className="lg:text-[20px] lg:mt-5 lg:mb-20 md:mt-5 md:mb-10 mt-5 text-white">
               It has survived not only five centuries, but also the leap into
               electronic typesetting, remaining essentially unchanged. It was
@@ -26,25 +25,7 @@ const RedefiningWriting = () => {
                 Join Papertown
               </button>
             </a>
-          </div>
-          {/* Right Col */}
-          {/* <div className="relative">
-            <div className="flex justify-center items-center">
-              <img
-                src={Rectangle}
-                alt="Rectangle.png"
-                className="absolute lg:top-2 md:top-12 top-10 w-full h-full self-center"
-              />
-              <img
-                src={BackgroundImg}
-                alt="Background.png"
-                className="absolute lg:top-2 md:top-5 top-[21px] w-full h-full self-center"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> */}
+          </div>         
           <div className="relative">
             <div className="flex justify-center items-center pb-5">
               <img
