@@ -11,7 +11,7 @@ const Modal = ({ isVisible, onClose, children }) => {
     <div
       className="fixed inset-0 bg-black bg-opacity-50 z-[60] flex items-center justify-center"
       onClick={handleClose}
-      style={{ width: "100vw" }}
+      style={{ width: "" }}
     >
       <div className="md:w-[400px] w-[370px] flex flex-col bg-white  rounded-2xl z-40">
         <div className="flex justify-end p-5">
