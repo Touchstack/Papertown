@@ -60,7 +60,7 @@ function PromptsPage() {
 
               
               <div className="flex justify-center items-center md:px-5">
-                <div className="bg-[#FFFFFF] rounded-[16px] lg:rounded-[25px] md:rounded-[20px] absolute lg:top-[310px] top-[140px] xl:min-w-[500px] lg:min-w-[350px] md:w-[200] w-[310px] p-2  lg:p-4 md:p-2 ">
+                <div className="bg-[#FFFFFF] rounded-[16px] lg:rounded-[25px] md:rounded-[20px] absolute lg:top-[310px] top-[140px] xl:min-w-[500px] lg:min-w-[320px] md:w-[200] w-[310px] py-2  lg:py-4 md:py-2 ">
                   <div className="flex items-center">
                     <img
                       src={ArrowNew}
