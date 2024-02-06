@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Student from "../../assets/Images/Boy.svg";
 import AppLogo from "../../assets/Images/Logo.svg";
 import Arrow from "../../assets/Images/arrow-left.svg";
+import { useForm } from 'react-hook-form';
 
 const SchoolInformation = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -11,6 +12,13 @@ const SchoolInformation = () => {
   const goBack = () => {
     navigate(-1); // Navigates back one step in the history stack
   };
+
+  const { register, handleSubmit, formState: { errors } } = useForm();
+
+  const onSubmit = (data) => {
+    navigate('/guardianinformationn')
+  };
+
   return (
     <div className="py-18 px-2">
       <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-y-4">
@@ -28,49 +36,48 @@ const SchoolInformation = () => {
             TELL US ABOUT YOUR SCHOOL
           </h3>
           <div className="font-VarelaRegular lg:text-md md:text-md sm:text-base pt-10 text-[#393939] leading-7 text-sm text-13 leading-26 text-start">
-            <form name="contact" method="post">
-              <div className="relative z-0 w-full mb-4 group text-md font-VarelaRegular text-[#F4F5F7]">
-                <input
-                  type="text"
-                  id="large-input"
-                  placeholder="School name"
-                  name="schoolname"
-                  required
-                  className="block w-[430px] p-4 mt-2 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
-                />
-              </div>
+          <form onSubmit={handleSubmit(onSubmit)} name="contact" method="post">
+            <div className="relative z-0 w-full mb-4 group text-md font-VarelaRegular text-[#F4F5F7]">
+              <input
+                type="text"
+                id="school-name"
+                placeholder="School name"
+                {...register("schoolName", { required: true })}
+                className="block w-[430px] p-4 mt-2 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
+              />
+              {errors.schoolName && <span className="text-red-500">School name is required</span>}
+            </div>
 
-              <div className="relative z-0 w-full mb-4 group text-md font-VarelaRegular text-[#F4F5F7]">
-                <input
-                  type="text"
-                  id="large-input"
-                  placeholder="School address"
-                  name="schooladdress"
-                  required
-                  className="block w-[430px] p-4 mt-2 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
-                />
-              </div>
+            <div className="relative z-0 w-full mb-4 group text-md font-VarelaRegular text-[#F4F5F7]">
+              <input
+                type="text"
+                id="school-address"
+                placeholder="School address"
+                {...register("schoolAddress", { required: true })}
+                className="block w-[430px] p-4 mt-2 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
+              />
+              {errors.schoolAddress && <span className="text-red-500">School address is required</span>}
+            </div>
 
-              <div className="relative z-0 w-full mb-1 group text-md font-VarelaRegular text-[#F4F5F7]">
-                <input
-                  type="text"
-                  id="large-input"
-                  placeholder="Class / Grade"
-                  name="class"
-                  required
-                  className="block w-[430px] p-4 mt-2 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
-                />
-              </div>
+            <div className="relative z-0 w-full mb-1 group text-md font-VarelaRegular text-[#F4F5F7]">
+              <input
+                type="text"
+                id="class-grade"
+                placeholder="Class / Grade"
+                {...register("class", { required: true })}
+                className="block w-[430px] p-4 mt-2 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
+              />
+              {errors.class && <span className="text-red-500">Class / Grade is required</span>}
+            </div>
 
-              <button
-                type="button"
-                className="font-Bold inline-flex text-[#FFFFFF] rounded-full w-[430px] py-4 bg-[#DB2E78] focus:ring-1 focus:outline-none
+            <button
+              type="submit"
+              className="font-Bold inline-flex text-[#FFFFFF] rounded-full w-[430px] py-4 bg-[#DB2E78] focus:ring-1 focus:outline-none
                 focus:ring-amber-100 justify-center items-center mt-12"
-                onClick={() => navigate("/guardianinformation")}
-              >
-                Continue (2/3)
-              </button>
-            </form>
+            >
+              Continue (2/3)
+            </button>
+          </form>
           </div>
         </div>
         {/* Right Col with Linear Gradient Background */}

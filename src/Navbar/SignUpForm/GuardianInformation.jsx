@@ -6,6 +6,7 @@ import AppLogo from "../../assets/Images/Logo.svg";
 import Arrow from "../../assets/Images/arrow-left.svg";
 import Tick from "../../assets/Images/Tick.svg";
 import PropTypes from "prop-types";
+import { useForm } from 'react-hook-form';
 
 const GuardianInformation = () => {
   const [showModal, setShowModal] = useState(false);
@@ -48,6 +49,14 @@ const GuardianInformation = () => {
     navigate(-1); // Navigates back one step in the history stack
   };
 
+  const { register, handleSubmit, formState: { errors } } = useForm();
+
+  const onSubmit = (data) => {
+    //make api call
+    setShowModal(true)
+  };
+
+
   return (
     <div className="py-18 px-2">
       <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-y-4">
@@ -65,48 +74,48 @@ const GuardianInformation = () => {
             Guardian info
           </h3>
           <div className="font-VarelaRegular lg:text-md md:text-md sm:text-base pt-10 text-[#393939] leading-7 text-sm text-13 leading-26 text-start">
-            <form name="contact" method="post">
-              <div className="relative z-0 w-full group text-md mb-4 font-VarelaRegular text-[#F4F5F7]">
-                <input
-                  type="text"
-                  id="large-input"
-                  placeholder="Parent/Guardian's full name:"
-                  name="fullname"
-                  required
-                  className="block w-[430px] p-4 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
-                />
-              </div>
+          <form onSubmit={handleSubmit(onSubmit)} name="contact" method="post">
+            <div className="relative z-0 w-full group text-md mb-4 font-VarelaRegular text-[#F4F5F7]">
+              <input
+                type="text"
+                id="full-name"
+                placeholder="Parent/Guardian's full name:"
+                {...register("fullName", { required: true })}
+                className="block w-[430px] p-4 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
+              />
+              {errors.fullName && <span  className="text-red-500">Parent/Guardian's full name is required</span>}
+            </div>
 
-              <div className="relative z-0 w-full mb-4 group text-md font-VarelaRegular text-[#F4F5F7]">
-                <input
-                  type="text"
-                  id="large-input"
-                  placeholder="Parent/Guardian's email address"
-                  name="emailaddress"
-                  required
-                  className="block w-[430px] p-4 mt-2 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
-                />
-              </div>
-              <div className="relative z-0 w-full mb-4 group text-md font-VarelaRegular text-[#F4F5F7]">
-                <input
-                  type="phonenumber"
-                  id="phonenumber"
-                  placeholder="Parent/Guardian's phone number"
-                  name="phonenumber"
-                  required
-                  className="block w-[430px] p-4 mt-2 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
-                />
-              </div>
+            <div className="relative z-0 w-full mb-4 group text-md font-VarelaRegular text-[#F4F5F7]">
+              <input
+                type="email"
+                id="email-address"
+                placeholder="Parent/Guardian's email address"
+                {...register("emailAddress", { required: true, pattern: /^\S+@\S+$/i })}
+                className="block w-[430px] p-4 mt-2 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
+              />
+              {errors.emailAddress && <span  className="text-red-500">Valid email address is required</span>}
+            </div>
 
-              <button
-                type="button"
-                className="font-Bold inline-flex text-[#FFFFFF] rounded-full w-[430px] py-4 bg-[#DB2E78] focus:ring-1 focus:outline-none
+            <div className="relative z-0 w-full mb-4 group text-md font-VarelaRegular text-[#F4F5F7]">
+              <input
+                type="tel"
+                id="phone-number"
+                placeholder="Parent/Guardian's phone number"
+                {...register("phoneNumber", { required: true, pattern: /^[0-9]{10}$/ })}
+                className="block w-[430px] p-4 mt-2 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
+              />
+              {errors.phoneNumber && <span className="text-red-500">Valid phone number is required (10 digits)</span>}
+            </div>
+
+            <button
+              type="submit"
+              className="font-Bold inline-flex text-[#FFFFFF] rounded-full w-[430px] py-4 bg-[#DB2E78] focus:ring-1 focus:outline-none
                 focus:ring-amber-100 justify-center items-center mt-12"
-                onClick={() => setShowModal(true)}
-              >
-                Done
-              </button>
-            </form>
+            >
+              Done
+            </button>
+          </form>
           </div>
           <Modal isVisible={showModal} onClose={() => closeModal(1)}>
             <div className="flex justify-center items-center pb-5">

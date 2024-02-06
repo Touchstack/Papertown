@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
 import AppLogo from "../../assets/Images/Logo.svg";
+import { baseURL } from "../../api";
 
 const Footer = () => {
   const [hoverIcon, setHoverIcon] = useState("");
@@ -32,7 +33,7 @@ const Footer = () => {
     bodyFormData.append("email", text);
     axios({
       method: "post",
-      url: "/api/newsletter",
+      url: `${baseURL}/api/newsletter`,
       data: bodyFormData,
       headers: { "Content-Type": "multipart/form-data" },
     })

@@ -15,3 +15,18 @@ export const logInUser = async (data) => {
     return err;
   }
 };
+
+
+export const createUser = async (data) => {
+  try {
+    const res = await axios.post(`${baseURL}/api/students/create`, data, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    return res;
+  } catch (err) {
+    console.error("Error during Login:", err);
+    return err;
+  }
+};

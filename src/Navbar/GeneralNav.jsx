@@ -11,7 +11,7 @@ import SideNav from "./SideNav";
 import { BsPersonCircle } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
-const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
+const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate("/accountsetup");
@@ -25,10 +25,10 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
 
   // Define prop types
   GeneralNav.propTypes = {
-    color: PropTypes.string.isRequired,
-    btnColor: PropTypes.string.isRequired,
-    bgColor: PropTypes.string.isRequired,
-    bgShadow: PropTypes.string.isRequired,
+    color: PropTypes.string,
+    btnColor: PropTypes.string,
+    bgColor: PropTypes.string,
+    bgShadow: PropTypes.string,
   };
 
   // Define a mapping of color classes
@@ -230,7 +230,7 @@ const GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
       {sideNav && (
         <SideNav
           onLoginClick={toggleLoginModal}
-          onJoinClick={toggleJoinModal}
+          onJoinClick={handleClick}
           onCloseClick={toggleCloseNav}
         />
       )}

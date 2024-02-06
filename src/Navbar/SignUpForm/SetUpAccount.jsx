@@ -5,10 +5,12 @@ import AppLogo from "../../assets/Images/Logo.svg";
 import Arrow from "../../assets/Images/arrow-left.svg";
 import LogInModal from "../../Component/Modal/LogInModal";
 import Modal from "../../Component/Modal/Modal";
+import { useForm } from 'react-hook-form';
 
 const SetUpAccount = () => {
   const [showModal, setShowModal] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+
   const navigate = useNavigate();
 
   const goBack = () => {
@@ -23,6 +25,13 @@ const SetUpAccount = () => {
     setShowModal(false);
   };
 
+  const { register, handleSubmit, formState: { errors } } = useForm();
+
+  const onSubmit = (data) => {
+    navigate('/gettoknowyou')
+  };
+
+
   return (
     <div className="py-18 px-2">
       <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-y-4">
@@ -34,99 +43,98 @@ const SetUpAccount = () => {
             className="font-Bold inline-flex gap-2 items-center justify-center w-[150px] py-2 border-2 [#D0D5DD] rounded-full ring-1 ring-[#1018280D] lg:text-lg md:text-lg
             sm:text-base text-[#344054] leading-7 text-sm text-13 leading-26 text-start"
           >
-            <img src={Arrow} style={{ height: "auto" }} className="" /> GO BACK
+          <img src={Arrow} style={{ height: "auto" }} className="" /> GO BACK
           </button>
           <h3 className="font-Bold lg:text-4xl md:text-3xl sm:text-43l text-[#040A1D] text-4xl mt-12 text-left">
             SET UP ACCOUNT
           </h3>
           <div className="font-VarelaRegular lg:text-md md:text-md sm:text-base pt-10 text-[#393939] leading-7 text-sm text-13 leading-26 text-start">
-            <form name="contact" method="post">
-              <div className="relative w-full group text-md mb-4 font-VarelaRegular text-[#858585]">
-                <input
-                  type="text"
-                  id="large-input"
-                  placeholder="Email address"
-                  name="emailaddress"
-                  required
-                  className="block w-[430px] sm:w-[395px]  p-4 text-[#858585] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
-                />
-              </div>
-              <div className="relative z-0 md:w-[400px] sm:w-[370px] w-[370px] group text-md mb-3 font-VarelaRegular text-[#858585]">
-                <input
-                  type="text"
-                  id="large-input"
-                  placeholder="Create password"
-                  name="password"
-                  required
-                  className="block w-[430px] sm:w-[395px] p-4 text-[#858585] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
-                />
-                <span className="absolute right-6 mt-0 top-1/2 transform -translate-y-1/2 inline-block">
-                  SHOW
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="relative w-full group text-md  mb-4 font-VarelaRegular text-[#858585]">
+              <input
+                type="text"
+                id="email-address"
+                placeholder="Email address"
+                {...register("emailAddress", { required: true })}
+                className="block w-[430px] sm:w-[395px]  p-4 text-[#858585] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
+              />
+              {errors.emailAddress && <span className="text-red-500">Email address is required</span>}
+            </div>
+            
+            <div className="relative z-0 md:w-[400px] sm:w-[370px] w-[370px] group text-md mb-3 font-VarelaRegular text-[#858585]">
+              <input
+                type="password"
+                id="password"
+                placeholder="Create password"
+                {...register("password", { required: true, minLength: 8, pattern: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*-_+=]{8,}$/ })}
+                className="block w-[430px] sm:w-[395px]  p-4 text-[#858585] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
+              />
+              {/* <span className="absolute right-6 mt-0 top-1/2 transform -translate-y-1/2 inline-block">SHOW</span> */}
+              {errors.password && <span className="text-red-500">Password must be at least 8 characters long and contain at least one letter and one number or symbol</span>}
+            </div>
+            
+            <div className="relative z-0 md:w-[400px] sm:w-[370px] w-[370px] mb-3 group text-md font-VarelaRegular text-[#858585]">
+              <input
+                type="password"
+                id="re-enter-password"
+                placeholder="Re-enter password"
+                {...register("reEnterPassword", { required: true, validate: value => value === password })}
+                className="block w-[430px] sm:w-[390px] p-4 mt-2 text-[#858585] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
+              />
+              {/* <span className="absolute right-6 mt-0 top-1/2 transform -translate-y-1/2 inline-block">SHOW</span> */}
+              {errors.reEnterPassword && <span className="text-red-500">Passwords must match</span>}
+            </div>
+            
+            <div className="text-[#4C536A] text-sm font-Regular leading-4 tracking-normal text-left">
+              <span className="p-1"> • </span>Use at least 8 characters. <br /> 
+              <span className="p-1"> • </span>Besides letters, include at least a number or symbol (!@#$%^&*-_+=). <br /> 
+              <span className="p-1"> • </span>Password is case sensitive.
+            </div>
+            
+            <div className="text-[#858585] text-sm mt-8">
+              <p className="flex items-center">
+                <label>
+                  <input
+                    type="checkbox"
+                    className="accent-pink-400 w-10 h-10"
+                    required
+                  />
+                </label>
+                <span className="ml-2">
+                  I confirm that this account has been created with the consent of a parent or guardian
                 </span>
-              </div>
-              <div className="text-[#4C536A] text-sm font-Regular leading-4 tracking-normal text-left">
-                <span className="p-1"> • </span>Use at least 8 characters.{" "}
-                <br /> <span className="p-1"> • </span>Besides letters, include
-                at least a number or symbol (!@#$%^&*-_+=). <br />{" "}
-                <span className="p-1"> • </span>Password is case sensitive.
-              </div>
-              <div className="relative z-0 md:w-[400px] sm:w-[370px] w-[370px] mb-1 group text-md font-VarelaRegular text-[#858585]">
-                <input
-                  type="text"
-                  id="large-input"
-                  placeholder="Re-enter password"
-                  name="password"
-                  required
-                  className="block w-[430px] sm:w-[390px] p-4 mt-2 text-[#858585] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
-                />
-                <span className="absolute right-6 mt-0 top-1/2 transform -translate-y-1/2 inline-block">
-                  SHOW
+              </p>
+              <p className="mt-4 flex items-center">
+                <label>
+                  <input
+                    type="checkbox"
+                    className="accent-pink-400 w-10 h-10"
+                    required
+                  />
+                </label>
+                <span className="ml-2">
+                  Please send me Papertown Imaginarium newsletters
                 </span>
-              </div>
-              <div className="text-[#858585] text-sm mt-8">
-                <p className="flex items-center">
-                  <label>
-                    <input
-                      type="checkbox"
-                      className="accent-pink-400 w-10 h-10"
-                    />
-                  </label>
-                  <span className="ml-2">
-                    I confirm that this account has been created with the
-                    consent of a parent or guardian
-                  </span>
-                </p>
-                <p className="mt-4 flex items-center">
-                  <label>
-                    <input
-                      type="checkbox"
-                      className="accent-pink-400 w-10 h-10"
-                    />
-                  </label>
-                  <span className="ml-2">
-                    Please send me Papertown Imaginarium newsletters
-                  </span>
-                </p>
-              </div>
-
+              </p>
+            </div>
+            
+            <button
+              type="submit"
+              className="font-Bold inline-flex text-[#FFFFFF] rounded-full w-[430px] sm:w-[390px] py-4 bg-[#DB2E78] focus:ring-1 focus:outline-none focus:ring-amber-100 justify-center items-center mt-12"
+            >
+              Get started
+            </button>
+            
+            <div className="lg:text-center text-left w-[430px] sm:w-[390px] mt-10 font-VarelaRegular text-[#828282]">
+              Already have an account?
               <button
-                type="button"
-                className="font-Bold inline-flex text-[#FFFFFF] rounded-full w-[430px] sm:w-[390px] py-4 bg-[#DB2E78] focus:ring-1 focus:outline-none
-                focus:ring-amber-100 justify-center items-center mt-12"
-                onClick={() => navigate("/gettoknowyou")}
+                onClick={openLoginModal}
+                className="text-[#942D99] font-VarelaRegular hover:underline ml-1"
               >
-                Get started
+                Log in
               </button>
-              <div className="lg:text-center text-left w-[430px] sm:w-[390px] mt-10 font-VarelaRegular text-[#828282]">
-                Already have an account?
-                <button
-                  onClick={openLoginModal}
-                  className="text-[#942D99] font-VarelaRegular hover:underline ml-1"
-                >
-                  Log in
-                </button>
-              </div>
-            </form>
+            </div>
+          </form>
             <Modal isVisible={showModal} onClose={closeLoginModal}>
               <LogInModal isVisible={showModal} onClose={closeLoginModal} />
             </Modal>
