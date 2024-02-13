@@ -16,7 +16,7 @@ function ProfileCardLeft() {
         </li>
         <li>
           <a
-            href=""
+            href="/submit"
             className="block px-4 py-2 mb-1  hover:bg-[#52B4AE1A] ml-[-1.5rem] mr-[-1.3rem] dark:hover:bg-gray-600 hover:font-Bold hover:border-[#52B4AE] hover:border-l-2 hover:rounded-s-lg"
           >
             Submissions
@@ -24,7 +24,7 @@ function ProfileCardLeft() {
         </li>
         <li>
           <a
-            href=""
+            href="/pressclub"
             className="block  px-4 py-2 mb-1 hover:bg-[#52B4AE1A] ml-[-1.5rem] mr-[-1.3rem] dark:hover:bg-gray-600 hover:font-Bold hover:border-[#52B4AE] hover:border-l-2 hover:rounded-s-lg"
           >
             Clubs

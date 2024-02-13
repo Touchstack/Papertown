@@ -20,7 +20,7 @@ const RedefiningWriting = () => {
               containing Lorem Ipsum passages, and more recently with desktop
               publishing software.
             </p>
-            <a href="">
+            <a href="/signup">
               <button className="leading-8 lg:mb-20 md:mb-10 mt-8 bg-[#52B4AE] text-white font-Bold hover:bg-[#099B96] cursor-pointer ease-in-out transform hover:scale-110 transition-transform duration-700 rounded-3xl md:text-[20px] text-[16px] md:w-[222px] h-[50px] w-[190px]">
                 Join Papertown
               </button>

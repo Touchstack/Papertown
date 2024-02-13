@@ -6,12 +6,15 @@ import Arrow from "../../assets/Images/arrow-left.svg";
 import LogInModal from "../../Component/Modal/LogInModal";
 import Modal from "../../Component/Modal/Modal";
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { setFormData } from "../../context/actions/formAction";
 
 const SetUpAccount = () => {
   const [showModal, setShowModal] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const goBack = () => {
     navigate(-1); // Navigates back one step in the history stack
@@ -25,19 +28,30 @@ const SetUpAccount = () => {
     setShowModal(false);
   };
 
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors }, getValues } = useForm();
 
   const onSubmit = (data) => {
-    navigate('/gettoknowyou')
+    navigate('/signup/gettoknowyou')
+    dispatch(setFormData({ 
+      email: data.email,
+      password: data.password,
+      confirm_password: data.confirm_password
+    }));
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   };
 
 
   return (
-    <div className="py-18 px-2">
+    // <div className="py-18">
       <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-y-4">
         {/* Left Col */}
         <div className="text-left items-center lg:p-24 md:p-18 sm:p-8 p-8">
-          <img src={AppLogo} style={{ height: "auto" }} className="mb-8" />
+         <a href="/">
+            <img src={AppLogo} style={{ height: "auto" }} className="mb-8" />
+          </a>
           <button
             onClick={goBack}
             className="font-Bold inline-flex gap-2 items-center justify-center w-[150px] py-2 border-2 [#D0D5DD] rounded-full ring-1 ring-[#1018280D] lg:text-lg md:text-lg
@@ -49,40 +63,48 @@ const SetUpAccount = () => {
             SET UP ACCOUNT
           </h3>
           <div className="font-VarelaRegular lg:text-md md:text-md sm:text-base pt-10 text-[#393939] leading-7 text-sm text-13 leading-26 text-start">
+          
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="relative w-full group text-md  mb-4 font-VarelaRegular text-[#858585]">
               <input
                 type="text"
                 id="email-address"
+                name="email"
                 placeholder="Email address"
-                {...register("emailAddress", { required: true })}
+                {...register("email", { required: true })}
                 className="block w-[430px] sm:w-[395px]  p-4 text-[#858585] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
               />
-              {errors.emailAddress && <span className="text-red-500">Email address is required</span>}
+              {errors.email && <span className="text-red-500">Email address is required</span>}
             </div>
             
             <div className="relative z-0 md:w-[400px] sm:w-[370px] w-[370px] group text-md mb-3 font-VarelaRegular text-[#858585]">
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 id="password"
+                name="password"
                 placeholder="Create password"
                 {...register("password", { required: true, minLength: 8, pattern: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d!@#$%^&*-_+=]{8,}$/ })}
                 className="block w-[430px] sm:w-[395px]  p-4 text-[#858585] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
               />
-              {/* <span className="absolute right-6 mt-0 top-1/2 transform -translate-y-1/2 inline-block">SHOW</span> */}
+               <span className="absolute right-6 mt-0 top-1/2 transform -translate-y-1/2 inline-block cursor-pointer" onClick={togglePasswordVisibility}>
+                 {showPassword ? "HIDE" : "SHOW"} {/* Toggle the text based on password visibility */}
+               </span>
               {errors.password && <span className="text-red-500">Password must be at least 8 characters long and contain at least one letter and one number or symbol</span>}
             </div>
             
             <div className="relative z-0 md:w-[400px] sm:w-[370px] w-[370px] mb-3 group text-md font-VarelaRegular text-[#858585]">
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 id="re-enter-password"
                 placeholder="Re-enter password"
-                {...register("reEnterPassword", { required: true, validate: value => value === password })}
+                name="confirm_password"
+                {...register("confirm_password", { required: true, validate: value => value === getValues("password") || "Passwords must match" })}
                 className="block w-[430px] sm:w-[390px] p-4 mt-2 text-[#858585] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
               />
-              {/* <span className="absolute right-6 mt-0 top-1/2 transform -translate-y-1/2 inline-block">SHOW</span> */}
-              {errors.reEnterPassword && <span className="text-red-500">Passwords must match</span>}
+               {/* <span className="absolute right-6 mt-0 top-1/2 transform -translate-y-1/2 inline-block cursor-pointer" onClick={togglePasswordVisibility}>
+                 {showPassword ? "HIDE" : "SHOW"}
+               </span> */}
+              {errors.confirm_password && <span className="text-red-500">{errors.confirm_password.message}</span>}
             </div>
             
             <div className="text-[#4C536A] text-sm font-Regular leading-4 tracking-normal text-left">
@@ -135,6 +157,8 @@ const SetUpAccount = () => {
               </button>
             </div>
           </form>
+
+
             <Modal isVisible={showModal} onClose={closeLoginModal}>
               <LogInModal isVisible={showModal} onClose={closeLoginModal} />
             </Modal>
@@ -144,9 +168,9 @@ const SetUpAccount = () => {
         {/* Right Col with Linear Gradient Background */}
         <div className="min-h-screen flex justify-center items-center pb-5 bg-gradient-to-r from-blue-500 to-pink-500">
           <img src={Student} style={{ height: "auto" }} className="" />
-        </div>
+         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

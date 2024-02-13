@@ -7,10 +7,15 @@ import Arrow from "../../assets/Images/arrow-left.svg";
 import Tick from "../../assets/Images/Tick.svg";
 import PropTypes from "prop-types";
 import { useForm } from 'react-hook-form';
+import { useSelector  } from 'react-redux';
+import { createUser } from "../../api";
+import { ClipLoader } from "react-spinners";
 
 const GuardianInformation = () => {
   const [showModal, setShowModal] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
+  const formData = useSelector(state => state.formReducer.formData);
+
 
   const openModal = (modalNumber) => {
     // Close all modals first
@@ -49,20 +54,64 @@ const GuardianInformation = () => {
     navigate(-1); // Navigates back one step in the history stack
   };
 
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm();
 
-  const onSubmit = (data) => {
-    //make api call
-    setShowModal(true)
+  const onSubmit = async (data) => {
+    //make api call pass data in redux store and clear store state
+      
+    const payLoad = {
+      has_guardian: formData.has_guardian,
+      email: formData.email,
+      password: formData.password,
+      confirm_password: formData.confirm_password,
+      studentDetails: {
+        first_name: formData.studentDetails.first_name,
+        last_name: formData.studentDetails.last_name,
+        date_of_birth: formData.studentDetails.date_of_birth, // required
+        phone_number: formData.studentDetails.phone_number,  // not required if HAS_GUARDIAN  === true
+        personal_address: formData.studentDetails.personal_address, // not required if HAS_GUARDIAN  === true
+        school: formData.studentDetails.school, // required
+        school_address: formData.studentDetails.school_address, // required
+        grade: formData.studentDetails.grade, // required
+      },
+      guardianDetails: {
+        first_name: data.first_name,
+        last_name: data.last_name,
+        email: data.email, // alert Eugene its not in structure
+        phone_number: data.phone_number,
+        personal_address: "",
+        relationship: ""
+       }
+    }
+
+    try {
+      const res = await createUser(payLoad)
+      //console.log(res);
+      if (res.status === 201) {
+        localStorage.setItem("user", JSON.stringify(res.data));
+        setShowModal(true)
+        setTimeout(() => {
+          navigate('/profile');
+        }, 3000);
+      } else {
+        alert("Login failed. Unexpected status:" + res.data.message);
+        setShowModal(false)
+      }
+    } catch (error) {
+      console.error("Login failed. Error:", error);
+    }
   };
 
 
   return (
-    <div className="py-18 px-2">
+    <div className="py-18">
       <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-y-4">
         {/* Left Col */}
         <div className="text-left items-center lg:p-24 md:p-18 sm:p-8 p-8">
-          <img src={AppLogo} style={{ height: "auto" }} className="mb-8" />
+          <a href="/">
+            <img src={AppLogo} style={{ height: "auto" }} className="mb-8" />
+          </a>
+          
           <button
             onClick={goBack}
             className="font-Bold inline-flex gap-2 items-center justify-center w-[150px] py-2 border-2 [#D0D5DD] rounded-full ring-1 ring-[#1018280D] lg:text-lg md:text-lg
@@ -78,12 +127,23 @@ const GuardianInformation = () => {
             <div className="relative z-0 w-full group text-md mb-4 font-VarelaRegular text-[#F4F5F7]">
               <input
                 type="text"
-                id="full-name"
-                placeholder="Parent/Guardian's full name:"
-                {...register("fullName", { required: true })}
+                id="first-name"
+                placeholder="Parent/Guardian's first name"
+                {...register("first_name", { required: true })}
                 className="block w-[430px] p-4 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
               />
-              {errors.fullName && <span  className="text-red-500">Parent/Guardian's full name is required</span>}
+              {errors.first_name && <span  className="text-red-500">Parent/Guardian's full name is required</span>}
+            </div>
+
+            <div className="relative z-0 w-full group text-md mb-4 font-VarelaRegular text-[#F4F5F7]">
+              <input
+                type="text"
+                id="full-name"
+                placeholder="Parent/Guardian's last name"
+                {...register("last_name", { required: true })}
+                className="block w-[430px] p-4 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
+              />
+              {errors.last_name && <span  className="text-red-500">Parent/Guardian's full name is required</span>}
             </div>
 
             <div className="relative z-0 w-full mb-4 group text-md font-VarelaRegular text-[#F4F5F7]">
@@ -91,10 +151,10 @@ const GuardianInformation = () => {
                 type="email"
                 id="email-address"
                 placeholder="Parent/Guardian's email address"
-                {...register("emailAddress", { required: true, pattern: /^\S+@\S+$/i })}
+                {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
                 className="block w-[430px] p-4 mt-2 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
               />
-              {errors.emailAddress && <span  className="text-red-500">Valid email address is required</span>}
+              {errors.email && <span  className="text-red-500">Valid email address is required</span>}
             </div>
 
             <div className="relative z-0 w-full mb-4 group text-md font-VarelaRegular text-[#F4F5F7]">
@@ -102,10 +162,10 @@ const GuardianInformation = () => {
                 type="tel"
                 id="phone-number"
                 placeholder="Parent/Guardian's phone number"
-                {...register("phoneNumber", { required: true, pattern: /^[0-9]{10}$/ })}
+                {...register("phone_number", { required: true, pattern: /^[0-9]{10}$/ })}
                 className="block w-[430px] p-4 mt-2 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
               />
-              {errors.phoneNumber && <span className="text-red-500">Valid phone number is required (10 digits)</span>}
+              {errors.phone_Number && <span className="text-red-500">Valid phone number is required (10 digits)</span>}
             </div>
 
             <button
@@ -113,7 +173,12 @@ const GuardianInformation = () => {
               className="font-Bold inline-flex text-[#FFFFFF] rounded-full w-[430px] py-4 bg-[#DB2E78] focus:ring-1 focus:outline-none
                 focus:ring-amber-100 justify-center items-center mt-12"
             >
-              Done
+            {isSubmitting ? (
+                <ClipLoader size={15} color="#FFFFFF"/>
+              ) : (
+                "Done"
+              )}
+
             </button>
           </form>
           </div>
@@ -121,13 +186,16 @@ const GuardianInformation = () => {
             <div className="flex justify-center items-center pb-5">
               <img src={Tick} alt="Tick.svg" />
             </div>
-            <div className="lg:text-3xl md:text-2xl sm:text-xl text-xl flex justify-center items-center max-w-[350px] ml-5 text-center mb-6 font-Bold text-[#040A1D]">
-              Awaiting Consent
+            <div className="lg:text-3xl md:text-2xl sm:text-xl text-xl flex flex-col justify-center items-center max-w-[350px] ml-5 text-center mb-6 font-Bold text-[#040A1D]">
+              Account Setup Complete
+
+              <ClipLoader size={25} color="#DB2E78" className="mt-5"/>
             </div>
-            <p className="flex text-center m-5 max-w-[350px] mb-14 font-VarelaRegular text-[#4C536A] text-lg">
+            {/* <p className="flex text-center m-5 max-w-[350px] mb-14 font-VarelaRegular text-[#4C536A] text-lg">
               You"ll receive an email notification when your parent or guardian
               has completed the consent form
-            </p>
+            </p> */}
+           
           </Modal>
         </div>
 
@@ -140,6 +208,6 @@ const GuardianInformation = () => {
   );
 };
 GuardianInformation.propTypes = {
-  showModal: PropTypes.bool.isRequired,
+  showModal: PropTypes.bool,
 };
 export default GuardianInformation;
