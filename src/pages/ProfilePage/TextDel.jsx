@@ -3,7 +3,22 @@ import { FaGraduationCap } from "react-icons/fa";
 import { IoMdCall } from "react-icons/io";
 import { FaRegCalendar } from "react-icons/fa";
 import { Icon } from "@iconify/react";
+
 function TextDel() {
+   const user = JSON.parse(localStorage.getItem('user'));
+
+   // Parse the ISO string to get the date of birth
+   const dob = new Date(user?.data?.studentDetails?.date_of_birth);
+
+   // Calculate the current date
+   const currentDate = new Date();
+
+   // Calculate the difference in milliseconds between the current date and the birthdate
+   const diffMs = currentDate - dob;
+ 
+   // Calculate the age by dividing the difference in milliseconds by the number of milliseconds in a year
+   const age = Math.floor(diffMs / (1000 * 60 * 60 * 24 * 365));
+
   return (
     <div>
       {/* top start  */}
@@ -14,7 +29,9 @@ function TextDel() {
             <MdCelebration />
             <p>Age</p>
           </div>
-          <span className="font-Bold">11 years</span>
+          <span className="font-Bold">  
+            {age} years
+          </span>
         </div>
         {/* end  */}
         {/* start  */}
@@ -23,7 +40,9 @@ function TextDel() {
             <FaGraduationCap />
             <p>School</p>
           </div>
-          <span className="font-Bold">Faith Montessori</span>
+          <span className="font-Bold">
+           {user?.data?.studentDetails?.school}
+          </span>
         </div>
         {/* end  */}
         {/* start  */}
@@ -35,9 +54,11 @@ function TextDel() {
               width="23"
               height="23"
             />
-            <p>Grade</p>
+            <p> Grade </p>
           </div>
-          <span className="font-Bold">Grade 9</span>
+          <span className="font-Bold">
+            Grade {user?.data?.studentDetails?.grade}
+          </span>
         </div>
         {/* end  */}
       </div>
@@ -50,23 +71,29 @@ function TextDel() {
             <IoMdCall />
             <p>Contact</p>
           </div>
-          <span className="font-Bold">0200 234 567</span>
+          <span className="font-Bold">
+          {user?.data?.studentDetails?.phone_number ? 
+            user?.data?.studentDetails?.phone_number : 
+            user?.data?.guardianDetails?.phone_number
+          }
+          </span>
         </div>
         {/* end  */}
         {/* start  */}
         <div>
           <div className="flex gap-2 items-center text-[#A3A3A3]">
             <FaRegCalendar />
-            <p>Date joined</p>
+            <p>Date joined</p> 
           </div>
           <span className="font-Bold">1st Nov, 2023</span>
+          {/* not returning date joined */}
         </div>
         {/* end  */}
       </div>
       {/* top down  */}
 
       {/* Ineterests section start  */}
-      <div className="lg:mt-16  mt-10">
+      {/* <div className="lg:mt-16  mt-10">
         <h5 className="text-[22px] font-Bold mb-5">Ineterests</h5>
         <div className="flex">
           <a href="#">
@@ -85,7 +112,7 @@ function TextDel() {
             </button>
           </a>
         </div>
-      </div>
+      </div> */}
       {/* Ineterests section end  */}
     </div>
   );

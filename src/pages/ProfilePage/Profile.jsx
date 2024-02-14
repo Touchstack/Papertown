@@ -5,6 +5,9 @@ import ProfileCardRight from "./ProfileCardRight";
 import { HiDotsVertical } from "react-icons/hi";
 
 function Profile() {
+   // retrive data in local storage
+   const user = JSON.parse(localStorage.getItem('user'));
+
   return (
     <div>
       {/* Navbar section starts */}
@@ -18,7 +21,7 @@ function Profile() {
       <div>
         <div>
           <h3 className="lg:text-[60px] gap-20 flex items-center text-[40px] font-Bold lg:ml-20 md:ml-10 ml-5 mt-20">
-            Hi Fortune 👋🏾
+            Hi {user?.data?.studentDetails?.first_name} 👋🏾
             <div className="lg:hidden inlin-block text-2xl md:flex md:ml-[50%]  ">
               <HiDotsVertical />
             </div>

@@ -3,7 +3,12 @@ import ProfilePic from "../../assets/Images/Profile.png";
 // import Line from "../../assets/Images/lines.png";
 // import { MdCelebration } from "react-icons/md";
 import TextDel from "./TextDel";
+import { BsPersonCircle } from "react-icons/bs";
+
+
 function ProfileCardRight() {
+  const user = JSON.parse(localStorage.getItem('user'));
+
   return (
     <div className="bg-white shadow-xl mb-[15%] rounded-xl lg:w-[973px] lg:h-[747px] lg:p-10 p-5 md:p-10 md:ml-10 w-[90vw]  md:h-[701px] ml-5 lg:ml-0">
       {/* header text section start  */}
@@ -18,19 +23,24 @@ function ProfileCardRight() {
       {/* image and text section start  */}
       <div className="mt-10">
         <div className="flex items-center lg:gap-9 gap-3 ">
-          <img
-            src={ProfilePic}
+          <BsPersonCircle
             alt=""
             className="lg:w-[113px] lg:h-[113px] w-[100px] h-[100px] "
           />
           {/* name and email start  */}
           <div>
-            <span className="font-Bold text-[24px]">Fortune Adeleke</span>
-            <p>fortune.adeleke@gmail.com</p>
+            <span className="font-Bold text-[24px]">
+             {user?.data?.studentDetails?.first_name}
+              {"  "}
+             {user?.data?.studentDetails?.last_name}
+            </span>
+            <p>
+            {user?.data?.email}
+            </p>
           </div>
           {/* name and email end  */}
         </div>
-        <div className="mt-10">
+        {/* <div className="mt-10">
           <span className="text-[#A3A3A3]">About the writer</span>
           <p className="lg:w-[730px]">
             It has survived not only five centuries, but also the leap into
@@ -39,7 +49,7 @@ function ProfileCardRight() {
             containing Lorem Ipsum passages, and more recently with desktop
             publishing software.
           </p>
-        </div>
+        </div> */}
       </div>
       {/* image and text section end  */}
 

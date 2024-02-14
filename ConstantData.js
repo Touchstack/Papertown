@@ -192,3 +192,28 @@ export const publication = [
       msg: 'Videos'
     }
   ]
+
+
+  const fromData = {
+    "has_guardian": true,
+    "email": "Kobbyisreal@gmail.com",
+    "password": "bb8_6p!xXWridXa",
+    "confirm_password": "bb8_6p!xXWridXa",
+    "studentDetails": {
+        "first_name": "Vincent",
+        "last_name": "Adzomani",
+        "phone_number": "",
+        "personal_address": "",
+        "date_of_birth": "2023-12-11",
+        "school": "west hatch school",
+        "school_address": "Kwabenya-musuku",
+        "grade": "8"
+    },
+    "guardianDetails": {
+        "first_name": "Vincent",
+        "last_name": "Adzomani",
+        "phone_number": "0547937232",
+        "personal_address": "Kwabenya-musuku",
+        "relationship": "mother"
+    }
+}
