@@ -39,6 +39,8 @@ const SideNav = ({ onLoginClick, onCloseClick, onJoinClick }) => {
     isVerified();
   }, []);
 
+  const user = JSON.parse(localStorage.getItem("user"))
+
   return (
     <motion.div
       style={{
@@ -144,7 +146,7 @@ const SideNav = ({ onLoginClick, onCloseClick, onJoinClick }) => {
             onClick={() => navigate("/profile")}
           >
             <BsPersonCircle size={30} />
-            Fortune
+            {user?.data?.studentDetails?.first_name}
           </motion.button>
         </div>
       )}

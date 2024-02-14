@@ -1,7 +1,8 @@
 import { useState } from "react";
-import axios from "axios";
 import { motion } from "framer-motion";
 import AppLogo from "../../assets/Images/Logo.svg";
+import { ClipLoader } from "react-spinners";
+import { subNewsLetter } from "../../api";
 
 const Footer = () => {
   const [hoverIcon, setHoverIcon] = useState("");
@@ -10,7 +11,7 @@ const Footer = () => {
   const [successText, setSuccessText] = useState("");
   const [errorAlert, setErrorAlert] = useState(false);
   const [errorText, setErrorText] = useState("");
-  const [text, setText] = useState("");
+  const [email, setEmail] = useState("");
 
   const hoverOver = (icon) => {
     return setHoverIcon(icon);
@@ -18,44 +19,58 @@ const Footer = () => {
 
   const handleChange = (e) => {
     // 👇 Store the input value to local state
-    setText(e.target.value);
+    setEmail(e.target.value);
   };
 
-  const subscribeNewsLetter = () => {
-    if (text.length === 0) {
-      setErrorText("Enter your email");
-      setErrorAlert(true);
-      return setTimeout(() => setErrorAlert(false), 2000);
+ 
+  const subscribeNewsLetter = async () => {
+    const data = {
+     email: email.toLowerCase()
     }
-    setLoading(true);
-    var bodyFormData = new FormData();
-    bodyFormData.append("email", text);
-    axios({
-      method: "post",
-      url: "/api/newsletter",
-      data: bodyFormData,
-      headers: { "Content-Type": "multipart/form-data" },
-    })
-      .then((response) => {
-        // handle success
-        setSuccessText(response.data.message);
-        setSuccessAlert(true);
-        setLoading(false);
-        return setTimeout(() => setSuccessAlert(false), 3000);
-      })
-      .catch((error) => {
-        // handle error
-        setErrorText(
-          error?.response?.data?.message
-            ? error?.response?.data?.message
-            : error?.message
-        );
-        setErrorAlert(true);
-        setLoading(false);
-        return setTimeout(() => setErrorAlert(false), 2000);
-      });
-  };
 
+   if(email === ""){
+     setErrorText(true);
+     setErrorAlert("Email address is required")
+     return setTimeout(() => setErrorAlert(false), 2000);
+    } else {
+    
+    try {
+      setLoading(true); 
+      const res = await subNewsLetter(data);
+
+
+      if (res?.data?.status === true){
+        setLoading(false)
+        setSuccessText(res?.data?.message);
+        setSuccessAlert(true);
+        setErrorText("")
+        return setTimeout(() => setSuccessAlert(false), 3000);
+      } else if (res?.response?.data?.status === 400){
+         setErrorAlert(true)
+         setErrorText(res?.response?.data?.error)
+         return setTimeout(() => setErrorAlert(false), 3000);
+      } else {
+        setErrorAlert(true)
+        setErrorText(res?.resposne?.data?.error)
+        return setTimeout(() => setErrorAlert(false), 3000);
+      }
+
+    } catch (error) {
+      if (error?.data?.error) {
+        setErrorAlert(true)
+        setErrorText(error?.response?.data?.message
+          ? error?.response?.data?.message
+          : error?.message)
+        return setTimeout(() => setErrorAlert(false), 3000);
+      }
+    } finally {
+       setLoading(false)
+    }
+   }
+
+}
+
+  
   const ErrorAlert = () => {
     return (
       <motion.div
@@ -354,18 +369,22 @@ const Footer = () => {
 
                      
                       onChange={handleChange}
-                      value={text}
+                      value={email}
                     />
 
-                    {loading ? null : (
+                    
                       <button
                         type="button"
-                        onClick={() => subscribeNewsLetter()}
+                        onClick={subscribeNewsLetter}
                         className="font-VarelaRegular text-[#FFFFFF] bg-[#52B4AE] block w-[300px] h-14 p-4 hover:bg-[#3a8783]  rounded-full text-xl px-5 py-3 "
                       >
-                        Subscribe
+                        {loading ? (
+                            <ClipLoader color={"#ffffff"} loading={loading} size={25} />
+                          ) : (
+                            "Subscribe"
+                          )}
                       </button>
-                    )}
+                  
                   </form>
                 </li>
               </ul>
@@ -397,5 +416,6 @@ const Footer = () => {
     </div>
   );
 };
+
 
 export default Footer;

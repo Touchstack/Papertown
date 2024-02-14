@@ -1,36 +1,43 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { setFormData } from "../../context/actions/formAction";
+
 import Student from "../../assets/Images/Boy.svg";
 import AppLogo from "../../assets/Images/Logo.svg";
 import Arrow from "../../assets/Images/arrow-left.svg";
 
 const AccountSetupJourney = () => {
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState(false); 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-  const handleCheckboxChange = () => {
-    setIsChecked(!isChecked);
+  const handleCheckboxChange = (value) => {
+    setIsChecked(value);
   };
 
   const handleContinue = () => {
     if (isChecked) {
-      // If the checkbox is checked, navigate to the parent page
-      navigate("/guardianaccountsetup");
+      navigate("/signup/guardian-account");
     } else {
-      // If the checkbox is not checked, navigate to the setup account page
-      navigate("/setupaccount");
+      navigate("/signup/setupaccount");
     }
+
+    dispatch(setFormData({ has_guardian: isChecked }));
   };
 
   const goBack = () => {
-    navigate(-1); // Navigates back one step in the history stack
+    navigate(-1);
   };
+
   return (
-    <div className="py-18 px-2">
+    <div className="py-18">
       <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-y-4">
         {/* Left Col */}
         <div className="text-left items-center lg:p-24 md:p-18 sm:p-8 p-8">
-          <img src={AppLogo} style={{ height: "auto" }} className="mb-6" />
+          <a href="/">
+            <img src={AppLogo} style={{ height: "auto" }} className="mb-8" />
+          </a>
           <button
             onClick={goBack}
             className="font-Bold inline-flex gap-2 items-center justify-center w-[150px] py-2 border-2 [#D0D5DD] rounded-full ring-1 ring-[#1018280D] lg:text-lg md:text-lg
@@ -52,52 +59,56 @@ const AccountSetupJourney = () => {
             popularised in the 1960s with the release of Letraset sheets.
           </p>
 
+
+          {/* First Checkbox */}
           <div className="font-VarelaRegular inline-flex w-[430px] py-4 border border-gray-300 rounded-md mt-10 lg:text-lg md:text-lg sm:text-base text-[#000000] leading-7 text-sm text-13 leading-26 text-start">
             <input
-              id="helper-checkbox"
-              aria-describedby="helper-checkbox-text"
+              id="helper-checkbox1"
+              aria-describedby="helper-checkbox-text1"
               type="checkbox"
               checked={isChecked}
-              onChange={handleCheckboxChange}
+              onChange={() => handleCheckboxChange(false)} // Pass false for first checkbox
               className="hidden" // Hide the default checkbox
             />
             <label
-              htmlFor="helper-checkbox"
+              htmlFor="helper-checkbox1"
               className={`font-Bold inline-flex text-[#FFFFFF] rounded-full w-[20px] h-[20px] ml-8 mt-1 transition-all border-2 ${
                 isChecked ? "bg-white" : "bg-[#942D99]"
               }`}
             ></label>
             <span
-              id="helper-checkbox-text"
+              id="helper-checkbox-text1"
               className="font-VarelaRegular gap-4 ml-3 justify-start items-start lg:text-md md:text-md sm:text-base text-[#000000] leading-7 text-sm text-13 leading-26 text-start"
             >
               I am 14 years and over
             </span>
           </div>
 
-          <div className="font-VarelaRegular inline-flex w-[430px] py-4 border border-gray-300 rounded-md mt-5 lg:text-md md:text-md sm:text-base text-[#000000] leading-7 text-sm text-13 leading-26 text-start">
+          {/* Second Checkbox */}
+          <div className="font-VarelaRegular inline-flex w-[430px] py-4 border border-gray-300 rounded-md mt-10 lg:text-lg md:text-lg sm:text-base text-[#000000] leading-7 text-sm text-13 leading-26 text-start">
             <input
-              id="parent-checkbox"
-              aria-describedby="parent-checkbox-text"
+              id="helper-checkbox2"
+              aria-describedby="helper-checkbox-text2"
               type="checkbox"
               checked={!isChecked}
-              onChange={handleCheckboxChange}
+              onChange={() => handleCheckboxChange(true)} // Pass true for second checkbox
               className="hidden" // Hide the default checkbox
             />
             <label
-              htmlFor="parent-checkbox"
+              htmlFor="helper-checkbox2"
               className={`font-Bold inline-flex text-[#FFFFFF] rounded-full w-[20px] h-[20px] ml-8 mt-1 transition-all border-2 ${
-                isChecked ? "bg-[#942D99]" : "bg-white"
+                !isChecked ? "bg-white" : "bg-[#942D99]"
               }`}
             ></label>
             <span
-              id="parent-checkbox-text"
+              id="helper-checkbox-text2"
               className="font-VarelaRegular gap-4 ml-3 justify-start items-start lg:text-md md:text-md sm:text-base text-[#000000] leading-7 text-sm text-13 leading-26 text-start"
             >
               I am a parent / guardian
             </span>
           </div>
 
+          {/* Continue Button */}
           <button
             type="button"
             className="font-Bold inline-flex text-[#FFFFFF] rounded-full w-[430px] py-4 bg-[#DB2E78] justify-center items-center mt-12"
@@ -109,7 +120,7 @@ const AccountSetupJourney = () => {
 
         {/* Right Col with Linear Gradient Background */}
         <div className="min-h-screen flex justify-center items-center pb-5 bg-gradient-to-r from-blue-500 to-pink-500">
-          <img src={Student} style={{ height: "auto" }} className="" />
+          <img src={Student} style={{ height: "auto" }} className="" alt="Student" />
         </div>
       </div>
     </div>

@@ -1,6 +1,9 @@
 import React from "react";
 import Homepage from "./pages/Homepage/Homepage.jsx";
 import ReactDOM from "react-dom/client";
+import {createStore} from 'redux'
+import { Provider } from "react-redux";
+import myReducers from "./context/reducers";
 import ErrorPage from "./pages/ErrorPage/ErrorPage.jsx";
 import Readpage from "./pages/ReadPage/Readpage.jsx";
 import PressClubPage from "./pages/PressClubPage/PressClubPage.jsx";
@@ -23,14 +26,14 @@ import PrivacyPolicy from "./pages/Doc/PrivacyPolicy.jsx";
 import TermsOfUse from "./pages/Doc/TermsOfUse.jsx";
 import TipRead from "./pages/Tips/TipRead.jsx";
 import Details from "./pages/PromptsPage/Details/Details.jsx";
-import AccountSetupJourney from "./Navbar/SignUpForm/AccountSetupJourney.jsx";
-import SetUpAccount from "./Navbar/SignUpForm/SetUpAccount.jsx";
-import GetToKnowYou from "./Navbar/SignUpForm/GetToKnowYou.jsx";
-import SchoolInformation from "./Navbar/SignUpForm/SchoolInformation.jsx";
-import GuardianInformation from "./Navbar/SignUpForm/GuardianInformation.jsx";
-import GuardianAccountSetup from "./Navbar/GuardianSignUpForm.jsx/GuardianAccountSetUp.jsx";
-import AboutYourself from "./Navbar/GuardianSignUpForm.jsx/AboutYourSelf.jsx";
-import AboutTheChild from "./Navbar/GuardianSignUpForm.jsx/AboutTheChild.jsx";
+import AccountSetupJourney from "./pages/SignUpForm/AccountSetupJourney.jsx";
+import SetUpAccount from "./pages/SignUpForm/SetUpAccount.jsx";
+import GetToKnowYou from "./pages/SignUpForm/GetToKnowYou.jsx";
+import SchoolInformation from "./pages/SignUpForm/SchoolInformation.jsx";
+import GuardianInformation from "./pages/SignUpForm/GuardianInformation.jsx";
+import GuardianAccountSetup from "./pages/GuardianSignUpForm/GuardianAccountSetUp.jsx";
+import AboutYourself from "./pages/GuardianSignUpForm/AboutYourSelf.jsx";
+import AboutTheChild from "./pages/GuardianSignUpForm/AboutTheChild.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
@@ -118,49 +121,53 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/accountsetup",
+    path: "/signup",
     element: <AccountSetupJourney />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/setupaccount",
+    path: "/signup/setupaccount",
     element: <SetUpAccount />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/gettoknowyou",
+    path: "/signup/gettoknowyou",
     element: <GetToKnowYou />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/schoolinformation",
+    path: "/signup/school-info",
     element: <SchoolInformation />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/guardianinformation",
+    path: "/signup/guardian-info",
     element: <GuardianInformation />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/guardianaccountsetup",
+    path: "/signup/guardian-account",
     element: <GuardianAccountSetup />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/aboutyourself",
+    path: "/signup/about-yourself",
     element: <AboutYourself />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/aboutthechild",
+    path: "/signup/about-child",
     element: <AboutTheChild />,
     errorElement: <ErrorPage />,
   },
 ]);
 
+const myStore = createStore(myReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+     <Provider store={myStore}>
+       <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
