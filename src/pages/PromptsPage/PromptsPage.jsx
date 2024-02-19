@@ -14,6 +14,7 @@ const tabsData = [
 
 function PromptsPage() {
   const [activeTab, setActiveTab] = useState(tabsData[0].id);
+  
 
   const changeTab = (tabId) => {
     setActiveTab(tabId);
@@ -42,9 +43,9 @@ function PromptsPage() {
               <p className="text-[16px] mt-5 mb-5">
                 Submit your articles by 10 April, 2023
               </p>
-              <button className="leading-8 mb-10 bg-[#52B4AE] text-white font-Bold rounded-3xl md:text-[20px] text-[16px] md:w-[222px] h-[50px] w-[190px]">
+              {/* <button className="leading-8 mb-10 bg-[#52B4AE] text-white font-Bold rounded-3xl md:text-[20px] text-[16px] md:w-[222px] h-[50px] w-[190px]">
                 Submit your writing
-              </button>
+              </button> */}
             </div>
           </div>
 
@@ -59,7 +60,7 @@ function PromptsPage() {
               />
 
               
-              <div className="flex justify-center items-center md:px-5">
+              {/* <div className="flex justify-center items-center md:px-5">
                 <div className="bg-[#FFFFFF] rounded-[16px] lg:rounded-[25px] md:rounded-[20px] absolute lg:top-[310px] top-[140px] xl:min-w-[500px] lg:min-w-[320px] md:w-[200] w-[310px] py-2  lg:py-4 md:py-2 ">
                   <div className="flex items-center">
                     <img
@@ -79,7 +80,8 @@ function PromptsPage() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
+
             </div>
           </div>
         </div>
@@ -108,10 +110,10 @@ function PromptsPage() {
               ))}
             </div>
             <div className="">
-              <button className="flex  gap-5 rounded-3xl justify-center items-center py-2 px-6 text-lg border-[1px] border-[#000f]  font-Bold">
+              {/* <button className="flex  gap-5 rounded-3xl justify-center items-center py-2 px-6 text-lg border-[1px] border-[#000f]  font-Bold">
                 <CiSliderHorizontal />
                 Filter
-              </button>
+              </button> */}
             </div>
           </div>
           {/* Display content based on active tab or pill */}
@@ -124,9 +126,9 @@ function PromptsPage() {
                 <a href="/promptdetails">
                 <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
                   <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#52B4AE] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
+                    {/* <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#52B4AE] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
                       Grade 6-12
-                    </button>
+                    </button> */}
 
                     <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
                       Memoir

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import AppLogo from "../../assets/Images/Logo.svg";
 import { ClipLoader } from "react-spinners";
-import { subNewsLetter } from "../../api";
+import { submitNewsLetter } from "../../api";
 
 const Footer = () => {
   const [hoverIcon, setHoverIcon] = useState("");
@@ -36,7 +36,7 @@ const Footer = () => {
     
     try {
       setLoading(true); 
-      const res = await subNewsLetter(data);
+      const res = await submitNewsLetter(data);
 
 
       if (res?.data?.status === true){

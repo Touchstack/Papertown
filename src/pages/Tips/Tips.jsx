@@ -47,10 +47,10 @@ function Tips() {
               ))}
             </div>
             <div className="">
-              <button className="flex  gap-5 rounded-3xl justify-center items-center py-2 px-6 text-lg border-[1px] border-[#000f]  font-Bold">
+              {/* <button className="flex  gap-5 rounded-3xl justify-center items-center py-2 px-6 text-lg border-[1px] border-[#000f]  font-Bold">
                 <CiSliderHorizontal />
                 Filter
-              </button>
+              </button> */}
             </div>
           </div>
           {/* Display content based on active tab or pill */}

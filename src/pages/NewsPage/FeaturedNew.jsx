@@ -13,8 +13,7 @@ function FeaturedNew() {
             Featured news
           </h5>
           {/* slider icons section start */}
-          <div className="flex lg:mr-20 md:mr-10 mr-3 hidden lg:inline-flex">
-            {/* Adjust the margin as needed */}
+          {/* <div className="flex lg:mr-20 md:mr-10 mr-3  lg:inline-flex">
             <a
               href="#"
               className="mr-3 border-[#52B4AE] border-2 p-2 rounded-full text-[#52B4AE] hover:bg-green-100 hover:ring-green-200 "
@@ -27,7 +26,7 @@ function FeaturedNew() {
             >
               <FaAngleRight />
             </a>
-          </div>
+          </div> */}
           {/* slider icons section end */}
         </div>
 

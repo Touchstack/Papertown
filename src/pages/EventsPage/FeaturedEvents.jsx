@@ -8,7 +8,7 @@ const FeaturedEvents = () => {
     <div className='z-1'>
       <div className="flex items-center justify-between lg:text-[42px] md:text-[60px] mb-5 text-[30px] font-Bold">
         <h1 className="font-Bold lg:px-24 md:px-16 text-[42px]"> Featured Events </h1>
-        <span className="flex-right text-right mr-5"><EventsSlider /></span>
+        {/* <span className="flex-right text-right mr-5"><EventsSlider /></span> */}
       </div>
  
       <FeaturedEventsCards />
