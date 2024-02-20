@@ -18,9 +18,9 @@ const AccountSetupJourney = () => {
 
   const handleContinue = () => {
     if (isChecked) {
-      navigate("/signup/guardian-account");
+      navigate("/signup/about-yourself");
     } else {
-      navigate("/signup/setupaccount");
+      navigate("/signup/gettoknowyou");
     }
 
     dispatch(setFormData({ has_guardian: isChecked }));
@@ -80,7 +80,7 @@ const AccountSetupJourney = () => {
               id="helper-checkbox-text1"
               className="font-VarelaRegular gap-4 ml-3 justify-start items-start lg:text-md md:text-md sm:text-base text-[#000000] leading-7 text-sm text-13 leading-26 text-start"
             >
-              I am 14 years and over
+              I am 18 years and over
             </span>
           </div>
 

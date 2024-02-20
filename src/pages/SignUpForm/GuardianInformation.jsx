@@ -1,21 +1,19 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Modal from "../../Component/Modal/Modal";
 import Student from "../../assets/Images/Boy.svg";
 import AppLogo from "../../assets/Images/Logo.svg";
 import Arrow from "../../assets/Images/arrow-left.svg";
-import Tick from "../../assets/Images/Tick.svg";
 import PropTypes from "prop-types";
 import { useForm } from 'react-hook-form';
-import { useSelector  } from 'react-redux';
-import { createUser } from "../../api";
-import { ClipLoader } from "react-spinners";
+import { useDispatch } from 'react-redux';
+import { setFormData } from "../../context/actions/formAction";
 
 const GuardianInformation = () => {
   const [showModal, setShowModal] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
-  const formData = useSelector(state => state.formReducer.formData);
 
+
+  const dispatch = useDispatch();
 
   const openModal = (modalNumber) => {
     // Close all modals first
@@ -34,72 +32,54 @@ const GuardianInformation = () => {
         break;
     }
   };
-  const closeModal = (modalNumber) => {
-    switch (modalNumber) {
-      case 1:
-        setShowModal(false);
-        break;
-      case 2:
-        setShowModal2(false);
-        break;
-      default:
-        break;
-    }
-  };
+  
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const navigate = useNavigate();
 
   const goBack = () => {
     navigate(-1); // Navigates back one step in the history stack
+    dispatch(setFormData({  //on go back reset from in redux state
+      email: "",
+      password: "",
+      confirm_password: "",
+      studentDetails: {
+        first_name: "",
+        last_name: "",
+        date_of_birth: "", // required
+        phone_number: "",  // not required if HAS_GUARDIAN  === true
+        personal_address: "", // not required if HAS_GUARDIAN  === true
+        school: "", // required
+        school_address: "", // required
+        grade: "", // required
+      },
+      guardianDetails: {
+        first_name: "", // required
+        last_name: "", // required
+        phone_number: "",// required
+        personal_address: "", // required if HAS_GUARDIAN  === true
+        relationship: "", // required if HAS_GUARDIAN  === true
+        email: "",
+      },
+    }))
   };
 
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm();
 
   const onSubmit = async (data) => {
-    //make api call pass data in redux store and clear store state
-      
-    const payLoad = {
-      has_guardian: formData.has_guardian,
-      email: formData.email,
-      password: formData.password,
-      confirm_password: formData.confirm_password,
-      studentDetails: {
-        first_name: formData.studentDetails.first_name,
-        last_name: formData.studentDetails.last_name,
-        date_of_birth: formData.studentDetails.date_of_birth, // required
-        phone_number: formData.studentDetails.phone_number,  // not required if HAS_GUARDIAN  === true
-        personal_address: formData.studentDetails.personal_address, // not required if HAS_GUARDIAN  === true
-        school: formData.studentDetails.school, // required
-        school_address: formData.studentDetails.school_address, // required
-        grade: formData.studentDetails.grade, // required
-      },
+     navigate('/signup/setupaccount')
+     dispatch(setFormData({ 
       guardianDetails: {
         first_name: data.first_name,
         last_name: data.last_name,
-        email: data.email, // alert Eugene its not in structure
+        email: data.email,
         phone_number: data.phone_number,
         personal_address: "",
         relationship: ""
        }
-    }
+    }));
 
-    try {
-      const res = await createUser(payLoad)
-      //console.log(res);
-      if (res.status === 201) {
-        localStorage.setItem("user", JSON.stringify(res.data));
-        setShowModal(true)
-        setTimeout(() => {
-          navigate('/profile');
-        }, 3000);
-      } else {
-        alert("Login failed. Unexpected status:" + res.data.message);
-        setShowModal(false)
-      }
-    } catch (error) {
-      console.error("Login failed. Error:", error);
-    }
+
   };
 
 
@@ -173,30 +153,11 @@ const GuardianInformation = () => {
               className="font-Bold inline-flex text-[#FFFFFF] rounded-full w-[430px] py-4 bg-[#DB2E78] focus:ring-1 focus:outline-none
                 focus:ring-amber-100 justify-center items-center mt-12"
             >
-            {isSubmitting ? (
-                <ClipLoader size={15} color="#FFFFFF"/>
-              ) : (
-                "Done"
-              )}
+             Continue (3/4)
 
             </button>
           </form>
           </div>
-          <Modal isVisible={showModal} onClose={() => closeModal(1)}>
-            <div className="flex justify-center items-center pb-5">
-              <img src={Tick} alt="Tick.svg" />
-            </div>
-            <div className="lg:text-3xl md:text-2xl sm:text-xl text-xl flex flex-col justify-center items-center max-w-[350px] ml-5 text-center mb-6 font-Bold text-[#040A1D]">
-              Account Setup Complete
-
-              <ClipLoader size={25} color="#DB2E78" className="mt-5"/>
-            </div>
-            {/* <p className="flex text-center m-5 max-w-[350px] mb-14 font-VarelaRegular text-[#4C536A] text-lg">
-              You"ll receive an email notification when your parent or guardian
-              has completed the consent form
-            </p> */}
-           
-          </Modal>
         </div>
 
         {/* Right Col with Linear Gradient Background */}
