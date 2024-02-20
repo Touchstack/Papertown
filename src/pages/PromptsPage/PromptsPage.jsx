@@ -51,9 +51,9 @@ useEffect(() => {
               <p className="text-[16px] mt-5 mb-5">
                 Submit your articles by 10 April, 2023
               </p>
-              <button className="leading-8 mb-10 bg-[#52B4AE] text-white font-Bold rounded-3xl md:text-[20px] text-[16px] md:w-[222px] h-[50px] w-[190px]">
+              {/* <button className="leading-8 mb-10 bg-[#52B4AE] text-white font-Bold rounded-3xl md:text-[20px] text-[16px] md:w-[222px] h-[50px] w-[190px]">
                 Submit your writing
-              </button>
+              </button> */}
             </div>
           </div>
 
@@ -68,7 +68,7 @@ useEffect(() => {
               />
 
               
-              <div className="flex justify-center items-center md:px-5">
+              {/* <div className="flex justify-center items-center md:px-5">
                 <div className="bg-[#FFFFFF] rounded-[16px] lg:rounded-[25px] md:rounded-[20px] absolute lg:top-[310px] top-[140px] xl:min-w-[500px] lg:min-w-[320px] md:w-[200] w-[310px] py-2  lg:py-4 md:py-2 ">
                   <div className="flex items-center">
                     <img
@@ -88,7 +88,8 @@ useEffect(() => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
+
             </div>
           </div>
         </div>
