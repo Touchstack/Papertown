@@ -1,23 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Footer from "../FooterPage/Footer";
 import GeneralNav from "../../Navbar/GeneralNav";
 import { CiSliderHorizontal } from "react-icons/ci";
 import ArrowNew from "../../assets/Images/arrownew.png";
 import BGimage from "../../assets/Images/pexels-katerina-holmes-5905479 1.png";
-const tabsData = [
-  { id: "all", label: "All" },
-  { id: "sparks", label: "Sparks" },
-  { id: "lessons", label: "Lessons" },
-  { id: "project", label: "Project" },
-  { id: "videos", label: "Videos" },
-];
+import { getCategoryListing } from "../../api";
+import PromptCard from "./PromptCard/PromptCard";
+
+
+// const tabsData = [
+//   { id: "all", label: "All" },
+//   { id: "sparks", label: "Sparks" },
+//   { id: "lessons", label: "Lessons" },
+//   { id: "project", label: "Project" },
+//   { id: "videos", label: "Videos" },
+// ];
 
 function PromptsPage() {
-  const [activeTab, setActiveTab] = useState(tabsData[0].id);
+  const [categories, setCategories] = useState([])
 
-  const changeTab = (tabId) => {
-    setActiveTab(tabId);
-  };
+
+useEffect(() => {
+   getCategoryListing()
+      .then((category) => 
+      setCategories(category) 
+    )
+}, [])
+
 
   return (
     <div className="">
@@ -51,11 +60,11 @@ function PromptsPage() {
           {/* Card image section */}
           
           <div className="flex items-center justify-center ">
-            <div className="relative lg:flex lg:flex-col md:px-5">
+            <div className="relative lg:flex lg:flex-col md:px-5 ">
               <img
                 src={BGimage}
                 alt="image"
-                className="lg:w-[544px] lg:h-[467px] w-[328px] h-[282px] items-center justify-center mb-10"
+                className="lg:w-[544px] lg:h-[467px] w-[328px] h-[282px] items-center justify-center mb-10 mt-5"
               />
 
               
@@ -93,298 +102,29 @@ function PromptsPage() {
           <div className="flex md:justify-between flex-wrap justify-start">
             <div className="grid md:grid-cols-5 grid-cols-3 gap-2 mb-4">
               {/* Tabs */}
-              {tabsData.map((tab) => (
+              {categories.map((category) => (
                 <div
-                  key={tab.id}
-                  onClick={() => changeTab(tab.id)}
-                  className={`cursor-pointer  py-2  px-4 mr-2  ${
-                    activeTab === tab.id
-                      ? "inline-block text-grad-400 rounded-3xl py-2 px-6  text-lg font-Bold border-2 border-grad-100 text-center bg-gray-50"
-                      : "inline-block text-grad-400 rounded-3xl py-2 px-6  text-lg font-Bold border-2 border-grad-100 text-center   bg-gray-50"
-                  }`}
+                  key={category.id}
+                  className={"cursor-pointer  py-2  px-4 mr-2  inline-block text-grad-400 rounded-3xl  text-lg font-Bold border-2 border-grad-100 text-center bg-gray-50"} 
                 >
-                  {tab.label}
+                  {category.name}
                 </div>
               ))}
             </div>
             <div className="">
-              <button className="flex  gap-5 rounded-3xl justify-center items-center py-2 px-6 text-lg border-[1px] border-[#000f]  font-Bold">
+              {/* <button className="flex  gap-5 rounded-3xl justify-center items-center py-2 px-6 text-lg border-[1px] border-[#000f]  font-Bold">
                 <CiSliderHorizontal />
                 Filter
-              </button>
+              </button> */}
             </div>
           </div>
           {/* Display content based on active tab or pill */}
         </div>
         <div className="lg:mx-24 my-8 md:mx-10 mx-8 ">
-          {activeTab && (
             <div className="items-center justify-center">
-              <div className="grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1 gap-5 ">
-                {/* card section start */}
-                <a href="/promptdetails">
-                <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
-                  <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#52B4AE] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
 
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Memoir
-                    </button>
-                  </span>
-                  <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
-                    Sensory Heat Mapping
-                  </h5>
-                  <span className="md:text-[16px] text-[15px]">
-                    Writers will identify their favorite sensory memories and
-                    transfer them to a visual heart map.
-                  </span>
-                </div>
-                </a>
-                {/* card section end */}
-                {/* card section start */}
-                <a href="/promptdetails">
-                <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
-                  <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#B44DB8] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
-
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Memoir
-                    </button>
-                  </span>
-                  <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
-                    Processing elements of sound
-                  </h5>
-                  <span className="md:text-[16px] text-[15px]">
-                    Writers will identify their favorite sensory memories and
-                    transfer them to a visual heart map.
-                  </span>
-                </div>
-                </a>
-                {/* card section end */}
-                {/* card section start */}
-                <a href="/promptdetails">
-                <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
-                  <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#FBCA23] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
-
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Memoir
-                    </button>
-                  </span>
-                  <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
-                    Sensory Heat Mapping
-                  </h5>
-                  <span className="md:text-[16px] text-[15px]">
-                    Writers will identify their favorite sensory memories and
-                    transfer them to a visual heart map.
-                  </span>
-                </div>
-                </a>
-                {/* card section end */}
-                {/* card section start */}
-                <a href="/promptdetails">
-                <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
-                  <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#52B4AE] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
-
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Memoir
-                    </button>
-                  </span>
-                  <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
-                    Sensory Heat Mapping
-                  </h5>
-                  <span className="md:text-[16px] text-[15px]">
-                    Writers will identify their favorite sensory memories and
-                    transfer them to a visual heart map.
-                  </span>
-                </div>
-                </a>
-                {/* card section end */}
-                {/* card section start */}
-                <a href="/promptdetails">
-                <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
-                  <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#B44DB8] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
-
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Memoir
-                    </button>
-                  </span>
-                  <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
-                    Sensory Heat Mapping
-                  </h5>
-                  <span className="md:text-[16px] text-[15px]">
-                    Writers will identify their favorite sensory memories and
-                    transfer them to a visual heart map.
-                  </span>
-                </div>
-                </a>
-                {/* card section end */}
-                {/* card section start */}
-                <a href="/promptdetails">
-                <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
-                  <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#FBCA23] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
-
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Memoir
-                    </button>
-                  </span>
-                  <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
-                    Sensory Heat Mapping
-                  </h5>
-                  <span className="md:text-[16px] text-[15px]">
-                    Writers will identify their favorite sensory memories and
-                    transfer them to a visual heart map.
-                  </span>
-                </div>
-                </a>
-                {/* card section end */}
-                {/* card section start */}
-                <a href="/promptdetails">
-                <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
-                  <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#52B4AE] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
-
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Memoir
-                    </button>
-                  </span>
-                  <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
-                    Sensory Heat Mapping
-                  </h5>
-                  <span className="md:text-[16px] text-[15px]">
-                    Writers will identify their favorite sensory memories and
-                    transfer them to a visual heart map.
-                  </span>
-                </div>
-                </a>
-                {/* card section end */}
-                {/* card section start */}
-                <a href="/promptdetails">
-                <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
-                  <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#B44DB8] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
-
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Memoir
-                    </button>
-                  </span>
-                  <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
-                    Sensory Heat Mapping
-                  </h5>
-                  <span className="md:text-[16px] text-[15px]">
-                    Writers will identify their favorite sensory memories and
-                    transfer them to a visual heart map.
-                  </span>
-                </div>
-                </a>
-                {/* card section end */}
-                {/* card section start */}
-                <a href="/promptdetails">
-                <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
-                  <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#FBCA23] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
-
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Memoir
-                    </button>
-                  </span>
-                  <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
-                    Sensory Heat Mapping
-                  </h5>
-                  <span className="md:text-[16px] text-[15px]">
-                    Writers will identify their favorite sensory memories and
-                    transfer them to a visual heart map.
-                  </span>
-                </div>
-                </a>
-                {/* card section end */}
-                {/* card section start */}
-                <a href="/promptdetails">
-                <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
-                  <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#52B4AE] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
-
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Memoir
-                    </button>
-                  </span>
-                  <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
-                    Sensory Heat Mapping
-                  </h5>
-                  <span className="md:text-[16px] text-[15px]">
-                    Writers will identify their favorite sensory memories and
-                    transfer them to a visual heart map.
-                  </span>
-                </div>
-                </a>
-                {/* card section end */}
-                {/* card section start */}
-                <a href="/promptdetails">
-                <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
-                  <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#B44DB8] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
-
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Memoir
-                    </button>
-                  </span>
-                  <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
-                    Sensory Heat Mapping
-                  </h5>
-                  <span className="md:text-[16px] text-[15px]">
-                    Writers will identify their favorite sensory memories and
-                    transfer them to a visual heart map.
-                  </span>
-                </div>
-                </a>
-                {/* card section end */}
-                {/* card section start */}
-                <a href="/promptdetails">
-                <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5   ">
-                  <span className="flex md:mt-2 md:ml-2">
-                    <button className="md:text-[13px] text-[13px] px-3 mr-3  leading-8 bg-[#FBCA23] text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                      Grade 6-12
-                    </button>
-
-                    <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                      Memoir
-                    </button>
-                  </span>
-                  <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold  mt-2 md:mb-3">
-                    Sensory Heat Mapping
-                  </h5>
-                  <span className="md:text-[16px] text-[15px]">
-                    Writers will identify their favorite sensory memories and
-                    transfer them to a visual heart map.
-                  </span>
-                </div>
-                </a>
-                {/* card section end */}
-              </div>
+              <PromptCard />
+              
               {/* {activeTab} */}
               <div className="flex md:ml-[50px] justify-center m-[50px]">
                 <button className="border-[1px] leading-8 border-[#52B4AE] text-[#52B4AE] font-bold rounded-3xl text-[20px] w-[145px] h-[50px]">
@@ -392,7 +132,6 @@ function PromptsPage() {
                 </button>
               </div>
             </div>
-          )}
         </div>
 
         {/* Tab and pill section end  */}
