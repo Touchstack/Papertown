@@ -41,7 +41,36 @@ export const subNewsLetter = async (data) => {
     });
     return res;
   } catch (err) {
-    console.error("Error during Login:", err);
+    console.error("Error during subcribing:", err);
     return err;
   }
 };
+
+
+export const getPrompt = async () => {
+  try {
+    const res = await axios.get(`${baseURL}/api/prompts`,{
+      headers:{
+        "Content-Type": "application/json",
+      },
+    });
+    return res.data;
+  } catch (error) {
+    console.error("Error reading prompt:", err);
+    return err;
+  }
+}
+
+export const getCategoryListing = async () => {
+  try {
+    const res = await axios.get(`${baseURL}/api/category/read`,{
+      headers:{
+        "Content-Type": "application/json",
+      },
+    });
+    return res.data.data;
+  } catch (error) {
+    console.error("Error lising category:", err);
+    return err;
+  }
+}
