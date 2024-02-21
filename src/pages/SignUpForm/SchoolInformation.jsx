@@ -15,6 +15,29 @@ const SchoolInformation = () => {
 
   const goBack = () => {
     navigate(-1); // Navigates back one step in the history stack
+    dispatch(setFormData({  //on go back reset from in redux state
+      email: "",
+      password: "",
+      confirm_password: "",
+      studentDetails: {
+        first_name: "",
+        last_name: "",
+        date_of_birth: "", // required
+        phone_number: "",  // not required if HAS_GUARDIAN  === true
+        personal_address: "", // not required if HAS_GUARDIAN  === true
+        school: "", // required
+        school_address: "", // required
+        grade: "", // required
+      },
+      guardianDetails: {
+        first_name: "", // required
+        last_name: "", // required
+        phone_number: "",// required
+        personal_address: "", // required if HAS_GUARDIAN  === true
+        relationship: "", // required if HAS_GUARDIAN  === true
+        email: "",
+      },
+    }))
   };
 
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -89,7 +112,7 @@ const SchoolInformation = () => {
               className="font-Bold inline-flex text-[#FFFFFF] rounded-full w-[430px] py-4 bg-[#DB2E78] focus:ring-1 focus:outline-none
                 focus:ring-amber-100 justify-center items-center mt-12"
             >
-              Continue (2/3)
+              Continue (2/4)
             </button>
           </form>
           </div>

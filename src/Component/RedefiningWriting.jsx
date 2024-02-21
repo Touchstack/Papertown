@@ -2,6 +2,9 @@ import BackgroundImg from "../assets/Images/Background.png";
 import Rectangle from "../assets/Images/Rectangle.png";
 import Student from "../assets/Images/Boy.svg";
 const RedefiningWriting = () => {
+
+   const user = localStorage.getItem("user");
+
   return (
     <div className="py-18 px-2 mt-12">
       <div className="container mx-auto xl:w-8/12 lg:w-9/12 md:w-10/12 sm:w-10/12 w-10/12">
@@ -20,11 +23,13 @@ const RedefiningWriting = () => {
               containing Lorem Ipsum passages, and more recently with desktop
               publishing software.
             </p>
-            <a href="/signup">
+           {!user && 
+              <a href="/signup">
               <button className="leading-8 lg:mb-20 md:mb-10 mt-8 bg-[#52B4AE] text-white font-Bold hover:bg-[#099B96] cursor-pointer ease-in-out transform hover:scale-110 transition-transform duration-700 rounded-3xl md:text-[20px] text-[16px] md:w-[222px] h-[50px] w-[190px]">
                 Join Papertown
               </button>
             </a>
+           }
           </div>         
           <div className="relative">
             <div className="flex justify-center items-center pb-5">
