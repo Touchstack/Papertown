@@ -134,7 +134,7 @@ const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
                     </div>
                   )}
                 </li>
-                { verified && 
+                
                     <li
                       className={`list-none inline-block  ${
                         location.pathname === "/tips"
@@ -148,7 +148,7 @@ const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
                       </a>
                     
                     </li>
-                  }
+             
                 <li
                   className={`list-none inline-block  ${
                     location.pathname === "/tips"
