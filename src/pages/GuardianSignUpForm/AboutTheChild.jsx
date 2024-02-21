@@ -1,75 +1,82 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Modal from "../../Component/Modal/Modal";
 import Student from "../../assets/Images/Girl.svg";
 import AppLogo from "../../assets/Images/Logo.svg";
-import Tick from "../../assets/Images/Tick.svg";
 import Arrow from "../../assets/Images/arrow-left.svg";
 import { useForm } from 'react-hook-form';
-import { useSelector  } from 'react-redux';
-import { createUser } from '../../api/index';
 import { ClipLoader } from "react-spinners";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-
+import { useDispatch } from 'react-redux';
+import { setFormData } from "../../context/actions/formAction";
 
 const AboutTheChild = () => {
-  const [showModal, setShowModal] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isChecked, setIsChecked] = useState(false);
   const [date, setDate] = useState(null)
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm();
 
-  const formData = useSelector(state => state.formReducer.formData);
+  
 
-  const openModal = (modalNumber) => {
-    // Close all modals first
-    setShowModal(false);
-    setShowModal2(false);
+  // const openModal = (modalNumber) => {
+  //   // Close all modals first
+  //   setShowModal(false);
+  //   setShowModal2(false);
 
-    // Open the desired modal
-    switch (modalNumber) {
-      case 1:
-        setShowModal(true);
-        break;
-      case 2:
-        setShowModal2(true);
-        break;
-      default:
-        break;
-    }
-  };
-  const closeModal = (modalNumber) => {
-    switch (modalNumber) {
-      case 1:
-        setShowModal(false);
-        break;
-      case 2:
-        setShowModal2(false);
-        break;
-      default:
-        break;
-    }
-  };
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const navigate = useNavigate();
-  const [isChecked, setIsChecked] = useState(false);
+  //   // Open the desired modal
+  //   switch (modalNumber) {
+  //     case 1:
+  //       setShowModal(true);
+  //       break;
+  //     case 2:
+  //       setShowModal2(true);
+  //       break;
+  //     default:
+  //       break;
+  //   }
+  // };
+ 
 
-  const handleCheckboxClick = () => {
-    setIsChecked(!isChecked);
-  };
+  // const handleCheckboxClick = () => {
+  //   setIsChecked(!isChecked);
+  // };
+
   const goBack = () => {
     navigate(-1); // Navigates back one step in the history stack
+    dispatch(setFormData({  //on go back reset from in redux state
+      email: "",
+      password: "",
+      confirm_password: "",
+      studentDetails: {
+        first_name: "",
+        last_name: "",
+        date_of_birth: "", // required
+        phone_number: "",  // not required if HAS_GUARDIAN  === true
+        personal_address: "", // not required if HAS_GUARDIAN  === true
+        school: "", // required
+        school_address: "", // required
+        grade: "", // required
+      },
+      guardianDetails: {
+        first_name: "", // required
+        last_name: "", // required
+        phone_number: "",// required
+        personal_address: "", // required if HAS_GUARDIAN  === true
+        relationship: "", // required if HAS_GUARDIAN  === true
+        email: "",
+      },
+    }))
   };
 
 
   const onSubmit = async (data) => {
-    
-    const payLoad = {
-      has_guardian: formData.has_guardian,
-      email: formData.email,
-      password: formData.password,
-      confirm_password: formData.confirm_password,
+    navigate('/signup/guardian-account');
+    dispatch(setFormData({
       studentDetails: {
         first_name: data.first_name,
         last_name: data.last_name,
@@ -81,34 +88,11 @@ const AboutTheChild = () => {
         grade: data.grade, // required
       },
       guardianDetails: {
-        first_name: formData.guardianDetails.first_name, // required
-        last_name: formData.guardianDetails.last_name, // required
-        phone_number: formData.guardianDetails.phone_number,// required
-        personal_address: formData.guardianDetails.personal_address, // required if HAS_GUARDIAN  === true
         relationship: data.relationship, // required if HAS_GUARDIAN  === true
         email: "",
-      },
-    }
+      }
+    }))
     
-   // console.log("data", payLoad)
-   
-   try {
-    const res = await createUser(payLoad)
-    //console.log(res);
-    if (res.status === 201) {
-      localStorage.setItem("user", JSON.stringify(res.data));
-      setShowModal(true)
-      setTimeout(() => {
-        navigate('/profile');
-      }, 3000);
-    } else {
-      alert("Login failed. Unexpected status:" + res.data.message);
-      setShowModal(false)
-    }
-  } catch (error) {
-    console.error("Login failed. Error:", error);
-  }
-
   };
 
   return (
@@ -226,25 +210,12 @@ const AboutTheChild = () => {
               {isSubmitting ? (
                 <ClipLoader size={15} color="#FFFFFF"/>
               ) : (
-                "Done"
+                "2/3"
               )}
             </button>
           </form>
           </div>
-          <Modal isVisible={showModal} onClose={() => closeModal(1)}>
-            <div className="flex justify-center items-center pb-5">
-              <img src={Tick} alt="Tick.svg" />
-            </div>
-            <div className="lg:text-3xl md:text-2xl sm:text-xl text-xl flex flex-col justify-center items-center max-w-[350px] ml-5 text-center mb-6 font-Bold text-[#040A1D]">
-              Account Setup Complete
-
-              <ClipLoader size={25} color="#DB2E78" className="mt-5"/>
-            </div>
-            {/* <p className="flex text-center m-5 max-w-[350px] mb-14 font-VarelaRegular text-[#4C536A] text-lg">
-              Start submitting your writeups. You can join pressclubs close to
-              you or available in your account.
-            </p> */}
-          </Modal>
+         
         </div>
 
         {/* Right Col with Linear Gradient Background */}

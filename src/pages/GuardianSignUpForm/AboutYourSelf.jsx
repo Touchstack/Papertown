@@ -18,6 +18,29 @@ const AboutYourself = () => {
 
   const goBack = () => {
     navigate(-1); // Navigates back one step in the history stack
+    dispatch(setFormData({  //reset form data
+      email: "",
+      password: "",
+      confirm_password: "",
+      studentDetails: {
+        first_name: "",
+        last_name: "",
+        date_of_birth: "", // required
+        phone_number: "",  // not required if HAS_GUARDIAN  === true
+        personal_address: "", // not required if HAS_GUARDIAN  === true
+        school: "", // required
+        school_address: "", // required
+        grade: "", // required
+      },
+      guardianDetails: {
+        first_name: "", // required
+        last_name: "", // required
+        phone_number: "",// required
+        personal_address: "", // required if HAS_GUARDIAN  === true
+        relationship: "", // required if HAS_GUARDIAN  === true
+        email: "",
+      },
+    }));
   };
 
   const onSubmit = (data) => {
@@ -90,7 +113,7 @@ const AboutYourself = () => {
                 <input
                   type="text"
                   id="personaladdress"
-                  placeholder="Personal Address"
+                  placeholder="Home Address"
                   name="personaladdress"
                   {...register("personal_address", { required: true })}
                   className="block w-[430px] p-4 mt-2 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
@@ -103,7 +126,7 @@ const AboutYourself = () => {
                 className="font-Bold inline-flex text-[#FFFFFF] rounded-full w-[430px] py-4 bg-[#DB2E78] focus:ring-1 focus:outline-none
                 focus:ring-amber-100 justify-center items-center mt-12"
               >
-                Continue
+                1/2
               </button>
             </form>
           </div>

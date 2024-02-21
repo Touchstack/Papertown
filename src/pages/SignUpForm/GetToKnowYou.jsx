@@ -20,6 +20,29 @@ const GetToKnowYou = () => {
 
   const goBack = () => {
     navigate(-1); // Navigates back one step in the history stack
+    dispatch(setFormData({  //on go back reset from in redux state
+      email: "",
+      password: "",
+      confirm_password: "",
+      studentDetails: {
+        first_name: "",
+        last_name: "",
+        date_of_birth: "", // required
+        phone_number: "",  // not required if HAS_GUARDIAN  === true
+        personal_address: "", // not required if HAS_GUARDIAN  === true
+        school: "", // required
+        school_address: "", // required
+        grade: "", // required
+      },
+      guardianDetails: {
+        first_name: "", // required
+        last_name: "", // required
+        phone_number: "",// required
+        personal_address: "", // required if HAS_GUARDIAN  === true
+        relationship: "", // required if HAS_GUARDIAN  === true
+        email: "",
+      },
+    }))
   };
 
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -86,7 +109,7 @@ const GetToKnowYou = () => {
               <div className="relative  w-full mb-4 group text-md font-VarelaRegular text-[#F4F5F7]">
                 <DatePicker
                   id="date-of-birth"
-                  placeholderText="MM/DD/YYYY"
+                  placeholderText="Date Of Birth"
                   name="date_of_birth"
                   selected={date} // Set the selected date
                   onChange={(date) => setDate(date)} // Update the form data
@@ -111,8 +134,8 @@ const GetToKnowYou = () => {
               <div className="relative z-0 w-full mb-1 group text-md font-VarelaRegular text-[#F4F5F7]">
                 <input
                   type="text"
-                  id="personal-address"
-                  placeholder="Personal Address"
+                  id="home-address"
+                  placeholder="Home Address"
                   name="personal_address"
                   {...register("personal_address", { required: true })}
                   className="block w-[430px] p-4 mt-2 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
@@ -125,7 +148,7 @@ const GetToKnowYou = () => {
                 className="font-Bold inline-flex text-[#FFFFFF] rounded-full w-[430px] py-4 bg-[#DB2E78] focus:ring-1 focus:outline-none
               focus:ring-amber-100 justify-center items-center mt-12"
               >
-                Continue (1/3)
+                Continue (1/4)
               </button>
             </form>
 

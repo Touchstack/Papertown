@@ -6,17 +6,22 @@ import Student from "../../assets/Images/Girl.svg";
 import AppLogo from "../../assets/Images/Logo.svg";
 import Arrow from "../../assets/Images/arrow-left.svg";
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
-import { setFormData } from "../../context/actions/formAction";
+import { useSelector  } from 'react-redux';
+import { createUser } from '../../api/index';
+import { ClipLoader } from "react-spinners";
+import Tick from "../../assets/Images/Tick.svg";
 
 const GuardianAccountSetup = () => {
   const [showModal, setShowModal] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [showRePassword, setShowRePassword] = useState(false);
+  const [showSuccessModal, setshowSuccessModal] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const { register, handleSubmit, formState: { errors }, getValues } = useForm();
+  const { register, handleSubmit, formState: { errors, isSubmitting }, getValues } = useForm();
 
-  const dispatch = useDispatch();
+  const formData = useSelector(state => state.formReducer.formData);
+
   const navigate = useNavigate();
 
   const goBack = () => {
@@ -34,14 +39,68 @@ const GuardianAccountSetup = () => {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
+  
+  const closeModal = (modalNumber) => {
+    switch (modalNumber) {
+      case 1:
+        setshowSuccessModal(false);
+        break;
+      // case 2:
+      //   setShowModal2(false);
+      //   break;
+      default:
+        break;
+    }
+  };
 
-  const onSubmit = (data) => {
-    navigate("/signup/about-yourself");
-    dispatch(setFormData({ 
+  
+  const onSubmit = async (data) => {
+    
+    const payLoad = {
+      has_guardian: formData.has_guardian,
       email: data.email,
       password: data.password,
-      confirm_password: data.confirm_password
-    }));
+      confirm_password: data.confirm_password,
+      studentDetails: {
+        first_name: formData.studentDetails.first_name,
+        last_name: formData.studentDetails.last_name,
+        date_of_birth: formData.studentDetails.date_of_birth, // required
+        phone_number: "",  // not required if HAS_GUARDIAN  === true
+        personal_address: "", // not required if HAS_GUARDIAN  === true
+        school: formData.studentDetails.school, // required
+        school_address: formData.studentDetails.school_address, // required
+        grade: formData.studentDetails.grade, // required
+      },
+      guardianDetails: {
+        first_name: formData.guardianDetails.first_name, // required
+        last_name: formData.guardianDetails.last_name, // required
+        phone_number: formData.guardianDetails.phone_number,// required
+        personal_address: formData.guardianDetails.personal_address, // required if HAS_GUARDIAN  === true
+        relationship: formData.guardianDetails.relationship, // required if HAS_GUARDIAN  === true
+        email: "",
+      },
+    }
+    
+   // console.log("data", payLoad)
+   
+   try {
+    const res = await createUser(payLoad)
+    //console.log(res);
+    if (res.status === 201) {
+      localStorage.setItem("user", JSON.stringify(res.data));
+      setshowSuccessModal(true)
+      setTimeout(() => {
+        navigate('/profile');
+      }, 3000);
+    } else {
+      const errorMessage = res?.response?.data?.message || "Couldn't SignUp. Please try again.";
+      alert(errorMessage);
+      setShowModal(false)
+    }
+  } catch (error) {
+    console.error("Login failed. Error:", error);
+  }
+
   };
 
   return (
@@ -93,20 +152,20 @@ const GuardianAccountSetup = () => {
               </div>
               <div className="relative z-0 md:w-[400px] sm:w-[370px] w-[370px] mb-1 group text-md font-VarelaRegular text-[#858585]">
                 <input
-                  type="text"
+                  type={showRePassword ? "text" : "password"} 
                   id="large-input"
                   placeholder="Re-enter password"
                   name="confirm_password"
                   {...register("confirm_password", { required: true, validate: value => value === getValues("password") || "Passwords must match" })}
                   className="block w-[430px] sm:w-[390px] p-4 mt-2 text-[#858585] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
                 />
-                {/* <span className="absolute right-6 mt-0 top-1/2 transform -translate-y-1/2 inline-block">
-                  SHOW
-                </span> */}
+               <span className="absolute right-6 mt-0 top-1/2 transform -translate-y-1/2 inline-block cursor-pointer" onClick={() => setShowRePassword(!showRePassword) }>
+                 {showRePassword ? "HIDE" : "SHOW"} {/* Toggle the text based on password visibility */}
+                </span>
                 {errors.password && <span className="text-red-500">{errors.confirm_password.message}</span>}
               </div>
               <div className="text-[#858585] text-sm mt-8">
-                <p className="flex items-center">
+                {/* <p className="flex items-center">
                   <label>
                     <input
                       type="checkbox"
@@ -118,7 +177,7 @@ const GuardianAccountSetup = () => {
                     I confirm that this account has been created with the
                     consent of a parent or guardian
                   </span>
-                </p>
+                </p> */}
                 <p className="mt-4 flex items-center">
                   <label>
                     <input
@@ -137,7 +196,11 @@ const GuardianAccountSetup = () => {
                 className="font-Bold inline-flex text-[#FFFFFF] rounded-full w-[430px] sm:w-[390px] py-4 bg-[#DB2E78] focus:ring-1 focus:outline-none
                 focus:ring-amber-100 justify-center items-center mt-12"
               >
-                Get started
+               {isSubmitting ? (
+                <ClipLoader size={15} color="#FFFFFF"/>
+              ) : (
+                "Done"
+               )}
               </button>
               <div className="lg:text-center text-left w-[430px] sm:w-[390px] mt-10 font-VarelaRegular text-[#828282]">
                 Already have an account?
@@ -152,6 +215,21 @@ const GuardianAccountSetup = () => {
             <Modal isVisible={showModal} onClose={closeLoginModal}>
               <LogInModal isVisible={showModal} onClose={closeLoginModal} />
             </Modal>
+
+            <Modal isVisible={showSuccessModal} onClose={() => closeModal(1)}>
+            <div className="flex justify-center items-center pb-5">
+              <img src={Tick} alt="Tick.svg" />
+            </div>
+            <div className="lg:text-3xl md:text-2xl sm:text-xl text-xl flex flex-col justify-center items-center max-w-[350px] ml-5 text-center mb-6 font-Bold text-[#040A1D]">
+              Account Setup Complete
+
+              <ClipLoader size={25} color="#DB2E78" className="mt-5"/>
+            </div>
+            {/* <p className="flex text-center m-5 max-w-[350px] mb-14 font-VarelaRegular text-[#4C536A] text-lg">
+              Start submitting your writeups. You can join pressclubs close to
+              you or available in your account.
+            </p> */}
+          </Modal>
           </div>
         </div>
 
