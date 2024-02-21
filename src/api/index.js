@@ -91,7 +91,7 @@ export const getPromptByCategoryId = async (id) => {
 
 export const getCategoryListing = async () => {
   try {
-    const res = await axios.get(`${baseURL}/api/category`,{
+    const res = await axios.get(`${baseURL}/api/category/read`,{
       headers:{
         "Content-Type": "application/json",
       },
