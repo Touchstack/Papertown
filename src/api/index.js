@@ -61,6 +61,34 @@ export const getPrompt = async () => {
   }
 }
 
+export const getPromptById = async (id) => {
+  try {
+    const res = await axios.get(`${baseURL}/api/prompts/${id}`,{
+      headers:{
+        "Content-Type": "application/json",
+      },
+    });
+    return res.data;
+  } catch (error) {
+    console.error("Error reading prompt:", err);
+    return err;
+  }
+}
+
+export const getPromptByCategoryId = async (id) => {
+  try {
+    const res = await axios.get(`${baseURL}/api/filter/${id}`,{
+      headers:{
+        "Content-Type": "application/json",
+      },
+    });
+    return res.data;
+  } catch (error) {
+    console.error("Error reading prompt:", err);
+    return err;
+  }
+}
+
 export const getCategoryListing = async () => {
   try {
     const res = await axios.get(`${baseURL}/api/category/read`,{
