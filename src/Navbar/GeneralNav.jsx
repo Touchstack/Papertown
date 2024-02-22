@@ -134,17 +134,21 @@ const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
                     </div>
                   )}
                 </li>
-                <li
-                  className={`list-none inline-block  ${
-                    location.pathname === "/tips"
-                      ? "font-Regular"
-                      : `${txColorClass}`
-                  }`}
-                >
-                  <a href="/submit" className="">
-                    Submit
-                  </a>
-                </li>
+                
+                    <li
+                      className={`list-none inline-block  ${
+                        location.pathname === "/tips"
+                          ? "font-Regular"
+                          : `${txColorClass}`
+                      }`}
+                    >
+                      
+                        <a href="/submit" className="">
+                        Submit
+                      </a>
+                    
+                    </li>
+             
                 <li
                   className={`list-none inline-block  ${
                     location.pathname === "/tips"

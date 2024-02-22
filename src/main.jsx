@@ -42,7 +42,7 @@ const router = createBrowserRouter([
   { path: "/tips", element: <Tips />, errorElement: <ErrorPage /> },
   { path: "/tip-read", element: <TipRead />, errorElement: <ErrorPage /> },
   { path: "/prompt", element: <PromptsPage />, errorElement: <ErrorPage /> },
-  { path: "/promptdetails", element: <Details />, errorElement: <ErrorPage /> },
+  { path: "/promptdetails/:id", element: <Details />, errorElement: <ErrorPage /> },
   { path: "/news", element: <NewSection />, errorElement: <ErrorPage /> },
   { path: "/det", element: <NewsDetails />, errorElement: <ErrorPage /> },
   { path: "/profile", element: <Profile />, errorElement: <ErrorPage /> },

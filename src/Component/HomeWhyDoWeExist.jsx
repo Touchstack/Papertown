@@ -32,7 +32,7 @@ const HomeWhyWeEXist = () => {
               </div>
 
               <h3 className="font-Bold text-[#FFF] lg:text-2xl md:text-2xl sm:text-xl text-xl mt-6 text-start">
-                USP 1
+                <a href="/whyweexist">USP 1</a>
               </h3>
               <p className="font-Regular text-[#F3F3F3] leading-7 text-sm tracking-wider text-13 leading-26 text-start mt-2 max-w-[350px]">
                 {" "}
@@ -63,7 +63,7 @@ const HomeWhyWeEXist = () => {
                 </svg>
               </div>
               <h3 className="font-Bold text-[#FFF] lg:text-2xl md:text-2xl sm:text-xl text-xl mt-6 text-start">
-                USP 2
+              <a href="/whyweexist">USP 2</a>
               </h3>
 
               <p className="font-Regular text-[#F3F3F3] leading-7 text-sm tracking-wider text-13 leading-26 text-start mt-2 max-w-[350px]">
@@ -95,7 +95,7 @@ const HomeWhyWeEXist = () => {
               </div>
 
               <h3 className="font-Bold text-[#FFF] lg:text-2xl md:text-2xl sm:text-xl text-xl mt-6 text-start">
-                USP 3
+                <a href="/whyweexist">USP 3</a>
               </h3>
               <p className="font-Regular text-[#F3F3F3] leading-7 text-sm tracking-wider text-13 leading-26 text-start mt-2 max-w-[350px]">
                 It has survived not only five centuries, but also the leap into
