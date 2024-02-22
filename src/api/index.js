@@ -77,7 +77,7 @@ export const getPromptById = async (id) => {
 
 export const getPromptByCategoryId = async (id) => {
   try {
-    const res = await axios.get(`${baseURL}/api/category/${id}`,{
+    const res = await axios.get(`${baseURL}/api/filter/${id}`,{
       headers:{
         "Content-Type": "application/json",
       },

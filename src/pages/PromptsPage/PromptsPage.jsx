@@ -56,6 +56,7 @@ function PromptsPage() {
     // Fetch prompts by selected category ID
     getPromptByCategoryId(categoryId)
       .then((res) => {
+        console.log(res);
         setPromptData(res?.data);
         setLoading(false);
       })
@@ -150,12 +151,20 @@ function PromptsPage() {
               </div>
           ) : (
             <div className="items-center justify-center">
-              <PromptCard data={promptData} />
-              <div className="flex md:ml-[50px] justify-center m-[50px]">
-                <button className="border-[1px] leading-8 border-[#52B4AE] text-[#52B4AE] font-bold rounded-3xl text-[20px] w-[145px] h-[50px]">
-                  Load More
-                </button>
-              </div>
+              {promptData.length === 0 ? (
+                 <div className="flex justify-center items-center mb-[60px]">
+                    <p className="text-5xl">No Prompt Writing Data</p>
+                 </div>
+              ) : (
+                <React.Fragment>
+                  <PromptCard data={promptData} />
+                  <div className="flex md:ml-[50px] justify-center m-[50px]">
+                    <button className="border-[1px] leading-8 border-[#52B4AE] text-[#52B4AE] font-bold rounded-3xl text-[20px] w-[145px] h-[50px]">
+                      Load More
+                    </button>
+                  </div>
+                </React.Fragment>
+              )}
             </div>
           )}
         </div>
