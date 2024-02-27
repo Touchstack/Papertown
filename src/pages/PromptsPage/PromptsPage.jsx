@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 import Footer from "../FooterPage/Footer";
 import GeneralNav from "../../Navbar/GeneralNav";
 import { CiSliderHorizontal } from "react-icons/ci";
@@ -7,6 +7,7 @@ import BGimage from "../../assets/Images/pexels-katerina-holmes-5905479 1.png";
 import { getCategoryListing, getPrompt, getPromptByCategoryId } from "../../api";
 import PromptCard from "./PromptCard/PromptCard";
 import { ClipLoader } from 'react-spinners';
+import EmptyState from "../../Component/EmptyState/EmptyState";
 
 function PromptsPage() {
   const [categories, setCategories] = useState([]);
@@ -106,70 +107,73 @@ function PromptsPage() {
           </div>
         </div>
       </div>
+
       <div className="mt-8 font-Bold">
         <div className="ml-3  md:px-20">
           <span className="md:text-5xl text-[36px]">Writing prompts</span>
         </div>
+        
         {/* Tab and pill section start  */}
-        <div className="lg:mx-24 my-8 md:mx-10 mx-8 ">
-          <div className="flex md:justify-between flex-wrap justify-start">
-            <div className="grid md:grid-cols-5 grid-cols-3 gap-2 mb-4">
-              {/* Tabs */}
-              {categories.map((category) => (
-                <div
-                  key={category._id}
-                  className={`cursor-pointer  py-2  px-4 mr-2  inline-block text-grad-400 rounded-3xl  text-lg font-Bold border-2 border-grad-100 text-center ${
-                    selectedCategoryId === category._id
-                      ? "bg-gray-200" // Change background color if selected
-                      : "bg-gray-50"
-                  }`}
-                  onClick={() => handleCategoryClick(category._id)}
-                >
-                  {category.name}
-                </div>
-              ))}
-            </div>
-            <div className="">
-              {/* Filter button */}
-              <button
-                className="flex  gap-5 rounded-3xl justify-center items-center py-2 px-6 text-lg border-[1px] border-[#000f]  font-Bold"
-                onClick={handleFilterClick}
-              >
-                <CiSliderHorizontal />
-                Filter
-              </button>
-            </div>
+        {loading ? (
+          <div className="flex items-center justify-center my-[10%]">
+            <ClipLoader color="#B44DB8" loading={loading} size={35} />
           </div>
-        </div>
+        ) : (
+          promptData.length === 0 ? (
+            <EmptyState />
+          ) : (
+            <div className="lg:mx-24 my-8 md:mx-10 mx-8 ">
+              <div className="flex md:justify-between flex-wrap justify-start">
+                <div className="grid md:grid-cols-5 grid-cols-3 gap-2 mb-4">
+                  {/* Tabs */}
+                  {categories.map((category) => (
+                    <div
+                      key={category._id}
+                      className={`cursor-pointer  py-2  px-4 mr-2  inline-block text-grad-400 rounded-3xl  text-lg font-Bold border-2 border-grad-100 text-center ${
+                        selectedCategoryId === category._id
+                          ? "bg-gray-200" // Change background color if selected
+                          : "bg-gray-50"
+                      }`}
+                      onClick={() => handleCategoryClick(category._id)}
+                    >
+                      {category.name}
+                    </div>
+                  ))}
+                </div>
+                <div className="">
+                  {/* Filter button */}
+                  <button
+                    className="flex  gap-5 rounded-3xl justify-center items-center py-2 px-6 text-lg border-[1px] border-[#000f]  font-Bold"
+                    onClick={handleFilterClick}
+                  >
+                    <CiSliderHorizontal />
+                    Filter
+                  </button>
+                </div>
+              </div>
+            </div>
+          )
+        )}
         {/* Tab and pill section end  */}
 
         {/* Display prompts */}
-        <div className="lg:mx-24 my-8 md:mx-10 mx-8">
-          {loading ? ( 
-              <div className="flex items-center justify-center">
-                <ClipLoader color="#B44DB8" loading={loading} size={35} />
-              </div>
-          ) : (
+        {!loading && promptData.length > 0 && (
+          <div className="lg:mx-24 my-8 md:mx-10 mx-8">
             <div className="items-center justify-center">
-              {promptData.length === 0 ? (
-                 <div className="flex justify-center items-center mb-[60px]">
-                    <p className="text-5xl">No Prompt Writing Data</p>
-                 </div>
-              ) : (
-                <React.Fragment>
-                  <PromptCard data={promptData} />
-                  <div className="flex md:ml-[50px] justify-center m-[50px]">
-                    <button className="border-[1px] leading-8 border-[#52B4AE] text-[#52B4AE] font-bold rounded-3xl text-[20px] w-[145px] h-[50px]">
-                      Load More
-                    </button>
-                  </div>
-                </React.Fragment>
-              )}
+              <Fragment>
+                <PromptCard data={promptData} />
+                <div className="flex md:ml-[50px] justify-center m-[50px]">
+                  <button className="border-[1px] leading-8 border-[#52B4AE] text-[#52B4AE] font-bold rounded-3xl text-[20px] w-[145px] h-[50px]">
+                    Load More
+                  </button>
+                </div>
+              </Fragment>
             </div>
-          )}
-        </div>
-          {/* Display prompts */}
+          </div>
+        )}
+        {/* Display prompts end */}
       </div>
+
       <div className="bg-[#B44DB8]">
         <Footer />
       </div>
