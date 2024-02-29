@@ -5,8 +5,7 @@ import AppLogo from "../../assets/Images/Logo.svg";
 import Arrow from "../../assets/Images/arrow-left.svg";
 import { useForm } from 'react-hook-form';
 import { ClipLoader } from "react-spinners";
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+import { DatePicker } from 'antd';
 import { useDispatch } from 'react-redux';
 import { setFormData } from "../../context/actions/formAction";
 
