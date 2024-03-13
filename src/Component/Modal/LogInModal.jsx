@@ -21,7 +21,7 @@ const LogInModal = ({ isVisible, onClose }) => {
       const res = await logInUser(data);
 
       if (res.status === 200) {
-        localStorage.setItem("user", JSON.stringify(res.data));
+        localStorage.setItem("user", JSON.stringify(res?.data));
         window.location.reload();
       } else {
         console.error("Login failed. Unexpected status:", res.status);

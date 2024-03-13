@@ -1,27 +1,16 @@
 import UploadFile from "./UploadFile";
 import { useForm } from "react-hook-form";
 
-/*const FileInput = () => {
-    const handleFileChange = (event) => {
-      const selectedFile = event.target.files[0];
-      if (selectedFile) {
-        console.log('Selected file:', selectedFile.name);
-      }
-    } 
-     ;*/
 const SubmitComponent = () => {
   const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm();
 
-  const onSubmit = async (data) => {
-    // Handle form submission here
-    console.log(data);
-  };
-
+ 
   return (
     <div>
         <main className=" flex items-center justify-center bg-[#52B4AE1A] w-full">
+         {/*
           <form onSubmit={handleSubmit(onSubmit)} className=" ">
-            <h1 className="lg:text-4xl md:text-3xl sm:text-2xl text-[24px] font-Bold text-center pt-6  pb-5">
+             <h1 className="lg:text-4xl md:text-3xl sm:text-2xl text-[24px] font-Bold text-center pt-6  pb-5">
               Submit your work here
             </h1>
             <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-4 sm:gap-8">
@@ -104,22 +93,16 @@ const SubmitComponent = () => {
               />
               {errors.school && <p className="text-red-500 text-sm mt-2">{errors.school.message}</p>}
             </div>
-            <br />
-            <div>
-              <label className="block text-sm pb-2">
-                Upload a pdf or Word document of your writeup
+            <br /> 
+          </form>
+          */}
+          <div className="flex flex-col items-center justify-center p-10">
+              <label className="block text-[24px] pb-2 font-[700]">
+                Upload a pdf document of your writeup
               </label>
           
               <UploadFile/>
-            </div>
-
-            <button
-              type="submit"
-              className="bg-[#099B96] font-Bold w-[250px] h-[45px] px-[30px] py-2.5 gap-2.5 justify-center text-center inline-flex text-white mt-10 mb-10 rounded-full"
-            >
-              Submit my writeup
-            </button>
-          </form>
+          </div>
         </main>
     </div>
   );
