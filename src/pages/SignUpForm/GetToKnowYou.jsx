@@ -6,8 +6,7 @@ import AppLogo from "../../assets/Images/Logo.svg";
 import Arrow from "../../assets/Images/arrow-left.svg";
 import { useForm } from 'react-hook-form';
 import { setFormData } from "../../context/actions/formAction";
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+import { DatePicker } from 'antd';
 
 const GetToKnowYou = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
