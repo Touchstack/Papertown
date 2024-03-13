@@ -61,6 +61,20 @@ export const getPrompt = async () => {
   }
 }
 
+export const createSubMissions = async (data) => {
+  try {
+    const res = await axios.post(`${baseURL}/api/writeup/create`, data, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    });
+    return res;
+  } catch (err) {
+    console.error("Error during subscribing:", err);
+    return err;
+  }
+};
+
 export const getPromptById = async (id) => {
   try {
     const res = await axios.get(`${baseURL}/api/prompts/${id}`,{

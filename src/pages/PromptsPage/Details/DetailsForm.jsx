@@ -11,7 +11,7 @@ import { useForm } from "react-hook-form";
       }
     } 
      ;*/
-const DetailsForm = () => {
+const DetailsForm = ({id, title}) => {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = async (data) => {
@@ -26,8 +26,8 @@ const DetailsForm = () => {
             <h1 className="text-4xl font-Bold text-center pb-6 sm:pb-12">
               Submit your work here
             </h1>
-            <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-[40px] sm:gap-8 mb-6">
-                {/*Larger Grid Left section*/}
+       {/* <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-[40px] sm:gap-8 mb-6">
+        
             <div className="grid lg:grid-cols-2 md:grid-cols-1 gap-4 lg:h-[200px]">
               <div className="">
                 <label className="block text-sm pb-2" htmlFor="Firstname">
@@ -111,7 +111,7 @@ const DetailsForm = () => {
 
               </div>
               
-              {/*Larger Grid right section*/}
+            
               <div className="">
                 <label className="block text-sm pb-2" htmlFor="age">
                 Enter the title of your submission
@@ -133,28 +133,21 @@ const DetailsForm = () => {
                   placeholder="Start typing"
                 />
                  </div>
-                {/* Upload a document */}
-              <div>
+              
+              </div>     
+            </div> 
+            */}
+
+             
+            <div className="flex flex-col items-center justify-center">
               <label className="block text-sm pb-2">
-                Upload a pdf or Word document of your writeup
+                Upload a pdf document of your writeup
               </label>
           
-              <UploadFile/>
+              <UploadFile id={id} title={title}/>
+           
             </div>
-             
-              <button
-              type="submit"
-              className="bg-[#099B96] font-Bold md:w-3/6 sm:w-4/6 h-2/6 px-[30px] py-2.5 gap-2.5 justify-center text-center inline-flex text-white mt-10 mb-10 md:rounded-full rounded-3xl"
-            >
-              Submit my writeup
-            </button>
-              </div>
-              
-             
-            </div>
-        
-
-            
+ 
           </form>
         </main>
     </div>

@@ -2,6 +2,7 @@ import GeneralNav from "../../../Navbar/GeneralNav"
 import { getPromptById } from "../../../api"
 import { useParams,  useLocation } from 'react-router-dom'; 
 import React, { useEffect, useState } from 'react';
+import DetailsForm from './DetailsForm'
 
 const PromptsDetails = () => {
    
@@ -71,10 +72,10 @@ const PromptsDetails = () => {
                 1. {promptDetails?.resources}
               </p>
             </div>
-          </div>
-           
+          </div> 
           </div>
           <div>
+          <DetailsForm id={id} title={promptDetails?.title} />
           </div>
           </div>
     )
