@@ -39,7 +39,7 @@ const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
   { path: "/submit", element: <SubmitPage />, errorElement: <ErrorPage /> },
   { path: "/read", element: <Readpage />, errorElement: <ErrorPage /> },
-  { path: "/tips", element: <Tips />, errorElement: <ErrorPage /> },
+  { path: "/lessons&notes", element: <Tips />, errorElement: <ErrorPage /> },
   { path: "/tip-read", element: <TipRead />, errorElement: <ErrorPage /> },
   { path: "/prompt", element: <PromptsPage />, errorElement: <ErrorPage /> },
   { path: "/promptdetails/:id", element: <Details />, errorElement: <ErrorPage /> },

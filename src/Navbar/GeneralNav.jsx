@@ -69,10 +69,10 @@ const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
     setSideNav(false); // Close SideNav when opening LoginModal
   };
 
-  const toggleJoinModal = () => {
-    setShowJoinUsModal(!showJoinUsModal);
-    setSideNav(false); // Close SideNav when opening LoginModal
-  };
+  // const toggleJoinModal = () => {
+  //   setShowJoinUsModal(!showJoinUsModal);
+  //   setSideNav(false); // Close SideNav when opening LoginModal
+  // };
 
   const toggleCloseNav = () => {
     setSideNav(false);
