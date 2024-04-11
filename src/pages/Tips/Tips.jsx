@@ -24,8 +24,13 @@ function Tips() {
       <div className="mt-20 font-Bold">
         <div className="ml-3 md:px-20">
           <span className="md:text-5xl text-[36px]">
-            Tips for writing great pieces
+          Hello Writers, <br /> Welcome to Lessons & Notes!
           </span>
+
+          <p className="w-[50%] pt-5 text-xl">
+          Here, you will find short notes, lessons in brief, and little packages of practical tips on various aspects of writing and being a writer.
+          We hope you find something that helps you in your brainstorming, writing, reviewing, and editing processes.
+          </p>
         </div>
         {/* Tab and pill section start  */}
         <div className=" lg:mx-24 my-8 md:mx-10 mx-8 ">

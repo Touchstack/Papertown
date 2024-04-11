@@ -56,8 +56,8 @@ export const getPrompt = async () => {
     });
     return res.data;
   } catch (error) {
-    console.error("Error reading prompt:", err);
-    return err;
+    console.error("Error reading prompt:", error);
+    return error;
   }
 }
 
@@ -84,8 +84,8 @@ export const getPromptById = async (id) => {
     });
     return res.data;
   } catch (error) {
-    console.error("Error reading prompt:", err);
-    return err;
+    console.error("Error reading prompt:", error);
+    return error;
   }
 }
 
@@ -98,8 +98,8 @@ export const getPromptByCategoryId = async (id) => {
     });
     return res.data;
   } catch (error) {
-    console.error("Error reading prompt:", err);
-    return err;
+    console.error("Error reading prompt:", error);
+    return error;
   }
 }
 
@@ -112,7 +112,7 @@ export const getCategoryListing = async () => {
     });
     return res.data.data;
   } catch (error) {
-    console.error("Error lising category:", err);
-    return err;
+    console.error("Error lising category:", error);
+    return error;
   }
 }

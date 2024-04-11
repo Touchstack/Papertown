@@ -76,7 +76,7 @@ const SideNav = ({ onLoginClick, onCloseClick, onJoinClick }) => {
               <div className="bg-[#ffffff33] w-[250px] h-[100px] rounded-[20px] mt-3">
                 <ul className="p-5">
                   <li>
-                    <a href="/tips">Tips</a>
+                    <a href="/lesson&notes">Lessons & Notes</a>
                   </li>
                   <li>
                     <a href="/prompt">Prompts</a>
