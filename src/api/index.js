@@ -1,6 +1,6 @@
-import axios from "axios"; 
+import axios from "axios";
 
-export const baseURL = "https://papertown.onrender.com";
+export const baseURL = "https://papertown-api.onrender.com";
 
 export const logInUser = async (data) => {
   try {
@@ -16,7 +16,6 @@ export const logInUser = async (data) => {
   }
 };
 
-
 export const createUser = async (data) => {
   try {
     const res = await axios.post(`${baseURL}/api/students/create`, data, {
@@ -30,7 +29,6 @@ export const createUser = async (data) => {
     return err;
   }
 };
-
 
 export const subNewsLetter = async (data) => {
   try {
@@ -46,11 +44,10 @@ export const subNewsLetter = async (data) => {
   }
 };
 
-
 export const getPrompt = async () => {
   try {
-    const res = await axios.get(`${baseURL}/api/prompts`,{
-      headers:{
+    const res = await axios.get(`${baseURL}/api/prompts`, {
+      headers: {
         "Content-Type": "application/json",
       },
     });
@@ -59,13 +56,13 @@ export const getPrompt = async () => {
     console.error("Error reading prompt:", error);
     return error;
   }
-}
+};
 
 export const createSubMissions = async (data) => {
   try {
     const res = await axios.post(`${baseURL}/api/writeup/create`, data, {
       headers: {
-        'Content-Type': 'multipart/form-data',
+        "Content-Type": "multipart/form-data",
       },
     });
     return res;
@@ -77,8 +74,8 @@ export const createSubMissions = async (data) => {
 
 export const getPromptById = async (id) => {
   try {
-    const res = await axios.get(`${baseURL}/api/prompts/${id}`,{
-      headers:{
+    const res = await axios.get(`${baseURL}/api/prompts/${id}`, {
+      headers: {
         "Content-Type": "application/json",
       },
     });
@@ -87,12 +84,12 @@ export const getPromptById = async (id) => {
     console.error("Error reading prompt:", error);
     return error;
   }
-}
+};
 
 export const getPromptByCategoryId = async (id) => {
   try {
-    const res = await axios.get(`${baseURL}/api/filter/${id}`,{
-      headers:{
+    const res = await axios.get(`${baseURL}/api/filter/${id}`, {
+      headers: {
         "Content-Type": "application/json",
       },
     });
@@ -101,12 +98,12 @@ export const getPromptByCategoryId = async (id) => {
     console.error("Error reading prompt:", error);
     return error;
   }
-}
+};
 
 export const getCategoryListing = async () => {
   try {
-    const res = await axios.get(`${baseURL}/api/category/read`,{
-      headers:{
+    const res = await axios.get(`${baseURL}/api/category/read`, {
+      headers: {
         "Content-Type": "application/json",
       },
     });
@@ -115,4 +112,4 @@ export const getCategoryListing = async () => {
     console.error("Error lising category:", error);
     return error;
   }
-}
+};
