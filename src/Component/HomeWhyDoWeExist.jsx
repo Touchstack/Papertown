@@ -1,13 +1,13 @@
 const HomeWhyWeEXist = () => {
   return (
-    <div className="py-16 px-14 mt-40 bg-transparent font-Medium text-center">
-      <h3 className="font-Bold text-[#F2F2F2] lg:text-4xl md:text-3xl sm:text-4xl text-3xl text-center ">
+    <div className="py-16 flex flex-col items-center justify-center mt-40 bg-transparent font-Medium text-center">
+      <h3 className="font-Bold  text-[#F2F2F2] w-[400px] lg:text-4xl md:text-3xl sm:text-4xl text-3xl text-center ">
         Why we exist and delight in what we do
       </h3>
 
       <div className="py-4">
-        <div className="my-3 container mx-auto">
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 lg:mt-5 md:mt-4 sm:mt-1 mt-1 gap-y-12 gap-x-4">
+        <div className="my-3 mx-6 md:mx-16 flex items-center justify-center ">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 lg:mt-5 md:mt-4 sm:mt-1 mt-1 gap-y-12 gap-x-14">
             <div className="">
               <div className="mt-8">
                 <svg
@@ -31,13 +31,13 @@ const HomeWhyWeEXist = () => {
                 </svg>
               </div>
 
-              <h3 className="font-Bold text-[#FFF] lg:text-2xl md:text-2xl sm:text-xl text-xl mt-6 text-start">
-                <a href="/whyweexist">USP 1</a>
+              <h3 className="font-Bold text-[#FFF] w-[398px] lg:text-[20px] md:text-2xl sm:text-xl text-xl mt-6 text-start">
+                <a href="/whyweexist">TO NURTURE THE LOVE OF WRITING IN YOUNG PEOPLE</a>
               </h3>
-              <p className="font-Regular text-[#F3F3F3] leading-7 text-sm tracking-wider text-13 leading-26 text-start mt-2 max-w-[350px]">
+              <p className="font-Regular min-w-[362px] text-[#F3F3F3] leading-7 text-sm tracking-wider text-13 leading-26 text-start mt-2 max-w-[350px]">
                 {" "}
-                It has survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged{" "}
+                Papertown Imaginarium was created primarily for the child who loves to write - to give him/her
+                everything he/she needs to keep doing what he/she enjoys doing.{" "}
               </p>
             </div>
             <div className="">
@@ -62,13 +62,13 @@ const HomeWhyWeEXist = () => {
                   </defs>
                 </svg>
               </div>
-              <h3 className="font-Bold text-[#FFF] lg:text-2xl md:text-2xl sm:text-xl text-xl mt-6 text-start">
-              <a href="/whyweexist">USP 2</a>
+              <h3 className="font-Bold  text-[#FFF] lg:text-2xl md:text-2xl sm:text-xl text-xl mt-6 text-start">
+              <a href="/whyweexist">TO SUPPORT WRITING EDUCATION</a>
               </h3>
 
-              <p className="font-Regular text-[#F3F3F3] leading-7 text-sm tracking-wider text-13 leading-26 text-start mt-2 max-w-[350px]">
-                It has survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged{" "}
+              <p className="font-Regular min-w-[362px] text-[#F3F3F3] leading-7 text-sm tracking-wider text-13 leading-26 text-start mt-2 ">
+              Beyond working with individual young writers directly through our website and writing programs,
+              we also work to support and improve the general state of writing education.{" "}
               </p>
             </div>
             <div className="">
@@ -94,12 +94,12 @@ const HomeWhyWeEXist = () => {
                 </svg>
               </div>
 
-              <h3 className="font-Bold text-[#FFF] lg:text-2xl md:text-2xl sm:text-xl text-xl mt-6 text-start">
-                <a href="/whyweexist">USP 3</a>
+              <h3 className="font-Bold text-[#FFF] w-[315px] lg:text-[20px] md:text-2xl sm:text-xl text-xl mt-6 text-start">
+                <a href="/whyweexist">TO DRIVE THE CREATION OF LITERARY CONTENT FOR YOUNG PEOPLE WRITTEN BY YOUNG PEOPLE</a>
               </h3>
-              <p className="font-Regular text-[#F3F3F3] leading-7 text-sm tracking-wider text-13 leading-26 text-start mt-2 max-w-[350px]">
-                It has survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged{" "}
+              <p className="font-Regular min-w-[362px] text-[#F3F3F3] leading-7 text-sm tracking-wider text-13 leading-26 text-start mt-2">
+                We’re trying something new at Papertown Imaginarium… allowing children and young people
+                write their own stories.{" "}
               </p>
             </div>
           </div>

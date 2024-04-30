@@ -103,18 +103,19 @@ const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
     <>
       <div className="pt-10 mx-3">
         <nav
-          className={`flex container mx-auto px-2 text-center font-VarelaRegular rounded-full max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-3 ${bgColorClass} ${bgShadowClass}`}
+          className={`flex md:container mx-auto px-2 text-center font-VarelaRegular rounded-full max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-3 ${bgColorClass} ${bgShadowClass}`}
         >
-          <div className="container md:pl-25 flex justify-between items-center m-auto">
+          <div className="container px-5 md:pl-25 flex justify-between items-center m-auto">
             <a
               href="/"
               className="transition duration-500 ease-in-out hover:scale-110 flex items-center"
             >
-              <img
-                src={AppLogo}
-                alt="Logo"
-                className="md:h-[80px] lg:w-[88px] sm:h-[70px]  h-[60px] w-[70px]"
-              />
+              <div className="md:h-[80px] lg:w-[88px] sm:h-[70px]  h-[65px] w-[65px]">
+                <img
+                  src={AppLogo}
+                  alt="Logo"
+                />
+              </div>
             </a>
             <div
               className={`lg:flex justify-between w-full md:w-auto `}
