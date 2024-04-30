@@ -12,16 +12,17 @@ const RedefiningWriting = () => {
           {/* Left Col */}
 
           <div className="text-left items-center lg:p-18 md:p-18 sm:p-8 p-8">
-            <h5 className="font-Bold lg:text-6xl md:text-5xl sm:text-4xl text-[#FFF] text-4xl mt-6 text-left">
-              Redefining writing, one
-              <span className="text-[#FBCA23]"> spark</span> at a time
+            <h5 className="font-Bold lg:text-[128.84px] md:text-5xl sm:text-4xl text-[#FFF] text-4xl mt-6 text-left">
+              Welcome
             </h5>
-            <p className="lg:text-[20px] lg:mt-5 lg:mb-20 md:mt-5 md:mb-10 mt-5 text-white">
-              It has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software.
+            <p className="lg:text-[16px] md:text-[16px] text-[14px] lg:mt-5 lg:mb-20 md:mt-5 md:mb-10 mt-5 text-white">
+              This is Papertown Imaginarium…
+              <br/>
+              a not-for-profit organisation that nurtures the love of writing in young people (10-19 years) Fiction or non-fiction, 
+              poetry or prose… whatever it is you love to write, 
+              and wherever you are in your writing journey, 
+              join our community of young writers and take advantage of our free writing resources, 
+              writing review and publication services.
             </p>
            {!user && 
               <a href="/signup">
