@@ -14,7 +14,7 @@ const FactsAndQuestions = () => {
   return (
     <div>
       <GeneralNav color="black" btnColor="black" bgShadow="shadow" />
-      <div className="bg-[#FFF] flex flex-col mx-auto p-16 lg:text-xl md:text-xl sm:text-lg mt-12">
+      <div className="bg-[#FFF] flex flex-col mx-auto p-4 md:p-16 lg:text-xl md:text-xl sm:text-lg mt-12">
          <h1 className="text-6xl font-Bold mb-6">FAQs</h1> 
          <img src={BgImage} alt="" />
       </div>

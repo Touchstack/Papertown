@@ -103,7 +103,9 @@ const OverLay = () => {
     </div>
 
       <div className="mt-10 py-[10px] transition-transform duration-700 ease-in-out transform hover:scale-110 cursor-pointer rounded-[30px] px-[30px] bg-[#52B4AE]">
-        <p className="text-[#FFFFFF]">View Our Partnership Philosophy</p>
+        <p className="text-[#FFFFFF]">
+         <a href="/our-partnership-philosophy">View Our Partnership Philosophy</a> 
+        </p>
       </div>
     </div>
   );
