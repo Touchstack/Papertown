@@ -7,7 +7,7 @@ const SubmitComponent = () => {
  
   return (
     <div>
-        <main className=" flex items-center justify-center bg-[#52B4AE1A] w-full">
+        <div className=" flex items-center justify-center bg-[#52B4AE1A] w-full">
          {/*
           <form onSubmit={handleSubmit(onSubmit)} className=" ">
              <h1 className="lg:text-4xl md:text-3xl sm:text-2xl text-[24px] font-Bold text-center pt-6  pb-5">
@@ -96,14 +96,14 @@ const SubmitComponent = () => {
             <br /> 
           </form>
           */}
-          <div className="flex flex-col items-center justify-center p-10">
+          <div className="flex flex-col w-full items-center justify-center p-10">
               <label className="block text-[24px] pb-2 font-[700]">
                 Upload a pdf document of your writeup
               </label>
           
               <UploadFile/>
           </div>
-        </main>
+        </div>
     </div>
   );
 };
