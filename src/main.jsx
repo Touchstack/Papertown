@@ -35,6 +35,7 @@ import GuardianAccountSetup from "./pages/GuardianSignUpForm/GuardianAccountSetU
 import AboutYourself from "./pages/GuardianSignUpForm/AboutYourSelf.jsx";
 import AboutTheChild from "./pages/GuardianSignUpForm/AboutTheChild.jsx";
 import ContactUs from "./pages/ContactUs/ContactUs.jsx";
+import FactsAndQuestions from "./pages/FAQs/FactsAndQuestions.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
@@ -95,6 +96,12 @@ const router = createBrowserRouter([
   {
     path: "/contactus",
     element: <ContactUs />,
+    errorElement: <ErrorPage />,
+  },
+
+  {
+    path: "/faqs",
+    element: <FactsAndQuestions />,
     errorElement: <ErrorPage />,
   },
 

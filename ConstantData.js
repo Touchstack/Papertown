@@ -193,27 +193,95 @@ export const publication = [
     }
   ]
 
-
-  const fromData = {
-    "has_guardian": true,
-    "email": "Kobbyisreal@gmail.com",
-    "password": "bb8_6p!xXWridXa",
-    "confirm_password": "bb8_6p!xXWridXa",
-    "studentDetails": {
-        "first_name": "Vincent",
-        "last_name": "Adzomani",
-        "phone_number": "",
-        "personal_address": "",
-        "date_of_birth": "2023-12-11",
-        "school": "west hatch school",
-        "school_address": "Kwabenya-musuku",
-        "grade": "8"
-    },
-    "guardianDetails": {
-        "first_name": "Vincent",
-        "last_name": "Adzomani",
-        "phone_number": "0547937232",
-        "personal_address": "Kwabenya-musuku",
-        "relationship": "mother"
-    }
-}
+export const accordianData = [
+  {
+    id: 1,
+    title: 'What is Papertown Imaginarium?',
+    msg: 'Papertown Imaginarium is a not-for-profit organisation that works with young people who love to write, and with schools to get pupils and students engaged with fun and insightful writing activities.'
+  },
+  {
+    id: 2,
+    title: 'How does Papertown Imaginarium work with young people who love to write?',
+    msg: 'Papertown Imaginarium is a not-for-profit organisation that works with young people who love to write, and with schools to get pupils and students engaged with fun and insightful writing activities.'
+  },
+  {
+    id: 3,
+    title: 'How does Papertown Imaginarium work with schools to support writing education?',
+    msg: 'Papertown Imaginarium is a not-for-profit organisation that works with young people who love to write, and with schools to get pupils and students engaged with fun and insightful writing activities.'
+  },
+  {
+    id: 4,
+    title: 'What is Papertown Imaginarium?',
+    msg: 'Papertown Imaginarium is a not-for-profit organisation that works with young people who love to write, and with schools to get pupils and students engaged with fun and insightful writing activities.'
+  },
+  {
+    id: 5,
+    title: 'How do I become a member of Papertown Imaginarium?',
+    msg: 'Papertown Imaginarium is a not-for-profit organisation that works with young people who love to write, and with schools to get pupils and students engaged with fun and insightful writing activities.'
+  },
+  {
+    id: 6,
+    title: 'Do I have to pay to become a member of Papertown Imaginarium?',
+    msg: 'Papertown Imaginarium is a not-for-profit organisation that works with young people who love to write, and with schools to get pupils and students engaged with fun and insightful writing activities.'
+  },
+  {
+    id: 7,
+    title: 'What if I do not want to become a member of Papertown Imaginarium?',
+    msg: 'Papertown Imaginarium is a not-for-profit organisation that works with young people who love to write, and with schools to get pupils and students engaged with fun and insightful writing activities.'
+  },
+  {
+    id: 8,
+    title: 'Can I get published through Papertown Imaginarium?',
+    msg: 'Papertown Imaginarium is a not-for-profit organisation that works with young people who love to write, and with schools to get pupils and students engaged with fun and insightful writing activities.'
+  },
+  {
+    id: 9,
+    title: 'Do I get paid for my writing published on the Papertown Imaginarium website?',
+    msg: 'Papertown Imaginarium is a not-for-profit organisation that works with young people who love to write, and with schools to get pupils and students engaged with fun and insightful writing activities.'
+  },
+  {
+    id: 10,
+    title: 'I want to take my writing seriously and become published beyond the content shared on the website. Can Papertown Imaginarium help me?',
+    msg: 'Papertown Imaginarium is a not-for-profit organisation that works with young people who love to write, and with schools to get pupils and students engaged with fun and insightful writing activities.'
+  },
+  {
+    id: 11,
+    title: 'I would like to become a commercially published writer but I have not written a book yet. Can Papertown Imaginarium help me?',
+    msg: 'Papertown Imaginarium is a not-for-profit organisation that works with young people who love to write, and with schools to get pupils and students engaged with fun and insightful writing activities.'
+  },
+  {
+    id: 12,
+    title: 'Is Papertown Imaginarium only for people who want to become professional writers?',
+    msg: 'Papertown Imaginarium is a not-for-profit organisation that works with young people who love to write, and with schools to get pupils and students engaged with fun and insightful writing activities.'
+  },
+  {
+    id: 13,
+    title: 'I want to take my writing seriously and become published beyond the content shared on the website. Can Papertown Imaginarium help me?',
+    msg: 'Papertown Imaginarium is a not-for-profit organisation that works with young people who love to write, and with schools to get pupils and students engaged with fun and insightful writing activities.'
+  },
+  {
+    id: 14,
+    title: 'What is the difference between Papertown Imaginarium and Papertown Press?',
+    msg: 'Papertown Imaginarium is a not-for-profit organisation that works with young people who love to write, and with schools to get pupils and students engaged with fun and insightful writing activities.'
+  },
+  {
+    id: 15,
+    title: 'Can Papertown Imaginarium help me write or review a writing assignment for school?',
+    msg: 'Papertown Imaginarium is a not-for-profit organisation that works with young people who love to write, and with schools to get pupils and students engaged with fun and insightful writing activities.'
+  },
+  {
+    id: 16,
+    title: 'Can Papertown Imaginarium help me write or review my submission for a writing competition?',
+    msg: 'Papertown Imaginarium is a not-for-profit organisation that works with young people who love to write, and with schools to get pupils and students engaged with fun and insightful writing activities.'
+  },
+  {
+    id: 17,
+    title: 'Can I submit a writing completed through Papertown Imaginarium to a writing competition or project?',
+    msg: 'Papertown Imaginarium is a not-for-profit organisation that works with young people who love to write, and with schools to get pupils and students engaged with fun and insightful writing activities.'
+  },
+  {
+    id: 18,
+    title: 'Can I share my writing done through the Papertown Imaginarium platform with others outside of the Papertown Imaginarium website?',
+    msg: 'Papertown Imaginarium is a not-for-profit organisation that works with young people who love to write, and with schools to get pupils and students engaged with fun and insightful writing activities.'
+  },
+]

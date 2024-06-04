@@ -1,7 +1,16 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
+  darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  prefix: "",
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
       fontFamily: {
         Bold: ["Dosis-Bold", "sans-serif"],
@@ -13,11 +22,9 @@ export default {
         SemiBold: ["Dosis-SemiBold", "sans-serif"],
         VarelaRegular: ["Varela-Regular", "sans-serif"],
       },
-
       backgroundColor: {
         "white-transparent": "rgba(255, 255, 255, 0.40)",
-        "custom-gradient":
-          "linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)",
+        "custom-gradient": "linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)",
         "custom-prm": "var(--prm-1003, #B44DB8)",
       },
       boxShadow: {
@@ -55,5 +62,81 @@ export default {
       xl: "1800px",
       "2xl": "2024px",
     },
+    keyframes: {
+      "accordion-down": {
+        from: { height: "0" },
+        to: { height: "var(--radix-accordion-content-height)" },
+      },
+      "accordion-up": {
+        from: { height: "var(--radix-accordion-content-height)" },
+        to: { height: "0" },
+      },
   },
-};
+  animation: {
+    "accordion-down": "accordion-down 0.2s ease-out",
+    "accordion-up": "accordion-up 0.2s ease-out",
+  },
+},
+plugins: [require("tailwindcss-animate")],
+}
+
+
+
+// export default {
+//   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+//   theme: {
+//     extend: {
+//       fontFamily: {
+//         Bold: ["Dosis-Bold", "sans-serif"],
+//         ExtraBold: ["Dosis-ExtraBold", "sans-serif"],
+//         ExtraLight: ["Dosis-ExtraLight", "sans-serif"],
+//         Light: ["Dosis-Light", "sans-serif"],
+//         Medium: ["Dosis-Medium", "sans-serif"],
+//         Regular: ["Dosis-Regular", "sans-serif"],
+//         SemiBold: ["Dosis-SemiBold", "sans-serif"],
+//         VarelaRegular: ["Varela-Regular", "sans-serif"],
+//       },
+
+//       backgroundColor: {
+//         "white-transparent": "rgba(255, 255, 255, 0.40)",
+//         "custom-gradient":
+//           "linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)",
+//         "custom-prm": "var(--prm-1003, #B44DB8)",
+//       },
+//       boxShadow: {
+//         custom: "0px 7px 80px 0px rgba(105, 23, 109, 0.30)",
+//         shadow: "0px 10px 40px 0px #DFBCDF",
+//       },
+//       backdropBlur: {
+//         custom: "10px",
+//       },
+//     },
+//     height: {
+//       80: "80px",
+//       150: "150px",
+//       225: "225px",
+//       300: "300px",
+//       340: "340px",
+//       370: "370px",
+//       420: "420px",
+//       510: "510px",
+//       600: "600px",
+//       650: "650px",
+//       685: "685px",
+//       800: "800px",
+//       "90vh": "90vh",
+//     },
+//     minWidth: {
+//       210: "210px",
+//       350: "350px",
+//       620: "620px",
+//     },
+//     screens: {
+//       sm: "640px",
+//       md: "768px",
+//       lg: "1024px",
+//       xl: "1800px",
+//       "2xl": "2024px",
+//     },
+//   },
+// };
