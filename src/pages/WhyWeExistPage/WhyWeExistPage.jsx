@@ -1,10 +1,11 @@
 import GeneralNav from "../../Navbar/GeneralNav";
 import Hero from "../../Component/WhyWeExist/Hero";
 import Header from "../../Component/WhyWeExist/Header";
-import Sponsor from "../../Component/WhyWeExist/Sponsor";
 import Team from "../../Component/WhyWeExist/Team";
 import Footer from "../FooterPage/Footer";
 import "../../Style/Style.css";
+import WhyWriting from "../../Component/WhyWeExist/WhyWriting";
+import MeetTheTeam from "../../Component/WhyWeExist/MeetTheTeam";
 
 const WhyWeExistPage = () => {
   return (
@@ -19,8 +20,8 @@ const WhyWeExistPage = () => {
       </div>
       <Header />
       <Hero />
-      <Sponsor />
-      <Team />
+      <WhyWriting />
+      <MeetTheTeam />
       <div className="bg-[#B44DB8]">
         <Footer />
       </div>

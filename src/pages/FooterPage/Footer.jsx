@@ -142,7 +142,7 @@ const onSubmit = async (data) => {
                     FAQs
                   </span>
                   <span className="text-[#FFF] text-[14px] md:text-lg font-VarelaRegular">
-                    Contact Us
+                  <a href="./contactus">Contact Us </a>
                   </span>
                 </div>
 
