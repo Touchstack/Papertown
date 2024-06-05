@@ -35,6 +35,8 @@ import GuardianAccountSetup from "./pages/GuardianSignUpForm/GuardianAccountSetU
 import AboutYourself from "./pages/GuardianSignUpForm/AboutYourSelf.jsx";
 import AboutTheChild from "./pages/GuardianSignUpForm/AboutTheChild.jsx";
 import ContactUs from "./pages/ContactUs/ContactUs.jsx";
+import FactsAndQuestions from "./pages/FAQs/FactsAndQuestions.jsx";
+import OurPartnershipPhilosophy from "./pages/OurPartnershipPhilosophy/OurPartnershipPhilosophy.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
@@ -70,6 +72,11 @@ const router = createBrowserRouter([
     element: <EventsDetails />,
     errorElement: <ErrorPage />,
   },
+  {
+    path: "/our-partnership-philosophy",
+    element: <OurPartnershipPhilosophy />,
+    errorElement: <ErrorPage />,
+  },
 
   {
     path: "/pressclub",
@@ -95,6 +102,12 @@ const router = createBrowserRouter([
   {
     path: "/contactus",
     element: <ContactUs />,
+    errorElement: <ErrorPage />,
+  },
+
+  {
+    path: "/faqs",
+    element: <FactsAndQuestions />,
     errorElement: <ErrorPage />,
   },
 

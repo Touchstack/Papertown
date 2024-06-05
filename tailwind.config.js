@@ -1,7 +1,16 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
+  darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  prefix: "",
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
       fontFamily: {
         Bold: ["Dosis-Bold", "sans-serif"],
@@ -13,11 +22,9 @@ export default {
         SemiBold: ["Dosis-SemiBold", "sans-serif"],
         VarelaRegular: ["Varela-Regular", "sans-serif"],
       },
-
       backgroundColor: {
         "white-transparent": "rgba(255, 255, 255, 0.40)",
-        "custom-gradient":
-          "linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)",
+        "custom-gradient": "linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)",
         "custom-prm": "var(--prm-1003, #B44DB8)",
       },
       boxShadow: {
@@ -55,5 +62,20 @@ export default {
       xl: "1800px",
       "2xl": "2024px",
     },
+    keyframes: {
+      "accordion-down": {
+        from: { height: "0" },
+        to: { height: "var(--radix-accordion-content-height)" },
+      },
+      "accordion-up": {
+        from: { height: "var(--radix-accordion-content-height)" },
+        to: { height: "0" },
+      },
   },
-};
+  animation: {
+    "accordion-down": "accordion-down 0.2s ease-out",
+    "accordion-up": "accordion-up 0.2s ease-out",
+  },
+},
+plugins: [require("tailwindcss-animate")],
+}
