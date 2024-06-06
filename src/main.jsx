@@ -37,6 +37,8 @@ import AboutTheChild from "./pages/GuardianSignUpForm/AboutTheChild.jsx";
 import ContactUs from "./pages/ContactUs/ContactUs.jsx";
 import FactsAndQuestions from "./pages/FAQs/FactsAndQuestions.jsx";
 import OurPartnershipPhilosophy from "./pages/OurPartnershipPhilosophy/OurPartnershipPhilosophy.jsx";
+import AllPressClubPage from "./pages/PressClubPage/AllPressClubPage.jsx";
+import PressClubDetailsPage from "./pages/PressClubPage/PressClubDetailsPage.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
@@ -50,11 +52,6 @@ const router = createBrowserRouter([
   { path: "/det", element: <NewsDetails />, errorElement: <ErrorPage /> },
   { path: "/profile", element: <Profile />, errorElement: <ErrorPage /> },
 
-  {
-    path: "/pressclub",
-    element: <PressClubPage />,
-    errorElement: <ErrorPage />,
-  },
   {
     path: "/whyweexist",
     element: <WhyWeExistPage />,
@@ -81,6 +78,16 @@ const router = createBrowserRouter([
   {
     path: "/pressclub",
     element: <PressClubPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/all/pressclub",
+    element: <AllPressClubPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/pressclub/details",
+    element: <PressClubDetailsPage />,
     errorElement: <ErrorPage />,
   },
   {
@@ -119,11 +126,6 @@ const router = createBrowserRouter([
 
   { path: "/events", element: <EventsPage />, errorElement: <ErrorPage /> },
 
-  {
-    path: "/eventsdet",
-    element: <EventsDetails />,
-    errorElement: <ErrorPage />,
-  },
   {
     path: "/privacypolicy",
     element: <PrivacyPolicy />,

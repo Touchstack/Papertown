@@ -6,6 +6,9 @@ import Icon3 from "./src/assets/Images/icon3.png";
 import Featured1 from "./src/assets/Images/Featured1.jpeg"
 import Featured2 from "./src/assets/Images/Featured2.jpeg"
 import Featured3 from "./src/assets/Images/Featured3.jpeg"
+import ChildrenPic from "./src/assets/Images/Children.png";
+import Child1 from "./src/assets/Images/child1.png";
+
  
  
 export const featuredEvents = [
@@ -353,4 +356,58 @@ export const Guides = [
     msg: 'Please note that we do not pay writers whose writings are posted on our website. We do not charge writers for the services we provide them, and we do not charge people when they read content published on our website - and so we are not able to offer any form of payment to writers.'
   },
 
+]
+
+export const  howWeCanHelp = [
+  {
+    id: 1,
+    title: 'Personnel Support',
+    msg: 'We assign a Papertown representative to your school, to help design, establish, and run the Press Club. From designing the framework for the club, to getting members signed up, coordinating club activities/sessions, and coordinating the publication production process, your Papertown Rep would work with the school to get the Press Club up and running.'
+  },
+  {
+    id: 2,
+    title: 'Press Club Materials',
+    msg: 'We provide extensive lesson guides and materials to be used to teach club members everything they need to know about the Press Club, establishing their roles/functions in the club, being journalists,   designing the school’s publication, gathering and creating content, and working together as a team to create something impactful!'
+  },
+  {
+    id: 3,
+    title: 'Publication & Distribution',
+    msg: 'We produce digital copies of newsletters, newspapers and magazines created by the School Press Club, which can be shared by the school on its digital platform (i.e. website and social media pages). We also publish these school publications on  our website and share them with our wide audience, who may be excited to know what is happening in your school.'
+  },
+  {
+    id: 4,
+    title: 'Network of School Press Clubs',
+    msg: 'We are building a continent-wide network of School Press Clubs, creating a platform for an enriching multi-cultural exchange between members of  various School Press Clubs. Our network also provides great avenues for schools and their Press Club members to engage with others in good-natured, positive competitions and constructive intellectual collaborations.'
+  }
+]
+
+export const pressClubs = [
+   {
+    id: 1,
+    title: 'Mary Mother of Good Counsel',
+    mainIMG: ChildrenPic,
+    childIMG: Child1,
+    numMembers: 12 
+   },
+   {
+    id: 2,
+    title: 'Mary Mother of Good Counsel',
+    mainIMG: ChildrenPic,
+    childIMG: Child1,
+    numMembers: 12 
+   },
+   {
+    id: 3,
+    title: 'Mary Mother of Good Counsel',
+    mainIMG: ChildrenPic,
+    childIMG: Child1,
+    numMembers: 12 
+   },
+   {
+    id: 4,
+    title: 'Mary Mother of Good Counsel',
+    mainIMG: ChildrenPic,
+    childIMG: Child1,
+    numMembers: 12 
+   },
 ]
