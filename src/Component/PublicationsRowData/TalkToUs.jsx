@@ -6,7 +6,13 @@ import Child5 from "../../assets/Images/child5.png";
 
 
 
+
 const TalkToUs = () => {
+  const handleClick = () => {
+    window.location.href = '/contactus'
+  }
+
+
   return (
   <div className="flex justify-center px-3">
       <div className="flex flex-col gap-[20px] mb-20 bg-[#EEF7F7] justify-center items-center p-[28px] md:w-[1241px] rounded-[30px]">
@@ -21,7 +27,7 @@ const TalkToUs = () => {
 
         <p className="md:text-[32px] text-[22px] font-bold">Want to get your work published?</p>
 
-         <button className="w-[151px] font-bold h-[55px] px-[30px] py-[8px] bg-[#52B4AE] rounded-[30px] text-white">
+         <button onClick={handleClick} className="w-[151px] font-bold h-[55px] px-[30px] py-[8px] bg-[#52B4AE] rounded-[30px] text-white">
             Talk to us
         </button>
     </div>

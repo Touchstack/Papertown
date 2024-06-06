@@ -1,7 +1,7 @@
 import BgImage from "../../assets/Images/detaImage.png"
 import DetailsForm from "./DetailsForm";
 import LocationIcon from "../../assets/Images/LocationIcon.svg"
-import MapComponent from "./MapComponent";
+import MapComponent from "../../Component/MapComponent";
 
 const DetailsContent = () => {
   return (

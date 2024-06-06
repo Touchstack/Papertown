@@ -7,7 +7,7 @@ const RedefiningWriting = () => {
 
   return (
     <div className="py-18 px-2 mt-12">
-      <div className="container mx-auto xl:w-8/12 lg:w-9/12 md:w-10/12 sm:w-10/12 w-10/12">
+      <div className="container mx-auto ">
         <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 gap-y-4">
           {/* Left Col */}
 

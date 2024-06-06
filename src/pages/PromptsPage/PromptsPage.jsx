@@ -1,8 +1,7 @@
-import React, { useState, useEffect, Fragment } from "react";
+import  { useState, useEffect, Fragment } from "react";
 import Footer from "../FooterPage/Footer";
 import GeneralNav from "../../Navbar/GeneralNav";
 import { CiSliderHorizontal } from "react-icons/ci";
-import ArrowNew from "../../assets/Images/arrownew.png";
 import BGimage from "../../assets/Images/pexels-katerina-holmes-5905479 1.png";
 import { getCategoryListing, getPrompt, getPromptByCategoryId } from "../../api";
 import PromptCard from "./PromptCard/PromptCard";
@@ -54,10 +53,10 @@ function PromptsPage() {
 
   const handleCategoryClick = (categoryId) => {
     setSelectedCategoryId(categoryId);
+    setLoading(true);
     // Fetch prompts by selected category ID
     getPromptByCategoryId(categoryId)
       .then((res) => {
-        console.log(res);
         setPromptData(res?.data);
         setLoading(false);
       })
@@ -74,19 +73,18 @@ function PromptsPage() {
   };
 
   return (
-    <div className="">
-      <div className="bg-[#FCF7E5] ">
+    <div>
+      <div className="bg-[#FCF7E5]">
         <GeneralNav bgColor="transparent" bgShadow="shadow" btnColor="black" />
 
-        <div className="md:flex md:flex-row md:mt-20 mt-[50px] md:items-center md:justify-center ">
+        <div className="md:flex md:flex-row md:mt-20 mt-[50px] md:items-center md:justify-center">
           {/* Text section */}
           <div className="lg:ml-10 ml-5">
-            {/* Add "mr-8" for right margin */}
-            <button className="leading-8 text-[#4F4F4F]  font-Bold text-[14px] border-[1px] border-[#4F4F4F] rounded-3xl px-5 py-2 mb-5">
+            <button className="leading-8 text-[#4F4F4F] font-Bold text-[14px] border-[1px] border-[#4F4F4F] rounded-3xl px-5 py-2 mb-5">
               Featured spark
             </button>
             <div>
-              <h5 className="lg:w-[599px] md:w-[400px] lg:text-[72px] font-Bold md:text-5xl text-5xl ">
+              <h5 className="lg:w-[599px] md:w-[400px] lg:text-[72px] font-Bold md:text-5xl text-5xl">
                 The pandemic effects on student learning
               </h5>
               <p className="text-[16px] mt-5 mb-5">
@@ -96,8 +94,8 @@ function PromptsPage() {
           </div>
 
           {/* Card image section */}
-          <div className="flex items-center justify-center ">
-            <div className="relative lg:flex lg:flex-col md:px-5 ">
+          <div className="flex items-center justify-center">
+            <div className="relative lg:flex lg:flex-col md:px-5">
               <img
                 src={BGimage}
                 alt="image"
@@ -109,52 +107,55 @@ function PromptsPage() {
       </div>
 
       <div className="mt-8 font-Bold">
-        <div className="ml-3  md:px-20">
+        <div className="ml-3 md:px-20">
           <span className="md:text-5xl text-[36px]">Writing prompts</span>
         </div>
-        
-        {/* Tab and pill section start  */}
-        {loading ? (
-          <div className="flex items-center justify-center my-[10%]">
-            <ClipLoader color="#B44DB8" loading={loading} size={35} />
-          </div>
-        ) : (
-          promptData.length === 0 ? (
-            <EmptyState />
-          ) : (
-            <div className="lg:mx-24 my-8 md:mx-10 mx-8 ">
-              <div className="flex md:justify-between flex-wrap justify-start">
-                <div className="grid md:grid-cols-5 grid-cols-3 gap-2 mb-4">
-                  {/* Tabs */}
-                  {categories.map((category) => (
-                    <div
-                      key={category._id}
-                      className={`cursor-pointer  py-2  px-4 mr-2  inline-block text-grad-400 rounded-3xl  text-lg font-Bold border-2 border-grad-100 text-center ${
-                        selectedCategoryId === category._id
-                          ? "bg-gray-200" // Change background color if selected
-                          : "bg-gray-50"
-                      }`}
-                      onClick={() => handleCategoryClick(category._id)}
-                    >
-                      {category.name}
-                    </div>
-                  ))}
-                </div>
-                <div className="">
-                  {/* Filter button */}
-                  <button
-                    className="flex  gap-5 rounded-3xl justify-center items-center py-2 px-6 text-lg border-[1px] border-[#000f]  font-Bold"
-                    onClick={handleFilterClick}
-                  >
-                    <CiSliderHorizontal />
-                    Filter
-                  </button>
-                </div>
-              </div>
+
+        {/* Tab and pill section start */}
+        <div className="lg:mx-24 my-8 md:mx-10 mx-8">
+          {loading ? (
+            <div className="flex items-center justify-center my-[10%]">
+              <ClipLoader color="#B44DB8" loading={loading} size={35} />
             </div>
-          )
-        )}
-        {/* Tab and pill section end  */}
+          ) : (
+            <>
+              {promptData.length > 0 ? (
+                <div className="flex md:justify-between flex-wrap justify-start">
+                  <div className="grid md:grid-cols-5 grid-cols-3 gap-2 mb-4">
+                    {/* Tabs */}
+                    {categories.map((category) => (
+                      <div
+                        key={category._id}
+                        className={`cursor-pointer flex items-center justify-center w-[100px] h-[50px] mr-2  text-grad-400 rounded-3xl text-lg font-Bold border-2 border-grad-100 text-center ${
+                          selectedCategoryId === category._id
+                            ? "bg-gray-200" // Change background color if selected
+                            : "bg-gray-50"
+                        }`}
+                        onClick={() => handleCategoryClick(category._id)}
+                      >
+                        <p>{category.name}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                   {/* Filter button */}
+                   <div className="flex justify-center mb-8">
+                      <button
+                        className="flex gap-5 rounded-3xl justify-center items-center py-2 px-6 text-lg border-[1px] border-[#000f] font-Bold"
+                        onClick={handleFilterClick}
+                      >
+                        <CiSliderHorizontal />
+                         Reset
+                      </button>
+                    </div>
+                </div>
+              ) : (
+                <EmptyState />
+              )}
+            </>
+          )}
+        </div>
+        {/* Tab and pill section end */}
 
         {/* Display prompts */}
         {!loading && promptData.length > 0 && (
