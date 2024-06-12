@@ -101,7 +101,7 @@ const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
 
   return (
     <>
-      <div className="pt-10 mx-20">
+      <div className="pt-10 md:mx-20 mx-10">
         <nav
           className={`flex md:container mx-auto px-2 text-center font-VarelaRegular rounded-full max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-3 ${bgColorClass} ${bgShadowClass}`}
         >
