@@ -147,9 +147,9 @@ const onSubmit = async (data) => {
                 </div>
 
                 <div className="font-Regular text-[#D0D0D0] w-[150px] text-sm sm:text-start mt-20">
-                  Follow us on social media
+                  {/* Follow us on social media */}
                 </div>
-                <div className="flex md:justify-start text-gray-600 dark:text-gray-400 pt-4 pb-4 pr-8">
+                {/* <div className="flex md:justify-start text-gray-600 dark:text-gray-400 pt-4 pb-4 pr-8">
                   <a
                     href=""
                     target="_blank"
@@ -329,7 +329,7 @@ const onSubmit = async (data) => {
                       </svg>
                     )}
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
             <div>
