@@ -6,7 +6,9 @@ function TipRead() {
   return (
     <div>
       <GeneralNav bgColor="transparent" bgShadow="shadow" btnColor="black" />
-      <SensoryHeat />
+       <div className="flex items-center justify-center">
+        <SensoryHeat /> 
+       </div>
       <div className="bg-[#B44DB8]">
         <Footer />
       </div>
