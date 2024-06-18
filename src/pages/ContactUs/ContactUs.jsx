@@ -26,8 +26,10 @@ const ContactUs = () => {
                <p className="text-[#FFFFFF] font-Bold text-[16] md:text-[26px] lg:text-[36px]">
                  We are here
                </p>
-               <p className="text-[#FFFFFF] font-Bold text-[16px]  md:text-[26px] lg:text-[72px]">
-                 hello@papertownimaginarium.org
+               <p className="text-[#FFFFFF] cursor-pointer font-Bold text-[16px] md:text-[26px] lg:text-[72px]">
+                  <a href="mailto:hello@papertownimaginarium.org">
+                    hello@papertownimaginarium.org
+                  </a>
                </p>
             </div>
         </div>
