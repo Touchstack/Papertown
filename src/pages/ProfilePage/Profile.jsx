@@ -1,56 +1,53 @@
+import { useState } from 'react';
 import GeneralNav from "../../Navbar/GeneralNav";
 import Footer from "../FooterPage/Footer";
 import ProfileCardLeft from "./ProfileCardLeft";
-import ProfileCardRight from "./ProfileCardRight";
+import MyProfileCard from "./MyProfileCard/MyProfileCard";
 import { HiDotsVertical } from "react-icons/hi";
+import MyClubsCard from './MyClubsCard/MyClubsCard';
+import MySubmissionsCard from "./MySubmissionsCard/MySubmissionsCard";
 
 function Profile() {
-   // retrive data in local storage
-   const user = JSON.parse(localStorage.getItem('user'));
+  const user = JSON.parse(localStorage.getItem('user'));
+  const [activeCard, setActiveCard] = useState('profile');
+
+  const renderActiveCard = () => {
+    switch (activeCard) {
+      case 'profile':
+        return <MyProfileCard />;
+      case 'clubs':
+        return <MyClubsCard />;
+      case 'submissions':
+        return <MySubmissionsCard />;
+      default:
+        return <MyProfileCard />;
+    }
+  };
 
   return (
     <div>
-      {/* Navbar section starts */}
-
       <GeneralNav bgColor="transparent" bgShadow="shadow" btnColor="black" />
-
-      {/* Navbar section ends */}
-
-      {/* profile main section start   */}
-
-      <div>
-        <div>
-          <h3 className="lg:text-[60px] gap-20 flex items-center text-[40px] font-Bold lg:ml-20 md:ml-10 ml-5 mt-20">
-            Hi {user?.data?.studentDetails?.first_name} 👋🏾
-            <div className="lg:hidden inlin-block text-2xl md:flex md:ml-[50%]  ">
-              <HiDotsVertical />
+      <div className="flex flex-col items-center">
+        <div className="">
+          <div className="flex items-center justify-center md:items-start md:justify-start">
+            <h3 className="lg:text-[60px] gap-20 flex items-center text-[40px] font-Bold mt-20">
+              Hi {user?.data?.studentDetails?.first_name} 👋🏾
+              <div className="lg:hidden inline-block text-2xl">
+                <HiDotsVertical />
+              </div>
+            </h3>
+          </div>
+          <div className="flex justify-center gap-10">
+            <div className="hidden lg:inline-block">
+              <ProfileCardLeft setActiveCard={setActiveCard} activeCard={activeCard} />
             </div>
-          </h3>
-        </div>
-        {/* Main cards section start  */}
-        <div className="flex lg:gap-10 lg:ml-20 mt-5">
-          {/* profile card left start  */}
-          <div className="hidden lg:inline-block">
-            <ProfileCardLeft />
+            {renderActiveCard()}
           </div>
-          {/* profile card left end  */}
-
-          {/* profile card right start  */}
-          <div>
-            <ProfileCardRight />
-          </div>
-          {/* profile card  right end  */}
         </div>
-        {/* Main cards section end  */}
       </div>
-
-      {/* profile main section end   */}
-
-      {/* Footer section starts */}
       <div className="bg-[#B44DB8]">
         <Footer />
       </div>
-      {/* Footer section ends */}
     </div>
   );
 }

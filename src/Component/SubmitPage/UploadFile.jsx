@@ -41,13 +41,13 @@ const UploadFile = () => {
           setLoading(false)
         } else {
           setError(response?.response?.data?.error);
-          aler(response?.response?.data?.error)
+          alert(response?.response?.data?.error)
           setLoading(false)
         }
       } catch (error) {
         console.error("Error occurred while uploading file:", error);
         setError("An error occurred while uploading the file");
-  };
+  }
 };
   
   
@@ -59,11 +59,11 @@ const UploadFile = () => {
           className="hover:bg-[#099B96] text-black font-Regular py-2 px-4 rounded flex items-center"
         >
           <BsFilePdf className=" mr-2 w-[21.75px] h-[29px]" />
-          <span>{selectedFile ? "Upload Another File" : "Upload File"}</span>
+          <span>{selectedFile ? "Upload Another File" : "Upload PDF or Word document"}</span>
         </label>
         <input
           className="bg-transparent hidden"
-          accept=".pdf"
+          accept=".pdf, .doc"
           type="file"
           id="fileInput"
           onChange={handleFileChange}

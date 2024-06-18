@@ -173,6 +173,25 @@ export const publication = [
     }
   ]
 
+  export const tags = [
+    {
+      id: 1,
+      msg: 'Fiction'
+    },
+    {
+      id: 2,
+      msg: 'Fiction'
+    },
+    {
+      id: 3,
+      msg: 'Fiction'
+    },
+    { 
+      id: 4,
+      msg: 'Fiction'
+    }
+  ]
+
   export const promptTypes = [
     {
       id: 1,

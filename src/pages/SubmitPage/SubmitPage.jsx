@@ -7,7 +7,7 @@ import { HiChevronLeft, HiChevronRight } from 'react-icons/hi2';
 import { Guides } from '../../../ConstantData';
 
 const SubmitPage = () => {
-  const user = localStorage.getItem("user");
+
 
   return (
     <div>
@@ -41,9 +41,9 @@ const SubmitPage = () => {
         </div>
       </div>
 
-      { user && 
+
         <SubmitComponent />
-      }
+ 
 
       <div className="flex md:flex-row flex-col items-center justify-center px-[10rem] py-[3rem] gap-[5rem]">
         <div>

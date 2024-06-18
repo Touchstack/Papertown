@@ -3,6 +3,7 @@ import { getPromptById } from "../../../api"
 import { useParams,  useLocation } from 'react-router-dom'; 
 import React, { useEffect, useState } from 'react';
 import DetailsForm from './DetailsForm'
+import SubmitComponent from "@/Component/SubmitPage/SubmitComponent";
 
 const PromptsDetails = () => {
    
@@ -75,7 +76,8 @@ const PromptsDetails = () => {
           </div> 
           </div>
           <div>
-          <DetailsForm id={id} title={promptDetails?.title} />
+          {/* <DetailsForm id={id} title={promptDetails?.title} /> */}
+          <SubmitComponent />
           </div>
           </div>
     )

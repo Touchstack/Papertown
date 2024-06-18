@@ -2,11 +2,11 @@ import  { useState, useEffect, Fragment } from "react";
 import Footer from "../FooterPage/Footer";
 import GeneralNav from "../../Navbar/GeneralNav";
 import { CiSliderHorizontal } from "react-icons/ci";
-import BGimage from "../../assets/Images/pexels-katerina-holmes-5905479 1.png";
 import { getCategoryListing, getPrompt, getPromptByCategoryId } from "../../api";
 import PromptCard from "./PromptCard/PromptCard";
 import { ClipLoader } from 'react-spinners';
 import EmptyState from "../../Component/EmptyState/EmptyState";
+import { Button } from "@/components/ui/button";
 
 function PromptsPage() {
   const [categories, setCategories] = useState([]);
@@ -72,47 +72,49 @@ function PromptsPage() {
     setSelectedCategoryId(null); // Reset selected category ID
   };
 
+  const handleSubmitClick = () => {
+    window.location.href = '/submit'
+  };
+
   return (
     <div>
       <div className="bg-[#FCF7E5]">
         <GeneralNav bgColor="transparent" bgShadow="shadow" btnColor="black" />
 
-        <div className="md:flex md:flex-row md:mt-20 mt-[50px] md:items-center md:justify-center">
-          {/* Text section */}
-          <div className="lg:ml-10 ml-5">
-            <button className="leading-8 text-[#4F4F4F] font-Bold text-[14px] border-[1px] border-[#4F4F4F] rounded-3xl px-5 py-2 mb-5">
-              Featured spark
-            </button>
-            <div>
-              <h5 className="lg:w-[599px] md:w-[400px] lg:text-[72px] font-Bold md:text-5xl text-5xl">
-                The pandemic effects on student learning
-              </h5>
-              <p className="text-[16px] mt-5 mb-5">
-                Submit your articles by 10 April, 2023
-              </p>
+         <div className="md:px-40 p-6 xl:px-80 flex flex-col items-start justify-center">
+           <h1 className="font-Bold text-[42px] md:text-[72px]">Writing prompts</h1>
+            <div className="space-y-6">
+              <p>
+              Hello Writers, <br />
+              Welcome to Prompts! <br />
+              Prompts are writing assignments - they present scenarios/thoughts/questions for you to explore/respond to/answer through stories, poems, and essays.
+              Writers (especially budding writers) should always be writing; this is how you get better at it. Prompt-based writing is a great way for you to continuously practice your craft and improve your skills with every new piece you tackle. After all, practice makes perfect! 
+            </p>
+            <p>
+              There is no particular order to follow when exploring the prompts - you can start anywhere. Simply pick any prompt that excites or challenges you and see where it takes you. 
+            </p>
+            <p>     
+              We encourage writers to explore the prompts through more than one writing type, even those that seemingly lend themselves to one or two particular forms. It is always thrilling to read pieces that tackle prompts through unexpected and unconventional ways. That is why we’re here, after all. To  be creative, inventive and unconventional! 
+            </p>
+             <p>
+              Have fun writing!
+             </p>
             </div>
-          </div>
 
-          {/* Card image section */}
-          <div className="flex items-center justify-center">
-            <div className="relative lg:flex lg:flex-col md:px-5">
-              <img
-                src={BGimage}
-                alt="image"
-                className="lg:w-[544px] lg:h-[467px] w-[328px] h-[282px] items-center justify-center mb-10 mt-5"
-              />
-            </div>
-          </div>
-        </div>
+            <Button onClick={handleSubmitClick} className="bg-[#52B4AE] mt-5 font-Bold rounded-[25px] md:w-2/12 text-white">
+              Submit your writing
+            </Button>
+         </div>
+        
       </div>
 
-      <div className="mt-8 font-Bold">
-        <div className="ml-3 md:px-20">
+      <div className="mt-8 md:px-20 xl:px-80  font-Bold">
+        <div className="px-10">
           <span className="md:text-5xl text-[36px]">Writing prompts</span>
         </div>
 
         {/* Tab and pill section start */}
-        <div className="lg:mx-24 my-8 md:mx-10 mx-8">
+        <div className=" my-8  mx-8">
           {loading ? (
             <div className="flex items-center justify-center my-[10%]">
               <ClipLoader color="#B44DB8" loading={loading} size={35} />
@@ -150,7 +152,18 @@ function PromptsPage() {
                     </div>
                 </div>
               ) : (
+                <>
+                 <div className="flex justify-end mb-8">
+                      <button
+                        className="flex gap-5 rounded-3xl justify-center items-center py-2 px-6 text-lg border-[1px] border-[#000f] font-Bold"
+                        onClick={handleFilterClick}
+                      >
+                        <CiSliderHorizontal />
+                         Reset
+                      </button>
+                    </div>
                 <EmptyState />
+              </>
               )}
             </>
           )}
