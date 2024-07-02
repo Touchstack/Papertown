@@ -75,7 +75,7 @@ const Hero = () => {
 
            <p>
              By working with schools in this way we are able to help a larger pool of young people benefit from
-             the gains of writing [link to ‘why writing’]
+             the <a href="#why-writing" className="text-blue-500 hover:underline">gains of writing</a>.
            </p>
           </div>
         </div>

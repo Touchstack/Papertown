@@ -68,15 +68,8 @@ const Submissions = ({ setIsSubmitting }) => {
               article?.contentPreview ? "group-hover:hidden" : ""
              }`}
            >
-             <div className="md:w-[40px] md:h-[40px] w-[30px] h-[30px] bg-orange-300 rounded-full flex justify-center items-center overflow-hidden transition ease-in-out duration-300">
-               <img
-                 src={article?.image}
-                 alt=""
-                 className="rounded-full w-full h-full object-cover"
-               />
-             </div>
-             <p className="md:text-[16px] text-[10px] font-bold font-Varela text-[#000]">
-               {article?.author}
+             <p className="md:text-[16px] text-[#027A48] bg-[#ECFDF3] p-2 rounded-[50px] text-[6px] font-bold font-Varela">
+              Published
              </p>
            </div>
          </div>

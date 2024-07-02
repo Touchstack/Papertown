@@ -16,7 +16,7 @@ const LessonsAndNotesCard = () => {
                     <h5 className="text-4xl sm:text-3xl md:text-3xl lg:text-4xl font-Bold mt-2 md:mb-3 mb-3">
                       Creative Writing in Brief
                     </h5>
-                    <span className="md:text-[16px] text-[16px]">
+                    <span className="md:text-[16px] font-Light text-[16px]">
                       Creative writing is a means of using written language to express one’s thoughts, opinions and
                       imagination. If you have written a story, poem, letter, or personal essay, you have engaged in
                       creative writing. Hurray!
@@ -42,7 +42,7 @@ const LessonsAndNotesCard = () => {
                     <h5 className="text-4xl sm:text-3xl md:text-3xl lg:text-4xl font-Bold mt-2 md:mb-3 mb-3">
                       Elements of a Story
                     </h5>
-                    <span className="md:text-[16px] text-[15px]">
+                    <span className="md:text-[16px] font-Light text-[15px]">
                       1 - Plot:
                       This is the “what happens” of a story. It is a sequence of actions or events that move the story
                       along, from the beginning to the middle and then the end. A simple summary way to think of the
@@ -72,7 +72,7 @@ const LessonsAndNotesCard = () => {
                     <h5 className="text-4xl sm:text-3xl md:text-3xl lg:text-4xl font-Bold mt-2 md:mb-3 mb-3">
                       The Theme of a Story
                     </h5>
-                    <span className="md:text-[16px] text-[15px]">
+                    <span className="md:text-[16px] font-Light text-[15px]">
                       The theme is the general message the author is trying to convey to readers through the story, or
                       the general idea at the heart of the story - for example, that things are not always what they seem,or that there is inherent good or bad in everyone. The theme is sometimes generally referred to as
                       the moral (lesson) of the story.
@@ -98,7 +98,7 @@ const LessonsAndNotesCard = () => {
                     <h5 className="text-4xl sm:text-3xl md:text-3xl lg:text-4xl font-Bold mt-2 md:mb-3 mb-3">
                       Poetry in Brief
                     </h5>
-                    <span className="md:text-[16px] text-[15px]">
+                    <span className="md:text-[16px] font-Light text-[15px]">
                       A poem is a type of literature that tells a story through a concentrated, lyrical arrangement of
                       words. It can be used to convey a thought, describe a scene, share feelings/emotion, or recount
                       events in a way that is musical.
@@ -125,7 +125,7 @@ const LessonsAndNotesCard = () => {
                     <h5 className="text-4xl sm:text-3xl md:text-3xl lg:text-4xl font-Bold mt-2 md:mb-3 mb-3">
                       Essays in Brief
                     </h5>
-                    <span className="md:text-[16px] text-[15px]">
+                    <span className="md:text-[16px] font-Light text-[15px]">
                       An essay is a piece of nonfiction writing that methodically examines and evaluates a particular
                       topic, presenting the author’s own point of view on the topic or issue covered. An essay could be
                       formal or informal.

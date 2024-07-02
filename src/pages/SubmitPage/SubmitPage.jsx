@@ -30,10 +30,10 @@ const SubmitPage = () => {
       </div>
 
       <div className="w-full flex flex-col items-center justify-center bg-[#FFD8FF] p-10">
-        <h1 className="font-Bold text-[42px]">Guidelines for submission</h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full mt-6">
+        <h1 className="font-Bold md:text-[42px] text-[32px]">Guidelines for submission</h1>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 w-full mt-6">
           {Guides.map((data, index) => (
-            <div key={index} className="p-8 space-y-2">
+            <div key={index} className="p-8 space-y-1">
               <h2 className="text-lg font-bold">{data?.title}</h2>
               <p className="text-sm">{data?.msg}</p>
             </div>
@@ -48,7 +48,7 @@ const SubmitPage = () => {
       <div className="flex md:flex-row flex-col items-center justify-center px-[10rem] py-[3rem] gap-[5rem]">
         <div>
           <p className="text-[32px] w-[400px] font-Bold p-5">
-            Don’t take our word for it. Hear what our past and current writers have to say
+            Thinking of submitting your writing to us or joining Papertown Imaginarium? Here are some of the young writers we have worked with.
           </p>
 
           <div className="flex items-center gap-3 pt-5 px-5">
@@ -66,20 +66,11 @@ const SubmitPage = () => {
 
         <div className="flex flex-col">
           <p className="w-[400px] md:w-[503px] text-[16px] p-5">
-            Writers will identify their favourite sensory memories and 
-            transfer them to a visual heart map. Writers will identify
-            their favourite sensory memories and transfer 
-            them to a visual heart map. Writers will identify their 
-            favourite sensory memories and transfer them to a visual heart map. 
+            Through Papertown Imaginarium I got to publish my first book. I have always loved writing and I am happy that I was able to write when I was at Papertown. I am very proud to have written a story that was published. 
           </p>
 
           <div className="flex items-center gap-5 pt-5 px-5">
-            <img
-              src={ProfilePicture}
-              alt="Profile Picture"
-              className="w-[39px] h-[39px] rounded-full border border-amber-400"
-            />
-            <p>Enoch Charway</p>
+            <p>Yojosam Inah</p>
           </div>
         </div>
       </div>

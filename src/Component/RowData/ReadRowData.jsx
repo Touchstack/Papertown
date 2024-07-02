@@ -4,6 +4,7 @@ import search from "../../assets/Images/ri_search-line.png";
 import vector from "../../assets/Images/subVector.png";
 import target from "../../assets/Images/mingcute.png";
 import { articles } from "../../../ConstantData";
+import FilterButton from "./FilterButton";
 
 // Single Article Card Component
 const ArticleCard = ({
@@ -133,13 +134,7 @@ const ReadRowData = () => {
             className="pl-10 bg-[#F9F9FB] h-[50px] md:w-[450px] w-[240px] rounded-[8px]"
           />
 
-          <button
-            type="button"
-            className="inline-flex items-center justify-center md:rounded-[8px] rounded-[30px] border w-[100px] h-[50px] ml-5 bg-white"
-          >
-            <img src={vector} alt="" className="mr-2" />
-            Filter
-          </button>
+         <FilterButton />
         </div>
       </div>
 

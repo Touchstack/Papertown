@@ -27,12 +27,12 @@ function ProfileCardLeft({ setActiveCard, activeCard }) {
         >
           Submissions
         </li>
-        <li 
+        {/* <li 
           className={getClassNames('clubs')}
           onClick={() => setActiveCard('clubs')}
         >
           Clubs
-        </li>
+        </li> */}
         <li 
           className={getClassNames('logout')}
           onClick={deleteUserAndRefresh}

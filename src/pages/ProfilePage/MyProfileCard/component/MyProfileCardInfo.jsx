@@ -25,20 +25,20 @@ function MyProfileCardInfo({ setIsEditing }) {
     <div className="space-y-5">
       <div className="flex justify-between">
         <h3 className="text-[29px] font-Bold">My Profile</h3>
-        <button
+        {/* <button
           className="flex items-center justify-center gap-3 text-[14px] border-[1px] border-[#52B4AE] text-[#52B4AE] w-[74px] h-[36px] rounded-3xl"
           onClick={() => setIsEditing(true)}
         >
           <FaPencil />
           Edit
-        </button>
+        </button> */}
       </div>
       <div className="mt-10">
         <div className="flex items-center lg:gap-9 gap-3 ">
-          <BsPersonCircle
+          {/* <BsPersonCircle
             alt=""
             className="lg:w-[113px] lg:h-[113px] w-[100px] h-[100px] "
-          />
+          /> */}
           <div>
             <span className="font-Bold text-[24px]">
               {user?.data?.studentDetails?.first_name}
@@ -49,12 +49,12 @@ function MyProfileCardInfo({ setIsEditing }) {
           </div>
         </div>
       </div>
-      <div className="mb-10">
+      {/* <div className="mb-10">
         <p className="text-[13px] text-[#A3A3A3]">About the writer</p>
         <span>
           It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.
         </span>
-      </div>
+      </div> */}
       <div className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-2">
         <div>
           <div className="flex gap-2 items-center text-[#A3A3A3]">

@@ -2,7 +2,7 @@ import GirlChild from "../../assets/Images/GirlChild.png";
 
 const WhyWriting = () => {
   return (
-    <div className='w-full p-20  bg-[#FFC5FF]'>
+    <div id="why-writing" className='w-full p-20  bg-[#FFC5FF]'>
        <div className='flex flex-col md:flex-row items-center justify-center'>
          {/* Left section */}
           <div className="flex flex-col space-y-6 max-w-[722px]">

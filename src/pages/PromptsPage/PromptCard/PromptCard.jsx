@@ -16,10 +16,10 @@ const PromptCard = ({ data }) => {
             <div className="bg-white border-[1px] border-grad-100 rounded-2xl md:p-6 p-4 md:px-10 px-5">
               <span className="flex md:mt-2 md:ml-2">
                 <button style={{ backgroundColor: gradeColors[colorIndex] }} className="md:text-[13px] text-[13px] px-3 mr-3 leading-8 text-white font-bold rounded-3xl md:w-[87px] md:h-[40px]">
-                  Age {prompt?.age?.[0]} - {prompt?.age?.[1]}
+                  Junior
                 </button>
-                <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl w-[71px] h-[36px]">
-                 {prompt?.category?.name}
+                <button className="leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl  w-6/12 h-[36px]">
+                 Senior Advance
                 </button>
               </span>
               <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold mt-2 md:mb-3">
@@ -28,6 +28,18 @@ const PromptCard = ({ data }) => {
               <span className="md:text-[16px] text-[15px]">
               {prompt?.description}
               </span>
+
+             <div className='mt-3 flex gap-3 flex-row'>
+                <div className="flex items-center justify-center leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl  w-3/12 h-[36px]">
+                  Story
+                </div>
+                <div className="flex items-center justify-center leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl  w-3/12 h-[36px]">
+                  Essay
+                </div>
+                <div className="flex items-center justify-center leading-8 text-[13px] border-[1px] border-[#292929] rounded-3xl  w-3/12 h-[36px]">
+                  Poem
+                </div>
+             </div>
             </div>
           </Link>
         )

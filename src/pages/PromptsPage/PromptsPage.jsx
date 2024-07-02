@@ -66,11 +66,11 @@ function PromptsPage() {
       });
   };
 
-  const handleFilterClick = () => {
-    // Fetch all prompts
-    fetchPrompts();
-    setSelectedCategoryId(null); // Reset selected category ID
-  };
+  // const handleFilterClick = () => {
+  //   // Fetch all prompts
+  //   fetchPrompts();
+  //   setSelectedCategoryId(null); // Reset selected category ID
+  // };
 
   const handleSubmitClick = () => {
     window.location.href = '/submit'
@@ -133,7 +133,6 @@ function PromptsPage() {
                             ? "bg-gray-200" // Change background color if selected
                             : "bg-gray-50"
                         }`}
-                        onClick={() => handleCategoryClick(category._id)}
                       >
                         <p>{category.name}</p>
                       </div>
@@ -144,10 +143,9 @@ function PromptsPage() {
                    <div className="flex justify-center mb-8">
                       <button
                         className="flex gap-5 rounded-3xl justify-center items-center py-2 px-6 text-lg border-[1px] border-[#000f] font-Bold"
-                        onClick={handleFilterClick}
                       >
                         <CiSliderHorizontal />
-                         Reset
+                         Filter
                       </button>
                     </div>
                 </div>
@@ -156,10 +154,9 @@ function PromptsPage() {
                  <div className="flex justify-end mb-8">
                       <button
                         className="flex gap-5 rounded-3xl justify-center items-center py-2 px-6 text-lg border-[1px] border-[#000f] font-Bold"
-                        onClick={handleFilterClick}
                       >
                         <CiSliderHorizontal />
-                         Reset
+                         Filter
                       </button>
                     </div>
                 <EmptyState />

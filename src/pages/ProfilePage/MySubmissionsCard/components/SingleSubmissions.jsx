@@ -24,6 +24,10 @@ const SingleSubmissions = ({onBackClick}) => {
             <p>2 min read</p>
           </div>
         </div>
+
+        <p className="md:text-[14px] mt-3 w-1/12 text-[#027A48] bg-[#ECFDF3] p-2 rounded-[50px] text-[13px] font-bold font-Varela">
+            Published
+        </p>
  
      {/* Use a react-PDF to render this */}
      <div className="space-y-5 p-4">
@@ -54,14 +58,12 @@ const SingleSubmissions = ({onBackClick}) => {
      </div>
 
      <div className="p-4">
-        <h1 className="font-Bold">Tags & Categories</h1>
+        <h1 className="font-Bold">Writing Category</h1>
 
         <div className="flex gap-2 mt-3 mb-3">
-           {tags.map((items, index) => (
-             <div key={index} className="border-[1px] border-[#B8B8B8] bg-[#EDEDED] p-2 rounded-full">
-               <p className="text-[#5A5A5A]">{items.msg}</p>
+             <div className="border-[1px] border-[#B8B8B8] bg-[#EDEDED] p-2 rounded-full">
+               <p className="text-[#5A5A5A]">Essay</p>
              </div>
-           ))} 
         </div>
      </div>
 

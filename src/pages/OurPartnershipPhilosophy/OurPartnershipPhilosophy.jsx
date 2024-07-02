@@ -6,14 +6,14 @@ const OurPartnershipPhilosophy = () => {
   return (
     <div>
       <GeneralNav color="black" btnColor="black" bgShadow="shadow" />
-      <div className="bg-[#FFF] flex flex-col mx-auto p-4 md:p-16 lg:text-xl md:text-xl sm:text-lg mt-12">
+      <div className="bg-[#FFF] flex flex-col p-10 md:px-16 md:py-10 lg:text-xl md:text-xl sm:text-lg ">
          <h1 className="md:text-6xl text-2xl font-Bold mb-4">
           Our Partnership Philosophy
          </h1> 
          <img src={BgImage} alt="" />
-      </div>
+    
  
-       <div className="md:p-20 p-4 space-y-6">
+       <div className="p-4 mt-6 space-y-6">
          <p>
            Attempting to foster and improve creative writing in Africa is a tall order and we do not presume to be able to do this on our own. To make any real gains towards having the kind of impact, and reaching the number of children we hope to reach, can only be achieved by working with others with the same/complementary interest.
          </p>
@@ -31,7 +31,7 @@ const OurPartnershipPhilosophy = () => {
          </p>
        </div>
 
-       <div className="md:p-20 p-6 space-y-6">
+       <div className="p-6 space-y-6">
          <h2 className="text-2xl font-Bold">Partnership with Schools</h2>
          <p>
             Papertown Imaginarium partners with schools to design and run programs that get pupils and
@@ -55,7 +55,7 @@ const OurPartnershipPhilosophy = () => {
          </ol>
        </div>
 
-       <div className="md:p-20 p-4 space-y-4">
+       <div className=" p-4 space-y-4">
          <h2 className="text-2xl font-Bold">Partnership with Corporate Organisations</h2>
          <p>
             We work with corporate organisations to run specific projects and programs for aspiring young
@@ -72,7 +72,7 @@ const OurPartnershipPhilosophy = () => {
          </p>
        </div>
 
-       <div className="md:p-20 p-4 space-y-4">
+       <div className="p-4 space-y-4">
          <h2 className="text-2xl font-Bold">Partnership with other Writing Organisations</h2>
          <p>
             Part of our work at Papertown Imaginarium is to help aspiring young writers find and take
@@ -87,7 +87,7 @@ const OurPartnershipPhilosophy = () => {
          </p>
        </div>
 
-       <div className="md:p-20 p-4 space-y-4">
+       <div className="p-4 space-y-4">
          <h2 className="text-2xl font-Bold">Partnership with Creative Persons (writers, illustrators, editors, etc.)</h2>
          <p>
            As a not-for profit organisation, we rely on working with writing experts who are interested in tutoring aspiring authors pro bono, as part of their own way to give back and contribute to the development of the writing hemisphere.
@@ -102,7 +102,7 @@ const OurPartnershipPhilosophy = () => {
          </p>
        </div>
 
-       <div className="md:p-20 p-4 space-y-4">
+       <div className="p-4 space-y-4">
          <h2 className="text-2xl font-Bold">Partnership with Publishers</h2>
          <p>
             In helping aspiring young writers explore their interest and develop their writing skills, we often
@@ -112,7 +112,7 @@ const OurPartnershipPhilosophy = () => {
          </p>
        </div>
 
-       <div className="md:p-20 p-4 space-y-4">
+       <div className="p-4 space-y-4">
          <h2 className="text-2xl font-Bold">Partnerships with Ancillary Organisations (e.g. reading groups, libraries, etc)</h2>
          <p>
             Reading and writing go hand-in-hand. Writers need to read a lot to improve their writing, and what
@@ -123,7 +123,7 @@ const OurPartnershipPhilosophy = () => {
          </p>
        </div>
 
-       <div className="md:p-20 p-4 space-y-4">
+       <div className="p-4 space-y-4">
          <h2 className="text-2xl font-Bold">Partnerships with Individuals</h2>
          <p>
             We welcome partnerships with individuals who are interested in encouraging and supporting
@@ -134,11 +134,12 @@ const OurPartnershipPhilosophy = () => {
             skill and achieve a lot through their writing.
          </p>
        </div>
-
+       </div>
       <div className="bg-[#B44DB8]">
         <Footer />
       </div>
-    </div>
+   
+  </div>
   )
 }
 

@@ -14,7 +14,7 @@ const SubmitComponent = () => {
                 </h1>
                ): (
                <h1 className="block text-[24px] pb-2 font-Bold">
-                Sign up to Submit your work here
+                Thinking of submitting your writing to us? 
                </h1>
               )}
           
@@ -24,7 +24,7 @@ const SubmitComponent = () => {
                  className="bg-[#099B96] p-4 font-Bold  justify-center text-center inline-flex text-white w-[298px] my-10 md:rounded-full rounded-3xl"
  
                >
-                 Get started
+                 Submit my writeup
                </button>
                }
           </div>
