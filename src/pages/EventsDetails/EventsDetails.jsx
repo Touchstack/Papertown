@@ -1,4 +1,3 @@
-import Circle from '../../Component/SubmitPage/SubmitBg'
 import GeneralNav from '../../Navbar/GeneralNav'
 import DetailsContent from './DetailsContent'
 import Footer from '../FooterPage/Footer'

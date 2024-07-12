@@ -5,7 +5,7 @@ import MapComponent from "../../Component/MapComponent";
 
 const DetailsContent = () => {
   return (
-    <div className="flex flex-col items-center justify-center lg:mt-20 mt-10 z-[50]">
+    <div className="flex flex-col items-center justify-center lg:mt-20 mt-8 z-[50]">
       <div>
         <div className="">
           <h5 className="lg:text-[72px] font-Bold md:text-5xl text-3xl md:mb-5">
@@ -25,7 +25,7 @@ const DetailsContent = () => {
 
       {/* image end*/}
       {/* Text section start  */}
-      <div className=" grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 md:px-40 gap-20">
+      <div className=" grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 px-10 md:px-40 gap-20">
         <div className="">
             <p className="font-Bold lg:text-3xl mt-10 py-5">Event Info</p>
         <p className="mb-5 mt-10">

@@ -36,10 +36,10 @@ function FeaturedNew() {
           <OtherCard />
         </div>
         <div className="lg:mr-20 m-2 mr-10 mb-20 ">
-          <h5 className="lg:text-[42px] md:text-[60px] mb-5  text-[30px] font-Bold">
+          {/* <h5 className="lg:text-[42px] md:text-[60px] mb-5  text-[30px] font-Bold">
             Other news items
           </h5>
-          <NewOtherCard />
+          <NewOtherCard /> */}
           {/* Button section start  */}
           <div className="flex md:ml-[50px] justify-center m-[50px]">
             <button className="border-[1px] leading-8 border-[#52B4AE] text-[#52B4AE] font-bold rounded-3xl text-[20px] w-[145px] h-[50px]">
