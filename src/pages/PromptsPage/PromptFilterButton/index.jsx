@@ -1,5 +1,4 @@
 import { useState } from "react"
-import vector from "../../assets/Images/subVector.png";
 
 import {
     DropdownMenu,
@@ -8,6 +7,7 @@ import {
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
 
+  import { CiSliderHorizontal } from "react-icons/ci";
 
 const FilterButton = () => {
     const [showAllBar, setShowAllBar] = useState(true)
@@ -18,13 +18,12 @@ const FilterButton = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-          <button
-            type="button"
-            className="inline-flex items-center justify-center md:rounded-[8px] rounded-[30px] border w-[100px] h-[50px] ml-5 bg-white"
-          >
-            <img src={vector} alt="" className="mr-2" />
-            Filter
-          </button>
+         <button
+            className="flex gap-5 rounded-[8px]  justify-center items-center py-2 px-6 text-lg border-[1px] border-[#000f] font-Bold"
+           >
+              <CiSliderHorizontal />
+              Filter
+         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-40 bg-white">
         <DropdownMenuCheckboxItem
@@ -38,21 +37,28 @@ const FilterButton = () => {
           checked={showEssayBar}
           onCheckedChange={setShowEssayBar}
         >
-         Essay
+         Beginner
         </DropdownMenuCheckboxItem>
         
         <DropdownMenuCheckboxItem
           checked={showPoem}
           onCheckedChange={setShowPoem}
         >
-          Poem
+          Senior Intermediate
         </DropdownMenuCheckboxItem>
         
         <DropdownMenuCheckboxItem
           checked={showStory}
           onCheckedChange={setShowStory}
         >
-          Story
+          Junior Advanced
+        </DropdownMenuCheckboxItem>
+
+        <DropdownMenuCheckboxItem
+          checked={showStory}
+          onCheckedChange={setShowStory}
+        >
+          Senior Advanced
         </DropdownMenuCheckboxItem>
       </DropdownMenuContent>
     </DropdownMenu>

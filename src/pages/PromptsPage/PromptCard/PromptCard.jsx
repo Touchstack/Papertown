@@ -25,7 +25,7 @@ const PromptCard = ({ data }) => {
               <h5 className="text-2xl md:text-3xl lg:text-4xl font-Bold mt-2 md:mb-3">
                 {prompt?.title}
               </h5>
-              <span className="md:text-[16px] text-[15px]">
+              <span className="md:text-[16px] font-Regular text-[15px]">
               {prompt?.description}
               </span>
 
