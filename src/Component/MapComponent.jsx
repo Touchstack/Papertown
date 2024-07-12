@@ -3,7 +3,7 @@ const MapComponent = () => {
     return (
       <div>
         <div
-          className="rounded-lg"
+          className="rounded-lg w-full"
           style={{
             position: "relative",
             overflow: "hidden",

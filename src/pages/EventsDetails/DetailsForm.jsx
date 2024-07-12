@@ -2,7 +2,7 @@ import React from "react"
 const DetailsForm = () => {
   return (
     <div> 
-        <form className="w-full sm:w-11/12 md:w-10/12 lg:w-8/12 xl:w-6/12 rounded-lg p-6">
+        <form className="w-full  rounded-lg p-6">
     <h1 className="text-4xl font-Bold text-center pb-6 sm:pb-12 mt-5 sm:text-left">
      Register to attend
     </h1>
@@ -56,9 +56,9 @@ const DetailsForm = () => {
       <label className="block text-sm pb-2 mt-5" htmlFor="email">
         Email address
       </label>
-      <input
-        className="border-gray-500 bg-neutral-200  rounded-md p-2 w-full h-[55px] sm:w-200px "
-        type="text"
+       <input
+          className="border-gray-500 bg-neutral-200 rounded-md p-2 w-[200px] h-[50px] sm:w-100px"
+          type="text"
         name="email"
         placeholder="name@domain.com"
       />
