@@ -11,11 +11,13 @@ const PublicationsPage = () => {
          <div className='flex flex-col mt-[70px] md:ml-[50px] ml-[10px] md:p-20 px-2'>
              <h2 className='text-[#000] md:text-[72px]  text-[40px] font-[900]'>Publications</h2>
     
-              <div className='md:w-[520px] mt-10'>
-                  <p className='text-[16px] font-[400]'> It has survived not only five centuries,
-                    but also the leap into electronic typesetting, 
-                    remaining essentially unchanged.
-                    It was popularised in the 1960s with the release of Letraset sheets containing. 
+              <div className='mt-5'>
+                  <p className='text-[16px] font-[400]'>
+                   Since being established in 2017, we have published 15 books written by writers between 8 and 14 years.  We have worked with young writers to come up with original story ideas, create story outlines and manuscripts, and write, review and edit drafts, leading to the publication of four
+                   stories, one collection of poems, and ten anthologies.
+                  </p>
+                  <p className="mt-6">
+                   Please note that commercial publication is done through our publishing business, Papertown Press, and is not part of the free services offered by Papertown   Imaginarium.
                   </p>
               </div>
 

@@ -2,8 +2,8 @@ import PublicationsRowData from "../../Component/PublicationsRowData/Publication
 import GeneralNav from "../../Navbar/GeneralNav"
 import Footer from '../FooterPage/Footer';
 import { useLocation, } from 'react-router-dom';
-import { HiMiniChevronLeft, HiMiniChevronRight } from "react-icons/hi2";
 import TalkToUs from "../../Component/PublicationsRowData/TalkToUs";
+import Barcode from "@/assets/Images/barcode.png"
 
 const SinglePublicationData = () => {
     const { state } = useLocation();
@@ -15,7 +15,7 @@ const SinglePublicationData = () => {
          <div className="flex flex-col md:flex-row md:py-40 py-20 lg:px-40 px-5 gap-[100px]">
 
             {/*Card*/}
-            <div className='max-w-md rounded-[15px] border px-[20px] pt-[25px] bg-[#F5F5F5]'>
+            <div className='max-w-md rounded-[15px] h-[383px] border px-[20px] pt-[25px] bg-[#F5F5F5]'>
             <div className='max-w-md rounded-[15px_15px_0px_0px] border '>
                 <img src={state.item.image} alt='' />
             </div>
@@ -55,8 +55,17 @@ const SinglePublicationData = () => {
                         <p>{state.item.pages}</p>
                         <p>{state.item.dop}</p>
                         <p>{state.item.language}</p>
-                        <p>{state.item.isbn}</p>
+                        <div>
+                        <img src={Barcode} alt="" />
+                        <p>
+                          {state.item.isbn}
+                        </p>
+                        </div>
                     </div>
+
+                  <button className="w-6/12 font-bold h-[55px] px-[30px] py-[8px] bg-[#52B4AE] rounded-[30px] text-white">
+                     View
+                  </button>
                 </div>
             </div>
          </div>
@@ -70,15 +79,7 @@ const SinglePublicationData = () => {
                <div className="md:flex flex-row text-[#52B4AE] hidden items-center gap-2">
                 
                 <p>View all</p>
-                
-                <div className="rounded-full border border-[#52B4AE] h-[30px] w-[30px] flex items-center justify-center">
-                    <HiMiniChevronLeft className="text-[50px]"/>
-                </div>
-                
-                <div className="rounded-full border border-[#52B4AE] bg-[#EEF7F7] h-[30px] w-[30px] flex items-center justify-center">
-                    <HiMiniChevronRight className="text-[50px]"/>
-                </div>
-
+              
               </div>
 
              </div>
