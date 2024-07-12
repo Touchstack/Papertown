@@ -25,7 +25,7 @@ const PressClubModal = ({ isVisible, onClose }) => {
       </header>
 
       <form onSubmit={formik.handleSubmit} name="contact" method="post">
-        <div className="relative mb-2 group text-sm font-Regular text-[#858585] items-center justify-center flex">
+        <div className="relative mb-6 group text-sm font-Regular text-[#858585] items-center justify-center flex">
           <input
             type="name"
             id="name"
@@ -34,7 +34,7 @@ const PressClubModal = ({ isVisible, onClose }) => {
             value={formik.values.full_name}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
-            className="block w-[350px] h-[50px] p-3 text-[#666] font-Regular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
+            className="block w-[350px]  p-3 text-[#666] font-Regular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
           />
           {formik.errors.full_name && formik.touched.full_name && (
             <p className="error absolute bottom-0 left-0 ml-8 mb-[-19px] text-red-500 text-xs">
@@ -42,7 +42,7 @@ const PressClubModal = ({ isVisible, onClose }) => {
             </p>
           )}
         </div>
-        <div className="relative z-0 w-full mb-2 group text-sm font-Regular text-[#858585] items-center justify-center flex">
+        <div className="relative z-0 w-full mb-6 group text-sm font-Regular text-[#858585] items-center justify-center flex">
           <input
             type="phone"
             id="phone_number"
@@ -60,7 +60,7 @@ const PressClubModal = ({ isVisible, onClose }) => {
           )}
         </div>
 
-        <div className="relative z-0 w-full mb-2 group text-sm font-Regular text-[#858585] items-center justify-center flex">
+        <div className="relative z-0 w-full mb-6 group text-sm font-Regular text-[#858585] items-center justify-center flex">
           <input
             type="email"
             id="email"
@@ -78,7 +78,7 @@ const PressClubModal = ({ isVisible, onClose }) => {
           )}
         </div>
 
-        <div className="relative z-0 w-full mb-2 group text-sm font-Regular text-[#858585] items-center justify-center flex">
+        <div className="relative z-0 w-full mb-6 group text-sm font-Regular text-[#858585] items-center justify-center flex">
           <input
             type="role"
             id="role"
@@ -96,7 +96,7 @@ const PressClubModal = ({ isVisible, onClose }) => {
           )}
         </div>
 
-        <div className="relative z-0 w-full mb-2 group text-sm font-Regular text-[#858585] items-center justify-center flex">
+        <div className="relative z-0 w-full mb-6 group text-sm font-Regular text-[#858585] items-center justify-center flex">
           <input
             type="address"
             id="address"
