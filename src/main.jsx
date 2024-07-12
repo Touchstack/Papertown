@@ -39,17 +39,19 @@ import FactsAndQuestions from "./pages/FAQs/FactsAndQuestions.jsx";
 import OurPartnershipPhilosophy from "./pages/OurPartnershipPhilosophy/OurPartnershipPhilosophy.jsx";
 import AllPressClubPage from "./pages/PressClubPage/AllPressClubPage.jsx";
 import PressClubDetailsPage from "./pages/PressClubPage/PressClubDetailsPage.jsx";
+import ReadpageDetails from "./pages/ReadPage/ReadpageDetails.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
   { path: "/submit", element: <SubmitPage />, errorElement: <ErrorPage /> },
   { path: "/read", element: <Readpage />, errorElement: <ErrorPage /> },
+  { path: "/read/details", element: <ReadpageDetails />, errorElement: <ErrorPage /> },
   { path: "/lessons&notes", element: <Tips />, errorElement: <ErrorPage /> },
   { path: "/tip-read", element: <TipRead />, errorElement: <ErrorPage /> },
   { path: "/prompt", element: <PromptsPage />, errorElement: <ErrorPage /> },
   { path: "/promptdetails/:id", element: <Details />, errorElement: <ErrorPage /> },
   { path: "/news", element: <NewSection />, errorElement: <ErrorPage /> },
-  { path: "/det", element: <NewsDetails />, errorElement: <ErrorPage /> },
+  { path: "/news/detials", element: <NewsDetails />, errorElement: <ErrorPage /> },
   { path: "/profile", element: <Profile />, errorElement: <ErrorPage /> },
 
   {
