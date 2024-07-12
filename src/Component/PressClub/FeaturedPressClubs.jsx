@@ -18,25 +18,22 @@ const FeaturedPressClubs = () => {
         </p>
       </div>
       
-      <div className="grid lg:grid-cols-3 grid-cols-1 gap-8 font-Bold">
-       {pressClubs.map((data, index) => (
-          <div key={index} onClick={handleNavigation} >
-            <img src={data?.mainIMG} />
-            <p className="text-[#000] lg:text-xl text-lg my-4">
-               {data?.title}
-            </p>
-            <div className="mb-8 text-sm font-SemiBold text-white md:text-sm lg:text-lg">
-              <div className="flex -space-x-4 rtl:space-x-reverse">
-                <img style={{ height: "auto" }} src={data?.childIMG} alt="" />
-                <img style={{ height: "auto" }}  src={data?.childIMG} alt="" />
-                <img style={{ height: "auto" }}  src={data?.childIMG} alt="" />
-                <span className="inline-flex text-[#393939] text-lg m-3 pl-7">
-                  + {data?.numMembers} members
+      <div className="flex items-center justify-center">
+        <div className="grid lg:grid-cols-3 grid-cols-1 gap-8 font-Bold">
+        {pressClubs.map((data, index) => (
+            <div key={index} onClick={handleNavigation} >
+              <img src={data?.mainIMG} />
+            <div>
+              <p className="text-[#000] lg:text-xl text-lg my-2">
+                  {data?.title}
+                </p>
+                <span className="inline-flex font-VarelaRegular text-[#393939] text-lg">
+                  {data?.numMembers} members
                 </span>
-              </div>
             </div>
+          </div>
+        ))}
         </div>
-      ))}
       </div>
     </div>
   );
