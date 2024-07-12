@@ -1,7 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import search from "../../assets/Images/ri_search-line.png";
-import vector from "../../assets/Images/subVector.png";
 import target from "../../assets/Images/mingcute.png";
 import { articles } from "../../../ConstantData";
 import FilterButton from "./FilterButton";
@@ -15,7 +14,7 @@ const ArticleCard = ({
   contentPreview,
   image,
 }) => (
-  <div className="group max-w-sm rounded-[30px] border overflow-hidden px-[28px] py-[36px] transition ease-in-out duration-300">
+  <div onClick={() => window.location = '/read/details'} className="group max-w-sm rounded-[30px] border overflow-hidden px-[28px] py-[36px] transition ease-in-out duration-300">
     <div
       className={`flex justify-center items-center font-bold md:text-[15px] text-[10px] md:w-[70px] w-[50px] md:h-[40px] h-[30px] rounded-[30px] border-[1px] border-black transition ease-in-out duration-300 ${
         contentPreview ? "group-hover:hidden" : ""
@@ -81,7 +80,7 @@ ArticleCard.propTypes = {
 };
 
 // Individual Articles List Component
-const ArticlesList = ({ articles }) => (
+export const ArticlesList = ({ articles }) => (
   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[10px] lg:gap-[10px]">
     {articles.map((article) => (
       <ArticleCard key={article.id} {...article} />

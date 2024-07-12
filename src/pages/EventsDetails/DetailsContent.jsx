@@ -5,25 +5,27 @@ import MapComponent from "../../Component/MapComponent";
 
 const DetailsContent = () => {
   return (
-    <div className="lg:ml-[10%] lg:mt-20 mt-10 z-[50]">
-      <div className="lg:ml-5 md:ml-20 ml-5">
-        <h5 className="lg:w-[800px] md:w-[500px] lg:text-[72px] font-Bold md:text-5xl text-5xl mb-5">
-        Annual UNICEF spelling Bee 2023
-        </h5>
-      </div>
+    <div className="flex flex-col items-center justify-center lg:mt-20 mt-10 z-[50]">
+      <div>
+        <div className="">
+          <h5 className="lg:text-[72px] font-Bold md:text-5xl text-3xl md:mb-5">
+          Annual UNICEF spelling Bee 2023
+          </h5>
+        </div>
 
-      {/* image*/}
-      <div className="mt-10 text-center">
-        <img
-          src={BgImage}
-          alt=""
-          className="lg:w-[1150px] lg:h-[330px] md:w-[685px] md:h-[230px] w-[360px] lg:mx-0 md:mx-auto mx-auto block"
-        />
+        {/* image*/}
+        <div className="mt-10 text-center">
+          <img
+            src={BgImage}
+            alt=""
+            className="lg:w-[1150px] lg:h-[330px] md:w-[685px] md:h-[230px] w-[360px] lg:mx-0 md:mx-auto mx-auto block"
+          />
+        </div>
       </div>
 
       {/* image end*/}
       {/* Text section start  */}
-      <div className="lg:w-[990px] md:w-[700px] md:ml-20 ml-10 lg:ml-0 w-[320px] grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-20">
+      <div className=" grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 md:px-40 gap-20">
         <div className="">
             <p className="font-Bold lg:text-3xl mt-10 py-5">Event Info</p>
         <p className="mb-5 mt-10">
@@ -46,25 +48,26 @@ const DetailsContent = () => {
         <p className="font-Bold lg:text-3xl mt-10">Date</p>
         <p className="font-Regular mt-5">Saturday, 1st Decmber 2022</p>
         <p className="font-Regular mb-5">12:00 PM GMT</p>
-        <div className="lg:w-[530px] lg:h-[200px] md:w-[420px] md:h-[170px] sm:w-[330px] sm:h-[130px] mb-10 flex-col justify-start items-start gap-2.5 inline-flex">
-<div className="w-[553px] h-[310px] rounded-[10px] md:w-1/2 border border-neutral-200 px-5 mb-30">
-<div className="flex-col justify-start items-start gap-3 flex">
-<div className="justify-start items-center gap-3 inline-flex">
-<div className="text-black text-xl font-SemiBold">
-    <img src={LocationIcon} alt="LocationIcon" className="inline-block"/> Location
-</div>
-</div>
-<div className="w-[510px] text-neutral-700 text-base font-Regular leading-relaxed">JWHM+WJH, First Floor, Blu Business Park, Aklika Junction, Accra</div>
-</div>
-<div className="overflow-hidden lg:w-[516px] lg:h-[185px] md:w-[400px] md:h-[150px] sm:w-[300px] sm:h-[100px] mb-5">
- <MapComponent/>
- </div>
- 
-</div>
-</div>
+        
+        <div className="lg:h-[200px]  md:h-[170px]  sm:h-[130px] mb-10 flex-col justify-start items-start gap-2.5 inline-flex">
+           <div className=" h-[310px] rounded-[10px] border border-neutral-200 px-5 mb-30">
+             <div className="flex-col justify-start items-start gap-3 flex">
+               <div className="justify-start items-center gap-3 inline-flex">
+                 <div className="text-black text-xl font-SemiBold">
+                   <img src={LocationIcon} alt="LocationIcon" className="inline-block"/> Location
+                 </div>
+               </div>
+        <div className="text-neutral-700 text-base font-Regular leading-relaxed">JWHM+WJH, First Floor, Blu Business Park, Aklika Junction, Accra</div>
+        </div>
+        <div className="overflow-hidden  mb-5">
+        <MapComponent/>
+        </div>
+        
+        </div>
+        </div>
 
         </div>
-        <div className="ml-5 gap-5">
+        <div className="gap-5">
         <DetailsForm/>
         </div>
       </div>
