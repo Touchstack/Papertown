@@ -9,11 +9,11 @@ function FeaturedNew() {
       <div className="">
         {/* Featured news text with slider start  */}
         <div className="flex items-center justify-between">
-          <h5 className="lg:text-[42px] md:text-[60px]  text-[30px] font-Bold">
-            Featured news
+          <h5 className="lg:text-[42px] md:text-[60px] mb-10  text-[30px] font-Bold">
+            Here’s what’s happening at the moment…
           </h5>
           {/* slider icons section start */}
-          <div className="flex lg:mr-20 md:mr-10 mr-3 hidden lg:inline-flex">
+          <div className="md:flex lg:mr-20 md:mr-10 mr-3 hidden lg:inline-flex">
             {/* Adjust the margin as needed */}
             <a
               href="#"
