@@ -1,4 +1,8 @@
+import { useState } from "react";
+import PressClubModal from "../PressClubModal/PressClubModal";
+
 const PressClubs = () => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <section className="bg-[#FFF]">
       <div className="py-14 lg:py-16 mx-auto text-center max-w-screen-xl px-4">
@@ -19,11 +23,17 @@ const PressClubs = () => {
           <br />Contact us here or at hello@papertownimaginarium.org if you would like us to set up and run a
           Press Club in your school.
           </p>
-          <button className="bg-[#52B4AE] font-Bold text-[#FFF] px-9 p-3 text-xl mt-8 rounded-full">
+          <button onClick={() => setShowModal(!showModal)} className="bg-[#52B4AE] font-Bold text-[#FFF] px-9 p-3 text-xl mt-8 rounded-full">
             Request press club
           </button>
         </div>
       </div>
+
+
+      {showModal && <PressClubModal 
+         isVisible={showModal}
+         onClose={() => setShowModal(false)}
+      />}
     </section>
   );
 };
