@@ -29,16 +29,9 @@ const AllPressClubPage = () => {
             <p className="text-[#000] lg:text-xl text-lg my-4">
                {data?.title}
             </p>
-            <div className="mb-8 text-sm font-SemiBold text-white md:text-sm lg:text-lg">
-              <div className="flex -space-x-4 rtl:space-x-reverse">
-                <img style={{ height: "auto" }} className="h-[50px] w-[50px] rounded-full" src={data?.childIMG} alt="" />
-                <img style={{ height: "auto" }} className="h-[50px] w-[50px] rounded-full" src={data?.childIMG} alt="" />
-                <img style={{ height: "auto" }} className="h-[50px] w-[50px] rounded-full" src={data?.childIMG} alt="" />
-                <span className="inline-flex text-[#393939] text-lg m-3 pl-7">
-                  + {data?.numMembers} members
-                </span>
-              </div>
-            </div>
+            <span className="inline-flex text-[#393939] font-VarelaRegular text-lg mb-10">
+                  {data?.numMembers} members
+            </span>
         </div>
       ))}
     </div>
