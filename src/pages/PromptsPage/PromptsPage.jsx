@@ -7,6 +7,7 @@ import PromptCard from "./PromptCard/PromptCard";
 import { ClipLoader } from 'react-spinners';
 import EmptyState from "../../Component/EmptyState/EmptyState";
 import { Button } from "@/components/ui/button";
+import FilterButton from "./PromptFilterButton";
 
 function PromptsPage() {
   const [categories, setCategories] = useState([]);
@@ -72,13 +73,10 @@ function PromptsPage() {
   //   setSelectedCategoryId(null); // Reset selected category ID
   // };
 
-  const handleSubmitClick = () => {
-    window.location.href = '/submit'
-  };
-
+ 
   return (
     <div>
-      <div className="bg-[#FCF7E5]">
+      <div className="bg-[#FCF7E5] pb-[120px]">
         <GeneralNav bgColor="transparent" bgShadow="shadow" btnColor="black" />
 
          <div className="md:px-40 p-6 xl:px-80 flex flex-col items-start justify-center">
@@ -101,9 +99,9 @@ function PromptsPage() {
              </p>
             </div>
 
-            <Button onClick={handleSubmitClick} className="bg-[#52B4AE] mt-5 font-Bold rounded-[25px] md:w-2/12 text-white">
+            {/* <Button onClick={handleSubmitClick} className="bg-[#52B4AE] mt-5 font-Bold rounded-[25px] md:w-2/12 text-white">
               Submit your writing
-            </Button>
+            </Button> */}
          </div>
         
       </div>
@@ -141,23 +139,13 @@ function PromptsPage() {
 
                    {/* Filter button */}
                    <div className="flex justify-center mb-8">
-                      <button
-                        className="flex gap-5 rounded-3xl justify-center items-center py-2 px-6 text-lg border-[1px] border-[#000f] font-Bold"
-                      >
-                        <CiSliderHorizontal />
-                         Filter
-                      </button>
+                     <FilterButton />
                     </div>
                 </div>
               ) : (
                 <>
                  <div className="flex justify-end mb-8">
-                      <button
-                        className="flex gap-5 rounded-3xl justify-center items-center py-2 px-6 text-lg border-[1px] border-[#000f] font-Bold"
-                      >
-                        <CiSliderHorizontal />
-                         Filter
-                      </button>
+                   <FilterButton />
                     </div>
                 <EmptyState />
               </>
