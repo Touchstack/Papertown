@@ -4,10 +4,12 @@ import FeaturedEventsCards from './FeaturedEventsCards';
 const FeaturedEvents = () => {
   return (
     <div className='z-1'>
-      <div className="flex items-center justify-between lg:text-[42px] md:text-[60px] mb-5 text-[30px] font-Bold">
+      <div className="flex items-center p-10 justify-between lg:text-[42px] md:text-[60px]  text-[30px] font-Bold">
         <h1 className="font-Bold lg:px-24 md:px-16 text-[42px]"> Upcoming Events </h1> 
       </div>
-      <FeaturedEventsCards />
+      <div className='p-3'>
+        <FeaturedEventsCards />
+      </div>
       {/* <p className="font-Bold text-left text-[42px] lg:px-24 md:px-16">Other upcoming events</p>
       <FeaturedEvents1 /> */}
       <div className="flex items-center justify-center mt-10 mb-10">
