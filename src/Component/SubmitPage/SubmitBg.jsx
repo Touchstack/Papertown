@@ -6,7 +6,7 @@ function SubmitBg() {
   return (
     <>
 
-      <div className="circle bg-transparent z-[-1]"> 
+      <div className="circle bg-transparent z-[-1] md:block hidden"> 
 
         <div className="py-24 flex space-x-[200px] ">
 

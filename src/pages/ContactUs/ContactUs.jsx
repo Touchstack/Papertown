@@ -21,12 +21,12 @@ const ContactUs = () => {
           </div>
         </div>
 
-        <div className="flex w-full p-20 items-center justify-center">
-            <div className="bg-gradient-to-b rounded-[16px] w-full h-[306px] flex flex-col items-center justify-center from-[#9747FF] via-[#DF327B] to-[#9747FF]">
-               <p className="text-[#FFFFFF] font-Bold text-[16] md:text-[26px] lg:text-[36px]">
+        <div className="flex w-12/12 p-20 items-center justify-center">
+            <div className="bg-gradient-to-b rounded-[16px] h-[306px] flex flex-col items-center justify-center from-[#9747FF] via-[#DF327B] to-[#9747FF]">
+               <p className="text-[#FFFFFF] font-Bold text-[26] md:text-[26px] lg:text-[36px]">
                  We are here
                </p>
-               <p className="text-[#FFFFFF] cursor-pointer font-Bold text-[16px] md:text-[26px] lg:text-[72px]">
+               <p className="text-[#FFFFFF] cursor-pointer p-3 font-Bold text-[26px] md:text-[26px] lg:text-[72px]">
                   <a href="mailto:hello@papertownimaginarium.org">
                     hello@papertownimaginarium.org
                   </a>

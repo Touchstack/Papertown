@@ -15,7 +15,7 @@ const SubmitPage = () => {
       <SubmitBg />
 
       <div className="flex flex-col my-10 items-center justify-center">
-        <h1 className="text-[#000000] font-Bold text-[36px] sm:text-[36px] md:text-4xl lg:text-6xl leading-100 tracking-widest p-5 mt-10">
+        <h1 className="text-[#000000] font-Bold text-[26px] sm:text-[36px] md:text-4xl lg:text-6xl leading-100 tracking-widest p-5 mt-10">
           Submit your personal <br /> write-ups for review
         </h1>
 
