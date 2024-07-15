@@ -22,7 +22,7 @@ const OverLay = () => {
       <div className="absolute md:bottom-[3rem]   w-full md:h-full md:p-8 py-4 px-4 flex flex-col justify-between">
         {/* Title and navigation on the same line */}
         <div className="flex justify-center items-center w-full  md:pt-8">
-          <p className="text-white text-[42px] md:pb-4 font-bold">Our Current Partners</p>
+          <p className="text-white text-[22px] md:text-[42px] md:pb-4 font-bold">Our Current Partners</p>
           {/* <div className="md:flex hidden">
             <button
               aria-label="Previous"

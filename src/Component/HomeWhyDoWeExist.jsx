@@ -1,7 +1,7 @@
 const HomeWhyWeEXist = () => {
   return (
     <div className="py-16 flex flex-col items-center justify-center mt-40 bg-transparent font-Medium text-center">
-      <h3 className="font-Bold  text-[#F2F2F2] w-[400px] lg:text-4xl md:text-3xl sm:text-4xl text-3xl text-center ">
+      <h3 className="font-Bold  text-[#F2F2F2] w-[400px] lg:text-4xl md:text-3xl text-xl text-center ">
         Why we exist and delight in what we do
       </h3>
 
@@ -31,7 +31,7 @@ const HomeWhyWeEXist = () => {
                 </svg>
               </div>
 
-              <h3 className="font-Bold text-[#FFF] w-[398px] lg:text-[20px] md:text-2xl sm:text-xl text-xl mt-6 text-start">
+              <h3 className="font-Bold text-[#FFF] lg:text-[20px] md:text-2xl sm:text-xl text-xl mt-6 text-start">
                 <a href="/whyweexist">TO NURTURE THE LOVE OF WRITING IN YOUNG PEOPLE</a>
               </h3>
               <p className="font-Regular min-w-[362px] text-[#F3F3F3] leading-7 text-sm tracking-wider text-13 leading-26 text-start mt-2 max-w-[350px]">

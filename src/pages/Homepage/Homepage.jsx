@@ -7,7 +7,7 @@ import MarqueeApp from "../../Component/MarqueeText";
 import NewCTA from "../../Component/CallToAction/NewCTA";
 //import Tips from "../Tips/Tips";
 
-const Homepage = () => {
+const  Homepage = () => {
   const gradientStyle = {
     background:
       "linear-gradient(180deg, #9747FF 7.29%, #DF327B 84.19%, #9747FF 100%)",
