@@ -7,7 +7,7 @@ import FeaturedEvents from './FeaturedEvents';
 const EventsPage = () => {
   return (
     <div>
-     <Circle/>
+     {/* <Circle/> */}
      <EventsHero />
      <FeaturedEvents/>
 
