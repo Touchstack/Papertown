@@ -1,6 +1,6 @@
 import { IoIosArrowBack } from "react-icons/io";
 import target from "@/assets/Images/mingcute.png";
-import { tags } from '../../../../../ConstantData'
+import SubmitReviewSample from "./SubmitReviewSample";
 
 const SingleSubmissions = ({onBackClick}) => {
   
@@ -70,12 +70,23 @@ const SingleSubmissions = ({onBackClick}) => {
      <hr className="w-full" />
 
      <div className="p-4">
-        <h1 className="font-Bold">Remarks</h1>
+       <div className="flex justify-between">
+         <h1 className="font-Bold">Feedback</h1>
 
-        <div className="flex flex-col py-3">
+         <div className="flex flex-row items-center gap-2">
+           <p className="text-[#52B4AE] hover:cursor-pointer font-Medium">view all [3] revisions</p>
+           <div className="border-[1px] border-[#52B4AE] hover:cursor-pointer  p-2 rounded-full">
+               <p className="text-[#52B4AE] font-Medium">
+                 Submit revision
+               </p>
+            </div>
+         </div>
+       </div>
+        
+        {/* <div className="flex flex-col py-3">
             <h3 className="text-[#A3A3A3] text-[13px]">Score</h3>
             <p>7 out of 10</p>
-        </div>
+        </div> */}
 
         <div className="flex flex-col py-3">
             <h3 className="text-[#A3A3A3] text-[13px]">Comments</h3>

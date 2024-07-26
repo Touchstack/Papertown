@@ -47,7 +47,7 @@ const SelectWritingPrompt = ({setIsSubmitting}) => {
           <div className="flex flex-col space-x-3">
          <div onClick={handleGoback} className="flex items-center hover:cursor-pointer">
           <IoIosArrowBack size={30} />
-            <h1 className="md:text-[36px] text-[26px] font-Bold">
+            <h1 className="md:text-[36px] text-[20px] font-Bold">
              Submit your writing sample
             </h1>
           </div>
@@ -79,21 +79,11 @@ const SelectWritingPrompt = ({setIsSubmitting}) => {
                       <h1 className="font-Bold text-[20px]">Submission guidelines</h1>
                       <div className="mt-3">
                           <p>
-                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently 
-                            with desktop publishing software.
+                           Review our Submission Guidelines {" "}
+                           <span className="text-[#52B4AE] hover:underline">
+                             <a href="/submit">here</a>
+                           </span>
                           </p>
-                          <ol className="list-decimal pl-4">
-                            <li>
-                              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                            </li>
-                            <li>
-                              It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.
-                            </li>
-                            <li>
-                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                            </li>
-                          </ol>
                       </div>
                     </FormDescription>
                   </div>
