@@ -12,6 +12,9 @@ module.exports = {
       },
     },
     extend: {
+      screens:{
+        "custom-497": "497px",
+      },
       fontFamily: {
         Bold: ["Dosis-Bold", "sans-serif"],
         ExtraBold: ["Dosis-ExtraBold", "sans-serif"],

@@ -55,36 +55,36 @@ function MyProfileCardInfo({ setIsEditing }) {
           It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software.
         </span>
       </div> */}
-      <div className="grid lg:grid-cols-5 md:grid-cols-2 grid-cols-2">
+      <div className="font-VarelaRegular flex flex-wrap gap-y-8 custom-497:flex-row  gap-x-12">
         <div>
           <div className="flex gap-2 items-center text-[#A3A3A3]">
             <MdCelebration />
             <p>Age</p>
           </div>
-          <span className="font-Bold">{age} years</span>
+          <span className="font-VarelaRegular">{age} years</span>
         </div>
-        <div>
-          <div className="flex gap-2 lg:mt-0 mt-2 items-center text-[#A3A3A3]">
+        <div className="custom-497:border-x-2 custom-497:px-12">
+          <div className="flex  gap-2 lg:mt-0 mt-2 items-center text-[#A3A3A3]">
             <FaGraduationCap />
             <p>School</p>
           </div>
-          <span className="font-Bold">{user?.data?.studentDetails?.school}</span>
+          <span className="font-VarelaRegular">{user?.data?.studentDetails?.school}</span>
         </div>
         <div>
           <div className="flex gap-1 items-center text-[#A3A3A3]">
             <Icon icon="lets-icons:dimond-alt-light" color="#a3a3a3" width="23" height="23" />
             <p>Grade</p>
           </div>
-          <span className="font-Bold">Grade {user?.data?.studentDetails?.grade}</span>
+          <span className="font-VarelaRegular">Grade {user?.data?.studentDetails?.grade}</span>
         </div>
       </div>
-      <div className="grid mt-5 lg:grid-cols-5 md:grid-cols-2 grid-cols-2">
-        <div>
+      <div className="font-VarelaRegular flex flex-wrap gap-y-8 custom-497:flex-row  gap-x-12">
+        <div className="custom-497:border-r-2 custom-497:pr-12">
           <div className="flex gap-2 items-center text-[#A3A3A3]">
             <IoMdCall />
             <p>Contact</p>
           </div>
-          <span className="font-Bold">
+          <span className="font-VarelaRegular">
             {user?.data?.studentDetails?.phone_number
               ? user?.data?.studentDetails?.phone_number
               : user?.data?.guardianDetails?.phone_number}
@@ -95,7 +95,7 @@ function MyProfileCardInfo({ setIsEditing }) {
             <FaRegCalendar />
             <p>Date joined</p>
           </div>
-          <span className="font-Bold">1st Nov, 2023</span>
+          <span className="font-VarelaRegular">1st Nov, 2023</span>
         </div>
       </div>
     </div>
