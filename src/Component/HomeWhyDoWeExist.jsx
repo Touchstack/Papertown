@@ -1,7 +1,7 @@
 const HomeWhyWeEXist = () => {
   return (
     <div className="py-16 flex flex-col items-center justify-center mt-40 bg-transparent font-Medium text-center">
-      <h3 className="font-Bold  text-[#F2F2F2] w-[400px] lg:text-4xl md:text-3xl text-xl text-center ">
+      <h3 className="font-Bold  text-[#F2F2F2] max-w-[400px] lg:text-4xl md:text-3xl text-xl text-center ">
         Why we exist and delight in what we do
       </h3>
 
@@ -34,7 +34,7 @@ const HomeWhyWeEXist = () => {
               <h3 className="font-Bold text-[#FFF] lg:text-[20px] md:text-2xl sm:text-xl text-xl mt-6 text-start">
                 <a href="/whyweexist">TO NURTURE THE LOVE OF WRITING IN YOUNG PEOPLE</a>
               </h3>
-              <p className="font-Regular min-w-[362px] text-[#F3F3F3] leading-7 text-sm tracking-wider text-13 leading-26 text-start mt-2 max-w-[350px]">
+              <p className="font-Regular text-[#F3F3F3] leading-7 text-sm tracking-wider text-13 leading-26 text-start mt-2 max-w-[350px]">
                 {" "}
                 Papertown Imaginarium was created primarily for the child who loves to write - to give him/her
                 everything he/she needs to keep doing what he/she enjoys doing.{" "}
@@ -66,7 +66,7 @@ const HomeWhyWeEXist = () => {
               <a href="/whyweexist">TO SUPPORT WRITING EDUCATION</a>
               </h3>
 
-              <p className="font-Regular min-w-[362px] text-[#F3F3F3] leading-7 text-sm tracking-wider text-13 leading-26 text-start mt-2 ">
+              <p className="font-Regular text-[#F3F3F3] leading-7 text-sm tracking-wider text-13 leading-26 text-start mt-2 ">
               Beyond working with individual young writers directly through our website and writing programs,
               we also work to support and improve the general state of writing education.{" "}
               </p>
@@ -94,10 +94,10 @@ const HomeWhyWeEXist = () => {
                 </svg>
               </div>
 
-              <h3 className="font-Bold text-[#FFF] w-[315px] lg:text-[20px] md:text-2xl sm:text-xl text-xl mt-6 text-start">
+              <h3 className="font-Bold text-[#FFF] max-w-[315px] lg:text-[20px] md:text-2xl sm:text-xl text-xl mt-6 text-start">
                 <a href="/whyweexist">TO DRIVE THE CREATION OF LITERARY CONTENT FOR YOUNG PEOPLE WRITTEN BY YOUNG PEOPLE</a>
               </h3>
-              <p className="font-Regular min-w-[362px] text-[#F3F3F3] leading-7 text-sm tracking-wider text-13 leading-26 text-start mt-2">
+              <p className="font-Regular text-[#F3F3F3] leading-7 text-sm tracking-wider text-13 leading-26 text-start mt-2">
                 We’re trying something new at Papertown Imaginarium… allowing children and young people
                 write their own stories.{" "}
               </p>

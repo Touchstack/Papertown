@@ -14,7 +14,7 @@ const SubmitPage = () => {
       <GeneralNav bgColor="transparent" bgShadow="shadow" btnColor="black" />
       <SubmitBg />
 
-      <div className="flex flex-col my-10 items-center justify-center">
+      <div className="flex flex-col  my-10 items-center justify-center">
         <h1 className="text-[#000000] font-Bold text-[26px] sm:text-[36px] md:text-4xl lg:text-6xl leading-100 tracking-widest p-5 mt-10">
           Submit your personal <br /> write-ups for review
         </h1>
@@ -29,11 +29,11 @@ const SubmitPage = () => {
         </div>
       </div>
 
-      <div className="w-full flex flex-col items-center justify-center bg-[#FFD8FF] p-10">
+      <div className="w-full flex flex-col items-center justify-center bg-[#FFD8FF] py-10 md:px-10 px-8">
         <h1 className="font-Bold md:text-[42px] text-[32px]">Guidelines for submission</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 w-full mt-6">
           {Guides.map((data, index) => (
-            <div key={index} className="p-8 space-y-1">
+            <div key={index} className="p-4 md:p-8 space-y-1">
               <h2 className="text-lg font-bold">{data?.title}</h2>
               <p className="text-sm">{data?.msg}</p>
             </div>
@@ -45,9 +45,9 @@ const SubmitPage = () => {
         <SubmitComponent />
  
 
-      <div className="flex md:flex-row flex-col items-center justify-center px-[10rem] py-[3rem] gap-[5rem]">
+      <div className="flex md:flex-row flex-col items-center justify-center  px-[2rem] py-[3rem] gap-[5rem]">
         <div>
-          <p className="text-[32px] w-[400px] font-Bold p-5">
+          <p className="text-[32px] w-full lg:max-w-[400px] font-Bold p-5">
             Thinking of submitting your writing to us or joining Papertown Imaginarium? Here are some of the young writers we have worked with.
           </p>
 
@@ -65,7 +65,7 @@ const SubmitPage = () => {
         </div>
 
         <div className="flex flex-col">
-          <p className="w-[400px] md:w-[503px] text-[16px] p-5">
+          <p className="lg:max-w-[400px] text-[16px] p-5">
             Through Papertown Imaginarium I got to publish my first book. I have always loved writing and I am happy that I was able to write when I was at Papertown. I am very proud to have written a story that was published. 
           </p>
 

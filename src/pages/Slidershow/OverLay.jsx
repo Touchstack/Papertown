@@ -8,20 +8,20 @@ const OverLay = () => {
   <div className="flex flex-col justify-center items-center">
     <div className="relative mt-[6rem]  flex flex-col justify-center items-center z-50 px-1">
       {/* Responsive image container */}
-      <div className="w-full max-w-[1400px] rounded-[30px] overflow-hidden">
+      <div className=" max-w-[1400px] rounded-[30px] overflow-hidden">
         <img
           src={BGimage}
           alt="Group of students"
-          className="w-[90vw] md:h-[600px] h-[770px] rounded-[30px] object-cover"
+          className="max-w-[90vw] md:h-[600px] h-[770px] rounded-[30px] object-cover"
         />
       </div>
       {/* className="w-[90vw]  md:h-[501px] h-[670px] rounded-[30px] object-cover"
         /> */}
 
       {/* Overlay content */}
-      <div className="absolute md:bottom-[3rem]   w-full md:h-full md:p-8 py-4 px-4 flex flex-col justify-between">
+      <div className="absolute md:bottom-[3rem]  md:h-full md:p-8 py-4 px-4 flex flex-col justify-between">
         {/* Title and navigation on the same line */}
-        <div className="flex justify-center items-center w-full  md:pt-8">
+        <div className="flex justify-center items-center  md:pt-8">
           <p className="text-white text-[22px] md:text-[42px] md:pb-4 font-bold">Our Current Partners</p>
           {/* <div className="md:flex hidden">
             <button
@@ -60,8 +60,8 @@ const OverLay = () => {
         </div> */}
 
 
-       <div className="grid grid-cols-1 md:grid-cols-2 gap-4  w-full py-4 md:py-0 my-auto ">
-            <div className="bg-white md:p-[30px] p-6 shadow-md rounded-[30px] md:h-[310px]">
+       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4 md:py-0 my-auto ">
+            <div className="bg-white md:p-[30px] p-6 shadow-md rounded-[30px] md:h-[385px]">
               <p className="text-left text-[#52B4AE] text-[24px] font-bold ">
                01
               </p>

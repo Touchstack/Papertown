@@ -185,7 +185,7 @@ const myStore = createStore(myReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && w
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
      <Provider store={myStore}>
-       <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </Provider>
   </React.StrictMode>
 );

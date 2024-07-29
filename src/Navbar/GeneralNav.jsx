@@ -101,16 +101,16 @@ const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
 
   return (
     <>
-      <div className="pt-10 md:mx-20 mx-2">
+      <div className="pt-10 ">
         <nav
-          className={`flex md:container mx-auto px-2 text-center font-VarelaRegular rounded-full max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-3 ${bgColorClass} ${bgShadowClass}`}
+          className={`md:container mx-auto px-2 text-center font-VarelaRegular rounded-full max-w-6xl py-3  ${bgColorClass} ${bgShadowClass}`}
         >
           <div className="container px-5 md:pl-25 flex justify-between items-center m-auto">
             <a
               href="/"
               className="transition duration-500 ease-in-out hover:scale-110 flex items-center"
             >
-              <div className="md:h-[80px] lg:w-[88px] sm:h-[70px]  h-[65px] w-[65px]">
+              <div className="md:h-[80px] lg:w-[80px] sm:h-[70px]  h-[65px] w-[65px]">
                 <img
                   src={AppLogo}
                   alt="Logo"
@@ -118,7 +118,7 @@ const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
               </div>
             </a>
             <div
-              className={`lg:flex justify-between w-full md:w-auto `}
+              className={`lg:flex justify-between md:w-auto `}
               id="navbar-cta"
             >
               <ul className="lg:flex flex-col text-[16px]  p-4 md:p-0 mt-4 border text-center rounded-lg md:shadow-none sm:shadow-lg shadow-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 hidden">
@@ -198,7 +198,7 @@ const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
             </div>
 
             {!verified ? (
-              <div className={`w-full lg:flex md:w-auto`} id="navbar-buttons">
+              <div className={`lg:flex md:w-auto`} id="navbar-buttons">
                 <ul className="lg:flex items-center py-2 font-Regular text-lg hidden">
                   <button
                     className={`border-[1px] ${btColorClass} ${txColorClass} px-7 p-3 mr-4 rounded-full`}

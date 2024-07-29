@@ -6,12 +6,12 @@ const RedefiningWriting = () => {
    const user = localStorage.getItem("user");
 
   return (
-    <div className="py-18 px-2 mt-12">
+    <div className="py-18  mt-12 ">
       <div className="container mx-auto ">
-        <div className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 gap-y-4">
+        <div className="lg:flex justify-center items-center">
           {/* Left Col */}
 
-          <div className="text-left items-center lg:p-18 md:p-18 sm:p-8 p-8">
+          <div className="text-left lg:w-1/2 lg:p-18 flex flex-col items-left justify-center">
             <h5 className="font-Bold lg:text-[128.84px] md:text-5xl sm:text-4xl text-[#FFF] text-4xl mt-6 text-left">
               Welcome
             </h5>
@@ -32,13 +32,13 @@ const RedefiningWriting = () => {
             </a>
            }
           </div>         
-          <div className="relative">
-            <div className="flex justify-center items-center pb-5">
+          <div className="relative lg:w-1/2">
+            <div className="flex justify-center items-center">
               <img
                 src={Student}
                 alt="Boy.svg"
                 style={{ height: "auto" }}
-                className="mt-8"
+                className=""
               />
             </div>
           </div>
