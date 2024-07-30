@@ -333,7 +333,7 @@ const onSubmit = async (data) => {
               </div>
             </div>
             <div>
-              <h2 className="mb-4 p-0 py-0 text-xl md:w-[300px]  text-[18px] font-VarelaRegular text-[#FFFFFF]">
+              <h2 className="mb-4 p-0 py-0 text-xl  md:w-[300px] text-[18px] font-VarelaRegular text-[#FFFFFF]">
                 Subscribe to our newsletter to receive periodic updates on what’s happening at Papertown.
                 Don’t worry, we only pop up in your inbox when it’s absolutely necessary.
               </h2>
@@ -351,7 +351,7 @@ const onSubmit = async (data) => {
                       placeholder="Email Address"
                       name="subscriptionemail"
                       required
-                      className="block w-[300px] outline-none h-14 p-4 placeholder-white text-white rounded-full border border-whit  mb-4  bg-[#FFFAF5] font-SemiBold  sm:text-md   bg-opacity-20 border-opacity-100  "
+                      className="block w-full max-w-[300px] outline-none h-14 p-4 placeholder-white text-white rounded-full border border-whit  mb-4  bg-[#FFFAF5] font-SemiBold  sm:text-md   bg-opacity-20 border-opacity-100  "
                       //   focus:ring-blue-500 focus:border-blue-500
                       {...register("email", { required: true })}
                     />
@@ -360,7 +360,7 @@ const onSubmit = async (data) => {
                       <button
                         type="submit"
                         //onClick={subscribeNewsLetter}
-                        className="font-VarelaRegular text-[#FFFFFF] bg-[#52B4AE] block w-[300px] h-14 p-4 hover:bg-[#3a8783]  rounded-full text-xl px-5 py-3 "
+                        className="font-VarelaRegular text-[#FFFFFF] bg-[#52B4AE] block w-full max-w-[300px] h-14 p-4 hover:bg-[#3a8783]  rounded-full text-xl px-5 py-3 "
                       >
                         {loading ? (
                             <ClipLoader color={"#ffffff"} loading={loading} size={25} />
