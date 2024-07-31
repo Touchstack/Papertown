@@ -1,6 +1,6 @@
 import { IoIosArrowBack } from "react-icons/io";
 import target from "@/assets/Images/mingcute.png";
-import { tags } from '../../../../../ConstantData'
+import SubmitReviewSample from "./SubmitReviewSample";
 
 const SingleSubmissions = ({onBackClick}) => {
   

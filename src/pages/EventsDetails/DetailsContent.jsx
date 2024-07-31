@@ -8,8 +8,8 @@ const DetailsContent = () => {
     <div className="flex flex-col items-center justify-center lg:mt-20 mt-8 z-[50]">
       <div>
         <div className="">
-          <h5 className="lg:text-[72px] font-Bold md:text-5xl text-3xl md:mb-5">
-          Annual UNICEF spelling Bee 2023
+          <h5 className="lg:text-[72px] font-Bold md:text-5xl text-xl md:mb-3">
+           Annual UNICEF Spelling Bee 2023
           </h5>
         </div>
 

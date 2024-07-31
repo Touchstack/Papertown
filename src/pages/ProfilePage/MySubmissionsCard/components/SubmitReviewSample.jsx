@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/form";
 import SuccessModal from "./modal/SuccessModal";
 
-const SubmitWritingSample = ({ onBackClick }) => {
+const SubmitReviewSample = ({ onBackClick }) => {
   const [showModal, setShowModal] = useState(false);
   const [submissionType, setSubmissionType] = useState("type"); // New state for tracking the selected option
 
@@ -45,7 +45,7 @@ const SubmitWritingSample = ({ onBackClick }) => {
         <div onClick={handleClick} className="flex items-center hover:cursor-pointer">
           <IoIosArrowBack size={30} />
           <h1 className="md:text-[36px] text-[26px] font-Bold">
-            Submit your writing sample
+            Submit your Review sample
           </h1>
         </div>
       </div>
@@ -134,4 +134,4 @@ const SubmitWritingSample = ({ onBackClick }) => {
   )
 }
 
-export default SubmitWritingSample;
+export default SubmitReviewSample;
