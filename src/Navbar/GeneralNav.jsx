@@ -10,6 +10,8 @@ import "../Style/Style.css";
 import SideNav from "./SideNav";
 import { BsPersonCircle } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectStatus, selectUser } from "@/redux/features/userSlice";
 
 const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
   const navigate = useNavigate();
@@ -21,7 +23,10 @@ const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
   const [showLogInModal, setShowLogInModal] = useState(false);
   const [showJoinUsModal, setShowJoinUsModal] = useState(false);
   const [sideNav, setSideNav] = useState(false);
-  const [verified, setVerified] = useState(false);
+ 
+
+  const status = useSelector(selectStatus)
+  const user = useSelector(selectUser)
 
   // Define prop types
   GeneralNav.propTypes = {
@@ -78,18 +83,7 @@ const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
     setSideNav(false);
   };
 
-  useEffect(() => {
-    const isVerified = () => {
-      // Check if the user is defined in local storage
-      const user = localStorage.getItem("user");
 
-      // Update the state based on the existence of the user
-      setVerified(!!user);
-    };
-
-    // Call the function to check user verification
-    isVerified();
-  }, []);
 
   // Determine the appropriate class to apply
   const txColorClass = txtcolorClasses[color] || "text-black"; // Default color
@@ -97,7 +91,7 @@ const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
   const bgColorClass = bgcolorClasses[bgColor] || "bg-white-transparent";
   const bgShadowClass = bgShadowClasses[bgShadow] || " ";
 
-  const user = JSON.parse(localStorage.getItem('user'));
+
 
   return (
     <>
@@ -197,8 +191,8 @@ const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
               </ul>
             </div>
 
-            {!verified ? (
-              <div className={`lg:flex md:w-auto`} id="navbar-buttons">
+            {!status ? (
+              <div className={`w-full lg:flex md:w-auto`} id="navbar-buttons">
                 <ul className="lg:flex items-center py-2 font-Regular text-lg hidden">
                   <button
                     className={`border-[1px] ${btColorClass} ${txColorClass} px-7 p-3 mr-4 rounded-full`}
@@ -222,7 +216,7 @@ const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
                 onClick={() => navigate("/profile")}
               >
                 <BsPersonCircle size={30} />
-                {user?.data?.studentDetails?.first_name}
+                {user?.first_name}
               </button>
             )}
 

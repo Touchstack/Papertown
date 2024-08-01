@@ -1,87 +1,50 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Student from "../../assets/Images/Boy.svg";
+import Student from "../../assets/Images/Girl.svg";
 import AppLogo from "../../assets/Images/Logo.svg";
 import Arrow from "../../assets/Images/arrow-left.svg";
 import PropTypes from "prop-types";
-import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
-import { setFormData } from "../../context/actions/formAction";
+import { useDispatch } from "react-redux";
+import {
+  CLEAR_GUARDIAN_INFO,
+  SET_GUARDIAN_INFO,
+} from "@/redux/features/guardianInfoSlice";
+import { useFormik } from "formik";
+import { guardianInfoSchema } from "@/schemas";
 
 const GuardianInformation = () => {
-  const [showModal, setShowModal] = useState(false);
-  const [showModal2, setShowModal2] = useState(false);
-
-
   const dispatch = useDispatch();
-
-  const openModal = (modalNumber) => {
-    // Close all modals first
-    setShowModal(false);
-    setShowModal2(false);
-
-    // Open the desired modal
-    switch (modalNumber) {
-      case 1:
-        setShowModal(true);
-        break;
-      case 2:
-        setShowModal2(true);
-        break;
-      default:
-        break;
-    }
-  };
-  
-
-  const [currentIndex, setCurrentIndex] = useState(0);
   const navigate = useNavigate();
 
   const goBack = () => {
-    navigate(-1); // Navigates back one step in the history stack
-    dispatch(setFormData({  //on go back reset from in redux state
-      email: "",
-      password: "",
-      confirm_password: "",
-      studentDetails: {
-        first_name: "",
-        last_name: "",
-        date_of_birth: "", // required
-        phone_number: "",  // not required if HAS_GUARDIAN  === true
-        personal_address: "", // not required if HAS_GUARDIAN  === true
-        school: "", // required
-        school_address: "", // required
-        grade: "", // required
-      },
-      guardianDetails: {
-        first_name: "", // required
-        last_name: "", // required
-        phone_number: "",// required
-        personal_address: "", // required if HAS_GUARDIAN  === true
-        relationship: "", // required if HAS_GUARDIAN  === true
-        email: "",
-      },
-    }))
+    navigate(-1);
+    dispatch(CLEAR_GUARDIAN_INFO());
   };
 
-  const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm();
-
-  const onSubmit = async (data) => {
-     navigate('/signup/setupaccount')
-     dispatch(setFormData({ 
-      guardianDetails: {
-        first_name: data.first_name,
-        last_name: data.last_name,
-        email: data.email,
-        phone_number: data.phone_number,
-        personal_address: "",
-        relationship: ""
-       }
-    }));
-
-
+  const initialValues = {
+    guardian_name: "",
+    g_phone: "",
+    personal_address: "",
   };
 
+  const OnSubmit = (values) => {
+    dispatch(
+      SET_GUARDIAN_INFO({
+        guardian_name: values.guardian_name,
+        g_phone: values.g_phone,
+        personal_address: values.personal_address,
+      })
+    );
+    navigate("/signup/about-child");
+  };
+
+  const formik = useFormik({
+    initialValues,
+    validationSchema: guardianInfoSchema,
+    onSubmit: OnSubmit,
+  });
+
+  const { values, handleChange, handleBlur, handleSubmit, touched, errors } =
+    formik;
 
   return (
     <div className="py-18">
@@ -91,7 +54,7 @@ const GuardianInformation = () => {
           <a href="/">
             <img src={AppLogo} style={{ height: "auto" }} className="mb-8" />
           </a>
-          
+
           <button
             onClick={goBack}
             className="font-Bold inline-flex gap-2 items-center justify-center w-[150px] py-2 border-2 [#D0D5DD] rounded-full ring-1 ring-[#1018280D] lg:text-lg md:text-lg
@@ -100,63 +63,68 @@ const GuardianInformation = () => {
             <img src={Arrow} style={{ height: "auto" }} className="" /> GO BACK
           </button>
           <h3 className="font-Bold lg:text-4xl md:text-3xl sm:text-3xl text-[#040A1D] text-3xl mt-12 text-left">
-            Guardian info
+            Parent/Guardian’s Information
           </h3>
           <div className="font-VarelaRegular lg:text-md md:text-md sm:text-base pt-10 text-[#393939] leading-7 text-sm text-13 leading-26 text-start">
-          <form onSubmit={handleSubmit(onSubmit)} name="contact" method="post">
-            <div className="relative z-0 w-full group text-md mb-4 font-VarelaRegular text-[#F4F5F7]">
-              <input
-                type="text"
-                id="first-name"
-                placeholder="Parent/Guardian's first name"
-                {...register("first_name", { required: true })}
-                className="block w-[430px] p-4 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
-              />
-              {errors.first_name && <span  className="text-red-500">Parent/Guardian's full name is required</span>}
-            </div>
+            <form onSubmit={handleSubmit} name="contact" method="post">
+              <div className="relative z-0 w-full group text-md mb-4 font-VarelaRegular text-[#F4F5F7]">
+                <input
+                  type="text"
+                  id="full-name"
+                  placeholder="Full name"
+                  name="guardian_name"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.guardian_name}
+                  className="block w-[430px] p-4 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
+                />
+                {errors.guardian_name && touched.guardian_name && (
+                  <span className="text-red-500">{errors.guardian_name}</span>
+                )}
+              </div>
 
-            <div className="relative z-0 w-full group text-md mb-4 font-VarelaRegular text-[#F4F5F7]">
-              <input
-                type="text"
-                id="full-name"
-                placeholder="Parent/Guardian's last name"
-                {...register("last_name", { required: true })}
-                className="block w-[430px] p-4 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
-              />
-              {errors.last_name && <span  className="text-red-500">Parent/Guardian's full name is required</span>}
-            </div>
+              <div className="relative z-0 w-full group text-md mb-4 font-VarelaRegular text-[#F4F5F7]">
+                <input
+                  type="text"
+                  id="phone-number"
+                  placeholder="Phone number"
+                  name="g_phone"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.g_phone}
+                  className="block w-[430px] p-4 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
+                />
+                {errors.g_phone && touched.g_phone && (
+                  <span className="text-red-500">{errors.g_phone}</span>
+                )}
+              </div>
 
-            <div className="relative z-0 w-full mb-4 group text-md font-VarelaRegular text-[#F4F5F7]">
-              <input
-                type="email"
-                id="email-address"
-                placeholder="Parent/Guardian's email address"
-                {...register("email", { required: true, pattern: /^\S+@\S+$/i })}
-                className="block w-[430px] p-4 mt-2 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
-              />
-              {errors.email && <span  className="text-red-500">Valid email address is required</span>}
-            </div>
+              <div className="relative z-0 w-full mb-4 group text-md font-VarelaRegular text-[#F4F5F7]">
+                <input
+                  type="text"
+                  id="contact-address"
+                  placeholder="Contact Address"
+                  name="personal_address"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.personal_address}
+                  className="block w-[430px] p-4 mt-2 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
+                />
+                {errors.personal_address && touched.personal_address && (
+                  <span className="text-red-500">
+                    {errors.personal_address}
+                  </span>
+                )}
+              </div>
 
-            <div className="relative z-0 w-full mb-4 group text-md font-VarelaRegular text-[#F4F5F7]">
-              <input
-                type="tel"
-                id="phone-number"
-                placeholder="Parent/Guardian's phone number"
-                {...register("phone_number", { required: true, pattern: /^[0-9]{10}$/ })}
-                className="block w-[430px] p-4 mt-2 text-[#666] font-VarelaRegular rounded-lg bg-[#F4F5F7] sm:text-md outline-none focus:outline-amber-300"
-              />
-              {errors.phone_Number && <span className="text-red-500">Valid phone number is required (10 digits)</span>}
-            </div>
-
-            <button
-              type="submit"
-              className="font-Bold inline-flex text-[#FFFFFF] rounded-full w-[430px] py-4 bg-[#DB2E78] focus:ring-1 focus:outline-none
+              <button
+                type="submit"
+                className="font-Bold inline-flex text-[#FFFFFF] rounded-full w-[430px] py-4 bg-[#DB2E78] focus:ring-1 focus:outline-none
                 focus:ring-amber-100 justify-center items-center mt-12"
-            >
-             Continue (3/4)
-
-            </button>
-          </form>
+              >
+                Continue (1/3)
+              </button>
+            </form>
           </div>
         </div>
 

@@ -6,10 +6,14 @@ import MyProfileCard from "./MyProfileCard/MyProfileCard";
 import { HiDotsVertical } from "react-icons/hi";
 import MyClubsCard from './MyClubsCard/MyClubsCard';
 import MySubmissionsCard from "./MySubmissionsCard/MySubmissionsCard";
+import { useSelector } from 'react-redux';
+import { selectUser } from '@/redux/features/userSlice';
 
 function Profile() {
-  const user = JSON.parse(localStorage.getItem('user'));
   const [activeCard, setActiveCard] = useState('profile');
+
+
+  const user = useSelector(selectUser)
 
   const renderActiveCard = () => {
     switch (activeCard) {
@@ -31,7 +35,7 @@ function Profile() {
         <div className="">
           <div className="flex items-center justify-center md:items-start md:justify-start">
             <h3 className="lg:text-[60px] gap-20 flex items-center text-[40px] font-Bold mt-20">
-              Hi {user?.data?.studentDetails?.first_name} 👋🏾
+              Hi {user?.first_name} 👋🏾
               <div className="lg:hidden inline-block text-2xl">
                 <HiDotsVertical />
               </div>

@@ -14,39 +14,17 @@ const AboutYourself = () => {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const formData = useSelector(state => state.formReducer.formData);
+
 
   const goBack = () => {
-    navigate(-1); // Navigates back one step in the history stack
-    dispatch(setFormData({  //reset form data
-      email: "",
-      password: "",
-      confirm_password: "",
-      studentDetails: {
-        first_name: "",
-        last_name: "",
-        date_of_birth: "", // required
-        phone_number: "",  // not required if HAS_GUARDIAN  === true
-        personal_address: "", // not required if HAS_GUARDIAN  === true
-        school: "", // required
-        school_address: "", // required
-        grade: "", // required
-      },
-      guardianDetails: {
-        first_name: "", // required
-        last_name: "", // required
-        phone_number: "",// required
-        personal_address: "", // required if HAS_GUARDIAN  === true
-        relationship: "", // required if HAS_GUARDIAN  === true
-        email: "",
-      },
-    }));
+    navigate(-1); 
+ 
   };
 
   const onSubmit = (data) => {
     navigate("/signup/about-child");
     dispatch(setFormData({
-      ...formData, // Change formData to state.formData
+      ...formData, 
       guardianDetails: {
         first_name: data.first_name,
         last_name: data.last_name,
