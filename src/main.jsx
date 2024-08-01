@@ -1,7 +1,7 @@
 import React from "react";
 import Homepage from "./pages/Homepage/Homepage.jsx";
 import ReactDOM from "react-dom/client";
-import {createStore} from 'redux'
+import { createStore } from "redux";
 import { Provider } from "react-redux";
 import myReducers from "./context/reducers";
 import ErrorPage from "./pages/ErrorPage/ErrorPage.jsx";
@@ -40,18 +40,37 @@ import OurPartnershipPhilosophy from "./pages/OurPartnershipPhilosophy/OurPartne
 import AllPressClubPage from "./pages/PressClubPage/AllPressClubPage.jsx";
 import PressClubDetailsPage from "./pages/PressClubPage/PressClubDetailsPage.jsx";
 import ReadpageDetails from "./pages/ReadPage/ReadpageDetails.jsx";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { PersistGate } from "redux-persist/integration/react";
+import { store, persistor } from "./redux/store.js";
+import PasswordReset from "./pages/ClientPasswordReset/PasswordReset.jsx";
+import NewPassword from "./pages/ClientPasswordReset/NewPassword.jsx";
+import ResetCode from "./pages/ClientPasswordReset/ResetCode.jsx";
+import PasswordResetSuccess from "./pages/ClientPasswordReset/PasswordResetSuccess.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <Homepage />, errorElement: <ErrorPage /> },
   { path: "/submit", element: <SubmitPage />, errorElement: <ErrorPage /> },
   { path: "/read", element: <Readpage />, errorElement: <ErrorPage /> },
-  { path: "/read/details", element: <ReadpageDetails />, errorElement: <ErrorPage /> },
+  {
+    path: "/read/details",
+    element: <ReadpageDetails />,
+    errorElement: <ErrorPage />,
+  },
   { path: "/lessons&notes", element: <Tips />, errorElement: <ErrorPage /> },
   { path: "/tip-read", element: <TipRead />, errorElement: <ErrorPage /> },
   { path: "/prompt", element: <PromptsPage />, errorElement: <ErrorPage /> },
-  { path: "/promptdetails/:id", element: <Details />, errorElement: <ErrorPage /> },
+  {
+    path: "/promptdetails/:id",
+    element: <Details />,
+    errorElement: <ErrorPage />,
+  },
   { path: "/news", element: <NewSection />, errorElement: <ErrorPage /> },
-  { path: "/news/detials", element: <NewsDetails />, errorElement: <ErrorPage /> },
+  {
+    path: "/news/detials",
+    element: <NewsDetails />,
+    errorElement: <ErrorPage />,
+  },
   { path: "/profile", element: <Profile />, errorElement: <ErrorPage /> },
 
   {
@@ -178,14 +197,38 @@ const router = createBrowserRouter([
     element: <AboutTheChild />,
     errorElement: <ErrorPage />,
   },
+  {
+    path: "/forgot-password",
+    element: <PasswordReset />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/new-password",
+    element: <NewPassword />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/reset-code",
+    element: <ResetCode />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/reset-successful",
+    element: <PasswordResetSuccess />,
+    errorElement: <ErrorPage />,
+  },
 ]);
 
-const myStore = createStore(myReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const queryClient = new QueryClient({});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-     <Provider store={myStore}>
-      <RouterProvider router={router} />
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <QueryClientProvider client={queryClient}>
+          <RouterProvider router={router} />
+        </QueryClientProvider>
+      </PersistGate>
     </Provider>
   </React.StrictMode>
 );

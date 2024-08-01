@@ -5,18 +5,25 @@ import { FaRegCalendar } from "react-icons/fa";
 import { Icon } from "@iconify/react";
 import { FaPencil } from "react-icons/fa6";
 import { BsPersonCircle } from "react-icons/bs";
+import { selectUser } from "@/redux/features/userSlice";
+import { useSelector } from "react-redux";
+import { formatDatePretty } from "@/utils/dateFormatting";
 
 function MyProfileCardInfo({ setIsEditing }) {
-  const user = JSON.parse(localStorage.getItem('user'));
+  const user = useSelector(selectUser);
 
   // Parse the ISO string to get the date of birth
-  const dob = new Date(user?.data?.studentDetails?.date_of_birth);
+  const dob = new Date(user?.date_of_birth);
+
+  console.log("dob: ", dob);
 
   // Calculate the current date
   const currentDate = new Date();
 
   // Calculate the difference in milliseconds between the current date and the birthdate
   const diffMs = currentDate - dob;
+
+  console.log(diffMs);
 
   // Calculate the age by dividing the difference in milliseconds by the number of milliseconds in a year
   const age = Math.floor(diffMs / (1000 * 60 * 60 * 24 * 365));
@@ -41,11 +48,11 @@ function MyProfileCardInfo({ setIsEditing }) {
           /> */}
           <div>
             <span className="font-Bold text-[24px]">
-              {user?.data?.studentDetails?.first_name}
+              {user?.first_name}
               {"  "}
-              {user?.data?.studentDetails?.last_name}
+              {user?.last_name}
             </span>
-            <p>{user?.data?.email}</p>
+            <p>{user?.email}</p>
           </div>
         </div>
       </div>
@@ -68,14 +75,19 @@ function MyProfileCardInfo({ setIsEditing }) {
             <FaGraduationCap />
             <p>School</p>
           </div>
-          <span className="font-VarelaRegular">{user?.data?.studentDetails?.school}</span>
+          <span className="font-VarelaRegular">{user?.school}</span>
         </div>
         <div>
           <div className="flex gap-1 items-center text-[#A3A3A3]">
-            <Icon icon="lets-icons:dimond-alt-light" color="#a3a3a3" width="23" height="23" />
+            <Icon
+              icon="lets-icons:dimond-alt-light"
+              color="#a3a3a3"
+              width="23"
+              height="23"
+            />
             <p>Grade</p>
           </div>
-          <span className="font-VarelaRegular">Grade {user?.data?.studentDetails?.grade}</span>
+          <span className="font-VarelaRegular">Grade {user?.grade}</span>
         </div>
       </div>
       <div className="font-VarelaRegular flex flex-wrap gap-y-8 custom-497:flex-row  gap-x-12">
@@ -84,18 +96,16 @@ function MyProfileCardInfo({ setIsEditing }) {
             <IoMdCall />
             <p>Contact</p>
           </div>
-          <span className="font-VarelaRegular">
-            {user?.data?.studentDetails?.phone_number
-              ? user?.data?.studentDetails?.phone_number
-              : user?.data?.guardianDetails?.phone_number}
-          </span>
+          <span className="font-VarelaRegular">{user?.contact}</span>
         </div>
         <div>
           <div className="flex gap-2 items-center text-[#A3A3A3]">
             <FaRegCalendar />
             <p>Date joined</p>
           </div>
-          <span className="font-VarelaRegular">1st Nov, 2023</span>
+          <span className="font-VarelaRegular break-words">
+            {formatDatePretty(user?.created_at)}
+          </span>
         </div>
       </div>
     </div>
