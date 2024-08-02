@@ -5,7 +5,7 @@ import SelectWritingSample from "./components/SelectWritingPrompt"
 const MySubmissionsCard = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   return (
-    <div className="bg-white shadow-xl mb-[15%] rounded-xl lg:w-[973px]  lg:p-10 p-5 md:p-10  w-[90vw]"> 
+    <div className=" mb-[15%]"> 
       {isSubmitting ? (
         <SelectWritingSample setIsSubmitting={setIsSubmitting} /> 
       ) : (
