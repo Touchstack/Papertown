@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { IoIosArrowBack } from "react-icons/io";
+import SuccessModal from "./modal/SuccessModal";
 import uploadImg from "@/assets/Images/upload.png";
-import SuccessModal from "./SuccessModal";
+import { IoIosArrowBack } from "react-icons/io";
+import documentIcon from "@/assets/Images/document.png";
+import trashIcon from "@/assets/Images/trash.svg";
 
-const SubmitWritingUpload = ({ onBackClick }) => {
+const SubmitRevisionUpload = ({ onBackClick }) => {
   const [showModal, setShowModal] = useState(false);
   const handleClick = () => {
     onBackClick(false);
@@ -13,7 +15,7 @@ const SubmitWritingUpload = ({ onBackClick }) => {
     setShowModal(true);
   };
   return (
-    <>
+    <div className="bg-white shadow-xl lg:p-10 p-5 md:p-10 rounded-xl lg:w-[973px]  w-[90vw]">
       <div className="flex flex-col gap-y-[48px] md:w-3/6">
         <div className="flex flex-col space-x-3">
           <div
@@ -22,7 +24,7 @@ const SubmitWritingUpload = ({ onBackClick }) => {
           >
             <IoIosArrowBack size={30} />
             <h1 className="md:text-[36px] text-[26px] font-Bold">
-              Submit your writing
+              Submit your revision
             </h1>
           </div>
         </div>
@@ -45,16 +47,21 @@ const SubmitWritingUpload = ({ onBackClick }) => {
               className="hidden"
             />
             <label htmlFor="image">
-              <div className="border py-[16px] gap-y-[12px] border-gray-200 text-gray-600 text-center flex flex-col items-center justify-center rounded-[8px]">
+              <div className="border p-[16px] gap-y-[12px] border-gray-200 text-gray-600 text-center flex items-start justify-between rounded-[8px]">
                 <img
-                  src={uploadImg}
-                  alt="uploadImg"
-                  className="w-[40px] h-[40px]"
+                  src={documentIcon}
+                  alt="documentIcon"
+                  className="w-[24px] h-[24px]"
                 />
-                <p>
-                  <span className="font-bold text-black">Click to upload</span>{" "}
-                  document
-                </p>
+                <div className="text-left">
+                  <p className="font-semibold">Submission.pdf</p>
+                  <p>16 MB</p>
+                </div>
+                <img
+                  src={trashIcon}
+                  alt="trash icon"
+                  className="w-[45px] h-[45px]"
+                />
               </div>
             </label>
           </div>
@@ -70,8 +77,8 @@ const SubmitWritingUpload = ({ onBackClick }) => {
         </button>
       </div>
       {showModal && <SuccessModal onClose={setShowModal} />}
-    </>
+    </div>
   );
 };
 
-export default SubmitWritingUpload;
+export default SubmitRevisionUpload;

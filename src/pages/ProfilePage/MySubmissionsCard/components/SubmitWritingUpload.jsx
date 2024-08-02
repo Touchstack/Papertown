@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { IoIosArrowBack } from "react-icons/io";
-import SuccessModal from "./SuccessModal";
+import uploadImg from "@/assets/Images/upload.png";
+import SuccessModal from "./modal/SuccessModal";
 
-const SubmitWritingWrite = ({ onBackClick }) => {
+const SubmitWritingUpload = ({ onBackClick }) => {
   const [showModal, setShowModal] = useState(false);
   const handleClick = () => {
     onBackClick(false);
@@ -12,7 +13,7 @@ const SubmitWritingWrite = ({ onBackClick }) => {
     setShowModal(true);
   };
   return (
-    <>
+    <div className="bg-white shadow-xl lg:p-10 p-5 md:p-10 rounded-xl lg:w-[973px]  w-[90vw]">
       <div className="flex flex-col gap-y-[48px] md:w-3/6">
         <div className="flex flex-col space-x-3">
           <div
@@ -34,14 +35,29 @@ const SubmitWritingWrite = ({ onBackClick }) => {
             className="outline-none placeholder:text-[#CECECE] h-[50px] bg-[#F4F5F7] rounded-[10px] px-[20px]   "
           />
         </div>
-        <div className="font-VarelaRegular flex flex-col gap-y-[10px]">
-          <p className=" text-[14px]">Type content</p>
-          <textarea
-            type="text"
-            placeholder="Start typing"
-            cols={150}
-            className="outline-none placeholder:text-[#CECECE] h-[224px] bg-[#F4F5F7] rounded-[10px] p-[20px]   "
-          />
+        <div className="font-VarelaRegular flex flex-col gap-y-[10px] ">
+          <p className=" text-[14px]">Content</p>
+          <div>
+            <input
+              type="file"
+              id="image"
+              placeholder="Title goes here"
+              className="hidden"
+            />
+            <label htmlFor="image">
+              <div className="border py-[16px] gap-y-[12px] border-gray-200 text-gray-600 text-center flex flex-col items-center justify-center rounded-[8px]">
+                <img
+                  src={uploadImg}
+                  alt="uploadImg"
+                  className="w-[40px] h-[40px]"
+                />
+                <p>
+                  <span className="font-bold text-black">Click to upload</span>{" "}
+                  document
+                </p>
+              </div>
+            </label>
+          </div>
         </div>
         <button
           type="submit"
@@ -54,8 +70,8 @@ const SubmitWritingWrite = ({ onBackClick }) => {
         </button>
       </div>
       {showModal && <SuccessModal onClose={setShowModal} />}
-    </>
+    </div>
   );
 };
 
-export default SubmitWritingWrite;
+export default SubmitWritingUpload;
