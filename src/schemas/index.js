@@ -1,7 +1,8 @@
 import * as yup from "yup";
 
 const passwordRegex =
-  /^(?=.*[A-Za-z])(?=.*[0-9!@#$%^&*\-_+=])[A-Za-z0-9!@#$%^&*\-_+=]{8,}$/;
+ /^(?=.*[A-Za-z])(?=.*[0-9!@#$%^&*\-_.+=])[A-Za-z0-9!@#$%^&*\-_.+=]{8,}$/
+
 
 export const loginSchema = yup.object().shape({
   email: yup
