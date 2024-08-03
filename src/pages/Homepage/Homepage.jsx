@@ -14,7 +14,7 @@ const  Homepage = () => {
   };
 
   return (
-    <div className="font-Medium px-2 sm:px-4 bg-black  " style={gradientStyle}>
+    <div className="font-Medium sm:px-4 bg-black  " style={gradientStyle}>
       <GeneralNav color="white" btnColor="white" bgColor="transparent" />
       <RedefiningWriting />
       <MarqueeApp />

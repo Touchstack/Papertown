@@ -6,8 +6,8 @@ const RedefiningWriting = () => {
    const user = localStorage.getItem("user");
 
   return (
-    <div className="py-18  mt-12 ">
-      <div className="container mx-auto ">
+    <div className="py-18 px-2 mt-12 ">
+      <div className="sm:container px-[8px] mx-auto ">
         <div className="lg:flex justify-center items-center">
           {/* Left Col */}
 

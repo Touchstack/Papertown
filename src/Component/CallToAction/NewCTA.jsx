@@ -5,7 +5,7 @@ const NewCTA = () => {
   return (
     <div className="mt-[6rem] flex flex-col items-center ">
       <a className="grid lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 grid-cols-1 bg-white  border border-gray-200 rounded-[50px] shadow md:flex-row xl:w-8/12 lg:w-9/12 md:w-10/12 sm:w-10/12 w-10/12">
-        <div className="flex flex-col justify-between leading-normal lg:px-[60px] xl:px-[100px] px-[8px] lg:py-20 md:py-12 sm:p-8 py-8 lg:rounded-l-[50px] lg:rounded-tr-none  md:rounded-t-[50px] sm:rounded-t-[50px] rounded-t-[50px]">
+        <div className="flex flex-col justify-between leading-normal lg:px-[60px] xl:px-[100px] px-4 lg:py-20 md:py-12 sm:p-8 py-8 lg:rounded-l-[50px] lg:rounded-tr-none  md:rounded-t-[50px] sm:rounded-t-[50px] rounded-t-[50px]">
           <h5 className="lg:text-4xl md:text-4xl sm:text-4xl text-4xl font-Bold tracking-tight text-gray-900  lg:mb-10">
             Thank You, Tony Elumelu Foundation (TEF) Entrepreneurship Forum
           </h5>
