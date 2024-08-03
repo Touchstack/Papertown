@@ -1,7 +1,7 @@
 const HomeWhyWeEXist = () => {
   return (
     <div className="py-16 flex flex-col items-center justify-center mt-40 bg-transparent font-Medium text-center">
-      <h3 className="font-Bold  text-[#F2F2F2] max-w-[400px] lg:text-4xl md:text-3xl text-xl text-center ">
+      <h3 className="font-Bold px-10 text-[#F2F2F2] max-w-[400px] lg:text-4xl md:text-3xl text-xl text-center ">
         Why we exist and delight in what we do
       </h3>
 
