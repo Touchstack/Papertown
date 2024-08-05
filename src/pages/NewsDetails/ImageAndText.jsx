@@ -6,21 +6,21 @@ function ImageAndText() {
   return (
     <div>
       {/* text and date section start */}
-      <div className="lg:ml-[10%] lg:mt-20 mt-10">
-        <div className="lg:ml-5 md:ml-20 ml-5">
-          <h5 className="lg:w-[800px] md:w-[500px] lg:text-[72px] font-Bold md:text-5xl text-5xl mb-5">
+      <div className="p-10 mt-10">
+        <div className="flex flex-col items-center justify-center">
+          <h5 className=" lg:text-[72px] font-Bold md:text-5xl text-5xl mb-5">
             UNICEF to initiate Grade 7 spelling Bee
           </h5>
+         <div className="flex items-start">
           <span className="flex items-center ">
-            <MdDateRange className="text-[#A3A3A3]" />
-            <p className="font-Bold">
-              <span className="mr-1 text-[#A3A3A3]">Date</span> 1st Nov,2023
-            </p>
-          </span>
-        </div>
+              <MdDateRange className="text-[#A3A3A3]" />
+              <p className="font-Bold">
+                <span className="mr-1 text-[#A3A3A3]">Date</span> 1st Nov,2023
+              </p>
+            </span>
+         </div>
 
-        {/* image section start  */}
-        <div className="mt-10  text-center">
+          <div className="mt-10  text-center">
           <img
             src={DetaImage}
             alt=""
@@ -28,8 +28,7 @@ function ImageAndText() {
           />
         </div>
 
-        {/* image section end  */}
-        {/* Text section start  */}
+
         <div className="lg:w-[990px] md:w-[700px] md:ml-20 ml-10 lg:ml-0 w-[320px]">
           <p className="mb-5 mt-10">
             It has survived not only five centuries, but also the leap into
@@ -72,17 +71,16 @@ function ImageAndText() {
             publishing software.
           </p>
         </div>
+      </div>
+
+        
         <div className="mt-20 mb-20">
           <img src={Line} alt="" />
         </div>
-        {/* Text section end  */}
       </div>
-      {/* text and date section end */}
-      {/* Other related stories section start  */}
       <div className="lg:ml-20  mb-20">
         <OtherRelated />
       </div>
-      {/* Other related stories section end  */}
     </div>
   );
 }

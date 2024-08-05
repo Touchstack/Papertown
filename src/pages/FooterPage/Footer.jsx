@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import AppLogo from "../../assets/Images/Logo.svg";
 import { ClipLoader } from "react-spinners";
 import { subNewsLetter } from "../../api";
+import { useForm } from "react-hook-form";
 
 const Footer = () => {
   const [hoverIcon, setHoverIcon] = useState("");
@@ -11,64 +12,52 @@ const Footer = () => {
   const [successText, setSuccessText] = useState("");
   const [errorAlert, setErrorAlert] = useState(false);
   const [errorText, setErrorText] = useState("");
-  const [email, setEmail] = useState("");
+
+
+  const { register, handleSubmit, formState: { errors } } = useForm();
 
   const hoverOver = (icon) => {
     return setHoverIcon(icon);
   };
 
-  const handleChange = (e) => {
-    // 👇 Store the input value to local state
-    setEmail(e.target.value);
-  };
 
- 
-  const subscribeNewsLetter = async () => {
-    const data = {
-     email: email.toLowerCase()
-    }
-
-   if(email === ""){
-     setErrorText(true);
-     setErrorAlert("Email address is required")
-     return setTimeout(() => setErrorAlert(false), 2000);
-    } else {
-    
-    try {
-      setLoading(true); 
-      const res = await subNewsLetter(data);
-
-
-      if (res?.data?.status === true){
-        setLoading(false)
-        setSuccessText(res?.data?.message);
-        setSuccessAlert(true);
-        setErrorText("")
-        return setTimeout(() => setSuccessAlert(false), 3000);
-      } else if (res?.response?.data?.status === 400){
-         setErrorAlert(true)
-         setErrorText(res?.response?.data?.error)
-         return setTimeout(() => setErrorAlert(false), 3000);
-      } else {
-        setErrorAlert(true)
-        setErrorText(res?.resposne?.data?.error)
-        return setTimeout(() => setErrorAlert(false), 3000);
-      }
-
-    } catch (error) {
-      if (error?.data?.error) {
-        setErrorAlert(true)
-        setErrorText(error?.response?.data?.message
-          ? error?.response?.data?.message
-          : error?.message)
-        return setTimeout(() => setErrorAlert(false), 3000);
-      }
-    } finally {
-       setLoading(false)
-    }
+const onSubmit = async (data) => {
+   const payLoad = {
+    email: data.email.toLowerCase()
    }
 
-}
+   try {
+    setLoading(true); 
+    const res = await subNewsLetter(payLoad);
+
+    if (res?.data?.status === true){
+      setLoading(false)
+      setSuccessText(res?.data?.message);
+      setSuccessAlert(true);
+      setErrorText("")
+      return setTimeout(() => setSuccessAlert(false), 3000);
+    } else if (res?.response?.data?.status === 400){
+       setErrorAlert(true)
+       setErrorText(res?.response?.data?.error)
+       return setTimeout(() => setErrorAlert(false), 3000);
+    } else {
+      setErrorAlert(true)
+      setErrorText(res?.resposne?.data?.error)
+      return setTimeout(() => setErrorAlert(false), 3000);
+    }
+
+  } catch (error) {
+    if (error?.data?.error) {
+      setErrorAlert(true)
+      setErrorText(error?.response?.data?.message
+        ? error?.response?.data?.message
+        : error?.message)
+      return setTimeout(() => setErrorAlert(false), 3000);
+    }
+  } finally {
+     setLoading(false)
+  }
+};
 
   
   const ErrorAlert = () => {
@@ -150,17 +139,17 @@ const Footer = () => {
                   </span>
 
                   <span className="text-[#FFF] text-[14px] md:text-lg font-VarelaRegular">
-                    FAQs
+                   <a href="./faqs"> FAQs </a>
                   </span>
                   <span className="text-[#FFF] text-[14px] md:text-lg font-VarelaRegular">
-                    Contact Us
+                  <a href="./contactus">Contact Us </a>
                   </span>
                 </div>
 
                 <div className="font-Regular text-[#D0D0D0] w-[150px] text-sm sm:text-start mt-20">
-                  Follow us on social media
+                  {/* Follow us on social media */}
                 </div>
-                <div className="flex md:justify-start text-gray-600 dark:text-gray-400 pt-4 pb-4 pr-8">
+                {/* <div className="flex md:justify-start text-gray-600 dark:text-gray-400 pt-4 pb-4 pr-8">
                   <a
                     href=""
                     target="_blank"
@@ -340,17 +329,17 @@ const Footer = () => {
                       </svg>
                     )}
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
             <div>
-              <h2 className="mb-4 p-0 py-0 text-xl  text-[18px] font-VarelaRegular text-[#FFFFFF]">
-                Receive weekly writing prompts when you subscribe to our
-                newsletter
+              <h2 className="mb-4 p-0 py-0 text-xl  md:w-[300px] text-[18px] font-VarelaRegular text-[#FFFFFF]">
+                Subscribe to our newsletter to receive periodic updates on what’s happening at Papertown.
+                Don’t worry, we only pop up in your inbox when it’s absolutely necessary.
               </h2>
               <ul className="text-[#CACACA]">
                 <li>
-                  <form name="subscribe" method="post">
+                  <form  onSubmit={handleSubmit(onSubmit)}>
                     {loading ? null : errorAlert ? (
                       <ErrorAlert />
                     ) : successAlert ? (
@@ -362,21 +351,16 @@ const Footer = () => {
                       placeholder="Email Address"
                       name="subscriptionemail"
                       required
-
-                      className="block w-[300px] outline-none h-14 p-4 placeholder-white text-white rounded-full border border-whit  mb-4  bg-[#FFFAF5] font-SemiBold  sm:text-md   bg-opacity-20 border-opacity-100  "
+                      className="block w-full max-w-[300px] outline-none h-14 p-4 placeholder-white text-white rounded-full border border-whit  mb-4  bg-[#FFFAF5] font-SemiBold  sm:text-md   bg-opacity-20 border-opacity-100  "
                       //   focus:ring-blue-500 focus:border-blue-500
-
-
-                     
-                      onChange={handleChange}
-                      value={email}
+                      {...register("email", { required: true })}
                     />
-
+                     {errors.email && <span className="text-red-500 pl-4 pb-2">Email address is required</span>}
                     
                       <button
-                        type="button"
-                        onClick={subscribeNewsLetter}
-                        className="font-VarelaRegular text-[#FFFFFF] bg-[#52B4AE] block w-[300px] h-14 p-4 hover:bg-[#3a8783]  rounded-full text-xl px-5 py-3 "
+                        type="submit"
+                        //onClick={subscribeNewsLetter}
+                        className="font-VarelaRegular text-[#FFFFFF] bg-[#52B4AE] block w-full max-w-[300px] h-14 p-4 hover:bg-[#3a8783]  rounded-full text-xl px-5 py-3 "
                       >
                         {loading ? (
                             <ClipLoader color={"#ffffff"} loading={loading} size={25} />
@@ -395,7 +379,7 @@ const Footer = () => {
             <div className="flex lg:w-2/6 md:w-3/6 sm:w-auto w-auto justify-around">
               <div className="text-sm sm:text-center text-[#D0D0D0] pr-2">
                 <a href="/privacypolicy" className="hover:underline">
-                  Copyright Papertown 2022
+                  Copyright Papertown 2024
                 </a>
               </div>
               <div className="text-sm sm:text-center text-[#D0D0D0] pr-2">

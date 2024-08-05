@@ -14,11 +14,10 @@ function NewSection() {
           News
         </h5>
         {/* header text end  */}
-        <p className="lg:text-25 md:text-[20px] lg:w-[620px] md:w-[600px] w-[330px] ">
-          It has survived not only five centuries, but also the leap into
-          electronic typesetting, remaining essentially unchanged. It was
-          popularised in the 1960s with the release of Letraset sheets
-          containing
+        <p className="lg:text-25 md:text-[20px] w-10/12  ">
+         Wondering what’s happening at Papertown and in the general world of creative writing for young writers?
+          <br /> Welcome to our News page!
+          <br /> This is where you find information about what we are up to and what is happening with us. We also scout for writing opportunities (contests, competition, prizes, projects, programs, fellowships, festivals, etc) and share them with you here. 
         </p>
       </div>
 

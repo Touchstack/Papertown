@@ -16,7 +16,7 @@ const GuardianAccountSetup = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showRePassword, setShowRePassword] = useState(false);
   const [showSuccessModal, setshowSuccessModal] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  //const [currentIndex, setCurrentIndex] = useState(0);
 
   const { register, handleSubmit, formState: { errors, isSubmitting }, getValues } = useForm();
 

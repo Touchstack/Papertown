@@ -1,9 +1,9 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import search from "../../assets/Images/ri_search-line.png";
-import vector from "../../assets/Images/subVector.png";
 import target from "../../assets/Images/mingcute.png";
 import { articles } from "../../../ConstantData";
+import FilterButton from "./FilterButton";
 
 // Single Article Card Component
 const ArticleCard = ({
@@ -14,7 +14,7 @@ const ArticleCard = ({
   contentPreview,
   image,
 }) => (
-  <div className="group max-w-sm rounded-[30px] border overflow-hidden px-[28px] py-[36px] transition ease-in-out duration-300">
+  <div onClick={() => window.location = '/read/details'} className="group max-w-sm rounded-[30px] border overflow-hidden px-[28px] py-[36px] transition ease-in-out duration-300">
     <div
       className={`flex justify-center items-center font-bold md:text-[15px] text-[10px] md:w-[70px] w-[50px] md:h-[40px] h-[30px] rounded-[30px] border-[1px] border-black transition ease-in-out duration-300 ${
         contentPreview ? "group-hover:hidden" : ""
@@ -55,13 +55,6 @@ const ArticleCard = ({
         contentPreview ? "group-hover:hidden" : ""
       }`}
     >
-      <div className="md:w-[40px] md:h-[40px] w-[30px] h-[30px] bg-orange-300 rounded-full flex justify-center items-center overflow-hidden transition ease-in-out duration-300">
-        <img
-          src={image}
-          alt=""
-          className="rounded-full w-full h-full object-cover"
-        />
-      </div>
       <p className="md:text-[16px] text-[10px] font-bold font-Varela text-[#000]">
         {author}
       </p>
@@ -80,7 +73,7 @@ ArticleCard.propTypes = {
 };
 
 // Individual Articles List Component
-const ArticlesList = ({ articles }) => (
+export const ArticlesList = ({ articles }) => (
   <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[10px] lg:gap-[10px]">
     {articles.map((article) => (
       <ArticleCard key={article.id} {...article} />
@@ -133,13 +126,7 @@ const ReadRowData = () => {
             className="pl-10 bg-[#F9F9FB] h-[50px] md:w-[450px] w-[240px] rounded-[8px]"
           />
 
-          <button
-            type="button"
-            className="inline-flex items-center justify-center md:rounded-[8px] rounded-[30px] border w-[100px] h-[50px] ml-5 bg-white"
-          >
-            <img src={vector} alt="" className="mr-2" />
-            Filter
-          </button>
+         <FilterButton />
         </div>
       </div>
 

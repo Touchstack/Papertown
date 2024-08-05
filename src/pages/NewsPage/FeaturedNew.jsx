@@ -9,11 +9,11 @@ function FeaturedNew() {
       <div className="">
         {/* Featured news text with slider start  */}
         <div className="flex items-center justify-between">
-          <h5 className="lg:text-[42px] md:text-[60px]  text-[30px] font-Bold">
-            Featured news
+          <h5 className="lg:text-[42px] md:text-[60px] mb-10  text-[30px] font-Bold">
+            Here’s what’s happening at the moment…
           </h5>
           {/* slider icons section start */}
-          <div className="flex lg:mr-20 md:mr-10 mr-3 hidden lg:inline-flex">
+          <div className="md:flex lg:mr-20 md:mr-10 mr-3 hidden lg:inline-flex">
             {/* Adjust the margin as needed */}
             <a
               href="#"
@@ -36,10 +36,10 @@ function FeaturedNew() {
           <OtherCard />
         </div>
         <div className="lg:mr-20 m-2 mr-10 mb-20 ">
-          <h5 className="lg:text-[42px] md:text-[60px] mb-5  text-[30px] font-Bold">
+          {/* <h5 className="lg:text-[42px] md:text-[60px] mb-5  text-[30px] font-Bold">
             Other news items
           </h5>
-          <NewOtherCard />
+          <NewOtherCard /> */}
           {/* Button section start  */}
           <div className="flex md:ml-[50px] justify-center m-[50px]">
             <button className="border-[1px] leading-8 border-[#52B4AE] text-[#52B4AE] font-bold rounded-3xl text-[20px] w-[145px] h-[50px]">

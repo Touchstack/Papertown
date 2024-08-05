@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from 'react-redux';
-import { setFormData } from "../../context/actions/formAction";
-
+import { useDispatch } from "react-redux";
 import Student from "../../assets/Images/Boy.svg";
 import AppLogo from "../../assets/Images/Logo.svg";
 import Arrow from "../../assets/Images/arrow-left.svg";
+import {
+  CLEAR_GUARDIAN_CHECKED,
+  SET_GUARDIAN_CHECKED,
+} from "@/redux/features/guardianCheckedSlice";
 
 const AccountSetupJourney = () => {
-  const [isChecked, setIsChecked] = useState(false); 
+  const [isChecked, setIsChecked] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -18,15 +20,13 @@ const AccountSetupJourney = () => {
 
   const handleContinue = () => {
     if (isChecked) {
-      navigate("/signup/about-yourself");
-    } else {
-      navigate("/signup/gettoknowyou");
+      dispatch(SET_GUARDIAN_CHECKED(true));
     }
-
-    dispatch(setFormData({ has_guardian: isChecked }));
+    navigate("/signup/setupaccount");
   };
 
   const goBack = () => {
+    dispatch(CLEAR_GUARDIAN_CHECKED());
     navigate(-1);
   };
 
@@ -49,16 +49,21 @@ const AccountSetupJourney = () => {
             Before you continue
           </h3>
           <p className="font-VarelaRegular lg:text-md md:text-md sm:text-base pt-8 text-[#393939] leading-7 text-sm text-13 leading-26 text-start">
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets.
+            This website and its content and materials have been designed for
+            and are intended to be used by young people - aged 10 to 19.
           </p>
           <p className="font-VarelaRegular lg:text-md md:text-md sm:text-base pt-8 text-[#393939] leading-7 text-sm text-13 leading-26 text-start">
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets.
+            We, however, understand that we are dealing with a sensitive age
+            group whose access to and use of the internet should be controlled,
+            and may even be restricted by law in some jurisdictions/country.
           </p>
-
+          <p className="font-VarelaRegular lg:text-md md:text-md sm:text-base pt-8 text-[#393939] leading-7 text-sm text-13 leading-26 text-start">
+            It is for this reason that minors (persons below 18years) are not
+            allowed to create accounts on this website by themselves. We ask
+            that parents be responsible for creating accounts for, and
+            supervising, their minor children’s use of this website. 
+            <br /> Thank you for your understanding and cooperation.  
+          </p>
 
           {/* First Checkbox */}
           <div className="font-VarelaRegular inline-flex w-[430px] py-4 border border-gray-300 rounded-md mt-10 lg:text-lg md:text-lg sm:text-base text-[#000000] leading-7 text-sm text-13 leading-26 text-start">
@@ -120,7 +125,12 @@ const AccountSetupJourney = () => {
 
         {/* Right Col with Linear Gradient Background */}
         <div className="min-h-screen flex justify-center items-center pb-5 bg-gradient-to-r from-blue-500 to-pink-500">
-          <img src={Student} style={{ height: "auto" }} className="" alt="Student" />
+          <img
+            src={Student}
+            style={{ height: "auto" }}
+            className=""
+            alt="Student"
+          />
         </div>
       </div>
     </div>

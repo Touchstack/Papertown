@@ -10,6 +10,8 @@ import "../Style/Style.css";
 import SideNav from "./SideNav";
 import { BsPersonCircle } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { selectStatus, selectUser } from "@/redux/features/userSlice";
 
 const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
   const navigate = useNavigate();
@@ -21,7 +23,10 @@ const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
   const [showLogInModal, setShowLogInModal] = useState(false);
   const [showJoinUsModal, setShowJoinUsModal] = useState(false);
   const [sideNav, setSideNav] = useState(false);
-  const [verified, setVerified] = useState(false);
+ 
+
+  const status = useSelector(selectStatus)
+  const user = useSelector(selectUser)
 
   // Define prop types
   GeneralNav.propTypes = {
@@ -78,18 +83,7 @@ const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
     setSideNav(false);
   };
 
-  useEffect(() => {
-    const isVerified = () => {
-      // Check if the user is defined in local storage
-      const user = localStorage.getItem("user");
 
-      // Update the state based on the existence of the user
-      setVerified(!!user);
-    };
-
-    // Call the function to check user verification
-    isVerified();
-  }, []);
 
   // Determine the appropriate class to apply
   const txColorClass = txtcolorClasses[color] || "text-black"; // Default color
@@ -97,27 +91,28 @@ const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
   const bgColorClass = bgcolorClasses[bgColor] || "bg-white-transparent";
   const bgShadowClass = bgShadowClasses[bgShadow] || " ";
 
-  const user = JSON.parse(localStorage.getItem('user'));
+
 
   return (
     <>
-      <div className="pt-10 mx-3">
+      <div className="pt-10 px-2">
         <nav
-          className={`flex container mx-auto px-2 text-center font-VarelaRegular rounded-full max-w-6xl lg:pt-2 md:pt-2 sm:px-4 py-3 ${bgColorClass} ${bgShadowClass}`}
+          className={`md:container mx-auto px-2 text-center font-VarelaRegular rounded-full max-w-6xl py-3  ${bgColorClass} ${bgShadowClass}`}
         >
-          <div className="container md:pl-25 flex justify-between items-center m-auto">
+          <div className="container px-5 md:pl-25 flex justify-between items-center m-auto">
             <a
               href="/"
               className="transition duration-500 ease-in-out hover:scale-110 flex items-center"
             >
-              <img
-                src={AppLogo}
-                alt="Logo"
-                className="md:h-[80px] lg:w-[88px] sm:h-[70px]  h-[60px] w-[70px]"
-              />
+              <div className="md:h-[80px] lg:w-[80px] sm:h-[70px]  h-[65px] w-[65px]">
+                <img
+                  src={AppLogo}
+                  alt="Logo"
+                />
+              </div>
             </a>
             <div
-              className={`lg:flex justify-between w-full md:w-auto `}
+              className={`lg:flex justify-between md:w-auto `}
               id="navbar-cta"
             >
               <ul className="lg:flex flex-col text-[16px]  p-4 md:p-0 mt-4 border text-center rounded-lg md:shadow-none sm:shadow-lg shadow-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 hidden">
@@ -196,7 +191,7 @@ const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
               </ul>
             </div>
 
-            {!verified ? (
+            {!status ? (
               <div className={`w-full lg:flex md:w-auto`} id="navbar-buttons">
                 <ul className="lg:flex items-center py-2 font-Regular text-lg hidden">
                   <button
@@ -221,7 +216,7 @@ const  GeneralNav = ({ color, btnColor, bgColor, bgShadow }) => {
                 onClick={() => navigate("/profile")}
               >
                 <BsPersonCircle size={30} />
-                {user?.data?.studentDetails?.first_name}
+                {user?.first_name}
               </button>
             )}
 

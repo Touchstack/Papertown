@@ -7,13 +7,13 @@ import FeaturedEvents from './FeaturedEvents';
 const EventsPage = () => {
   return (
     <div>
-      <Circle/>
-<EventsHero />
-<FeaturedEvents/>
+     {/* <Circle/> */}
+     <EventsHero />
+     <FeaturedEvents/>
 
-<div className="bg-[#B44DB8]">
-<Footer />
-</div>
+      <div className="bg-[#B44DB8]">
+         <Footer />
+      </div>
     </div>
   )
 }

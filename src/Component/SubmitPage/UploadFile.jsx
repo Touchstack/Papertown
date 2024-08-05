@@ -41,29 +41,29 @@ const UploadFile = () => {
           setLoading(false)
         } else {
           setError(response?.response?.data?.error);
-          aler(response?.response?.data?.error)
+          alert(response?.response?.data?.error)
           setLoading(false)
         }
       } catch (error) {
         console.error("Error occurred while uploading file:", error);
         setError("An error occurred while uploading the file");
-  };
+  }
 };
   
   
   return (
-    <div className="w-[900px] p-6 flex flex-col items-center justify-center">
-      <div className="flex items-center text-sm text-opacity-30 border-2 border-dashed border-neutral-400 lg:w-3/6 w-2/6 lg:h-2/6 h-2/6 rounded-lg p-2 sm:w-1/4">
+    <div className="p-6 md:w-2/6 flex flex-col items-center justify-center">
+      <div className="flex items-center text-sm text-opacity-30 border-2 border-dashed border-neutral-400 w-full">
         <label
           htmlFor="fileInput"
           className="hover:bg-[#099B96] text-black font-Regular py-2 px-4 rounded flex items-center"
         >
           <BsFilePdf className=" mr-2 w-[21.75px] h-[29px]" />
-          <span>{selectedFile ? "Upload Another File" : "Upload File"}</span>
+          <span>{selectedFile ? "Upload Another File" : "Upload PDF or Word document"}</span>
         </label>
         <input
           className="bg-transparent hidden"
-          accept=".pdf"
+          accept=".pdf, .doc"
           type="file"
           id="fileInput"
           onChange={handleFileChange}
@@ -75,7 +75,7 @@ const UploadFile = () => {
 
       <button
         type="submit"
-        className="bg-[#099B96] font-Bold md:w-2/6 sm:w-4/6 h-2/6 px-[30px] py-2.5 gap-2.5 justify-center text-center inline-flex text-white mt-10 mb-10 md:rounded-full rounded-3xl"
+        className="bg-[#099B96] p-4 font-Bold  justify-center text-center inline-flex text-white my-10 md:rounded-full rounded-3xl"
         onClick={uploadFileHandler}
         disabled={!selectedFile} 
       >
